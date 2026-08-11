@@ -1,0 +1,459 @@
+[
+  {
+    "id": "62f028d4-ce9b-4092-9b7f-f7add9eaf89e",
+    "materialIds": [
+      9101,
+      9155
+    ],
+    "resultId": 9157
+  },
+  {
+    "id": "829757c0-13af-49d8-8d75-f3f6d332241c",
+    "materialIds": [
+      9003,
+      9053,
+      9157
+    ],
+    "resultId": 9088
+  },
+  {
+    "id": "ce0c95d9-adc9-45d7-a07c-cd307dd5e94c",
+    "materialIds": [
+      9071,
+      9087,
+      9156
+    ],
+    "resultId": 9158
+  },
+  {
+    "id": "b4706ac7-80e0-474b-bfc0-bae24ed4ff51",
+    "materialIds": [
+      9027,
+      9102,
+      9215
+    ],
+    "resultId": 9216
+  },
+  {
+    "id": "2960e979-1b4d-4894-8a7d-192c5cc860c5",
+    "materialIds": [
+      9106,
+      9159
+    ],
+    "resultId": 9161
+  },
+  {
+    "id": "1a0e2689-c7d0-4f07-b0f0-095ca0a0a48a",
+    "materialIds": [
+      9042,
+      9089,
+      9161
+    ],
+    "resultId": 9090
+  },
+  {
+    "id": "897825b7-0940-447e-a59d-bdc55344d8c2",
+    "materialIds": [
+      9413,
+      9415
+    ],
+    "resultId": 9416
+  },
+  {
+    "id": "c64db0c8-c746-4f7d-a853-39d580280e66",
+    "materialIds": [
+      9163,
+      9164
+    ],
+    "resultId": 9166
+  },
+  {
+    "id": "6e1aa505-14dd-405c-84f0-ce7ec0a5cd9a",
+    "materialIds": [
+      9112,
+      9115,
+      9166
+    ],
+    "resultId": 9167
+  },
+  {
+    "id": "07be0a9c-0906-4371-beaf-08a8ad1178b2",
+    "materialIds": [
+      9114,
+      9433,
+      9434
+    ],
+    "resultId": 9434
+  },
+  {
+    "id": "54ff3d07-7486-4e4b-9acc-8ae5d94a2943",
+    "materialIds": [
+      9031,
+      9091,
+      9165
+    ],
+    "resultId": 9092
+  },
+  {
+    "id": "e21e536e-0ed6-44f4-80a3-c533ee9311c9",
+    "materialIds": [
+      9118,
+      9168
+    ],
+    "resultId": 9170
+  },
+  {
+    "id": "ba9ecc0c-42eb-445a-ac4c-fbd8509556b3",
+    "materialIds": [
+      9023,
+      9064,
+      9170
+    ],
+    "resultId": 9171
+  },
+  {
+    "id": "1b08bcc6-5cb4-4624-aa1d-6be628e2359f",
+    "materialIds": [
+      9119,
+      9423
+    ],
+    "resultId": 9424
+  },
+  {
+    "id": "38d2c68c-2293-4e2f-923e-53d546e56a76",
+    "materialIds": [
+      9419,
+      9424
+    ],
+    "resultId": 9248
+  },
+  {
+    "id": "beacfc14-f652-4f18-a0c4-58d8e749c87a",
+    "materialIds": [
+      9013,
+      9033,
+      9169
+    ],
+    "resultId": 9094
+  },
+  {
+    "id": "3dd25779-ab0d-481e-90fb-9614c4fd26ba",
+    "materialIds": [
+      9172,
+      9173
+    ],
+    "resultId": 9175
+  },
+  {
+    "id": "e8dbd115-a6e4-4e71-b21f-eea2983aef1a",
+    "materialIds": [
+      9049,
+      9125,
+      9175
+    ],
+    "resultId": 9176
+  },
+  {
+    "id": "9deb8b02-3096-4ce2-bea0-952bd09d7f82",
+    "materialIds": [
+      9408,
+      9409,
+      9410
+    ],
+    "resultId": 9410
+  },
+  {
+    "id": "d690ec8b-2354-46eb-9bd0-d8a06170855c",
+    "materialIds": [
+      9059,
+      9074,
+      9174
+    ],
+    "resultId": 9096
+  },
+  {
+    "id": "f254b48c-677a-48ce-a8d7-f22b19973584",
+    "materialIds": [
+      9063,
+      9177
+    ],
+    "resultId": 9179
+  },
+  {
+    "id": "1e13d021-c289-4c1d-8e57-da90cd90f918",
+    "materialIds": [
+      9056,
+      9097,
+      9179
+    ],
+    "resultId": 9098
+  },
+  {
+    "id": "154a6d68-27f2-40b0-a940-aec12dd13a5b",
+    "materialIds": [
+      9073,
+      9127,
+      9178
+    ],
+    "resultId": 9180
+  },
+  {
+    "id": "eec0e85d-d35f-4bea-beec-e4a99895b9eb",
+    "materialIds": [
+      9132,
+      9181
+    ],
+    "resultId": 9183
+  },
+  {
+    "id": "b460386b-6387-4e54-ad7d-a0b5df623fa3",
+    "materialIds": [
+      9062,
+      9072,
+      9183
+    ],
+    "resultId": 9184
+  },
+  {
+    "id": "a908ea61-fcdc-4876-898d-5c9ae168ebc7",
+    "materialIds": [
+      9069,
+      9099,
+      9182
+    ],
+    "resultId": 9100
+  },
+  {
+    "id": "7800fae0-5470-481b-962e-edf961e49dd4",
+    "materialIds": [
+      9713,
+      9714
+    ],
+    "resultId": 9717
+  },
+  {
+    "id": "c5c3b158-11f5-459b-aeb5-247af89149eb",
+    "materialIds": [
+      9713,
+      9715
+    ],
+    "resultId": 9718
+  },
+  {
+    "id": "aa579a6b-a711-4d67-9a47-6f3fb5d6a748",
+    "materialIds": [
+      9782,
+      9714
+    ],
+    "resultId": 9783
+  },
+  {
+    "id": "1f58501b-accf-408b-8ff6-b88c1a2a5716",
+    "materialIds": [
+      9782,
+      9715
+    ],
+    "resultId": 9784
+  },
+  {
+    "id": "35da1447-178a-4c49-98a3-2525ffbd0d1a",
+    "materialIds": [
+      9721,
+      9724
+    ],
+    "resultId": 9728
+  },
+  {
+    "id": "72088b3e-9cee-433c-94ce-c5d43325ace9",
+    "materialIds": [
+      9721,
+      9725
+    ],
+    "resultId": 9729
+  },
+  {
+    "id": "15d8c01d-1b82-4cbe-b100-f44062aace11",
+    "materialIds": [
+      9722,
+      9724
+    ],
+    "resultId": 9730
+  },
+  {
+    "id": "6eed0a4a-5249-4627-bd4a-ba623ee3ce4d",
+    "materialIds": [
+      9722,
+      9725
+    ],
+    "resultId": 9731
+  },
+  {
+    "id": "fddf54b2-3513-4068-85be-8bb188bcef05",
+    "materialIds": [
+      9732,
+      9733
+    ],
+    "resultId": 9740
+  },
+  {
+    "id": "f49bc17b-bef7-4136-b708-d39fa75b5cdf",
+    "materialIds": [
+      9734,
+      9735
+    ],
+    "resultId": 9741
+  },
+  {
+    "id": "6151beb9-ffc1-47b8-9daf-09e3c8f09f7c",
+    "materialIds": [
+      9736,
+      9737
+    ],
+    "resultId": 9742
+  },
+  {
+    "id": "761f2ccd-e66d-435a-80fc-f8530b986c4d",
+    "materialIds": [
+      9738,
+      9739
+    ],
+    "resultId": 9743
+  },
+  {
+    "id": "08e5f36e-82d1-4b74-8268-56a1846c6b97",
+    "materialIds": [
+      9840,
+      9841,
+      9842
+    ],
+    "resultId": 9843
+  },
+  {
+    "id": "74a3b469-f75f-4a85-b2dc-e58c3702ce7a",
+    "materialIds": [
+      9759,
+      9760
+    ],
+    "resultId": 9761
+  },
+  {
+    "id": "1faeb98d-9a09-4899-8f1f-481d5d8c7e5d",
+    "materialIds": [
+      9762,
+      9763
+    ],
+    "resultId": 9764
+  },
+  {
+    "id": "892cc36c-a068-49e0-8f71-5d134511b2dd",
+    "materialIds": [
+      9709,
+      9710,
+      9711
+    ],
+    "resultId": 9765
+  },
+  {
+    "id": "3bf0b6ab-07d9-4d4f-93ea-e711d99fc036",
+    "materialIds": [
+      9778,
+      9779
+    ],
+    "resultId": 9780
+  },
+  {
+    "id": "922eaac8-c697-492e-9686-f5836251f026",
+    "materialIds": [
+      9423,
+      9424
+    ],
+    "resultId": 9248
+  },
+  {
+    "id": "6fdb1d0b-8fbb-4188-a9cb-f8e38a93f856",
+    "materialIds": [
+      9786,
+      9787
+    ],
+    "resultId": 9792
+  },
+  {
+    "id": "2076c0a0-4ca3-4979-b15a-7cf8bf5a2aa8",
+    "materialIds": [
+      9788,
+      9789
+    ],
+    "resultId": 9793
+  },
+  {
+    "id": "c865ce8e-925d-4008-94b1-065c73406628",
+    "materialIds": [
+      9790,
+      9791
+    ],
+    "resultId": 9795
+  },
+  {
+    "id": "4fda9107-9dab-47c2-9207-5a04018733f1",
+    "materialIds": [
+      9819,
+      9820
+    ],
+    "resultId": 9825
+  },
+  {
+    "id": "ff399933-d31b-443c-8c94-7a171e31a763",
+    "materialIds": [
+      9821,
+      9826
+    ],
+    "resultId": 9822
+  },
+  {
+    "id": "220993a6-19d1-455e-a807-a4b29fbd312a",
+    "materialIds": [
+      9233,
+      9234
+    ],
+    "resultId": 9235
+  },
+  {
+    "id": "8d99e254-417a-4abc-bd6a-c106dc92cd2d",
+    "materialIds": [
+      9236,
+      9237
+    ],
+    "resultId": 9239
+  },
+  {
+    "id": "cd9be1da-a37b-46df-b018-8f405c45c939",
+    "materialIds": [
+      9223,
+      9225
+    ],
+    "resultId": 9224
+  },
+  {
+    "id": "1463f517-aba3-4cb4-9961-6b07dd41a795",
+    "materialIds": [
+      9260,
+      9261
+    ],
+    "resultId": 9263
+  },
+  {
+    "id": "bc9f33f0-c822-4d6e-b859-3927f693e5f2",
+    "materialIds": [
+      9262,
+      9266
+    ],
+    "resultId": 9264
+  },
+  {
+    "id": "bfabb4d7-ded7-4a5c-9328-0610a1daade5",
+    "materialIds": [
+      9265
+    ],
+    "resultId": 9268
+  }
+]
