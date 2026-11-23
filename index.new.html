@@ -50,6 +50,7 @@ body{margin:0}
 .selected-item__remove{z-index:3;opacity:0;transition:opacity .15s;pointer-events:none}
 .selected-item:hover .selected-item__remove{opacity:1;pointer-events:auto}
 .selected-item .gift-card{pointer-events:auto}
+.filter-btn__icon{width:14px;height:14px;vertical-align:-2px;margin-right:4px;border-radius:50%}
 </style>
 </head>
 <body>
@@ -243,7 +244,7 @@ function renderGifts(){
   const cats = [...ORDER.filter(c=>c==='全部'||present.includes(c)), ...present.filter(c=>!ORDER.includes(c))];
   $('app').innerHTML = `
   <div class="compendium">
-    <div class="filter-bar">${cats.map(c=>`<button class="filter-btn ${c===S.cat?'active':''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('')}</div>
+    <div class="filter-bar">${cats.map(c=>`<button class="filter-btn ${c===S.cat?'active':''}" data-cat="${esc(c)}">${catImg(c)?`<img class="filter-btn__icon" src="${catImg(c)}" onerror="this.style.display='none'">`:''}${esc(c)}</button>`).join('')}</div>
     <input class="search-input" id="q" type="search" placeholder="搜索饰品名…" value="${esc(S.q)}">
     <div class="gift-sections" id="gs"></div>
   </div>`;
