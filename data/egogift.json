@@ -3975,21 +3975,6 @@
 "rarity": "IV"
 },
 {
-"id": 9252,
-"name": "钉与锤",
-"category": "流血",
-"descriptions": {
-"base": "属于N公司[Assemble]徒的友方单位基础威力+3\n\n属于N公司[Assemble]徒的人格获得[AssemblePersonality]时，使全体属于N公司[Assemble]徒的人格获得相应层数的[AssemblePersonality](每回合最多1次；包括自身)\n- 激活色欲完全共鸣时，令获得的[AssemblePersonality]层数变为3倍\n\n关卡开始时，对全体敌方单位施加2层[NailPersonality]\n\n属于N公司[Assemble]徒的人格的基础技能与带有[NailPersonality]的目标进行拼点时，使该目标增加3级[Laceration]强度(每个技能最多1次)\n\n属于N公司[Assemble]徒的人格的基础技能对带有[NailPersonality]的目标造成的伤害+100%",
-"plus": "",
-"double_plus": ""
-},
-"simple_descriptions": {
-"base": "属于N公司[Assemble]徒的友方单位基础威力+3\n\n属于N公司[Assemble]徒的人格获得[AssemblePersonality]时，使全体属于N公司[Assemble]徒的人格获得相应层数的[AssemblePersonality](每回合最多1次；包括自身)\n- 激活色欲完全共鸣时，令获得的[AssemblePersonality]层数变为3倍\n\n关卡开始时，对全体敌方单位施加2层[NailPersonality]\n\n属于N公司[Assemble]徒的人格的基础技能与带有[NailPersonality]的目标进行拼点时，使该目标增加3级[Laceration]强度(每个技能最多1次)\n\n属于N公司[Assemble]徒的人格的基础技能对带有[NailPersonality]的目标造成的伤害+100%",
-"plus": "",
-"double_plus": ""
-}
-},
-{
 "id": 9256,
 "name": "不完善的预知眼",
 "category": "震颤",
@@ -4200,81 +4185,6 @@
 "double_plus": ""
 },
 "rarity": "II"
-},
-{
-"id": 9269,
-"name": "登场专用音响",
-"category": "打击",
-"descriptions": {
-"base": "打击技能命中时，使该友方单位恢复造成伤害量5%的体力\n\n反击技能命中时，使自身恢复5点理智值(每回合每名人格最多2次)",
-"plus": "",
-"double_plus": ""
-},
-"simple_descriptions": {
-"base": "打击技能命中时，使该友方单位恢复造成伤害量5%的体力\n\n反击技能命中时，使自身恢复5点理智值(每回合每名人格最多2次)",
-"plus": "",
-"double_plus": ""
-}
-},
-{
-"id": 9270,
-"name": "幼·兄登场",
-"category": "打击",
-"descriptions": {
-"base": "友方单位受到攻击时，使该友方单位获得3层[AttackUp]并对攻击者施加4层[Laceration](每个技能最多1次)\n\n属于中指的人格使用的基础技能基础威力+1，造成的伤害+(30/硬币数)%\n- 回合开始时，若属于中指的人格不低于3名，则改为基础威力+1，造成的伤害+(60/硬币数)%\n- 若不低于5名，则改为基础威力+2，造成的伤害+(90/硬币数)%\n\n打击技能命中时，使该友方单位恢复造成伤害量10%的体力\n\n反击技能命中时，使自身恢复5点理智值(每回合每名人格最多2次)\n\n回合结束时，若战斗开始时装备了反击技能的友方单位在本回合未使用反击技能，则下回合使该友方单位获得1层[PlusCoinValueUp]与1层[MinusCoinValueDown]",
-"plus": "",
-"double_plus": ""
-},
-"simple_descriptions": {
-"base": "友方单位受到攻击时，使该友方单位获得3层[AttackUp]并对攻击者施加4层[Laceration](每个技能最多1次)\n\n属于中指的人格使用的基础技能基础威力+1，造成的伤害+(30/硬币数)%\n- 回合开始时，若属于中指的人格不低于3名，则改为基础威力+1，造成的伤害+(60/硬币数)%\n- 若不低于5名，则改为基础威力+2，造成的伤害+(90/硬币数)%\n\n打击技能命中时，使该友方单位恢复造成伤害量10%的体力\n\n反击技能命中时，使自身恢复5点理智值(每回合每名人格最多2次)\n\n回合结束时，若战斗开始时装备了反击技能的友方单位在本回合未使用反击技能，则下回合使该友方单位获得1层[PlusCoinValueUp]与1层[MinusCoinValueDown]",
-"plus": "",
-"double_plus": ""
-}
-},
-{
-"id": 9271,
-"name": "黑兽丸 - 卯",
-"category": "破裂",
-"descriptions": {
-"base": "属于黑兽 - 卯的人格首次登场时，1回合内使其最小速度值固定为10(若最小速度值不低于10，则不会触发该效果)\n\n自身带有[LegStrength]时，使自身基础技能的拼点威力+1，造成的伤害+10%",
-"plus": "",
-"double_plus": ""
-},
-"simple_descriptions": {
-"base": "属于黑兽 - 卯的人格首次登场时，1回合内使其最小速度值固定为10(若最小速度值不低于10，则不会触发该效果)\n\n自身带有[LegStrength]时，使自身基础技能的拼点威力+1，造成的伤害+10%",
-"plus": "",
-"double_plus": ""
-}
-},
-{
-"id": 9272,
-"name": "暗中行动",
-"category": "破裂",
-"descriptions": {
-"base": "属于黑兽 - 卯的人格首次登场时，3回合内使其最小速度值固定为10(若最小速度值不低于10，则不会触发该效果)\n\n自身每带有1层[LegStrength]，使自身基础技能的拼点威力+1，造成的伤害+10%\n\n施加[BurstAgility]时，额外对未带有[BurstAgility]的2名敌方单位施加(每回合最多1次，若是集中遭遇战，则改为以部位判定)\n\n若自身的速度值高于目标，则令自身通过技能增加[Burst]强度或施加[Burst]层数时额外增加(速度值之差/3)级[Burst]强度或额外施加(速度值之差/3)层[Burst](最多3点)\n\n回合结束时，使属于黑兽 - 卯的友方单位在下回合获得2层[Agility]\n若自身的速度值高于目标或进行单方面攻击，则(速度值之差/3)每有1点，使自身造成的斩击伤害+10%(最多+30%)\n若自身的速度值高于目标，则(速度值之差/3)每有1点，使自身受到的伤害-10%(最多-30%)",
-"plus": "",
-"double_plus": ""
-},
-"simple_descriptions": {
-"base": "属于黑兽 - 卯的人格首次登场时，3回合内使其最小速度值固定为10(若最小速度值不低于10，则不会触发该效果)\n\n自身每带有1层[LegStrength]，使自身基础技能的拼点威力+1，造成的伤害+10%\n\n施加[BurstAgility]时，额外对未带有[BurstAgility]的2名敌方单位施加(每回合最多1次，若是集中遭遇战，则改为以部位判定)\n\n若自身的速度值高于目标，则令自身通过技能增加[Burst]强度或施加[Burst]层数时额外增加(速度值之差/3)级[Burst]强度或额外施加(速度值之差/3)层[Burst](最多3点)\n\n回合结束时，使属于黑兽 - 卯的友方单位在下回合获得2层[Agility]\n若自身的速度值高于目标或进行单方面攻击，则(速度值之差/3)每有1点，使自身造成的斩击伤害+10%(最多+30%)\n若自身的速度值高于目标，则(速度值之差/3)每有1点，使自身受到的伤害-10%(最多-30%)",
-"plus": "",
-"double_plus": ""
-}
-},
-{
-"id": 9283,
-"name": "奉纳的雪茄",
-"category": "震颤",
-"descriptions": {
-"base": "回合开始时，若属于拇指的人格不低于3名，则触发该效果(以参战人员为基准)\n回合开始时，使属于拇指的人格获得1层[PlusCoinValueUp]与2层[AttackDmgUp]\n每有1名属于拇指的人格，使全体属于拇指的人格获得1层[AttackUp](最多4层)\n目标每带有1级[VibrationIgnition]强度，使自身造成的伤害+1%(最多+20%)\n- 消耗[Bullet]的技能造成的伤害额外+1%(最多+20%)\n- 属于拇指的人格造成的伤害额外+1%(最多+20%)\n\n自身的技能触发[VibrationExplosion]时，下回合使自身获得2层[AttackUp](每回合最多3次)\n\n蜘蛛巢 拇指 父辈 罗佳3技能攻击后，使蜘蛛巢 拇指 子辈 希斯克利夫获得1层[EvolvingManual]",
-"plus": "",
-"double_plus": ""
-},
-"simple_descriptions": {
-"base": "回合开始时，若属于拇指的人格不低于3名，则触发该效果(以参战人员为基准)\n回合开始时，使属于拇指的人格获得1层[PlusCoinValueUp]与2层[AttackDmgUp]\n每有1名属于拇指的人格，使全体属于拇指的人格获得1层[AttackUp](最多4层)\n目标每带有1级[VibrationIgnition]强度，使自身造成的伤害+1%(最多+20%)\n- 消耗[Bullet]的技能造成的伤害额外+1%(最多+20%)\n- 属于拇指的人格造成的伤害额外+1%(最多+20%)\n\n自身的技能触发[VibrationExplosion]时，下回合使自身获得2层[AttackUp](每回合最多3次)\n\n蜘蛛巢 拇指 父辈 罗佳3技能攻击后，使蜘蛛巢 拇指 子辈 希斯克利夫获得1层[EvolvingManual]",
-"plus": "",
-"double_plus": ""
-}
 },
 {
 "id": 9284,
