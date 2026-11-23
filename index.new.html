@@ -215,7 +215,7 @@ function render(){
 /* ---------- 图鉴 ---------- */
 function giftListHtml(){
   const q = S.q.trim().toLowerCase();
-  const list = S.gifts.filter(g => (S.cat==='全部'||catOf(g)===S.cat) && (!q || (g.name||'').toLowerCase().includes(q)));
+  const list = S.gifts.filter(g => q ? (g.name||'').toLowerCase().includes(q) : (S.cat==='全部'||catOf(g)===S.cat));
   const groups = {};
   for(const g of list){ const r=rarOf(g); (groups[r] ||= []).push(g); }
   const order = [...RARITIES.filter(r=>groups[r]), ...Object.keys(groups).filter(r=>!RARITIES.includes(r))];
