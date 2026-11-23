@@ -151,7 +151,14 @@ async function boot(){
     (p || []).forEach((x, i) => { ord.set(String(x.id), i); ordName.set(x.name, i); });
     const rank = x => ord.has(String(x.id)) ? ord.get(String(x.id)) : (ordName.has(x.name) ? ordName.get(x.name) : 9999);
     all.sort((a,b) => rank(a) - rank(b));
-    return all.map((x,i)=>({ ...x, id: (x.id === undefined || x.id === null) ? ('preset_'+i) : x.id }));
+    /* preset 里改过的名字（如汉化更新）盖过她 localStorage 里的旧名，但不动她的数据 */
+    const presetById = new Map((p || []).map(x => [String(x.id), x]));
+    return all.map((x,i) => {
+      const pp = presetById.get(String(x.id));
+      const o = (x.id === undefined || x.id === null) ? { ...x, id: 'preset_'+i } : { ...x };
+      if (pp && pp.name) o.name = pp.name;
+      return o;
+    });
   })();
   S.recipes = (()=>{ try{ const v=JSON.parse(localStorage.getItem('egogift_recipes')||'null'); return Array.isArray(v)&&v.length?v:r||[]; }catch(e){ return r||[]; } })();
   /* 卡包饰品：数据里写死的 gifts 合并进 packMap（localStorage 优先） */
