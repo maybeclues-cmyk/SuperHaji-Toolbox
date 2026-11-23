@@ -1,350 +1,1291 @@
 [
-  {
-    "name": "无归属者",
-    "imageKey": "HeadlessIchthys_Extreme"
-  },
-  {
-    "name": "自动工厂",
-    "imageKey": "Plant_Extreme"
-  },
-  {
-    "name": "无慈悲者",
-    "imageKey": "HeavyHeld_Extreme"
-  },
-  {
-    "name": "信仰与侵蚀",
-    "imageKey": "Distortion_Extreme"
-  },
-  {
-    "name": "无作为者",
-    "imageKey": "CorpN_Extreme"
-  },
-  {
-    "name": "落花",
-    "imageKey": "LeiHeng_Extreme"
-  },
-  {
-    "name": "无改变者",
-    "imageKey": "Ricardo_Extreme"
-  },
-  {
-    "name": "伏行深渊",
-    "imageKey": "BloodFiend_Extreme"
-  },
-  {
-    "name": "定义为恶",
-    "imageKey": "DealCut_Extreme"
-  },
-  {
-    "name": "宅邸的副产物",
-    "imageKey": "Fairy_Extreme"
-  },
-  {
-    "name": "某个世界",
-    "imageKey": "AF2_Extreme"
-  },
-  {
-    "name": "心意相悖",
-    "imageKey": "KCorp_Extreme"
-  },
-  {
-    "name": "重新开园的拉・曼却领",
-    "imageKey": "LamanchaOwner_Extreme"
-  },
-  {
-    "name": "无尽的游行",
-    "imageKey": "LamanchaParade_Extreme"
-  },
-  {
-    "name": "梦之终焉",
-    "imageKey": "Walpu2_Extreme"
-  },
-  {
-    "name": "四大家族与欲念",
-    "imageKey": "Walpu3_Extreme"
-  },
-  {
-    "name": "不思观望",
-    "imageKey": null
-  },
-  {
-    "name": "魅惑、彷徨、猜疑",
-    "imageKey": null
-  },
-  {
-    "name": "教材",
-    "imageKey": null
-  },
-  {
-    "name": "刀与作品",
-    "imageKey": null
-  },
-  {
-    "name": "无割舍者",
-    "imageKey": null
-  },
-  {
-    "name": "地狱鸡",
-    "imageKey": "Canto_HellsChicken"
-  },
-  {
-    "name": "去・海・边",
-    "imageKey": "Canto_SEA"
-  },
-  {
-    "name": "20 区的奇迹",
-    "imageKey": "Canto_Miracle20"
-  },
-  {
-    "name": "肉斩骨断",
-    "imageKey": "Canto_YFCB"
-  },
-  {
-    "name": "时间杀人时间",
-    "imageKey": "Canto_TimeKillingTime"
-  },
-  {
-    "name": "WARP 快车谋杀案",
-    "imageKey": "Canto_MOWE"
-  },
-  {
-    "name": "LCB 定期体检",
-    "imageKey": "Canto_LCBCheckUp"
-  },
-  {
-    "name": "深夜清扫",
-    "imageKey": "Canto_NightSweep"
-  },
-  {
-    "name": "切磋琢春",
-    "imageKey": "Canto_XiChunMaker"
-  },
-  {
-    "name": "绞丝结线",
-    "imageKey": "Canto_TwiningThread"
-  },
-  {
-    "name": "紫罗兰的正午",
-    "imageKey": "Walpu4_NoonOfViolet"
-  },
-  {
-    "name": "由子弹画下的句点",
-    "imageKey": "Canto_Pilgrimage"
-  },
-  {
-    "name": "憎恶与绝望",
-    "imageKey": null
-  },
-  {
-    "name": "琥珀色的黄昏",
-    "imageKey": "Walpu8_Amber"
-  },
-  {
-    "name": "1 号线",
-    "imageKey": "RailwayDungeon_1"
-  },
-  {
-    "name": "2 号线",
-    "imageKey": "RailwayDungeon_2"
-  },
-  {
-    "name": "3 号线",
-    "imageKey": "RailwayDungeon_3"
-  },
-  {
-    "name": "4 号线",
-    "imageKey": "RailwayDungeon_4"
-  },
-  {
-    "name": "5 号线",
-    "imageKey": "RailwayDungeon_5"
-  },
-  {
-    "name": "解放的暴怒",
-    "imageKey": null
-  },
-  {
-    "name": "束缚的色欲",
-    "imageKey": null
-  },
-  {
-    "name": "停滞的怠惰",
-    "imageKey": null
-  },
-  {
-    "name": "漫溢的暴食",
-    "imageKey": null
-  },
-  {
-    "name": "沉溺的忧郁",
-    "imageKey": null
-  },
-  {
-    "name": "虚张声势的傲慢",
-    "imageKey": null
-  },
-  {
-    "name": "自以为是的傲慢",
-    "imageKey": null
-  },
-  {
-    "name": "凄惨的嫉妒",
-    "imageKey": null
-  },
-  {
-    "name": "盛火时节",
-    "imageKey": null
-  },
-  {
-    "name": "沉沦泛滥",
-    "imageKey": null
-  },
-  {
-    "name": "凤・皇",
-    "imageKey": null
-  },
-  {
-    "name": "N公司 新九人会",
-    "imageKey": null
-  },
-  {
-    "name": "绽放的绿林",
-    "imageKey": null
-  },
-  {
-    "name": "3号线-终点站",
-    "imageKey": null
-  },
-  {
-    "name": "长线战斗",
-    "imageKey": null
-  },
-  {
-    "name": "永劫的枷锁",
-    "imageKey": null
-  },
-  {
-    "name": "去・海・边・激・蟹",
-    "imageKey": null
-  },
-  {
-    "name": "无尽的死路",
-    "imageKey": null
-  },
-  {
-    "name": "无法成为血魔的人们",
-    "imageKey": null
-  },
-  {
-    "name": "美妙的嗓音",
-    "imageKey": null
-  },
-  {
-    "name": "绿色的黎明",
-    "imageKey": null
-  },
-  {
-    "name": "进入某座图书馆的某本藏书",
-    "imageKey": null
-  },
-  {
-    "name": "紫色编码",
-    "imageKey": null
-  },
-  {
-    "name": "身负重担者们",
-    "imageKey": null
-  },
-  {
-    "name": "长线战斗1号线：疯狂",
-    "imageKey": null
-  },
-  {
-    "name": "充满祝福的嘉年华",
-    "imageKey": null
-  },
-  {
-    "name": "精灵童话",
-    "imageKey": null
-  },
-  {
-    "name": "血腥味",
-    "imageKey": null
-  },
-  {
-    "name": "即刻处刑时间",
-    "imageKey": null
-  },
-  {
-    "name": "拉・曼却领之主",
-    "imageKey": null
-  },
-  {
-    "name": "插翅虎",
-    "imageKey": null
-  },
-  {
-    "name": "仲春夜之梦 2",
-    "imageKey": null
-  },
-  {
-    "id": "pack_canto_x",
-    "name": "开店抢购",
-    "imageKey": "Canto_X",
-    "floors": [],
-    "gifts": [
-      9290,
-      9291
-    ]
-  },
-  {
-    "id": "pack_canto_x_mid",
-    "name": "纷繁的色彩",
-    "imageKey": "Canto_X_mid",
-    "floors": [],
-    "gifts": [
-      9288,
-      9289
-    ]
-  },
-  {
-    "id": "pack_canto_x_mid2",
-    "name": "保存的信念",
-    "imageKey": "Canto_X_mid2",
-    "floors": [],
-    "gifts": [
-      9286,
-      9287
-    ]
-  },
-  {
-    "id": "pack_walpu10_dawn",
-    "name": "黎明后贯穿而来之楔",
-    "imageKey": "Walpu10_Dawn",
-    "floors": [
-      11,
-      12,
-      13,
-      14,
-      15
-    ],
-    "gifts": [
-      9292,
-      9293,
-      9297,
-      9298,
-      9299,
-      9300
-    ]
-  },
-  {
-    "id": "pack_canto_x_hard",
-    "name": "暴食重临",
-    "imageKey": "Canto_X_hard",
-    "floors": [],
-    "gifts": [
-      9284,
-      9285
-    ]
-  }
+ {
+  "id": "7d2c4a47-5282-40b2-b28d-4e7700c72e0b",
+  "name": "无归属者",
+  "imageKey": "user_7d2c4a47.png",
+  "floors": [
+   1
+  ],
+  "gifts": []
+ },
+ {
+  "id": "a4fce550-44cb-4e00-8ae7-d328a67bfbb0",
+  "name": "自动工厂",
+  "imageKey": "Canto_II_mid.png",
+  "floors": [
+   1,
+   2
+  ],
+  "gifts": [
+   9410
+  ]
+ },
+ {
+  "id": "bffdf1e7-2a52-4d27-8e04-d1dbe69fa363",
+  "name": "无慈悲者",
+  "imageKey": "Canto_II_hard.png",
+  "floors": [
+   1,
+   2
+  ],
+  "gifts": [
+   9410
+  ]
+ },
+ {
+  "id": "ed70fa7c-5215-41ba-bf6b-10be31850ee6",
+  "name": "信仰与侵蚀",
+  "imageKey": "Canto_III_mid.png",
+  "floors": [
+   1
+  ],
+  "gifts": [
+   9416
+  ]
+ },
+ {
+  "id": "1e885087-8f7d-436c-aff9-79fb131e19da",
+  "name": "无作为者",
+  "imageKey": "Canto_III_hard.png",
+  "floors": [
+   2,
+   3
+  ],
+  "gifts": [
+   9416
+  ]
+ },
+ {
+  "id": "39a83a05-bc66-45bd-8723-491fbb4b726b",
+  "name": "落花",
+  "imageKey": "Canto_IV_mid1.png",
+  "floors": [
+   2,
+   3
+  ],
+  "gifts": [
+   9248
+  ]
+ },
+ {
+  "id": "bbeaeda7-92e1-464d-950a-06755e0fe583",
+  "name": "无改变者",
+  "imageKey": "Canto_IV_hard.png",
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9248,
+   9424
+  ]
+ },
+ {
+  "id": "3e7702d1-2217-44e0-a7c0-dc3b69439e6f",
+  "name": "伏行深渊",
+  "imageKey": "Canto_V_mid.png",
+  "floors": [
+   3,
+   4
+  ],
+  "gifts": [
+   9212
+  ]
+ },
+ {
+  "id": "db805120-2e10-46b1-af63-0c7533603f42",
+  "name": "定义为恶",
+  "imageKey": "Canto_V_hard.png",
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9430
+  ]
+ },
+ {
+  "id": "40eeb5dc-99c8-4947-ae39-0e297e9bed92",
+  "name": "宅邸的副产物",
+  "imageKey": "Canto_VI.png",
+  "floors": [
+   1
+  ],
+  "gifts": [
+   9249
+  ]
+ },
+ {
+  "id": "386f86de-79a6-49c9-8c06-5402839b8d2c",
+  "name": "某个世界",
+  "imageKey": "Canto_VI_mid.png",
+  "floors": [
+   3,
+   4
+  ],
+  "gifts": [
+   9434
+  ]
+ },
+ {
+  "id": "2535a12a-a5a4-4ed4-a676-8754eda281c7",
+  "name": "心意相悖",
+  "imageKey": "Canto_VI_hard.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": []
+ },
+ {
+  "id": "015a043e-1100-4389-9be1-0a5de1cf8630",
+  "name": "重新开园的拉・曼却领",
+  "imageKey": "user_015a043e.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9213,
+   9437,
+   9438,
+   9439,
+   9440,
+   9795
+  ]
+ },
+ {
+  "id": "8af70696-d1db-4b39-9e87-229cd0dadb3f",
+  "name": "无尽的游行",
+  "imageKey": "Canto_VII_mid.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9213,
+   9437,
+   9438,
+   9439,
+   9440,
+   9795
+  ]
+ },
+ {
+  "id": "b0c2f8e1-1400-49e2-a71b-9bc175d5713a",
+  "name": "梦之终焉",
+  "imageKey": "Canto_VII_hard.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9213,
+   9437,
+   9438,
+   9439,
+   9440,
+   9795
+  ]
+ },
+ {
+  "id": "983be6c0-1276-4412-855b-23bc65a3f93d",
+  "name": "四大家族与欲念",
+  "imageKey": "user_983be6c0.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9801,
+   9802
+  ]
+ },
+ {
+  "id": "0c23d076-c66a-4fd4-92a3-f4278aa3de99",
+  "name": "不思观望",
+  "imageKey": "user_0c23d076.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9803,
+   9804
+  ]
+ },
+ {
+  "id": "f4683d1b-853d-4acb-bef6-e53da04b9eb6",
+  "name": "魅惑、彷徨、猜疑",
+  "imageKey": "Canto_IX.png",
+  "floors": [
+   3,
+   4
+  ],
+  "gifts": [
+   9220,
+   9221,
+   81030
+  ]
+ },
+ {
+  "id": "2ecaf6b6-8757-4773-90e7-181e5c375f6e",
+  "name": "教材",
+  "imageKey": "user_2ecaf6b6.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9214,
+   9215,
+   9216,
+   81030
+  ]
+ },
+ {
+  "id": "fec647c1-05f5-4128-aa9f-16ea66b3b0b3",
+  "name": "刀与作品",
+  "imageKey": "user_fec647c1.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9222,
+   9223,
+   9224,
+   9225,
+   9226,
+   81030
+  ]
+ },
+ {
+  "id": "546e2539-da92-44a0-a26a-450ee1790fdc",
+  "name": "无割舍者",
+  "imageKey": "Canto_IX_hard.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9217,
+   9218,
+   9219,
+   81030
+  ]
+ },
+ {
+  "id": "57345b1b-31d5-47aa-8b68-fb63b45a7a6a",
+  "name": "地狱鸡",
+  "imageKey": "Canto_HellsChicken.png",
+  "floors": [
+   2
+  ],
+  "gifts": [
+   9702,
+   9703,
+   9704,
+   9705
+  ]
+ },
+ {
+  "id": "8c93e96a-399b-4a00-9513-82598f13e059",
+  "name": "去・海・边",
+  "imageKey": "Canto_SEA",
+  "floors": [
+   2,
+   3
+  ],
+  "gifts": [
+   9249,
+   9706,
+   9707,
+   9708
+  ]
+ },
+ {
+  "id": "e8d6a32a-eafa-4c3f-881e-6c6ca638a051",
+  "name": "20 区的奇迹",
+  "imageKey": "Canto_Miracle20",
+  "floors": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9709,
+   9710,
+   9711,
+   9759,
+   9760,
+   9761,
+   9762,
+   9763,
+   9764,
+   9765
+  ]
+ },
+ {
+  "id": "80dee2e5-f9c9-4efd-b787-9b3c7a5ab9bf",
+  "name": "肉斩骨断",
+  "imageKey": "Canto_YFCB.png",
+  "floors": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9712,
+   9713,
+   9714,
+   9715,
+   9716,
+   9717,
+   9718,
+   9719,
+   9720,
+   9781,
+   9782,
+   9783,
+   9784,
+   9785
+  ]
+ },
+ {
+  "id": "0a18fc3f-862b-48d5-a5e8-edc2a724db74",
+  "name": "时间杀人时间",
+  "imageKey": "Canto_TimeKillingTime",
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9721,
+   9722,
+   9723,
+   9724,
+   9725,
+   9726,
+   9727,
+   9728,
+   9729,
+   9730,
+   9731,
+   9812,
+   9813,
+   9814,
+   9816
+  ]
+ },
+ {
+  "id": "767a17ab-d3b0-4c20-941b-dec996b03406",
+  "name": "WARP 快车谋杀案",
+  "imageKey": "Canto_MOWE",
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9732,
+   9733,
+   9734,
+   9735,
+   9736,
+   9737,
+   9738,
+   9739,
+   9740,
+   9741,
+   9742,
+   9743,
+   9818,
+   9840,
+   9841,
+   9842,
+   9843
+  ]
+ },
+ {
+  "id": "1f9e17d8-f47c-4817-9825-ff899eac14ee",
+  "name": "LCB 定期体检",
+  "imageKey": "Canto_LCBCheckUp",
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9243,
+   9244,
+   9245,
+   9246,
+   9772,
+   9773,
+   9774,
+   9775,
+   9776,
+   9777,
+   9778,
+   9779,
+   9780
+  ]
+ },
+ {
+  "id": "3e74016d-b4ea-4f11-b648-7cb9a88d64fb",
+  "name": "深夜清扫",
+  "imageKey": "Canto_NightSweep.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9786,
+   9787,
+   9788,
+   9789,
+   9790,
+   9791,
+   9792,
+   9793,
+   9794,
+   9815,
+   9844,
+   9845,
+   9846
+  ]
+ },
+ {
+  "id": "2f32d905-66ea-458e-902b-9cad9352497d",
+  "name": "切磋琢春",
+  "imageKey": "Canto_XiChunMaker",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9819,
+   9820,
+   9821,
+   9822,
+   9823,
+   9824,
+   9825,
+   9826
+  ]
+ },
+ {
+  "id": "a7fb4d20-e99a-40e3-8dfa-34e2b54cb0da",
+  "name": "绞丝结线",
+  "imageKey": "Canto_TwiningThread",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9260,
+   9261,
+   9262,
+   9263,
+   9264,
+   9265,
+   9266,
+   9268
+  ]
+ },
+ {
+  "id": "7eb53650-2a02-44c8-a671-3eb0063d87c6",
+  "name": "经验记忆",
+  "imageKey": "user_7eb53650.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   80001,
+   81861,
+   81958,
+   83340,
+   83851,
+   88643,
+   89877
+  ]
+ },
+ {
+  "id": "57edf703-8efd-4b24-87f0-d3483c8aad0d",
+  "name": "紫罗兰的正午",
+  "imageKey": "Walpu4_NoonOfViolet",
+  "floors": [
+   3,
+   4
+  ],
+  "gifts": [
+   9744,
+   9745,
+   9746,
+   9747,
+   9748,
+   9749,
+   9750
+  ]
+ },
+ {
+  "id": "3ecd5731-8103-4255-a086-dd34e73e985c",
+  "name": "由子弹画下的句点",
+  "imageKey": "user_3ecd5731.png",
+  "floors": [
+   3,
+   4
+  ],
+  "gifts": [
+   9766,
+   9767,
+   9768,
+   9769,
+   9770,
+   9771
+  ]
+ },
+ {
+  "id": "f6a25ff7-fd57-4cf9-8ac1-a4093dcb8c83",
+  "name": "憎恶与绝望",
+  "imageKey": "Walpu6_MagicalGirl.png",
+  "floors": [
+   3,
+   4
+  ],
+  "gifts": [
+   9805,
+   9806,
+   9807,
+   9808,
+   9809,
+   9810,
+   9811
+  ]
+ },
+ {
+  "id": "0e327241-a4f2-42f0-a74d-783fe4e6a8e7",
+  "name": "琥珀色的黄昏",
+  "imageKey": "Walpu8_Amber.png",
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9233,
+   9234,
+   9235,
+   9236,
+   9237,
+   9238,
+   9239,
+   9240,
+   9241
+  ]
+ },
+ {
+  "id": "0a71c5a4-028b-4d37-8ed4-4689d4343e3d",
+  "name": "1 号线",
+  "imageKey": "RailwayDungeon_1",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9751,
+   9752
+  ]
+ },
+ {
+  "id": "cccee90e-8053-4ec1-88e8-6c9ba4b3ff14",
+  "name": "2 号线",
+  "imageKey": "RailwayDungeon_2",
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9753,
+   9754
+  ]
+ },
+ {
+  "id": "00b17c74-db87-4f67-ad6d-c9fa568aa548",
+  "name": "3 号线",
+  "imageKey": "RailwayDungeon_3",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9755,
+   9756
+  ]
+ },
+ {
+  "id": "aad3b29c-e331-43fa-8de3-589bc28a05d2",
+  "name": "4 号线",
+  "imageKey": "RailwayDungeon_4",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9757,
+   9758
+  ]
+ },
+ {
+  "id": "378a03b2-75e2-4a6a-a960-af48d9862d75",
+  "name": "5 号线",
+  "imageKey": "RailwayDungeon_5",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9796,
+   9797,
+   9798
+  ]
+ },
+ {
+  "id": "4f7b6434-3697-4f88-9d1c-ef75794051b8",
+  "name": "解放的暴怒",
+  "imageKey": "user_4f7b6434.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9208,
+   9267,
+   86992
+  ]
+ },
+ {
+  "id": "612459cd-560d-4599-b2be-4bc06d3eead5",
+  "name": "束缚的色欲",
+  "imageKey": "user_612459cd.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9208
+  ]
+ },
+ {
+  "id": "c4b87d2e-0782-44a5-96dd-3bc666e77ca0",
+  "name": "停滞的怠惰",
+  "imageKey": "user_c4b87d2e.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9208
+  ]
+ },
+ {
+  "id": "2e18b5dc-f066-4571-b3d6-6e1335170cca",
+  "name": "漫溢的暴食",
+  "imageKey": "user_2e18b5dc.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9208
+  ]
+ },
+ {
+  "id": "ca3e1d5b-2d1d-4747-825d-fc7e63b7cd38",
+  "name": "沉溺的忧郁",
+  "imageKey": "user_ca3e1d5b.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9208,
+   9211
+  ]
+ },
+ {
+  "id": "660664c0-b455-4adc-93c4-ac260ec49be8",
+  "name": "虚张声势的傲慢",
+  "imageKey": "user_660664c0.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9209
+  ]
+ },
+ {
+  "id": "5bf73d84-cc74-4977-b799-eb455a002c64",
+  "name": "自以为是的傲慢",
+  "imageKey": "user_5bf73d84.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9208
+  ]
+ },
+ {
+  "id": "50c806b9-abd3-42a6-8002-056e6eaf0060",
+  "name": "凄惨的嫉妒",
+  "imageKey": "user_50c806b9.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9208
+  ]
+ },
+ {
+  "id": "c8ae2b00-ed41-4c44-96a2-35769b63c4ba",
+  "name": "盛火时节",
+  "imageKey": "user_c8ae2b00.png",
+  "floors": [
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9267,
+   86992
+  ]
+ },
+ {
+  "id": "3d52de20-af3d-4082-8978-40eb0fba5644",
+  "name": "沉沦泛滥",
+  "imageKey": "user_3d52de20.png",
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "gifts": [
+   9211
+  ]
+ },
+ {
+  "id": "bd21476f-a066-49c3-9db0-0c2a1c6086df",
+  "name": "凤・皇",
+  "imageKey": "user_bd21476f.png",
+  "floors": [],
+  "gifts": [
+   9242
+  ]
+ },
+ {
+  "id": "12e81bd5-db05-4a6f-ae3f-d2b554f319dd",
+  "name": "N公司 新九人会",
+  "imageKey": "user_12e81bd5.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": []
+ },
+ {
+  "id": "aaf1df6d-48e2-4fb7-83a9-6d6a6b81862b",
+  "name": "绽放的绿林",
+  "imageKey": "user_aaf1df6d.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": []
+ },
+ {
+  "id": "8964955e-49a5-4371-bf77-61290161ae34",
+  "name": "3号线-终点站",
+  "imageKey": "user_8964955e.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": []
+ },
+ {
+  "id": "d5a88126-fe7a-434d-83d8-fb56445692a0",
+  "name": "永劫的枷锁",
+  "imageKey": "user_d5a88126.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9209
+  ]
+ },
+ {
+  "id": "f9a8c4a9-ece2-4dc1-82f5-c928e74dac41",
+  "name": "去・海・边・激・蟹",
+  "imageKey": "user_f9a8c4a9.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": []
+ },
+ {
+  "id": "77d57564-2e43-414f-9ff1-592d3fe3486e",
+  "name": "无尽的死路",
+  "imageKey": "user_77d57564.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": []
+ },
+ {
+  "id": "4433ac4a-8de1-45ef-99a8-615e0774bfeb",
+  "name": "无法成为血魔的人们",
+  "imageKey": "user_4433ac4a.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": []
+ },
+ {
+  "id": "67b4c09c-35fa-4d44-9de7-68debdb246e3",
+  "name": "美妙的嗓音",
+  "imageKey": "user_67b4c09c.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": []
+ },
+ {
+  "id": "80c24a86-bb5a-439e-ae6f-52dc0c7387bd",
+  "name": "绿色的黎明",
+  "imageKey": "user_80c24a86.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": []
+ },
+ {
+  "id": "7927fed4-108d-43e8-aa0a-ac37972af9e0",
+  "name": "进入某座图书馆的某本藏书",
+  "imageKey": "user_7927fed4.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": []
+ },
+ {
+  "id": "9c4cf949-57dc-47bf-bb69-f0c1abcb56f6",
+  "name": "紫色编码",
+  "imageKey": "user_9c4cf949.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   86603
+  ]
+ },
+ {
+  "id": "2c8f285e-4217-4064-853c-a82f8d5d9af0",
+  "name": "身负重担者们",
+  "imageKey": "user_2c8f285e.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   81712
+  ]
+ },
+ {
+  "id": "b514a57d-31f9-447d-b6d8-93791a298063",
+  "name": "1号线：疯狂",
+  "imageKey": "user_b514a57d.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9848
+  ]
+ },
+ {
+  "id": "34e48ea5-da23-4105-b0cd-c3af77e333c8",
+  "name": "充满祝福的嘉年华",
+  "imageKey": "user_34e48ea5.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   89048
+  ]
+ },
+ {
+  "id": "46ec761b-bf3a-413c-8c1e-a9e5f1846e29",
+  "name": "精灵童话",
+  "imageKey": "user_46ec761b.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   82089
+  ]
+ },
+ {
+  "id": "4cfa5775-c428-4c9b-919d-ad289ef6c955",
+  "name": "血腥味",
+  "imageKey": "user_4cfa5775.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   83253
+  ]
+ },
+ {
+  "id": "1ae13dec-8e51-4c40-bc2a-a59ea795ff71",
+  "name": "即刻处刑时间",
+  "imageKey": "user_1ae13dec.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9829
+  ]
+ },
+ {
+  "id": "f0471fd8-f492-4e7b-aa25-6cad73e70fb7",
+  "name": "拉・曼却领之主",
+  "imageKey": "user_f0471fd8.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9827
+  ]
+ },
+ {
+  "id": "6dbade95-636e-4949-bb01-ba1511a29bf9",
+  "name": "插翅虎",
+  "imageKey": "user_6dbade95.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9828
+  ]
+ },
+ {
+  "id": "d95ad9c2-5d49-4aed-a07a-574a98b9b74c",
+  "name": "仲春夜之梦 2",
+  "imageKey": "user_d95ad9c2.png",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9830
+  ]
+ },
+ {
+  "id": "pack_canto_x",
+  "name": "开店抢购",
+  "imageKey": "Canto_X",
+  "floors": [],
+  "gifts": [
+   9290,
+   9291
+  ]
+ },
+ {
+  "id": "pack_canto_x_mid",
+  "name": "纷繁的色彩",
+  "imageKey": "Canto_X_mid",
+  "floors": [],
+  "gifts": [
+   9288,
+   9289
+  ]
+ },
+ {
+  "id": "pack_canto_x_mid2",
+  "name": "保存的信念",
+  "imageKey": "Canto_X_mid2",
+  "floors": [],
+  "gifts": [
+   9286,
+   9287
+  ]
+ },
+ {
+  "id": "pack_walpu10_dawn",
+  "name": "黎明后贯穿而来之楔",
+  "imageKey": "Walpu10_Dawn",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9292,
+   9293,
+   9297,
+   9298,
+   9299,
+   9300
+  ]
+ },
+ {
+  "id": "pack_canto_x_hard",
+  "name": "暴食重临",
+  "imageKey": "Canto_X_hard",
+  "floors": [],
+  "gifts": [
+   9284,
+   9285
+  ]
+ }
 ]
