@@ -594,7 +594,7 @@ function bgmEl(f){
 function playBgm(f){ S.playedBgm.add(f); syncBgmBtns(); bgmEl(f).play().catch(()=>{}); }
 function toggleBgm(f){
   const a = bgmEl(f);
-  if(cur === f && !a.paused) a.pause(); else { a.currentTime = 0; a.play().catch(()=>{}); }
+  if(cur === f && !a.paused) a.pause(); else a.play().catch(()=>{});
 }
 function syncBgmBtns(){
   $('bgmLei').classList.toggle('hidden', !S.playedBgm.has('BGM_LeiHeng.ogg'));
