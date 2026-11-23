@@ -6336,7 +6336,7 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害增加[TabExplain]，获得[AttackUp]"
+"base": "造成的伤害增加，获得[AttackUp]"
 }
 },
 {
@@ -6392,7 +6392,7 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害，拼点威力与最终威力增加[TabExplain]，获得[Agility]"
+"base": "造成的伤害，拼点威力与最终威力增加，获得[Agility]"
 }
 },
 {
@@ -6406,7 +6406,7 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "受到的伤害减少[TabExplain]，获得[AttackUp]或[ResultEnhancement]"
+"base": "受到的伤害减少，获得[AttackUp]或[ResultEnhancement]"
 }
 },
 {
@@ -6420,7 +6420,7 @@
 "double_plus": "[第1顺位友方单位专属]\n\n属于西西弗的人格或[PersonalityCharge]基础技能的最后一枚硬币命中时，对主要目标造成相当于该硬币最终伤害量15%的斩击伤害(每个技能最多1次)"
 },
 "simple_descriptions": {
-"base": "对主要目标造成斩击伤害[TabExplain]"
+"base": "对主要目标造成斩击伤害"
 }
 },
 {
