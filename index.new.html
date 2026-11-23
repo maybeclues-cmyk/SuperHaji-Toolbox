@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E.G.O 饰品图鉴</title>
+<link rel="stylesheet" href="orig.flat.css">
+<style>
+body{margin:0}
+.gift-card{cursor:pointer}
+.pack-item__cover{width:70px;height:90px}
+.pack-item__cover img{width:70px;height:90px;object-fit:cover;border-radius:4px}
+.pack-item__cover-placeholder{font-size:10px;color:#d4b896;text-align:center;padding:2px;line-height:1.25}
+.pack-item__name{font-size:11px;color:#c9b89a;max-width:82px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.modal-overlay{display:none}.modal-overlay.open{display:flex}
+.pack-modal-overlay{display:none}.pack-modal-overlay.open{display:flex}
+.hidden{display:none!important}
+.nav-btn--leiheng{color:#e74c3c}.nav-btn--matthias{color:#9b59b6}
+.context-menu{display:none}.context-menu.open{display:block}
+.ctx-row{padding:6px 12px;display:flex;align-items:center;gap:8px;font-size:13px}
+.ctx-row select,.ctx-row input{background:#2c1d12;color:#d4b896;border:1px solid #5a3a1a;border-radius:4px;padding:2px 4px;font-size:12px}
+.ctx-item{padding:6px 12px;cursor:pointer;font-size:13px;color:#d4b896}
+.ctx-item:hover{background:#5a3a1a}
+.recipe-panel{display:none}.recipe-panel.open{display:block}
+.recipe-icon-wrapper{background:url(gift-bg.png) center/contain no-repeat;border-radius:6px;padding:3px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.recipe-panel__title{color:#ffba00;font-size:16px;margin:0 0 10px}
+.recipe-panel__gift-icon{width:64px;height:64px;object-fit:contain;vertical-align:middle}
+.recipe-panel__gift-name{font-size:15px;color:#e8ddc9;margin-left:8px}
+.recipe-panel__label{color:#ffba00;font-size:12px;margin:10px 0 4px}
+.recipe-panel__desc{font-size:12px;color:#c9b89a;white-space:pre-wrap;background:#1d130d;border:1px solid #3c2a1a;border-radius:6px;padding:8px}
+.recipe-panel__pack-item{font-size:12px;color:#c9b89a;padding:2px 0}
+.recipe-panel__name{font-size:12px;color:#c9b89a}
+.recipe-panel__close{position:absolute;right:10px;top:8px;cursor:pointer;color:#9a8b74;font-size:20px;background:none;border:none}
+.nav-btn--mute{color:#e6a817;border-color:#8b6914;position:relative;cursor:pointer}
+.nav-btn--mute:hover{background:#8b69144d}
+.mute-icon{position:relative;display:inline-block}
+.nav-btn--muted .mute-icon:after{content:"";position:absolute;left:-2px;top:-2px;width:120%;height:120%;background:linear-gradient(to top right,transparent 44%,#e6a817 44%,#e6a817 56%,transparent 56%);pointer-events:none}
+.recipe-icon{width:48px;height:48px}
+.recipe-icon-wrapper{width:48px;height:48px}
+.recipe-gift-name{white-space:nowrap}
+.recipe-panel{width:460px}
+.recipe-panel__list{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:4px;padding-bottom:2px}
+.recipe-panel__entry{flex-wrap:nowrap}
+.recipe-panel__gift-name{white-space:nowrap}
+.recipe-panel__packs{display:flex;flex-wrap:wrap;gap:8px}
+#hoverPanel{padding-top:38px}
+#hoverPanel .recipe-panel__label{margin:8px 0 6px}
+#hoverPanel .recipe-panel__gift-icon{width:48px;height:48px}
+#hoverPanel .recipe-panel__pack-img{width:48px;height:48px}
+.selected-item__remove{z-index:3;opacity:0;transition:opacity .15s;pointer-events:none}
+.selected-item:hover .selected-item__remove{opacity:1;pointer-events:auto}
+.selected-item .gift-card{pointer-events:auto}
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="nav-bar">
+    <a class="nav-link" href="#/gifts" data-page="gifts"><img class="nav-icon" src="nav-icon-pack.png" alt="">饰品图鉴</a>
+    <a class="nav-link" href="#/packs" data-page="packs"><img class="nav-icon" src="nav-icon-gift.png" alt="">卡包饰品</a>
+    <a class="nav-link" href="#/plan" data-page="plan"><img class="nav-icon" src="nav-icon-floor.png" alt="">楼层规划</a>
+    <a class="nav-link" href="#/recipes" data-page="recipes"><img class="nav-icon" src="nav-icon-recipe.png" alt="">合成方式</a>
+    <button class="nav-btn nav-btn--mute" id="bgmMute" title="总开关"><span class="mute-icon">♪</span></button>
+    <button class="nav-btn nav-btn--leiheng hidden" id="bgmLei" title="BGM：雷恒">雷</button>
+    <button class="nav-btn nav-btn--matthias hidden" id="bgmMat" title="BGM：马蒂亚斯">马</button>
+  </nav>
+  <main class="main-content" id="app"></main>
+</div>
+
+<div class="modal-overlay" id="modal"><div class="modal-content" id="modalBody"></div></div>
+<div class="pack-modal-overlay" id="packModal"><div class="pack-detail" id="packBody"></div></div>
+<div class="recipe-panel" id="hoverPanel"></div>
+<div class="context-menu" id="ctxMenu"></div>
+
+<script>
+const CAT_ICON = {烧伤:'Combustion',流血:'Laceration',震颤:'Vibration',破裂:'Burst',沉沦:'Sinking',呼吸法:'Breath',充能:'Charge',斩击:'Slash',突刺:'Pierce',打击:'Blunt'};
+const RARITIES = ['EX','V','IV','III','II','I'];
+const S = {gifts:[],packs:[],recipes:[],user:{rarities:{},cats:{},labels:{},packMap:{}},sel:[],cat:'烧伤',q:'',page:'gifts',packOpen:null};
+const icon = id => 'EgoGiftIcon/' + id + '.png';
+const catImg = c => CAT_ICON[c] ? 'Buf/' + CAT_ICON[c] + '.png' : '';
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+/* [状态] → 图标 + 中文名 */
+function describe(text){
+  if (!text) return '';
+  return esc(text).replace(/\[([A-Za-z0-9_]+)\]/g, (m, key) => {
+    const cn = (S.status && S.status[key]) || key;
+    return `<img class="status-icon" src="Buf/${encodeURIComponent(key)}.png" onerror="this.style.display='none'"><span class="status-name">${esc(cn)}</span>`;
+  });
+}
+const $ = id => document.getElementById(id);
+
+function loadUser(){
+  try{
+    const P = 'egogift_';
+    const get = k => JSON.parse(localStorage.getItem(P + k) || 'null');
+    S.user.rarities = get('giftRarities') || {};
+    S.user.cats = get('giftCategoryOverrides') || {};
+    S.user.labels = get('giftLabels') || {};
+    S.user.packMap = get('giftCardPackMap') || {};
+    S.sel = (get('selectedGiftIds') || []).map(String);
+  }catch(e){}
+}
+function saveUser(){
+  const P = 'egogift_';
+  localStorage.setItem(P + 'giftRarities', JSON.stringify(S.user.rarities));
+  localStorage.setItem(P + 'giftCategoryOverrides', JSON.stringify(S.user.cats));
+  localStorage.setItem(P + 'giftLabels', JSON.stringify(S.user.labels));
+  localStorage.setItem(P + 'giftCardPackMap', JSON.stringify(S.user.packMap));
+  localStorage.setItem(P + 'selectedGiftIds', JSON.stringify(S.sel));
+}
+const giftById = id => S.gifts.find(g => String(g.id) === String(id));
+const catOf = g => S.user.cats[g.id] || g.category || '泛用';
+const rarOf = g => S.user.rarities[g.id] || g.rarity || '';
+const packsOf = id => {
+  const v = S.user.packMap[String(id)];
+  const arr = Array.isArray(v) ? v.map(String) : (v ? [String(v)] : []);
+  return arr.map(x => { const p = S.packs.find(pp => String(pp.id) === x || pp.name === x); return p ? p.name : x; });
+};
+function giftIdsInPack(packName){
+  const p = S.packs.find(x => x.name === packName);
+  if(!p) return [];
+  const out = [];
+  for (const [gid, val] of Object.entries(S.user.packMap)) {
+    const arr = Array.isArray(val) ? val.map(String) : [String(val)];
+    if (arr.includes(String(p.id))) out.push(gid);
+  }
+  return out;
+}
+
+const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
+
+async function boot(){
+  loadUser();
+  const [g,p,r,st] = await Promise.all([
+    fetch('data/egogift.json').then(x=>x.json()),
+    fetch('data/cardpacks_preset.json').then(x=>x.json()),
+    fetch('data/recipes_preset.json').then(x=>x.json()),
+    fetch('data/status_names.json').then(x=>x.json()).catch(()=>({}))
+  ]);
+  S.status = st || {};
+  S.gifts=g.gifts||[];
+  S.packs = (()=>{ try{ const v=JSON.parse(localStorage.getItem('egogift_cardPacks')||'null'); return Array.isArray(v)&&v.length?v:p||[]; }catch(e){ return p||[]; } })()
+    .map((x,i)=>({ ...x, id: (x.id === undefined || x.id === null) ? ('preset_'+i) : x.id }));
+  S.recipes = (()=>{ try{ const v=JSON.parse(localStorage.getItem('egogift_recipes')||'null'); return Array.isArray(v)&&v.length?v:r||[]; }catch(e){ return r||[]; } })();
+  /* 卡包饰品：数据里写死的 gifts 合并进 packMap（localStorage 优先） */
+  for(const pk of S.packs){
+    if(!Array.isArray(pk.gifts)) continue;
+    for(const gid of pk.gifts){
+      const key = String(gid);
+      const cur = S.user.packMap[key];
+      const arr = Array.isArray(cur) ? cur.map(String) : (cur ? [String(cur)] : []);
+      if(!arr.includes(String(pk.id))){ arr.push(String(pk.id)); S.user.packMap[key] = arr; }
+    }
+  }
+  /* 权威映射：dcorps 的卡包→饰品（按名字归一化匹配），补齐缺的归属，并作为"这个卡包有没有饰品"的判据 */
+  S.packSrc = await fetch('data/pack_sources.json').then(x=>x.json()).catch(()=>({}));
+  const byName = {};
+  for (const pk of S.packs) byName[nrmName(pk.name)] = String(pk.id);
+  for (const [name, ids] of Object.entries(S.packSrc || {})) {
+    const pid = byName[nrmName(name)];
+    if (!pid) continue;
+    for (const gid of ids) {
+      const key = String(gid);
+      const cur = S.user.packMap[key];
+      const arr = Array.isArray(cur) ? cur.map(String) : (cur ? [String(cur)] : []);
+      if (!arr.includes(pid)) { arr.push(pid); S.user.packMap[key] = arr; }
+    }
+  }
+  route();
+}
+function route(){
+  const h = (location.hash.replace(/^#\/?/, '') || 'gifts');
+  const page = ['gifts','packs','plan','recipes'].includes(h) ? h : 'gifts';
+  if(page !== S.page) S.q = '';
+  S.page = page;
+  document.querySelectorAll('.nav-link').forEach(a => a.classList.toggle('router-link-active', a.dataset.page === S.page));
+  closeAll(); render();
+}
+window.addEventListener('hashchange', route);
+function closeAll(){ $('modal').classList.remove('open'); $('packModal').classList.remove('open'); $('hoverPanel').classList.remove('open'); $('ctxMenu').classList.remove('open'); }
+
+function render(){
+  if(S.page==='gifts') renderGifts();
+  else if(S.page==='packs') renderPacks();
+  else if(S.page==='recipes') renderRecipes();
+  else renderPlan();
+}
+
+/* ---------- 图鉴 ---------- */
+function giftListHtml(){
+  const q = S.q.trim().toLowerCase();
+  const list = S.gifts.filter(g => (S.cat==='全部'||catOf(g)===S.cat) && (!q || (g.name||'').toLowerCase().includes(q)));
+  const groups = {};
+  for(const g of list){ const r=rarOf(g); (groups[r] ||= []).push(g); }
+  const order = [...RARITIES.filter(r=>groups[r]), ...Object.keys(groups).filter(r=>!RARITIES.includes(r))];
+  return order.map(r=>`<div class="rarity-section"><h3 class="rarity-section__title">${r?esc(r):'未标等级'}</h3>
+        <div class="gift-grid">${groups[r].map(cardHtml).join('')}</div></div>`).join('');
+}
+function renderGiftList(){
+  const gs = $('gs');
+  if(!gs) return;
+  gs.innerHTML = giftListHtml();
+  bindCards(gs);
+}
+function renderGifts(){
+  const ORDER = ['烧伤','流血','震颤','破裂','沉沦','呼吸法','充能','斩击','突刺','打击','泛用','全部'];
+  const present = [...new Set(S.gifts.map(catOf))];
+  const cats = [...ORDER.filter(c=>c==='全部'||present.includes(c)), ...present.filter(c=>!ORDER.includes(c))];
+  $('app').innerHTML = `
+  <div class="compendium">
+    <div class="filter-bar">${cats.map(c=>`<button class="filter-btn ${c===S.cat?'active':''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('')}</div>
+    <input class="search-input" id="q" type="search" placeholder="搜索饰品名…" value="${esc(S.q)}">
+    <div class="gift-sections" id="gs"></div>
+  </div>`;
+  document.querySelectorAll('[data-cat]').forEach(el=>el.onclick=()=>{S.cat=el.dataset.cat;renderGifts();});
+  const qi=$('q');
+  qi.oninput=e=>{ S.q=e.target.value; renderGiftList(); };
+  renderGiftList();
+}
+function cardHtml(g){
+  const r=rarOf(g);
+  return `<div class="gift-card gift-card--normal" data-id="${g.id}" title="${esc(g.name)}">
+    ${r?`<span class="gift-card__rarity">${esc(r)}</span>`:''}
+    <img class="gift-card__icon" loading="lazy" src="${icon(g.id)}" onerror="this.classList.add('hidden')">
+    ${catImg(catOf(g))?`<img class="gift-card__category" src="${catImg(catOf(g))}">`:''}
+  </div>`;
+}
+function bindCards(root){
+  root.querySelectorAll('.gift-card[data-id]').forEach(el=>{
+    const id = el.dataset.id;
+    el.onclick = () => { triggerGiftBgm(giftById(id)); openGift(id); };
+    el.oncontextmenu = ev => { ev.preventDefault(); openCtx(id, ev.clientX, ev.clientY); };
+    el.onmouseenter = () => showHover(id);
+  });
+  const grid = root.querySelector('.gift-grid');
+  if(grid) grid.onmouseleave = () => $('hoverPanel').classList.remove('open');
+  const cont = root.querySelector('.gift-sections');
+  if(cont) cont.onmouseleave = () => $('hoverPanel').classList.remove('open');
+}
+
+/* ---------- 悬浮窗 ---------- */
+function showHover(id){
+  const g = giftById(id); if(!g) return;
+  const recs = S.recipes.filter(x => String(x.resultId)===String(g.id));
+  const usedIn = S.recipes.filter(x => (x.materialIds||[]).some(m=>String(m)===String(g.id)));
+  const pk = packsOf(g.id);
+  const entry = (gid,name) => `<span class="recipe-panel__entry"><img class="recipe-panel__gift-icon" src="${icon(gid)}" onerror="this.style.display='none'"><span class="recipe-panel__gift-name">${esc(name)}</span></span>`;
+  const matHtml = mid => { const m=giftById(mid); return m ? entry(m.id,m.name) : `<span class="recipe-panel__gift-name">${esc(mid)}</span>`; };
+  const isRep = (S.user.labels[g.id]||'')==='复刻';
+  const panel = $('hoverPanel');
+  if(!recs.length && !usedIn.length && !pk.length){ panel.classList.remove('open'); return; }
+  panel.innerHTML = `
+    <button class="recipe-panel__close" onclick="document.getElementById('hoverPanel').classList.remove('open')">×</button>
+    ${(recs.length||usedIn.length)?`<div class="recipe-panel__label">合成方式</div>
+    ${recs.map(rr=>`<div class="recipe-panel__list">${(rr.materialIds||[]).map(matHtml).join('<span class="recipe-panel__plus">+</span>')}</div>`).join('')}
+    ${usedIn.map(rr=>{const res=giftById(rr.resultId);return `<div class="recipe-panel__list"><span class="recipe-panel__gift-name">可合成 </span>${res?entry(res.id,res.name):esc(rr.resultId)}</div>`}).join('')}`:''}
+    ${pk.length?`<div class="recipe-panel__label">所属卡包</div><div class="recipe-panel__packs">${pk.map(n=>{const p=S.packs.find(x=>x.name===n);return `<div class="recipe-panel__pack-item">${p&&p.imageKey?`<img class="recipe-panel__pack-img" src="${coverSrc(p)}" onerror="this.style.display='none'">`:''}<span class="recipe-panel__pack-name">${esc(n)}${isRep?' 复刻':''}</span></div>`}).join('')}</div>`:''}`;
+  panel.classList.add('open');
+}
+
+/* ---------- 详情弹窗 ---------- */
+function openGift(id, grade){
+  const g = giftById(id); if(!g) return;
+  const cat = catOf(g), r = rarOf(g), pk = packsOf(g.id);
+  const d = g.descriptions||{};
+  const cur = (grade && d[grade]) ? grade : 'base';
+  const recs = S.recipes.filter(x=>String(x.resultId)===String(g.id));
+  const usedIn = S.recipes.filter(x=>(x.materialIds||[]).some(m=>String(m)===String(g.id)));
+  const entry = (gid,name) => `<span class="recipe-panel__entry"><img class="recipe-panel__gift-icon" src="${icon(gid)}" onerror="this.style.display='none'"><span class="recipe-panel__gift-name">${esc(name)}</span></span>`;
+  const matHtml = mid => { const m=giftById(mid); return m ? entry(m.id,m.name) : `<span class="recipe-panel__gift-name">${esc(mid)}</span>`; };
+  const isRep = (S.user.labels[g.id]||'')==='复刻';
+  const gradeBtns = [['base','-'],['plus','+'],['double_plus','++']].filter(([k])=>d[k]);
+  $('modalBody').innerHTML = `
+    <div class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">×</div>
+    <div class="modal-header">
+      <img class="modal-icon" src="${icon(g.id)}" onerror="this.style.display='none'">
+      <div><div class="modal-name">${esc(g.name)}</div><div class="modal-category">${esc(cat)}${r?' · '+esc(r):''}</div></div>
+      ${catImg(cat)?`<img class="modal-category-icon" src="${catImg(cat)}">`:''}
+    </div>
+    ${gradeBtns.length>1?`<div class="modal-controls"><div class="pill-group">${gradeBtns.map(([k,lbl])=>`<button class="pill-btn ${k===cur?'active':''}" data-grade="${k}">${lbl}</button>`).join('')}</div></div>`:''}
+    ${d[cur]?`<div class="modal-description">${describe(d[cur])}</div>`:''}
+    ${(()=>{ const rel=[...recs,...usedIn].filter((v,i,a)=>a.indexOf(v)===i); return rel.length?`<div class="recipe-panel__label">合成方式</div>${rel.map(rr=>`<div class="recipe-panel__list">${(rr.materialIds||[]).map(matHtml).join('<span class="recipe-panel__plus">+</span>')}<span class="recipe-panel__plus">=</span>${(()=>{const res=giftById(rr.resultId);return res?entry(res.id,res.name):`<span class="recipe-panel__gift-name">${esc(rr.resultId)}</span>`})()}</div>`).join('')}`:'' })()}
+    ${pk.length?`<div class="recipe-panel__label">所属卡包</div><div class="recipe-panel__packs">${pk.map(n=>{const p=S.packs.find(x=>x.name===n);return `<div class="recipe-panel__pack-item">${p&&p.imageKey?`<img class="recipe-panel__pack-img" src="${coverSrc(p)}" onerror="this.style.display='none'">`:''}<span class="recipe-panel__pack-name">${esc(n)}${isRep?' 复刻':''}</span></div>`}).join('')}</div>`:''}`;
+  $('modal').classList.add('open');
+  document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>openGift(id, b.dataset.grade));
+}
+
+/* ---------- 右键菜单 ---------- */
+function openCtx(id, x, y){
+  const g = giftById(id); if(!g) return;
+  const menu = $('ctxMenu');
+  const inSel = S.sel.includes(String(g.id));
+  menu.innerHTML = `<div class="ctx-item" id="ctxSel">${inSel?'− 移除':'+ 添加'}</div>`;
+  menu.style.left = Math.min(x, innerWidth-200)+'px';
+  menu.style.top = Math.min(y, innerHeight-220)+'px';
+  menu.classList.add('open');
+  $('ctxSel').onclick = () => {
+    const s=String(g.id), i=S.sel.indexOf(s);
+    if(i>=0) S.sel.splice(i,1); else S.sel.push(s);
+    saveUser(); menu.classList.remove('open'); render();
+  };
+}
+document.addEventListener('click', e => { if(!$('ctxMenu').contains(e.target)) $('ctxMenu').classList.remove('open'); });
+
+/* ---------- 卡包 ---------- */
+function renderPacks(){
+  const q = S.q.trim().toLowerCase();
+  const hasSrc = p => { const v = S.packSrc && S.packSrc[nrmName(p.name)]; return Array.isArray(v) && v.length > 0; };
+  const list = S.packs.filter(hasSrc).filter(p=>!q||(p.name||'').toLowerCase().includes(q));
+  const cur = S.packOpen ? S.packs.find(p=>String(p.id)===String(S.packOpen)) : null;
+  $('app').innerHTML = `<div class="card-pack-page">
+    <div class="search-wrapper"><input class="search-input" id="q" type="search" placeholder="搜索卡包名…" value="${esc(S.q)}"></div>
+    <div class="pack-list">${list.map(packHtml).join('')}</div>
+    ${cur?packDetailHtml(cur):''}
+  </div>`;
+  const qi=$('q');
+  qi.oninput=e=>{S.q=e.target.value;renderPacks();const n=$('q');n.focus();};
+  document.querySelectorAll('.pack-item').forEach(el=>el.onclick=()=>{
+    const id = el.dataset.id;
+    S.packOpen = (String(S.packOpen)===String(id)) ? null : id;
+    renderPacks();
+    const d=$('packDetail'); if(d) setTimeout(()=>d.scrollIntoView({behavior:'smooth',block:'start'}),30);
+  });
+  fillCovers($('app'));
+  const det=$('packDetail'); if(det) bindCards(det);
+}
+function coverSrc(p){
+  if (!p.imageKey) return '';
+  const k = p.imageKey;
+  return 'card_pack/' + encodeURIComponent(k.toLowerCase().endsWith('.png') ? k : k + '.png');
+}
+function packHtml(p){
+  const cover = p.imageKey
+    ? `<img data-cover loading="lazy" src="${coverSrc(p)}" onerror="this.style.display='none'"><div class="pack-item__cover-placeholder" style="display:none">${esc(p.name)}</div>`
+    : `<img data-cover style="display:none"><div class="pack-item__cover-placeholder">${esc(p.name)}</div>`;
+  const on = String(S.packOpen)===String(p.id) ? ' pack-item--active' : '';
+  return `<div class="pack-item${on}" data-id="${esc(p.id)}" data-name="${esc(p.name)}"><div class="pack-item__cover">${cover}</div><div class="pack-item__name">${esc(p.name)}</div></div>`;
+}
+function packDetailHtml(p){
+  const idsOf = g => { const v=S.user.packMap[String(g.id)]; return Array.isArray(v)?v.map(String):(v?[String(v)]:[]); };
+  const G = S.gifts.filter(g=>idsOf(g).includes(String(p.id)));
+  const inPack = new Set(G.map(g=>String(g.id)));
+  const synth = new Set(S.recipes.filter(r=>inPack.has(String(r.resultId)) && (r.materialIds||[]).some(m=>inPack.has(String(m)))).map(r=>String(r.resultId)));
+  const isRep = g => (S.user.labels[g.id]||'')==='复刻';
+  const V = G.filter(g=>!synth.has(String(g.id)) && !isRep(g));
+  const F = G.filter(g=>synth.has(String(g.id)) && !isRep(g));
+  const H = G.filter(isRep);
+  const z = H.filter(g=>!synth.has(String(g.id)));
+  const Y = H.filter(g=>synth.has(String(g.id)));
+  const sep = '<div class="pack-detail__separator"></div>';
+  const row = a => a.map(cardHtml).join('');
+  return `<div class="pack-detail" id="packDetail">
+    <div class="pack-detail__header"><h3 class="pack-detail__title">${esc(p.name)}</h3></div>
+    <div class="pack-detail__gifts">${G.length===0?'<span class="pack-detail__empty">暂无饰品</span>':row(V)+(F.length?sep+row(F):'')}</div>
+    ${H.length?`<div class="pack-detail__reprint"><span class="pack-detail__reprint-label">复刻</span><div class="pack-detail__gifts">${row(z)}${Y.length?sep+row(Y):''}</div></div>`:''}
+  </div>`;
+}
+
+/* ---------- 合成 ---------- */
+function recipeIcon(g){
+  const r = rarOf(g);
+  return `<span class="recipe-icon-wrapper" data-id="${g.id}"><img class="recipe-icon" src="${icon(g.id)}" loading="lazy">${r?`<span class="recipe-rarity">${esc(r)}</span>`:''}</span>`;
+}
+function renderRecipes(){
+  $('app').innerHTML = `<div class="recipe-page"><div class="recipe-list">${S.recipes.map(r=>{
+    const mats=(r.materialIds||[]).map(giftById).filter(Boolean);
+    const res=giftById(r.resultId); if(!res) return '';
+    return `<div class="recipe-item">
+      <div class="recipe-materials">${mats.map(m=>`<div class="recipe-material-entry">${recipeIcon(m)}<span class="recipe-gift-name">${esc(m.name)}</span></div><span class="recipe-plus">+</span>`).join('')}</div>
+      <span class="recipe-equals">=</span>
+      <div class="recipe-result">${recipeIcon(res)}<span class="recipe-gift-name">${esc(res.name)}</span></div>
+    </div>`;
+  }).join('')}</div></div>`;
+  $('app').querySelectorAll('.recipe-icon-wrapper[data-id]').forEach(el=>{
+    el.onclick = () => openGift(el.dataset.id);
+    el.oncontextmenu = ev => { ev.preventDefault(); openCtx(el.dataset.id, ev.clientX, ev.clientY); };
+  });
+}
+
+/* ---------- 规划 ---------- */
+const FLOOR_ROWS = [
+  {key:1,label:'第 1 层',floors:[1]},
+  {key:2,label:'第 2 层',floors:[2]},
+  {key:3,label:'第 3 层',floors:[3]},
+  {key:4,label:'第 4 层',floors:[4]},
+  {key:5,label:'第 5 层',floors:[5]},
+  {key:6,label:'平行叠加',floors:[6,7,8,9,10]},
+  {key:11,label:'极限模式',floors:[11,12,13,14,15]},
+];
+const PACK_COLORS = ['#e74c3c','#e67e22','#f1c40f','#2ecc71','#1abc9c','#3498db','#9b59b6','#e91e63','#00bcd4','#8bc34a','#ff9800','#795548','#607d8b','#cddc39','#ff5722'];
+const packFloors = p => Array.isArray(p.floors) ? p.floors.slice() : [];
+const packById = id => S.packs.find(p=>String(p.id)===String(id));
+function packAvgFloor(p){ const f=packFloors(p); return f.length ? f.reduce((a,b)=>a+b,0)/f.length : -1; }
+const packHasRow = (p,row) => packFloors(p).some(f=>row.floors.includes(f));
+const cellStart = (p,i) => packHasRow(p,FLOOR_ROWS[i]) && !(i>0 && packHasRow(p,FLOOR_ROWS[i-1]));
+function cellSpan(p,i){ let n=1; while(i+n<FLOOR_ROWS.length && packHasRow(p,FLOOR_ROWS[i+n])) n++; return n; }
+function cellCovered(p,i){ for(let j=i-1;j>=0;j--){ if(cellStart(p,j)) return j + cellSpan(p,j) > i; } return false; }
+function groups4(packId){
+  const idsOf = g => { const v=S.user.packMap[String(g.id)]; return Array.isArray(v)?v.map(String):(v?[String(v)]:[]); };
+  const G = S.gifts.filter(g=>idsOf(g).includes(String(packId)));
+  const inPack = new Set(G.map(g=>String(g.id)));
+  const synth = new Set(S.recipes.filter(r=>inPack.has(String(r.resultId)) && (r.materialIds||[]).some(m=>inPack.has(String(m)))).map(r=>String(r.resultId)));
+  const isRep = g => (S.user.labels[g.id]||'')==='复刻';
+  return {
+    G,
+    V: G.filter(g=>!synth.has(String(g.id)) && !isRep(g)),
+    F: G.filter(g=>synth.has(String(g.id)) && !isRep(g)),
+    H: G.filter(isRep),
+    z: G.filter(g=>isRep(g) && !synth.has(String(g.id))),
+    Y: G.filter(g=>isRep(g) && synth.has(String(g.id))),
+  };
+}
+function selectedPacks(){
+  const set = new Set();
+  for(const gid of S.sel){
+    const v = S.user.packMap[String(gid)];
+    const arr = Array.isArray(v)?v:(v?[v]:[]);
+    for(const x of arr) if(x) set.add(String(x));
+  }
+  return S.packs.filter(p=>set.has(String(p.id)));
+}
+function floorGridHtml(packs){
+  const withF = packs.filter(p=>packFloors(p).length>0).slice().sort((a,b)=>packAvgFloor(a)-packAvgFloor(b));
+  if(!withF.length) return '<div class="floor-detail__empty">还没有选中带楼层的卡包</div>';
+  const col = i => PACK_COLORS[i % PACK_COLORS.length];
+  const overview = `<div class="pack-overview">${withF.map((p,i)=>`<div class="pack-overview__item" data-pack="${esc(p.id)}" style="border-color:${col(i)}">${p.imageKey?`<img class="pack-overview__img" src="${coverSrc(p)}" onerror="this.style.display='none'">`:''}<span>${esc(p.name)}</span></div>`).join('')}</div>`;
+  let body = '';
+  FLOOR_ROWS.forEach((row,i)=>{
+    body += `<tr><td class="floor-table__row-label floor-table__sticky">${row.label}</td>`;
+    withF.forEach((p,ci)=>{
+      if(cellStart(p,i)){
+        body += `<td rowspan="${cellSpan(p,i)}" class="floor-table__cell floor-table__cell--active" data-pack="${esc(p.id)}" style="background:${col(ci)}30;border-color:${col(ci)}"><span>${esc(p.name)}</span></td>`;
+      } else if(!cellCovered(p,i)){
+        body += `<td class="floor-table__cell"></td>`;
+      }
+    });
+    body += '</tr>';
+  });
+  const head = `<tr><th class="floor-table__corner floor-table__sticky">层</th>${withF.map((_,ci)=>`<th class="floor-table__col-header"><span style="color:${col(ci)}">${ci+1}</span></th>`).join('')}</tr>`;
+  return `${overview}<div class="floor-table-wrapper"><table class="floor-table"><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+}
+function floorDetailHtml(){
+  const id = S.planPick || S.planHover;
+  const p = id ? packById(id) : null;
+  if(!p) return '';
+  const g = groups4(p.id);
+  const sep = '<div class="floor-detail__separator"></div>';
+  const row = a => a.map(cardHtml).join('');
+  return `<div class="floor-detail"><h4 class="floor-detail__title">${esc(p.name)} 的饰品</h4>
+    <div class="floor-detail__gifts">${g.G.length?row(g.V)+(g.F.length?sep+row(g.F):''):'<span class="floor-detail__empty">暂无饰品</span>'}</div>
+    ${g.H.length?`<div class="floor-detail__reprint"><span class="floor-detail__reprint-label">复刻</span><div class="floor-detail__gifts">${row(g.z)}${g.Y.length?sep+row(g.Y):''}</div></div>`:''}
+  </div>`;
+}
+function refreshFloorDetail(){
+  const box = $('floorDetailBox');
+  if(!box) return;
+  box.innerHTML = floorDetailHtml();
+  bindCards(box);
+}
+function renderPlan(){
+  const sel = S.sel.map(giftById).filter(Boolean);
+  const groups = [{key:'other',gifts:[]},{key:'low',gifts:[]},{key:'mid',gifts:[]},{key:'high',gifts:[]}];
+  for(const g of sel){
+    const pks = packsOf(g.id).map(n=>S.packs.find(x=>x.name===n)).filter(Boolean);
+    const fl = pks.flatMap(packFloors);
+    const avg = fl.length ? fl.reduce((a,b)=>a+b,0)/fl.length : -1;
+    if(avg>=1 && avg<=3) groups[1].gifts.push(g);
+    else if(avg>3 && avg<=10) groups[2].gifts.push(g);
+    else if(avg>10 && avg<=15) groups[3].gifts.push(g);
+    else groups[0].gifts.push(g);
+  }
+  const packs = selectedPacks();
+  $('app').innerHTML = `<div class="planning-page">
+    <div class="planning-page__section">
+      <div class="section-header">
+        <h3 class="section-title">已选中饰品（${sel.length}）</h3>
+        ${sel.length?`<button class="clear-all-btn" id="clearAll">清除全部</button>`:''}
+      </div>
+      ${(groups.filter(g=>g.gifts.length).map(gr=>`<div class="selected-group">${gr.gifts.map(g=>`<div class="selected-item" data-id="${g.id}">${cardHtml(g)}<button class="selected-item__remove" data-remove="${g.id}">×</button></div>`).join('')}</div>`).join('')) || '<div class="selected-list__empty">还没选饰品，去图鉴点卡片「加入规划」</div>'}
+    </div>
+    <div class="planning-page__section" id="floorSection">
+      <h3 class="section-title">楼层分布</h3>
+      ${floorGridHtml(packs)}
+      <div id="floorDetailBox">${floorDetailHtml()}</div>
+    </div>
+  </div>`;
+  bindCards($('app'));
+  document.querySelectorAll('[data-remove]').forEach(b=>b.onclick=ev=>{
+    ev.stopPropagation();
+    S.sel = S.sel.filter(x=>x!==String(b.dataset.remove));
+    saveUser(); renderPlan();
+  });
+  const ca=$('clearAll');
+  if(ca) ca.onclick=()=>{ if(confirm('确定清除所有已选中饰品？')){ S.sel=[]; saveUser(); renderPlan(); } };
+  document.querySelectorAll('[data-pack]').forEach(el=>{
+    el.onmouseenter = () => { S.planHover = el.dataset.pack; refreshFloorDetail(); };
+    el.onmouseleave = () => { S.planHover = null; refreshFloorDetail(); };
+    el.onclick = ev => { ev.stopPropagation(); S.planPick = (String(S.planPick)===String(el.dataset.pack)) ? null : el.dataset.pack; refreshFloorDetail(); };
+  });
+}
+
+/* ---------- 卡包封面（IndexedDB 里的用户图） ---------- */
+function openImgDb(){
+  return new Promise((res, rej) => {
+    const req = indexedDB.open('egogift', 1);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if (!db.objectStoreNames.contains('cardpack_images')) db.createObjectStore('cardpack_images');
+    };
+    req.onsuccess = () => res(req.result);
+    req.onerror = () => rej(req.error);
+  });
+}
+function getCover(name){
+  return new Promise(async (res) => {
+    try{
+      const db = await openImgDb();
+      const tx = db.transaction('cardpack_images', 'readonly');
+      const r = tx.objectStore('cardpack_images').get('cardpack_img_' + name);
+      r.onsuccess = () => { db.close(); res(r.result || null); };
+      r.onerror = () => { db.close(); res(null); };
+    }catch(e){ res(null); }
+  });
+}
+async function fillCovers(root){
+  const items = [...root.querySelectorAll('.pack-item')];
+  for (const el of items){
+    const name = el.dataset.name;
+    const img = el.querySelector('img[data-cover]');
+    if (!img) continue;
+    const data = await getCover(name);
+    if (data){ img.src = data; img.style.display = 'block'; img.nextElementSibling && (img.nextElementSibling.style.display = 'none'); }
+  }
+}
+
+/* ---------- BGM ---------- */
+let audio=null, cur='', muted=false;
+const BGM_VOL = 0.18;
+const SFX = {};
+S.playedBgm = new Set();
+function sfx(name){
+  if(muted) return;
+  if(!SFX[name]){ SFX[name]=new Audio(name+'.mp3'); SFX[name].volume=1; }
+  SFX[name].currentTime=0;
+  SFX[name].play().catch(()=>{});
+}
+function bgmEl(f){
+  if(!audio){
+    audio = new Audio();
+    audio.loop = true;
+    audio.volume = BGM_VOL;
+    audio.addEventListener('play', syncBgmBtns);
+    audio.addEventListener('pause', syncBgmBtns);
+  }
+  if(cur !== f){ audio.src = f; cur = f; }
+  audio.volume = BGM_VOL;
+  return audio;
+}
+function playBgm(f){ S.playedBgm.add(f); syncBgmBtns(); bgmEl(f).play().catch(()=>{}); }
+function toggleBgm(f){
+  const a = bgmEl(f);
+  if(cur === f && !a.paused) a.pause(); else { a.currentTime = 0; a.play().catch(()=>{}); }
+}
+function syncBgmBtns(){
+  $('bgmLei').classList.toggle('hidden', !S.playedBgm.has('BGM_LeiHeng.ogg'));
+  $('bgmMat').classList.toggle('hidden', !S.playedBgm.has('BGM_Matthias.ogg'));
+}
+/* 点特定饰品才起的 BGM（原版规则：为了指挥官→QINHU→雷恒；复仇账簿：附录→YILI→马蒂亚斯） */
+function triggerGiftBgm(g){
+  if(!g) return;
+  if(g.name === '为了指挥官'){
+    sfx('QINHU');
+    setTimeout(()=>{ if(!(audio && cur==='BGM_LeiHeng.ogg' && !audio.paused)) playBgm('BGM_LeiHeng.ogg'); }, 6000);
+  }
+  if(g.name === '复仇账簿：附录'){
+    sfx('YILI');
+    setTimeout(()=>{ if(!(audio && cur==='BGM_Matthias.ogg' && !audio.paused)) playBgm('BGM_Matthias.ogg'); }, 4000);
+  }
+}
+$('bgmLei').onclick=()=>toggleBgm('BGM_LeiHeng.ogg');
+$('bgmMat').onclick=()=>toggleBgm('BGM_Matthias.ogg');
+$('bgmMute').onclick=()=>{
+  muted = !muted;
+  $('bgmMute').classList.toggle('nav-btn--muted', muted);
+  if(!audio) return;
+  if(muted) audio.pause(); else audio.play().catch(()=>{});
+};
+/* 点空白处关掉详情 */
+document.addEventListener('click', e => {
+  const m = $('modal');
+  if(m && m.classList.contains('open') && e.target === m) m.classList.remove('open');
+});
+
+boot();
+</script>
+</body>
+</html>
