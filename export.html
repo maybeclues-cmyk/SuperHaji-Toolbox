@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>导出我的数据（老的那份）</title>
+<style>
+  body{background:#1a1410;color:#e8dcc8;font-family:system-ui,"Microsoft YaHei",sans-serif;padding:40px;max-width:900px;margin:0 auto}
+  h1{font-size:22px}
+  p{color:#b8a890;line-height:1.7;font-size:14px}
+  button{background:#8b6914;color:#fff;border:0;border-radius:8px;padding:12px 26px;font-size:16px;cursor:pointer;margin:8px 8px 8px 0}
+  button:hover{background:#a57f1a}
+  textarea{width:100%;height:340px;background:#241a14;color:#d8c8a8;border:1px solid #4a3a24;border-radius:8px;padding:10px;font-family:Consolas,monospace;font-size:12px}
+</style>
+</head>
+<body>
+<h1>导出我的数据</h1>
+<p>这一页和 <b>index.html</b>、<b>index.new.html</b> 共用同一个 localStorage。<br>
+点下面的按钮，把 <b>所有 egogift_* 键</b>导成一个 json 文件（也会显示在下面，可以全选复制）。</p>
+<button onclick="dump()">导出并下载</button>
+<button onclick="copyAll()">复制到剪贴板</button>
+<p id="status">未导出</p>
+<textarea id="out" readonly></textarea>
+<script>
+function collect(){
+  const out = {};
+  for (let i = 0; i < localStorage.length; i++){
+    const k = localStorage.key(i);
+    out[k] = localStorage.getItem(k);
+  }
+  return out;
+}
+function dump(){
+  const out = collect();
+  const txt = JSON.stringify(out, null, 1);
+  document.getElementById('out').value = txt;
+  document.getElementById('status').textContent =
+    '共 ' + Object.keys(out).length + ' 个键；egogift_* 有 ' +
+    Object.keys(out).filter(k => k.indexOf('egogift_') === 0).length + ' 个';
+  const blob = new Blob([txt], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'egogift-export-old.json';
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+}
+function copyAll(){
+  dump();
+  navigator.clipboard.writeText(document.getElementById('out').value)
+    .then(() => document.getElementById('status').textContent += '（已复制）')
+    .catch(e => document.getElementById('status').textContent += '（复制失败：' + e.message + '，手动全选复制吧）');
+}
+</script>
+</body>
+</html>
