@@ -306,8 +306,7 @@ function openGift(id, grade){
     </div>
     ${gradeBtns.length>1?`<div class="modal-controls"><div class="pill-group">${gradeBtns.map(([k,lbl])=>`<button class="pill-btn ${k===cur?'active':''}" data-grade="${k}">${lbl}</button>`).join('')}</div></div>`:''}
     ${d[cur]?`<div class="modal-description">${describe(d[cur])}</div>`:''}
-    ${(()=>{ const rel=[...recs,...usedIn].filter((v,i,a)=>a.indexOf(v)===i); return rel.length?`<div class="recipe-panel__label">合成方式</div>${rel.map(rr=>`<div class="recipe-panel__list">${(rr.materialIds||[]).map(matHtml).join('<span class="recipe-panel__plus">+</span>')}<span class="recipe-panel__plus">=</span>${(()=>{const res=giftById(rr.resultId);return res?entry(res.id,res.name):`<span class="recipe-panel__gift-name">${esc(rr.resultId)}</span>`})()}</div>`).join('')}`:'' })()}
-    ${pk.length?`<div class="recipe-panel__label">所属卡包</div><div class="recipe-panel__packs">${pk.map(n=>{const p=S.packs.find(x=>x.name===n);return `<div class="recipe-panel__pack-item">${p&&p.imageKey?`<img class="recipe-panel__pack-img" src="${coverSrc(p)}" onerror="this.style.display='none'">`:''}<span class="recipe-panel__pack-name">${esc(n)}${isRep?' 复刻':''}</span></div>`}).join('')}</div>`:''}`;
+    ${(()=>{ const rel=[...recs,...usedIn].filter((v,i,a)=>a.indexOf(v)===i); return rel.length?`<div class="recipe-panel__label">合成方式</div>${rel.map(rr=>`<div class="recipe-panel__list">${(rr.materialIds||[]).map(matHtml).join('<span class="recipe-panel__plus">+</span>')}<span class="recipe-panel__plus">=</span>${(()=>{const res=giftById(rr.resultId);return res?entry(res.id,res.name):`<span class="recipe-panel__gift-name">${esc(rr.resultId)}</span>`})()}</div>`).join('')}`:'' })()}`;
   $('modal').classList.add('open');
   document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>openGift(id, b.dataset.grade));
 }
