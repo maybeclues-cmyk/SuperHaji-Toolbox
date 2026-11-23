@@ -51,6 +51,7 @@ body{margin:0}
 .selected-item:hover .selected-item__remove{opacity:1;pointer-events:auto}
 .selected-item .gift-card{pointer-events:auto}
 .filter-btn__icon{width:14px;height:14px;vertical-align:-2px;margin-right:4px;border-radius:50%}
+.filter-btn[data-cat="全部"]{margin-left:14px}
 </style>
 </head>
 <body>
@@ -73,7 +74,7 @@ body{margin:0}
 <div class="context-menu" id="ctxMenu"></div>
 
 <script>
-const CAT_ICON = {烧伤:'Combustion',流血:'Laceration',震颤:'Vibration',破裂:'Burst',沉沦:'Sinking',呼吸法:'Breath',充能:'Charge',斩击:'Slash',突刺:'Pierce',打击:'Blunt'};
+const CAT_ICON = {烧伤:'Combustion',流血:'Laceration',震颤:'Vibration',破裂:'Burst',沉沦:'Sinking',呼吸法:'Breath',充能:'Charge',斩击:'Slash',突刺:'Pierce',打击:'Blunt',泛用:'none'};
 const RARITIES = ['EX','V','IV','III','II','I'];
 const S = {gifts:[],packs:[],recipes:[],user:{rarities:{},cats:{},labels:{},packMap:{}},sel:[],cat:'烧伤',q:'',page:'gifts',packOpen:null};
 const icon = id => 'EgoGiftIcon/' + id + '.png';
