@@ -11152,7 +11152,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "I"
 },
 {
 "id": 81030,
@@ -11185,7 +11186,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "III"
 },
 {
 "id": 81712,
@@ -11203,7 +11205,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "IV"
 },
 {
 "id": 81861,
@@ -11224,7 +11227,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "III"
 },
 {
 "id": 81958,
@@ -11245,7 +11249,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "II"
 },
 {
 "id": 82089,
@@ -11263,7 +11268,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "IV"
 },
 {
 "id": 83253,
@@ -11281,7 +11287,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "IV"
 },
 {
 "id": 83340,
@@ -11302,7 +11309,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "II"
 },
 {
 "id": 83851,
@@ -11323,7 +11331,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "III"
 },
 {
 "id": 86603,
@@ -11341,7 +11350,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "IV"
 },
 {
 "id": 86992,
@@ -11362,7 +11372,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "III"
 },
 {
 "id": 88643,
@@ -11383,7 +11394,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "II"
 },
 {
 "id": 89048,
@@ -11401,7 +11413,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "IV"
 },
 {
 "id": 89877,
@@ -11422,7 +11435,8 @@
 "plus": "",
 "double_plus": ""
 },
-"isCustom": true
+"isCustom": true,
+"rarity": "IV"
 }
 ]
 }
