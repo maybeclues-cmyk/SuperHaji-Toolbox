@@ -62,7 +62,6 @@ body{margin:0}
     <button class="nav-btn nav-btn--mute" id="bgmMute" title="总开关"><span class="mute-icon">♪</span></button>
     <button class="nav-btn nav-btn--leiheng hidden" id="bgmLei" title="BGM：雷恒">雷</button>
     <button class="nav-btn nav-btn--matthias hidden" id="bgmMat" title="BGM：马蒂亚斯">马</button>
-<button class="nav-btn" id="exportData" title="导出我的数据（等级/Buf/卡包）">⬇</button>
   </nav>
   <main class="main-content" id="app"></main>
 </div>
@@ -611,22 +610,6 @@ $('bgmMute').onclick=()=>{
   $('bgmMute').classList.toggle('nav-btn--muted', muted);
   if(!audio) return;
   if(muted) audio.pause(); else audio.play().catch(()=>{});
-};
-/* 导出我的数据（等级／Buf／卡包映射等，都在 localStorage 的 egogift_* 里） */
-$('exportData').onclick=()=>{
-  try{
-    const out = {};
-    for(let i=0;i<localStorage.length;i++){
-      const k = localStorage.key(i);
-      if(k && k.indexOf('egogift_')===0) out[k] = localStorage.getItem(k);
-    }
-    const blob = new Blob([JSON.stringify(out, null, 1)], {type:'application/json'});
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'egogift-export.json';
-    a.click();
-    setTimeout(()=>URL.revokeObjectURL(a.href), 5000);
-  }catch(e){ alert('导出失败：' + e.message); }
 };
 /* 点空白处关掉详情 */
 document.addEventListener('click', e => {
