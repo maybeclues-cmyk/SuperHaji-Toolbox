@@ -1521,9 +1521,9 @@
 "name": "美感",
 "category": "沉沦",
 "descriptions": {
-"base": "对因理智值降低而获得负面状态(士气低落，恐慌)的敌方单位造成的伤害+35%。\n\n增加[Sinking]强度或施加[Sinking]层数的技能造成的伤害额外+10%(包括特殊<noparse>沉沦</noparse>)\n\n对未带有理智值的敌方单位触发[Sinking]效果时，改为对其造成包括忧郁属性在内的所有罪孽属性中最有效的属性伤害。",
-"plus": "对理智值低于0点的敌方单位造成的伤害+40%。\n\n增加[Sinking]强度或施加[Sinking]层数的技能造成的伤害额外+10%(包括特殊<noparse>沉沦</noparse>)\n\n对未带有理智值的敌方单位触发[Sinking]效果时，改为对其造成包括忧郁属性在内的所有罪孽属性中最有效的属性伤害。",
-"double_plus": "对未带有理智值或理智值低于0点的敌方单位造成的伤害+50%。\n\n增加[Sinking]强度或施加[Sinking]层数的技能造成的伤害额外+10%(包括特殊<noparse>沉沦</noparse>)\n\n对未带有理智值的敌方单位触发[Sinking]效果时，改为对其造成包括忧郁属性在内的所有罪孽属性中最有效的属性伤害。"
+"base": "对因理智值降低而获得负面状态(士气低落，恐慌)的敌方单位造成的伤害+35%。\n\n增加[Sinking]强度或施加[Sinking]层数的技能造成的伤害额外+10%(包括特殊沉沦)\n\n对未带有理智值的敌方单位触发[Sinking]效果时，改为对其造成包括忧郁属性在内的所有罪孽属性中最有效的属性伤害。",
+"plus": "对理智值低于0点的敌方单位造成的伤害+40%。\n\n增加[Sinking]强度或施加[Sinking]层数的技能造成的伤害额外+10%(包括特殊沉沦)\n\n对未带有理智值的敌方单位触发[Sinking]效果时，改为对其造成包括忧郁属性在内的所有罪孽属性中最有效的属性伤害。",
+"double_plus": "对未带有理智值或理智值低于0点的敌方单位造成的伤害+50%。\n\n增加[Sinking]强度或施加[Sinking]层数的技能造成的伤害额外+10%(包括特殊沉沦)\n\n对未带有理智值的敌方单位触发[Sinking]效果时，改为对其造成包括忧郁属性在内的所有罪孽属性中最有效的属性伤害。"
 },
 "simple_descriptions": {
 "base": [
@@ -6160,7 +6160,7 @@
 "name": "作品：跃动",
 "category": "充能",
 "descriptions": {
-"base": "若自身在一回合内通过基础技能消耗了不低于10层[Charge]，则下回合使自身基础技能造成的伤害+20%(不包括固定强度的特殊<noparse>充能</noparse>)\n- 若消耗的[Charge]为特殊充能，则下回合令自身增加的[Laceration]强度与施加的[Laceration]层数额外+1",
+"base": "若自身在一回合内通过基础技能消耗了不低于10层[Charge]，则下回合使自身基础技能造成的伤害+20%(不包括固定强度的特殊充能)\n- 若消耗的[Charge]为特殊充能，则下回合令自身增加的[Laceration]强度与施加的[Laceration]层数额外+1",
 "plus": "",
 "double_plus": ""
 },
@@ -6298,7 +6298,7 @@
 "name": "万物的本能",
 "category": "泛用",
 "descriptions": {
-"base": "回合结束时，使属于环指的(带有[Laceration]的敌方单位数)名人格在下回合获得1层随机罪孽属性的<noparse>伤害强化</noparse>(每回合每名人格最多1次；若是集中遭遇战，则以部位判定)\n\n属于环指的人格造成的伤害+10%",
+"base": "回合结束时，使属于环指的(带有[Laceration]的敌方单位数)名人格在下回合获得1层随机罪孽属性的伤害强化(每回合每名人格最多1次；若是集中遭遇战，则以部位判定)\n\n属于环指的人格造成的伤害+10%",
 "plus": "",
 "double_plus": ""
 },
@@ -7165,7 +7165,7 @@
 "name": "折射玻璃管",
 "category": "沉沦",
 "descriptions": {
-"base": "常规遭遇战中，命中[Sinking]强度与[Sinking]层数之和不低于10点的敌方单位时，若目标的理智值为-45点，\n则对其造成(其[Sinking]强度/2)点忧郁伤害(每个技能最多1次)\n\n集中遭遇战中，命中[Sinking]强度与[Sinking]层数之和不低于10点的敌方单位时，\n对目标造成(其[Sinking]强度/2)点忧郁伤害(每个技能最多1次)\n\n若命中敌方单位的技能为施加[Sinking](包括施加[Sinking]层数与特殊<noparse>沉沦</noparse>)的技能，则改为其造成(其[Sinking]强度)点忧郁伤害，而非([Sinking]强度/2)点\n(适用于每回合首个攻击命中的施加[Sinking]的技能)",
+"base": "常规遭遇战中，命中[Sinking]强度与[Sinking]层数之和不低于10点的敌方单位时，若目标的理智值为-45点，\n则对其造成(其[Sinking]强度/2)点忧郁伤害(每个技能最多1次)\n\n集中遭遇战中，命中[Sinking]强度与[Sinking]层数之和不低于10点的敌方单位时，\n对目标造成(其[Sinking]强度/2)点忧郁伤害(每个技能最多1次)\n\n若命中敌方单位的技能为施加[Sinking](包括施加[Sinking]层数与特殊沉沦)的技能，则改为其造成(其[Sinking]强度)点忧郁伤害，而非([Sinking]强度/2)点\n(适用于每回合首个攻击命中的施加[Sinking]的技能)",
 "plus": "",
 "double_plus": ""
 },
@@ -11257,7 +11257,7 @@
 "name": "再来一杯！",
 "category": "泛用",
 "descriptions": {
-"base": "消耗[Vibration]层数或[Charge]层数的基础技能造成的伤害+20%(包括特殊<noparse>充能</noparse>，不包括固定强度的特殊<noparse>充能</noparse>)\n\n通过基础技能消耗[Vibration]层数或[Charge]层数时，该技能结束时对自身重新施加相当于消耗层数一半的[Vibration]层数或[Charge]层数(最少1层，向下取整；包括特殊<noparse>充能</noparse>，不包括固定强度的特殊<noparse>充能</noparse>)",
+"base": "消耗[Vibration]层数或[Charge]层数的基础技能造成的伤害+20%(包括特殊充能，不包括固定强度的特殊充能)\n\n通过基础技能消耗[Vibration]层数或[Charge]层数时，该技能结束时对自身重新施加相当于消耗层数一半的[Vibration]层数或[Charge]层数(最少1层，向下取整；包括特殊充能，不包括固定强度的特殊充能)",
 "plus": "",
 "double_plus": ""
 },
@@ -11276,7 +11276,7 @@
 "name": "拍手啪啪！",
 "category": "震颤",
 "descriptions": {
-"base": "使敌方单位增加[Vibration]强度，对敌方单位施加[Vibration]层数或对敌方单位施加特殊<noparse>震颤</noparse>的基础技能拼点胜利时，随机使目标以以下的特殊<noparse>震颤</noparse>[FusionVibration](每回合最多1次)\n- [VibrationIgnition]\n- [VibrationBleeding]\n- [VibrationEcho]\n- [VibrationCollapse]\n- [VibrationChainPersonality]",
+"base": "使敌方单位增加[Vibration]强度，对敌方单位施加[Vibration]层数或对敌方单位施加特殊震颤的基础技能拼点胜利时，随机使目标以以下的特殊震颤[FusionVibration](每回合最多1次)\n- [VibrationIgnition]\n- [VibrationBleeding]\n- [VibrationEcho]\n- [VibrationCollapse]\n- [VibrationChainPersonality]",
 "plus": "",
 "double_plus": ""
 },
@@ -11358,7 +11358,7 @@
 "name": "翼形蜡烛",
 "category": "烧伤",
 "descriptions": {
-"base": "回合开始时，若属于<noparse>黎明事务所</noparse>的人格不低于3名，则触发该效果(以编队人员为基准)\n首个回合开始时，使全体友方单位获得2层[DawnLight]\n战斗开始时，使<noparse>黎明事务所</noparse> 收尾人 辛克莱恢复10点理智值，该人格通过被动“不稳定的自我外壳”进入不稳定E.G.O::蜡翼状态的理智值条件改为不低于25点\n\n[属于<noparse>黎明事务所</noparse>的人格专属]\n基础技能攻击命中时，使目标增加2级[Combustion]强度与2级[Vibration]强度(每个技能最多1次)\n属于<noparse>黎明事务所</noparse>的人格视作施加[Combustion]与[Vibration]的人格\n- 属于<noparse>黎明事务所</noparse>的人格的基础技能视作施加[Combustion]与[Vibration]的技能\n关卡开始时，若<noparse>黎明事务所</noparse> 收尾人 浮士德在场，则使其获得1层[Firstlight]",
+"base": "回合开始时，若属于黎明事务所的人格不低于3名，则触发该效果(以编队人员为基准)\n首个回合开始时，使全体友方单位获得2层[DawnLight]\n战斗开始时，使黎明事务所 收尾人 辛克莱恢复10点理智值，该人格通过被动“不稳定的自我外壳”进入不稳定E.G.O::蜡翼状态的理智值条件改为不低于25点\n\n[属于黎明事务所的人格专属]\n基础技能攻击命中时，使目标增加2级[Combustion]强度与2级[Vibration]强度(每个技能最多1次)\n属于黎明事务所的人格视作施加[Combustion]与[Vibration]的人格\n- 属于黎明事务所的人格的基础技能视作施加[Combustion]与[Vibration]的技能\n关卡开始时，若黎明事务所 收尾人 浮士德在场，则使其获得1层[Firstlight]",
 "plus": "",
 "double_plus": ""
 },
