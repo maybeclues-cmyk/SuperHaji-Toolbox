@@ -343,6 +343,46 @@
   ]
  },
  {
+  "id": "pack_canto_x",
+  "name": "开店抢购",
+  "imageKey": "Canto_X",
+  "floors": [],
+  "gifts": [
+   9290,
+   9291
+  ]
+ },
+ {
+  "id": "pack_canto_x_mid",
+  "name": "纷繁的色彩",
+  "imageKey": "Canto_X_mid",
+  "floors": [],
+  "gifts": [
+   9288,
+   9289
+  ]
+ },
+ {
+  "id": "pack_canto_x_mid2",
+  "name": "保存的信念",
+  "imageKey": "Canto_X_mid2",
+  "floors": [],
+  "gifts": [
+   9286,
+   9287
+  ]
+ },
+ {
+  "id": "pack_canto_x_hard",
+  "name": "暴食重临",
+  "imageKey": "Canto_X_hard",
+  "floors": [],
+  "gifts": [
+   9284,
+   9285
+  ]
+ },
+ {
   "id": "57345b1b-31d5-47aa-8b68-fb63b45a7a6a",
   "name": "地狱鸡",
   "imageKey": "Canto_HellsChicken.png",
@@ -695,6 +735,26 @@
    9239,
    9240,
    9241
+  ]
+ },
+ {
+  "id": "pack_walpu10_dawn",
+  "name": "黎明后贯穿而来之楔",
+  "imageKey": "Walpu10_Dawn",
+  "floors": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "gifts": [
+   9292,
+   9293,
+   9297,
+   9298,
+   9299,
+   9300
   ]
  },
  {
@@ -1248,66 +1308,6 @@
   ],
   "gifts": [
    9830
-  ]
- },
- {
-  "id": "pack_canto_x",
-  "name": "开店抢购",
-  "imageKey": "Canto_X",
-  "floors": [],
-  "gifts": [
-   9290,
-   9291
-  ]
- },
- {
-  "id": "pack_canto_x_mid",
-  "name": "纷繁的色彩",
-  "imageKey": "Canto_X_mid",
-  "floors": [],
-  "gifts": [
-   9288,
-   9289
-  ]
- },
- {
-  "id": "pack_canto_x_mid2",
-  "name": "保存的信念",
-  "imageKey": "Canto_X_mid2",
-  "floors": [],
-  "gifts": [
-   9286,
-   9287
-  ]
- },
- {
-  "id": "pack_walpu10_dawn",
-  "name": "黎明后贯穿而来之楔",
-  "imageKey": "Walpu10_Dawn",
-  "floors": [
-   11,
-   12,
-   13,
-   14,
-   15
-  ],
-  "gifts": [
-   9292,
-   9293,
-   9297,
-   9298,
-   9299,
-   9300
-  ]
- },
- {
-  "id": "pack_canto_x_hard",
-  "name": "暴食重临",
-  "imageKey": "Canto_X_hard",
-  "floors": [],
-  "gifts": [
-   9284,
-   9285
   ]
  }
 ]

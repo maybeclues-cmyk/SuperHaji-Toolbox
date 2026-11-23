@@ -145,7 +145,13 @@ async function boot(){
     const base = user.length ? user : (p || []);
     const have = new Set(base.map(x=>String(x.id)));
     const extra = (p || []).filter(x=>x && x.id && String(x.id).startsWith('pack_') && !have.has(String(x.id)));
-    return base.concat(extra).map((x,i)=>({ ...x, id: (x.id === undefined || x.id === null) ? ('preset_'+i) : x.id }));
+    const all = base.concat(extra);
+    /* 按 preset 的顺序排（她的旧卡包按名字对、新卡包按 id 对） */
+    const ord = new Map(), ordName = new Map();
+    (p || []).forEach((x, i) => { ord.set(String(x.id), i); ordName.set(x.name, i); });
+    const rank = x => ord.has(String(x.id)) ? ord.get(String(x.id)) : (ordName.has(x.name) ? ordName.get(x.name) : 9999);
+    all.sort((a,b) => rank(a) - rank(b));
+    return all.map((x,i)=>({ ...x, id: (x.id === undefined || x.id === null) ? ('preset_'+i) : x.id }));
   })();
   S.recipes = (()=>{ try{ const v=JSON.parse(localStorage.getItem('egogift_recipes')||'null'); return Array.isArray(v)&&v.length?v:r||[]; }catch(e){ return r||[]; } })();
   /* 卡包饰品：数据里写死的 gifts 合并进 packMap（localStorage 优先） */
