@@ -194,12 +194,30 @@ async function boot(){
   }
   route();
 }
+/* ---------- 界面音效 ---------- */
+let _uiCtx = null;
+function uiBeep(freq, dur, type){
+  try{
+    _uiCtx = _uiCtx || new (window.AudioContext || window.webkitAudioContext)();
+    if(_uiCtx.state === 'suspended') _uiCtx.resume();
+    const o = _uiCtx.createOscillator(), g = _uiCtx.createGain();
+    o.type = type || 'sine';
+    o.frequency.value = freq;
+    g.gain.setValueAtTime(0.10, _uiCtx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, _uiCtx.currentTime + dur);
+    o.connect(g); g.connect(_uiCtx.destination);
+    o.start(); o.stop(_uiCtx.currentTime + dur);
+  }catch(e){}
+}
 function route(){
   const h = (location.hash.replace(/^#\/?/, '') || 'gifts');
   const page = ['gifts','packs','plan','recipes'].includes(h) ? h : 'gifts';
   if(page !== S.page) S.q = '';
   S.page = page;
-  document.querySelectorAll('.nav-link').forEach(a => a.classList.toggle('router-link-active', a.dataset.page === S.page));
+  document.querySelectorAll('.nav-link').forEach(a => {
+    a.classList.toggle('router-link-active', a.dataset.page === S.page);
+    a.onclick = () => uiBeep(520, 0.06, 'square');
+  });
   closeAll(); render();
 }
 window.addEventListener('hashchange', route);
@@ -256,7 +274,7 @@ function bindCards(root){
     const id = el.dataset.id;
     el.onclick = () => { triggerGiftBgm(giftById(id)); openGift(id); };
     el.oncontextmenu = ev => { ev.preventDefault(); openCtx(id, ev.clientX, ev.clientY); };
-    el.onmouseenter = () => showHover(id);
+    el.onmouseenter = () => { uiBeep(880, 0.04, 'sine'); showHover(id); };
   });
   const grid = root.querySelector('.gift-grid');
   if(grid) grid.onmouseleave = () => $('hoverPanel').classList.remove('open');
