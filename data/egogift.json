@@ -28,7 +28,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得1个技能所对应的E.G.O资源\n获得所有技能所对应的E.G.O资源各1个",
+"base": [
+{
+"abilityID": 9002,
+"simpleDesc": "获得1个技能所对应的E.G.O资源"
+},
+{
+"abilityID": 90021,
+"simpleDesc": "获得所有技能所对应的E.G.O资源各1个"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -44,7 +53,12 @@
 "double_plus": "战斗开始时，使全体敌方单位(或所有异想体部位)增加3级[Combustion]强度。"
 },
 "simple_descriptions": {
-"base": "增加2级[Combustion]强度",
+"base": [
+{
+"abilityID": 9003,
+"simpleDesc": "增加2级[Combustion]强度"
+}
+],
 "plus": "增加2级[Combustion]强度",
 "double_plus": "增加3级[Combustion]强度"
 },
@@ -60,7 +74,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复已失去体力12.5%的体力\n恢复已失去体力25%的体力",
+"base": [
+{
+"abilityID": 9004,
+"simpleDesc": "恢复已失去体力12.5%的体力"
+},
+{
+"abilityID": 90041,
+"simpleDesc": "恢复已失去体力25%的体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -92,7 +115,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "随机获得1个上回合未使用的E.G.O资源\n获得上回合未使用的所有E.G.O资源各1个",
+"base": [
+{
+"abilityID": 9006,
+"simpleDesc": "随机获得1个上回合未使用的E.G.O资源"
+},
+{
+"abilityID": 90061,
+"simpleDesc": "获得上回合未使用的所有E.G.O资源各1个"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -108,7 +140,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成首次使用攻击技能造成伤害量50%的固定伤害\n造成首次使用攻击技能造成伤害量50%的固定伤害",
+"base": [
+{
+"abilityID": 9007,
+"simpleDesc": "造成首次使用攻击技能造成伤害量50%的固定伤害"
+},
+{
+"abilityID": 90071,
+"simpleDesc": "造成首次使用攻击技能造成伤害量50%的固定伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -124,7 +165,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加1级[Laceration]强度并直到下回合施加2层[DefenseDown]\n增加3级[Laceration]强度",
+"base": [
+{
+"abilityID": 2058,
+"simpleDesc": "增加1级[Laceration]强度并直到下回合施加2层[DefenseDown]"
+},
+{
+"abilityID": 205801,
+"simpleDesc": "增加3级[Laceration]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -140,7 +190,16 @@
 "double_plus": "使用增加[Combustion]强度或施加特殊烧伤的技能或色欲技能对敌方单位造成伤害时，使目标增加4级[Combustion]强度。\n\n回合开始时，使[Combustion]强度不低于20级的全体敌方单位的[Combustion]强度变为2.5倍。"
 },
 "simple_descriptions": {
-"base": "增加3级[Combustion]强度\n[Combustion]强度变为2倍",
+"base": [
+{
+"abilityID": 9009,
+"simpleDesc": "增加3级[Combustion]强度"
+},
+{
+"abilityID": 90091,
+"simpleDesc": "[Combustion]强度变为2倍"
+}
+],
 "plus": "增加4级[Combustion]强度\n[Combustion]强度变为2倍",
 "double_plus": "增加4级[Combustion]强度\n[Combustion]强度变为2.5倍"
 },
@@ -156,7 +215,16 @@
 "double_plus": "回合开始时，随机使2名友方单位获得2层[AttackDmgUp]。\n\n优先选取拥有色欲攻击技能的友方单位，且该情况下使其额外获得2层[AttackDmgUp]。"
 },
 "simple_descriptions": {
-"base": "获得2层[AttackDmgUp]\n获得3层[AttackDmgUp]",
+"base": [
+{
+"abilityID": 9010,
+"simpleDesc": "获得2层[AttackDmgUp]"
+},
+{
+"abilityID": 90101,
+"simpleDesc": "获得3层[AttackDmgUp]"
+}
+],
 "plus": "获得2层[AttackDmgUp]\n获得4层[AttackDmgUp]",
 "double_plus": "获得2层[AttackDmgUp]\n获得4层[AttackDmgUp]"
 },
@@ -172,7 +240,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "技能威力+2",
+"base": [
+{
+"abilityID": 9011,
+"simpleDesc": "技能威力+2"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -188,7 +261,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "打击技能威力+2",
+"base": [
+{
+"abilityID": 9012,
+"simpleDesc": "打击技能威力+2"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -204,7 +282,16 @@
 "double_plus": "使用单个技能对敌方单位造成不低于1点体力伤害时，使其增加3级[Burst]强度。\n\n若该技能为斩击技能，则改为增加5级[Burst]强度并施加1层[Burst]。"
 },
 "simple_descriptions": {
-"base": "增加2级[Burst]强度\n增加4级[Burst]强度",
+"base": [
+{
+"abilityID": 9013,
+"simpleDesc": "增加2级[Burst]强度"
+},
+{
+"abilityID": 90131,
+"simpleDesc": "增加4级[Burst]强度"
+}
+],
 "plus": "增加3级[Burst]强度\n增加5级[Burst]强度 ",
 "double_plus": "增加3级[Burst]强度\n增加5级[Burst]强度并施加1层[Burst]"
 },
@@ -220,7 +307,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "重复使用技能\n技能威力+1",
+"base": [
+{
+"abilityID": 9014,
+"simpleDesc": "重复使用技能"
+},
+{
+"abilityID": 90141,
+"simpleDesc": "技能威力+1"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -236,7 +332,16 @@
 "double_plus": "技能对陷入混乱的敌方单位造成的伤害+15%。\n\n若该技能为增加震颤 强度，施加震颤 层数，造成振幅转换 ，造成震颤引爆 或造成振幅纠缠 的技能，或该技能为怠惰技能，则改为造成的伤害+30%"
 },
 "simple_descriptions": {
-"base": "造成的伤害+10%\n造成的伤害+20%",
+"base": [
+{
+"abilityID": 9015,
+"simpleDesc": "造成的伤害+10%"
+},
+{
+"abilityID": 90151,
+"simpleDesc": "造成的伤害+20%"
+}
+],
 "plus": "造成的伤害+12.5%\n造成的伤害+25%",
 "double_plus": "造成的伤害+15%\n造成的伤害+30%"
 },
@@ -252,7 +357,12 @@
 "double_plus": "使用暴食技能对未陷入混乱的敌方单位造成伤害，或通过技能效果增加[Vibration]强度时，随机使全体敌方单位(或所有异想体部位)增加共计8级[Vibration]强度。"
 },
 "simple_descriptions": {
-"base": "随机增加4级[Vibration]强度",
+"base": [
+{
+"abilityID": 9016,
+"simpleDesc": "随机增加4级[Vibration]强度"
+}
+],
 "plus": "随机增加6级[Vibration]强度",
 "double_plus": "随机增加8级[Vibration]强度"
 },
@@ -268,7 +378,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复体力上限5%的体力\n恢复体力上限10%的体力",
+"base": [
+{
+"abilityID": 9017,
+"simpleDesc": "恢复体力上限5%的体力"
+},
+{
+"abilityID": 90171,
+"simpleDesc": "恢复体力上限10%的体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -284,7 +403,16 @@
 "double_plus": "回合开始时，随机使3名敌方单位(或所有异想体部位)增加4级[Burst]强度。\n\n激活暴食完全共鸣时，在战斗开始时使全体敌方单位增加4级[Burst]强度。"
 },
 "simple_descriptions": {
-"base": "增加4级[Burst]强度\n增加2级[Burst]强度",
+"base": [
+{
+"abilityID": 9018,
+"simpleDesc": "增加4级[Burst]强度"
+},
+{
+"abilityID": 90181,
+"simpleDesc": "增加2级[Burst]强度"
+}
+],
 "plus": "增加4级[Burst]强度\n增加3级[Burst]强度",
 "double_plus": "增加4级[Burst]强度\n增加4级[Burst]强度"
 },
@@ -300,7 +428,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加2层[DefenseDown]",
+"base": [
+{
+"abilityID": 9019,
+"simpleDesc": "施加2层[DefenseDown]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -316,7 +449,12 @@
 "double_plus": "回合开始时，解除敌方单位的混乱，使其增加(12+混乱阶段×6)级[Laceration]强度并在本回合与下回合对其施加 (12+混乱阶段×6)层[AttackDown]与[DefenseDown]。(每场战斗每名敌方单位最多1次，不对不能解除混乱的特定敌方单位生效)"
 },
 "simple_descriptions": {
-"base": "增加(8+混乱阶段×4)级[Laceration]强度",
+"base": [
+{
+"abilityID": 9020,
+"simpleDesc": "增加(8+混乱阶段×4)级[Laceration]强度"
+}
+],
 "plus": "增加(10+混乱阶段×5)级[Laceration]强度",
 "double_plus": "增加(12+混乱阶段×6)级[Laceration]强度"
 },
@@ -332,7 +470,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得忧郁E.G.O资源和随机2种其他E.G.O资源各1个。",
+"base": [
+{
+"abilityID": 9021,
+"simpleDesc": "获得忧郁E.G.O资源和随机2种其他E.G.O资源各1个。"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -348,7 +491,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害+15%\n获得2层[AttackUp]",
+"base": [
+{
+"abilityID": 9022,
+"simpleDesc": "造成的伤害+15%"
+},
+{
+"abilityID": 90221,
+"simpleDesc": "获得2层[AttackUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -364,7 +516,12 @@
 "double_plus": "通过技能效果增加[Burst]强度时，使目标增加3级[Burst]强度并对其施加1层[Burst]。\n\n若该技能为忧郁技能，则改为使目标增加3级[Burst]强度并对其施加2层[Burst]。"
 },
 "simple_descriptions": {
-"base": "增加1级[Burst]强度并施加1层[Burst]",
+"base": [
+{
+"abilityID": 9023,
+"simpleDesc": "增加1级[Burst]强度并施加1层[Burst]"
+}
+],
 "plus": "增加2级[Burst]强度并施加1层[Burst]",
 "double_plus": "增加3级[Burst]强度并施加1层[Burst]\n增加3级[Burst]强度并施加2层[Burst]"
 },
@@ -380,7 +537,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加5层[AttackDown]与5层[DefenseDown]",
+"base": [
+{
+"abilityID": 9024,
+"simpleDesc": "施加5层[AttackDown]与5层[DefenseDown]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -396,7 +558,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害+20%\n恢复伤害量20%的体力",
+"base": [
+{
+"abilityID": 9025,
+"simpleDesc": "造成的伤害+20%"
+},
+{
+"abilityID": 90251,
+"simpleDesc": "恢复伤害量20%的体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -412,7 +583,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得2层[AttackUp]与2层[DefenseUp]",
+"base": [
+{
+"abilityID": 9026,
+"simpleDesc": "获得2层[AttackUp]与2层[DefenseUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -428,7 +604,16 @@
 "double_plus": "使用打击技能或傲慢技能命中敌方单位时，对目标造成5点固定理智伤害。\n\n使理智值低于0点的友方单位造成的伤害+25%"
 },
 "simple_descriptions": {
-"base": "造成2点理智伤害\n造成的伤害+10%",
+"base": [
+{
+"abilityID": 9027,
+"simpleDesc": "造成2点理智伤害"
+},
+{
+"abilityID": 90271,
+"simpleDesc": "造成的伤害+10%"
+}
+],
 "plus": "造成3点理智伤害\n造成的伤害+15%",
 "double_plus": "造成5点理智伤害\n造成的伤害+25%"
 },
@@ -444,7 +629,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复体力上限15%的体力\n恢复已失去体力12.5%的体力",
+"base": [
+{
+"abilityID": 9028,
+"simpleDesc": "恢复体力上限15%的体力"
+},
+{
+"abilityID": 90281,
+"simpleDesc": "恢复已失去体力12.5%的体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -455,12 +649,29 @@
 "name": "又小又可能很坏的玩偶",
 "category": "流血",
 "descriptions": {
-"base": "对战斗开始时带有[Laceration]或特殊流血的敌方单位造成的伤害+10%\n\n受到来自战斗开始时带有[Laceration]或特殊流血的敌方单位的伤害-20%\n\n拥有傲慢攻击技能的友方单位改为对带有流血或特殊流血的敌方单位造成的伤害+20%\n\n拥有傲慢攻击技能的友方单位改为受到来自带有[Laceration]或特殊流血的敌方单位的伤害-30%。",
+"base": "对战斗开始时带有[Laceration]或特殊流血的敌方单位造成的伤害+10%\n\n受到来自战斗开始时带有[Laceration]或特殊流血的敌方单位的伤害-20%\n\n拥有傲慢攻击技能的友方单位改为对带有[Laceration]或特殊流血的敌方单位造成的伤害+20%\n\n拥有傲慢攻击技能的友方单位改为受到来自带有[Laceration]或特殊流血的敌方单位的伤害-30%。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害+10%\n受到的伤害-20%\n造成的伤害+20%\n受到的伤害-30%",
+"base": [
+{
+"abilityID": 9029,
+"simpleDesc": "造成的伤害+10%"
+},
+{
+"abilityID": 90291,
+"simpleDesc": "受到的伤害-20%"
+},
+{
+"abilityID": 90292,
+"simpleDesc": "造成的伤害+20%"
+},
+{
+"abilityID": 90293,
+"simpleDesc": "受到的伤害-30%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -476,7 +687,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "突刺技能威力+2",
+"base": [
+{
+"abilityID": 9030,
+"simpleDesc": "突刺技能威力+2"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -492,7 +708,16 @@
 "double_plus": "波次的首个回合开始时，使全体敌方单位(或所有异想体部位)增加5级[Vibration]强度，并对其施加5层[Vibration]。\n\n使用嫉妒技能造成伤害时，使目标增加3级[Vibration]强度。"
 },
 "simple_descriptions": {
-"base": "增加4级[Vibration]强度并施加4层[Vibration]。\n增加2级[Vibration]强度",
+"base": [
+{
+"abilityID": 9031,
+"simpleDesc": "增加4级[Vibration]强度并施加4层[Vibration]。"
+},
+{
+"abilityID": 90311,
+"simpleDesc": "增加2级[Vibration]强度"
+}
+],
 "plus": "增加4级[Vibration]强度并施加4层[Vibration]。\n增加2级[Vibration]强度",
 "double_plus": "增加5级[Vibration]强度并施加5层[Vibration]。\n增加3级[Vibration]强度"
 },
@@ -508,7 +733,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "斩击技能威力+2\n获得2层[AttackUp]与2层[DefenseUp]",
+"base": [
+{
+"abilityID": 9032,
+"simpleDesc": "斩击技能威力+2"
+},
+{
+"abilityID": 90321,
+"simpleDesc": "获得2层[AttackUp]与2层[DefenseUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -524,7 +758,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加3级[Burst]强度\n增加5级[Burst]强度",
+"base": [
+{
+"abilityID": 9033,
+"simpleDesc": "增加3级[Burst]强度"
+},
+{
+"abilityID": 90331,
+"simpleDesc": "增加5级[Burst]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -535,12 +778,17 @@
 "name": "单点打击逻辑电路",
 "category": "烧伤",
 "descriptions": {
-"base": "使用增加[Combustion]强度或施加特殊烧伤的技能或嫉妒技能命中敌方单位时，额外使目标增加(技能硬币数/2)级[Combustion]强度(向上取整)\n- [不可重复触发] 迁居申请 希斯克利夫 E.G.O被动“电路连接”触发时，该效果不会触发\n\n命中时，若目标的[Combustion]强度为99级，则使其施加1层[IDMicroChip](每个敌方单位最多1次，每回合最多3次)",
+"base": "使用增加[Combustion]强度或施加特殊烧伤的技能或嫉妒技能命中敌方单位时，额外使目标增加(技能硬币数/2)级[Combustion]强度(向上取整)\n- [不可重复触发] 迁居申请 希斯克利夫 E.G.O被动“电路连接”触发时，该效果不会触发\n\n命中时，若目标的[Combustion]强度为99级，则对其施加1层[IDMicroChip](每个敌方单位最多1次，每回合最多3次)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加(技能硬币数/2)级[Combustion]强度",
+"base": [
+{
+"abilityID": 9034,
+"simpleDesc": "增加(技能硬币数/2)级[Combustion]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -556,7 +804,16 @@
 "double_plus": "回合开始时，对全体敌方单位造成5点固定嫉妒伤害。\n\n对现存体力低于50%的敌方单位施加2层[ResultReduction]。"
 },
 "simple_descriptions": {
-"base": "造成3点嫉妒伤害\n造成3点嫉妒伤害并施加1层[ResultReduction]",
+"base": [
+{
+"abilityID": 9035,
+"simpleDesc": "造成3点嫉妒伤害"
+},
+{
+"abilityID": 90351,
+"simpleDesc": "造成3点嫉妒伤害并施加1层[ResultReduction]"
+}
+],
 "plus": "造成4点嫉妒伤害\n造成4点嫉妒伤害并施加1层[ResultReduction]",
 "double_plus": "造成5点嫉妒伤害\n造成5点嫉妒伤害并施加2层[ResultReduction]"
 },
@@ -572,7 +829,12 @@
 "double_plus": "非集中遭遇战开始时，对全体敌方单位造成其体力上限30%的固定伤害。"
 },
 "simple_descriptions": {
-"base": "造成体力上限20%的固定伤害",
+"base": [
+{
+"abilityID": 2060,
+"simpleDesc": "造成体力上限20%的固定伤害"
+}
+],
 "plus": "造成体力上限25%的固定伤害",
 "double_plus": "造成体力上限30%的固定伤害"
 },
@@ -583,12 +845,17 @@
 "name": "瓶中婴孩",
 "category": "泛用",
 "descriptions": {
-"base": "关卡开始时，所有E.G.O资源+1。",
+"base": "关卡开始时，所有E.G.O资源+1。\n战斗胜利时，获得持有量最少的2种E.G.O资源各2个",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "所有E.G.O资源+1",
+"base": [
+{
+"abilityID": 9037,
+"simpleDesc": "所有E.G.O资源+1"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -604,7 +871,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得2层[AttackDmgUp]",
+"base": [
+{
+"abilityID": 9038,
+"simpleDesc": "获得2层[AttackDmgUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -620,7 +892,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复体力上限12%的体力。",
+"base": [
+{
+"abilityID": 9039,
+"simpleDesc": "恢复体力上限12%的体力。"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -636,7 +913,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "遭遇战奖励卡中的第一张变为其可能出现的最高等级",
+"base": [
+{
+"abilityID": 9040,
+"simpleDesc": "遭遇战奖励卡中的第一张变为其可能出现的最高等级"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -652,7 +934,16 @@
 "double_plus": "友方单位通过技能效果使敌方单位增加[Sinking]强度，对敌方单位施加[Sinking]层数或对敌方单位施加特殊沉沦时，下回合使该人格增加2级攻击等级（最多增加4级）。\n\n若该友方单位拥有忧郁或暴怒攻击技能，则改为每次增加[Sinking]强度或施加[Sinking]层数时，下回合使该人格增加3级攻击等级（最多增加6级）。"
 },
 "simple_descriptions": {
-"base": "增加1级攻击等级\n增加2级攻击等级",
+"base": [
+{
+"abilityID": 9041,
+"simpleDesc": "增加1级攻击等级"
+},
+{
+"abilityID": 90411,
+"simpleDesc": "增加2级攻击等级"
+}
+],
 "plus": "增加1级攻击等级\n增加2级攻击等级",
 "double_plus": "增加2级攻击等级\n增加3级攻击等级"
 },
@@ -668,7 +959,16 @@
 "double_plus": "友方单位通过技能效果使敌方单位增加的[Laceration]强度变为2.5倍。\n\n回合结束时带有[Laceration]或特殊流血的敌方单位在下回合速度值-3。"
 },
 "simple_descriptions": {
-"base": "增加的[Laceration]强度变为2倍\n速度值减少2",
+"base": [
+{
+"abilityID": 9042,
+"simpleDesc": "增加的[Laceration]强度变为2倍"
+},
+{
+"abilityID": 90421,
+"simpleDesc": "速度值减少2"
+}
+],
 "plus": "增加的[Laceration]强度变为2倍\n速度值减少3",
 "double_plus": "增加的[Laceration]强度变为2.5倍\n速度值减少3"
 },
@@ -684,7 +984,12 @@
 "double_plus": "激活暴怒共鸣或使用获得[Charge]层数或特殊充能的技能时，下回合开始时使全体友方单位获得4层[Charge]。(每回合最多1次)"
 },
 "simple_descriptions": {
-"base": "获得3层[Charge]",
+"base": [
+{
+"abilityID": 9043,
+"simpleDesc": "获得3层[Charge]"
+}
+],
 "plus": "获得3层[Charge]",
 "double_plus": "获得4层[Charge]"
 },
@@ -700,7 +1005,16 @@
 "double_plus": "使用技能命中敌方单位时，下回合使其增加2级[Vibration]强度。\n\n若该技能为暴怒技能，则改为使其增加4级[Vibration]强度。"
 },
 "simple_descriptions": {
-"base": "增加1级[Vibration]强度\n增加2级[Vibration]强度",
+"base": [
+{
+"abilityID": 9044,
+"simpleDesc": "增加1级[Vibration]强度"
+},
+{
+"abilityID": 90441,
+"simpleDesc": "增加2级[Vibration]强度"
+}
+],
 "plus": "增加1级[Vibration]强度\n增加3级[Vibration]强度",
 "double_plus": "增加2级[Vibration]强度\n增加4级[Vibration]强度"
 },
@@ -716,7 +1030,16 @@
 "double_plus": "回合结束时，使带有[Combustion]的敌方单位消耗一半[Combustion]层数并对其额外造成(其[Combustion]强度×消耗的[Combustion]层数)点暴怒伤害。(最多消耗10层[Combustion])\n\n下回合使其防御等级减少(炎鳞消耗的[Combustion]层数)级(最多减少8级)"
 },
 "simple_descriptions": {
-"base": "根据[Combustion]相应造成暴怒伤害\n[DefenseDown]",
+"base": [
+{
+"abilityID": 9045,
+"simpleDesc": "根据[Combustion]相应造成暴怒伤害"
+},
+{
+"abilityID": 90451,
+"simpleDesc": "[DefenseDown]"
+}
+],
 "plus": "根据[Combustion]相应造成暴怒伤害\n[DefenseDown]",
 "double_plus": "根据[Combustion]相应造成暴怒伤害\n[DefenseDown]"
 },
@@ -732,7 +1055,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得1层[ResultEnhancement]\n获得2层[ResultEnhancement]",
+"base": [
+{
+"abilityID": 9046,
+"simpleDesc": "获得1层[ResultEnhancement]"
+},
+{
+"abilityID": 90461,
+"simpleDesc": "获得2层[ResultEnhancement]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -748,7 +1080,16 @@
 "double_plus": "回合结束时，使全体敌方单位增加与其(速度值+2)相等的[Burst]强度。\n\n激活色欲完全共鸣时，在战斗开始时随机使1名敌方单位增加5级[Burst]强度并对其施加4层[Burst]。"
 },
 "simple_descriptions": {
-"base": "增加与速度值相等的[Burst]强度\n增加3级[Burst]强度并施加3层[Burst]",
+"base": [
+{
+"abilityID": 2059,
+"simpleDesc": "增加与速度值相等的[Burst]强度"
+},
+{
+"abilityID": 205901,
+"simpleDesc": "增加3级[Burst]强度并施加3层[Burst]"
+}
+],
 "plus": "增加与(速度值+1)相等的[Burst]强度\n增加4级[Burst]强度并施加3层[Burst]",
 "double_plus": "增加与(速度值+2)相等的[Burst]强度\n增加5级[Burst]强度并施加4层[Burst]"
 },
@@ -764,7 +1105,16 @@
 "double_plus": "通过技能效果增加[Laceration]强度或施加特殊流血时，使目标增加3级[Laceration]强度并对其施加1层[Laceration]。\n\n若该技能为色欲技能，则改为使目标增加3级[Laceration]强度并对其施加2层[Laceration]。"
 },
 "simple_descriptions": {
-"base": "增加1级[Laceration]强度并施加1层[Laceration]\n增加3级[Laceration]强度并施加1层[Laceration]",
+"base": [
+{
+"abilityID": 9048,
+"simpleDesc": "增加1级[Laceration]强度并施加1层[Laceration]"
+},
+{
+"abilityID": 90481,
+"simpleDesc": "增加3级[Laceration]强度并施加1层[Laceration]"
+}
+],
 "plus": "增加2级[Laceration]强度并施加1层[Laceration]\n增加3级[Laceration]强度并施加1层[Laceration]",
 "double_plus": "增加3级[Laceration]强度并施加1层[Laceration]\n增加3级[Laceration]强度并施加2层[Laceration]"
 },
@@ -780,7 +1130,16 @@
 "double_plus": "使用增加[Sinking]强度或施加特殊沉沦的技能对敌方单位造成体力伤害时，回合结束时额外使其增加4级[Sinking]强度并施加3层[Sinking]。(每个回合，每名敌方单位最多1次)\n\n若激活忧郁或色欲共鸣，则在战斗开始时，使全体敌方单位(若是异想体，则随机对一个部位)增加3级[Sinking]强度并施加3层[Sinking]。"
 },
 "simple_descriptions": {
-"base": "施加2层[Sinking]并增加3级[Sinking]强度\n施加3层[Sinking]并增加2级[Sinking]强度",
+"base": [
+{
+"abilityID": 9049,
+"simpleDesc": "施加2层[Sinking]并增加3级[Sinking]强度"
+},
+{
+"abilityID": 90491,
+"simpleDesc": "施加3层[Sinking]并增加2级[Sinking]强度"
+}
+],
 "plus": "施加2层[Sinking]并增加3级[Sinking]强度\n施加3层[Sinking]并增加2级[Sinking]强度",
 "double_plus": "施加3层[Sinking]并增加4级[Sinking]强度\n施加3层[Sinking]并增加3级[Sinking]强度"
 },
@@ -791,12 +1150,21 @@
 "name": "红染棉花",
 "category": "流血",
 "descriptions": {
-"base": "关卡的首个回合开始时，使全体敌方单位(或所有异想体部位)增加1级[Laceration]强度并对其施加15层[Laceration]。\n\n回合开始时，带有[Laceration]的敌方单位在本回合减少(其[Laceration]强度/3)级攻击等级与防御等级。([Laceration]强度积累至30级时效果最高)",
+"base": "关卡的首个回合开始时，使全体敌方单位增加1级[Laceration]强度并对其施加15层[Laceration]。(若是异想体，则对所有部位造成此效果。)\n\n回合开始时，带有[Laceration]的敌方单位在本回合减少(其[Laceration]强度/3)级攻击等级与防御等级。([Laceration]强度积累至30级时效果最高)",
 "plus": "波次的首个回合开始时，使全体敌方单位增加2级[Laceration]强度并对其施加15层[Laceration]。(若是异想体，则对所有部位造成此效果。)\n\n回合开始时，带有[Laceration]的敌方单位在本回合减少(其[Laceration]强度/3)级攻击等级与防御等级。([Laceration]强度积累至30级时效果最高)",
 "double_plus": "波次的首个回合开始时，使全体敌方单位增加4级[Laceration]强度并对其施加20层[Laceration]。(若是异想体，则对所有部位造成此效果。)\n\n回合开始时，带有[Laceration]的敌方单位在本回合减少(其[Laceration]强度/2)级攻击等级与防御等级。([Laceration]强度积累至30级时效果最高)"
 },
 "simple_descriptions": {
-"base": "增加1级[Laceration]强度并施加15层[Laceration]\n本回合内减少([Laceration]强度/3)级攻击等级和防御等级",
+"base": [
+{
+"abilityID": 9050,
+"simpleDesc": "增加1级[Laceration]强度并施加15层[Laceration]"
+},
+{
+"abilityID": 90501,
+"simpleDesc": "本回合内减少([Laceration]强度/3)级攻击等级和防御等级"
+}
+],
 "plus": "增加2级[Laceration]强度并施加15层[Laceration]\n本回合内减少([Laceration]强度/3)级攻击等级和防御等级",
 "double_plus": "增加4级[Laceration]强度并施加20层[Laceration]\n本回合内减少([Laceration]强度/2)级攻击等级和防御等级"
 },
@@ -812,7 +1180,16 @@
 "double_plus": "友方单位通过技能效果获得的[Breath]强度变为2倍。\n\n若友方单位击杀了敌方单位，则下回合开始时使其增加4级[Breath]强度并获得2层[Breath](每回合最多1次)。"
 },
 "simple_descriptions": {
-"base": "[Breath]强度变为1.5倍\n增加2级[Breath]强度并获得2层[Breath]",
+"base": [
+{
+"abilityID": 9051,
+"simpleDesc": "[Breath]强度变为1.5倍"
+},
+{
+"abilityID": 90511,
+"simpleDesc": "增加2级[Breath]强度并获得2层[Breath]"
+}
+],
 "plus": "[Breath]强度变为1.5倍\n增加3级[Breath]强度并获得2层[Breath]",
 "double_plus": "[Breath]强度变为2倍\n增加4级[Breath]强度并获得2层[Breath]"
 },
@@ -828,7 +1205,16 @@
 "double_plus": "回合开始时，随机使3名友方单位获得3层[Charge](优先选取拥有获得[Charge]层数或特殊充能的技能的人格)。\n\n激活怠惰共鸣时，战斗开始时随机使1名友方单位获得5层[Charge]。"
 },
 "simple_descriptions": {
-"base": "获得2层[Charge]\n获得3层[Charge]",
+"base": [
+{
+"abilityID": 9052,
+"simpleDesc": "获得2层[Charge]"
+},
+{
+"abilityID": 90521,
+"simpleDesc": "获得3层[Charge]"
+}
+],
 "plus": "获得3层[Charge]\n获得3层[Charge]",
 "double_plus": "获得3层[Charge]\n获得5层[Charge]"
 },
@@ -844,7 +1230,16 @@
 "double_plus": "波次的首个回合开始时，使全体敌方单位(若是异想体，则随机对一个部位)增加8级[Combustion]强度并对其施加3层[Combustion]。\n\n激活怠惰共鸣时，战斗开始时使全体敌方单位(若是异想体，则随机对一个部位)增加4级[Combustion]强度并对其施加3层[Combustion]。"
 },
 "simple_descriptions": {
-"base": "增加5级[Combustion]强度并施加3层[Combustion]\n增加3级[Combustion]强度并施加2层[Combustion]",
+"base": [
+{
+"abilityID": 9053,
+"simpleDesc": "增加5级[Combustion]强度并施加3层[Combustion]"
+},
+{
+"abilityID": 90531,
+"simpleDesc": "增加3级[Combustion]强度并施加2层[Combustion]"
+}
+],
 "plus": "增加6级[Combustion]强度并施加3层[Combustion]\n增加4级[Combustion]强度并施加2层[Combustion]",
 "double_plus": "增加8级[Combustion]强度并施加3层[Combustion]\n增加4级[Combustion]强度并施加3层[Combustion]"
 },
@@ -860,7 +1255,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "本回合内减少3级攻击等级与防御等级",
+"base": [
+{
+"abilityID": 9054,
+"simpleDesc": "本回合内减少3级攻击等级与防御等级"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -876,7 +1276,16 @@
 "double_plus": "回合开始时，使全体敌方单位(或所有异想体部位)增加(5+当前回合数×2)级[Vibration]强度并对其施加3层[Vibration]。\n\n回合结束时，使全体敌方单位(或所有异想体部位)[VibrationExplosion]2次。"
 },
 "simple_descriptions": {
-"base": "增加(当前回合数×2)级[Vibration]强度并施加2层[Vibration]\n使目标[VibrationExplosion]",
+"base": [
+{
+"abilityID": 9055,
+"simpleDesc": "增加(当前回合数×2)级[Vibration]强度并施加2层[Vibration]"
+},
+{
+"abilityID": 90551,
+"simpleDesc": "使目标[VibrationExplosion]"
+}
+],
 "plus": "增加(3+当前回合数×2)级[Vibration]强度并施加3层[Vibration]\n[VibrationExplosion]",
 "double_plus": "增加(5+当前回合数×2)级[Vibration]强度并施加3层[Vibration]\n[VibrationExplosion]2次"
 },
@@ -892,7 +1301,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加5级[Breath]强度并获得2层[Breath]\n增加7级[Breath]强度并获得3层[Breath]",
+"base": [
+{
+"abilityID": 9056,
+"simpleDesc": "增加5级[Breath]强度并获得2层[Breath]"
+},
+{
+"abilityID": 90561,
+"simpleDesc": "增加7级[Breath]强度并获得3层[Breath]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -908,7 +1326,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加5级攻击等级",
+"base": [
+{
+"abilityID": 9057,
+"simpleDesc": "增加5级攻击等级"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -924,7 +1347,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "随机获得1个E.G.O资源\n随机获得3个E.G.O资源",
+"base": [
+{
+"abilityID": 9058,
+"simpleDesc": "随机获得1个E.G.O资源"
+},
+{
+"abilityID": 90581,
+"simpleDesc": "随机获得3个E.G.O资源"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -940,7 +1372,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加3级[Sinking]强度\n增加5级[Sinking]强度",
+"base": [
+{
+"abilityID": 9059,
+"simpleDesc": "增加3级[Sinking]强度"
+},
+{
+"abilityID": 90591,
+"simpleDesc": "增加5级[Sinking]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -956,7 +1397,16 @@
 "double_plus": "回合开始时，使全体敌方单位(若是异想体，则改为所有部位)增加6级[Burst]强度并对其施加3层[Burst]。\n\n回合结束时，对全体敌方单位(若是异想体，则改为所有部位)造成(其[Burst]强度×[Burst]层数)点暴食伤害。(最多计入10层[Burst])"
 },
 "simple_descriptions": {
-"base": "增加3级[Burst]强度并施加3层[Burst]\n造成([Burst]强度×[Burst]层数)的暴食伤害并使目标减少2层[Burst] ",
+"base": [
+{
+"abilityID": 9060,
+"simpleDesc": "增加3级[Burst]强度并施加3层[Burst]"
+},
+{
+"abilityID": 90601,
+"simpleDesc": "造成([Burst]强度×[Burst]层数)的暴食伤害并使目标减少2层[Burst] "
+}
+],
 "plus": "增加4级[Burst]强度并施加3层[Burst]\n造成([Burst]强度×[Burst]层数)的暴食伤害并使目标减少1层[Burst]",
 "double_plus": "增加6级[Burst]强度并施加3层[Burst]\n造成([Burst]强度×[Burst]层数)的暴食伤害"
 },
@@ -972,7 +1422,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害增加12.5%\n受到的伤害减少12.5%\n造成的伤害增加20%\n受到的伤害减少20%",
+"base": [
+{
+"abilityID": 9061,
+"simpleDesc": "造成的伤害增加12.5%"
+},
+{
+"abilityID": 90611,
+"simpleDesc": "受到的伤害减少12.5%"
+},
+{
+"abilityID": 90612,
+"simpleDesc": "造成的伤害增加20%"
+},
+{
+"abilityID": 90613,
+"simpleDesc": "受到的伤害减少20%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -988,7 +1455,16 @@
 "double_plus": "回合结束时，[Charge]与特殊充能层数之和不低于7层的友方单位在下回合获得3层[Agility]。\n\n若该友方单位拥有忧郁攻击技能，则改为获得4层[Agility]与1层[ResultEnhancement]。"
 },
 "simple_descriptions": {
-"base": "下回合获得1层[Agility]\n下回合获得2层[Agility]与1层[ResultEnhancement]",
+"base": [
+{
+"abilityID": 9062,
+"simpleDesc": "下回合获得1层[Agility]"
+},
+{
+"abilityID": 90621,
+"simpleDesc": "下回合获得2层[Agility]与1层[ResultEnhancement]"
+}
+],
 "plus": "下回合获得2层[Agility]\n下回合获得3层[Agility]与1层[ResultEnhancement]",
 "double_plus": "下回合获得3层[Agility]\n下回合获得4层[Agility]与1层[ResultEnhancement]"
 },
@@ -1004,7 +1480,16 @@
 "double_plus": "战斗开始时，随机使2名友方单位增加4级[Breath]强度。(优先选取拥有获得[Breath]层数的攻击技能的人格)\n\n优先选取拥有忧郁攻击技能的友方单位，且该情况下改为使其增加4级[Breath]强度并获得3层[Breath]。"
 },
 "simple_descriptions": {
-"base": "增加3级[Breath]强度\n增加3级[Breath]强度并获得2层[Breath]层数",
+"base": [
+{
+"abilityID": 9063,
+"simpleDesc": "增加3级[Breath]强度"
+},
+{
+"abilityID": 90631,
+"simpleDesc": "增加3级[Breath]强度并获得2层[Breath]层数"
+}
+],
 "plus": "增加4级[Breath]强度并获得4层[Breath]\n增加4级[Breath]强度并获得3层[Breath]",
 "double_plus": "增加4级[Breath]强度并获得4层[Breath]\n增加4级[Breath]强度并获得3层[Breath]"
 },
@@ -1020,7 +1505,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "减少2级攻击等级与防御等级",
+"base": [
+{
+"abilityID": 9064,
+"simpleDesc": "减少2级攻击等级与防御等级"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1036,7 +1526,16 @@
 "double_plus": "对未带有理智值或理智值低于0点的敌方单位造成的伤害+50%。\n\n增加[Sinking]强度或施加[Sinking]层数的技能造成的伤害额外+10%(包括特殊<noparse>沉沦</noparse>)\n\n对未带有理智值的敌方单位触发[Sinking]效果时，改为对其造成包括忧郁属性在内的所有罪孽属性中最有效的属性伤害。"
 },
 "simple_descriptions": {
-"base": "造成的伤害增加\n改为造成所有罪孽属性中最有效的属性伤害。",
+"base": [
+{
+"abilityID": 9065,
+"simpleDesc": "造成的伤害增加"
+},
+{
+"abilityID": 90651,
+"simpleDesc": "改为造成所有罪孽属性中最有效的属性伤害。"
+}
+],
 "plus": "造成的伤害增加\n改为造成所有罪孽属性中最有效的属性伤害。",
 "double_plus": "造成的伤害增加\n改为造成所有罪孽属性中最有效的属性伤害。"
 },
@@ -1052,7 +1551,16 @@
 "double_plus": "波次的首个回合开始时，使全体友方单位增加5级[Breath]强度并获得5层[Breath]。\n\n激活傲慢共鸣时，战斗开始时，使全体友方单位增加3级[Breath]强度并获得3层[Breath]。\n- [不可重复触发] 胸痛 良秀 E.G.O被动“息”触发时，该效果不会触发"
 },
 "simple_descriptions": {
-"base": "增加4级[Breath]强度并获得4层[Breath]层数\n增加2级[Breath]强度并获得2层[Breath]层数",
+"base": [
+{
+"abilityID": 9066,
+"simpleDesc": "增加4级[Breath]强度并获得4层[Breath]层数"
+},
+{
+"abilityID": 90661,
+"simpleDesc": "增加2级[Breath]强度并获得2层[Breath]层数"
+}
+],
 "plus": "增加5级[Breath]强度并获得4层[Breath]层数\n增加3级[Breath]强度并获得2层[Breath]层数",
 "double_plus": "增加5级[Breath]强度并获得5层[Breath]层数\n增加3级[Breath]强度并获得3层[Breath]层数"
 },
@@ -1068,7 +1576,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成体力上限33%的固定伤害，下回合施加2层[Vulnerable]",
+"base": [
+{
+"abilityID": 9067,
+"simpleDesc": "造成体力上限33%的固定伤害，下回合施加2层[Vulnerable]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1084,7 +1597,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得5个傲慢属性E.G.O资源\n获得2个傲慢属性E.G.O资源，并随机获得2种其余属性的E.G.O资源各1个",
+"base": [
+{
+"abilityID": 9068,
+"simpleDesc": "获得5个傲慢属性E.G.O资源"
+},
+{
+"abilityID": 90681,
+"simpleDesc": "获得2个傲慢属性E.G.O资源，并随机获得2种其余属性的E.G.O资源各1个"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1100,7 +1622,16 @@
 "double_plus": "回合开始时，带有[Charge]或特殊充能的友方单位获得2层[AttackDmgUp]。\n\n若该友方单位拥有傲慢攻击技能，则改为获得3层[AttackDmgUp]。"
 },
 "simple_descriptions": {
-"base": "获得1层[AttackDmgUp]\n获得2层[AttackDmgUp]",
+"base": [
+{
+"abilityID": 9069,
+"simpleDesc": "获得1层[AttackDmgUp]"
+},
+{
+"abilityID": 90691,
+"simpleDesc": "获得2层[AttackDmgUp]"
+}
+],
 "plus": "获得1层[AttackDmgUp]\n获得2层[AttackDmgUp]",
 "double_plus": "获得2层[AttackDmgUp]\n获得3层[AttackDmgUp]"
 },
@@ -1116,7 +1647,12 @@
 "double_plus": "友方单位的暴击倍率从1.2倍增加至2.5倍\n\n若因暴击消耗了[Breath]层数，则下回合使该人格获得15层[AttackUp]。(每回合每名人格最多生效1次)"
 },
 "simple_descriptions": {
-"base": "获得10层[AttackUp]",
+"base": [
+{
+"abilityID": 9070,
+"simpleDesc": "获得10层[AttackUp]"
+}
+],
 "plus": "获得12层[AttackUp]",
 "double_plus": "获得15层[AttackUp]"
 },
@@ -1132,7 +1668,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加阵亡的敌方单位一半的[Combustion]强度\n施加4层攻击等级降低 ",
+"base": [
+{
+"abilityID": 9071,
+"simpleDesc": "施加阵亡的敌方单位一半的[Combustion]强度"
+},
+{
+"abilityID": 90711,
+"simpleDesc": "施加4层攻击等级降低 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1148,7 +1693,16 @@
 "double_plus": "关卡开始时，使全体友方单位获得5层[Charge]。\n\n若参战的拥有嫉妒攻击技能的友方单位不低于2名，则改为获得7层[Charge]。"
 },
 "simple_descriptions": {
-"base": "获得3层[Charge]\n获得5层[Charge]",
+"base": [
+{
+"abilityID": 9072,
+"simpleDesc": "获得3层[Charge]"
+},
+{
+"abilityID": 90721,
+"simpleDesc": "获得5层[Charge]"
+}
+],
 "plus": "获得4层[Charge]\n获得6层[Charge]",
 "double_plus": "获得5层[Charge]\n获得7层[Charge]"
 },
@@ -1164,7 +1718,16 @@
 "double_plus": "通过技能效果增加[Breath]强度时，额外增加3级[Breath]强度并获得3层[Breath]。\n\n若该技能为嫉妒技能，则改为额外增加4级[Breath]强度并获得4层[Breath]。"
 },
 "simple_descriptions": {
-"base": "增加1级[Breath]强度并获得1层[Breath]\n增加2级[Breath]强度并获得2层[Breath]",
+"base": [
+{
+"abilityID": 9073,
+"simpleDesc": "增加1级[Breath]强度并获得1层[Breath]"
+},
+{
+"abilityID": 90731,
+"simpleDesc": "增加2级[Breath]强度并获得2层[Breath]"
+}
+],
 "plus": "增加2级[Breath]强度并获得2层[Breath]\n增加3级[Breath]强度并获得3层[Breath]",
 "double_plus": "增加3级[Breath]强度并获得3层[Breath]\n增加4级[Breath]强度并获得4层[Breath]"
 },
@@ -1180,7 +1743,16 @@
 "double_plus": "战斗开始时，使理智值低于0点的全体敌方单位(若是异想体，则随机对1个部位)增加4级[Sinking]强度并对其施加1层[Sinking]。\n\n使用嫉妒技能时，下回合随机使全体敌方单位(若是异想体，则随机对1个部位)增加共计3级[Sinking]强度。"
 },
 "simple_descriptions": {
-"base": "增加2级[Sinking]强度\n增加1级[Sinking]强度",
+"base": [
+{
+"abilityID": 9074,
+"simpleDesc": "增加2级[Sinking]强度"
+},
+{
+"abilityID": 90741,
+"simpleDesc": "增加1级[Sinking]强度"
+}
+],
 "plus": "增加3级[Sinking]强度\n增加共计2级[Sinking]强度",
 "double_plus": "增加4级[Sinking]强度并施加1层[Sinking]\n增加共计3级[Sinking]强度"
 },
@@ -1196,7 +1768,20 @@
 "double_plus": "最大[Charge]层数+10\n\n关卡开始时，使全体友方单位获得8层[Charge]。\n\n回合开始时，使全体友方单位获得4层[Charge]。\n\n[第1顺位友方单位专属] 关卡开始时，获得20层[ChoSuperCharge] "
 },
 "simple_descriptions": {
-"base": "最大[Charge]层数+10\n获得5层[Charge]\n回合开始时，使全体友方单位获得2层[Charge]",
+"base": [
+{
+"abilityID": 9075,
+"simpleDesc": "最大[Charge]层数+10"
+},
+{
+"abilityID": 90751,
+"simpleDesc": "获得5层[Charge]"
+},
+{
+"abilityID": 90752,
+"simpleDesc": "回合开始时，使全体友方单位获得2层[Charge]"
+}
+],
 "plus": "最大[Charge]层数+10\n获得6层[Charge]\n回合开始时，使全体友方单位获得3层[Charge]",
 "double_plus": "最大[Charge]层数+10\n获得8层[Charge]\n回合开始时，使全体友方单位获得3层[Charge]"
 },
@@ -1212,7 +1797,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复体力上限25%的体力",
+"base": [
+{
+"abilityID": 9076,
+"simpleDesc": "恢复体力上限25%的体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1228,7 +1818,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复体力上限12.5%的体力并在本回合内获得3层[Protection]",
+"base": [
+{
+"abilityID": 9077,
+"simpleDesc": "恢复体力上限12.5%的体力并在本回合内获得3层[Protection]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1244,7 +1839,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得(阵亡敌方单位数量×3)点经费",
+"base": [
+{
+"abilityID": 9078,
+"simpleDesc": "获得(阵亡敌方单位数量×3)点经费"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1260,7 +1860,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得的经费增加20%",
+"base": [
+{
+"abilityID": 9079,
+"simpleDesc": "获得的经费增加20%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1276,7 +1881,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得经费",
+"base": [
+{
+"abilityID": 9080,
+"simpleDesc": "获得经费"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1292,7 +1902,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "理智值变为最大值",
+"base": [
+{
+"abilityID": 9036,
+"simpleDesc": "理智值变为最大值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1308,7 +1923,12 @@
 "double_plus": "获得该饰品时，编队中的所有人格提升10级。"
 },
 "simple_descriptions": {
-"base": "人格提升5级",
+"base": [
+{
+"abilityID": 9082,
+"simpleDesc": "人格提升5级"
+}
+],
 "plus": "人格提升7级",
 "double_plus": "人格提升10级"
 },
@@ -1324,7 +1944,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "物理抗性及罪孽抗性全部变为“致命”",
+"base": [
+{
+"abilityID": 9083,
+"simpleDesc": "物理抗性及罪孽抗性全部变为“致命”"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1335,12 +1960,21 @@
 "name": "古代雕像",
 "category": "泛用",
 "descriptions": {
-"base": "回合开始时，使速度值最高的1名友方单位在下回合获得5层[Agility]。\n下回合开始时，使未受古代雕像影响的速度值最高的1名友方单位获得该效果。\n(若没有可选择的单位，则解除该效果)",
+"base": "回合开始时，使速度值最高的1名友方单位在下回合获得5层[Agility]\n\n下回合开始时，使未受古代雕像影响的速度值最高的1名友方单位获得该效果(若没有可选择的单位，则解除该效果)\n\n若自身的速度值不低于10，则使自身增加(与目标的速度值之差/2)级攻击等级(最多5级，向下取整)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得5层[Agility]",
+"base": [
+{
+"abilityID": 9084,
+"simpleDesc": "获得5层[Agility]"
+},
+{
+"abilityID": 90841,
+"simpleDesc": "增加(与目标的速度值之差/2)级攻击等级"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1351,12 +1985,17 @@
 "name": "保密协议",
 "category": "泛用",
 "descriptions": {
-"base": "回合开始时，随机使1名友方单位造成的伤害+10%。(直到保密协议的效果被移除)\n\n每当该友方单位使用技能对敌方单位造成体力伤害，使其造成的伤害额外+10%(最多+40%)。当该友方单位受到体力伤害时，移除该效果。下回合开始时，随机使另一名友方单位获得该效果。(若没有可选择的单位，则移除该效果)",
+"base": "回合开始时，随机使1名友方单位造成的伤害+10%并使其获得其体力上限49%的护盾(直到保密协议的效果被移除)\n\n每当该友方单位使用技能对敌方单位造成体力伤害，使其造成的伤害额外+10%(最多+40%)\n\n当该友方单位受到体力伤害时，移除该效果。下回合开始时，随机使另一名友方单位获得该效果。(保留额外增加的伤害；若没有可选择的单位，则移除该效果)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害+10%",
+"base": [
+{
+"abilityID": 9085,
+"simpleDesc": "造成的伤害+10%，获得体力上限49%的护盾"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1372,7 +2011,16 @@
 "double_plus": "回合结束时，对[Vibration]强度不低于5级的全体敌方单位(或异想体的对应部位)在下回合施加2层[Binding]与3层[DefenseDown]。若该单位的[Vibration]强度不低于10级，则改为施加2层[Binding]，1层[Paralysis]，以及4层[DefenseDown]。"
 },
 "simple_descriptions": {
-"base": "施加2层[Binding]\n施加2层[Binding]与1层[Paralysis]",
+"base": [
+{
+"abilityID": 9086,
+"simpleDesc": "施加2层[Binding]"
+},
+{
+"abilityID": 90861,
+"simpleDesc": "施加2层[Binding]与1层[Paralysis]"
+}
+],
 "plus": "对目标施加2层[Binding]与2层[DefenseDown]\n对目标施加2层[Binding]，1层[Paralysis]与2层[DefenseDown]",
 "double_plus": "对目标施加2层[Binding]与3层[DefenseDown]\n对目标施加2层[Binding]，1层[Paralysis]与4层[DefenseDown]"
 },
@@ -1388,7 +2036,12 @@
 "double_plus": "通过[Combustion]效果击杀敌方单位后，下回合开始时使拥有增加[Combustion]强度的技能的3名友方人格获得2层[AttackDmgUp]。"
 },
 "simple_descriptions": {
-"base": "获得1层[AttackDmgUp]",
+"base": [
+{
+"abilityID": 9087,
+"simpleDesc": "获得1层[AttackDmgUp]"
+}
+],
 "plus": "获得2层[AttackDmgUp]",
 "double_plus": "获得2层[AttackDmgUp]"
 },
@@ -1399,12 +2052,25 @@
 "name": "镇魂",
 "category": "烧伤",
 "descriptions": {
-"base": "回合开始时，若拥有增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果。(不包括E.G.O技能，不包括待命人员)\n\n回合开始时，对全体敌方单位(或异想体的所有部位)施加3层[Combustion]并随机使全体敌方单位增加共计15级[Combustion]强度。(每个波次最多1次)\n\n使增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的加算硬币技能的最终威力+1，硬币威力+1，使目标增加的[Combustion]强度额外+1级，对目标施加的[Combustion]层数额外+1层。\n- 减算硬币技能改为基础威力+(4/硬币数)，而非硬币威力(最少+1，向下取整)\n\n增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的技能拼点胜利时，使目标敌方单位增加(剩余硬币数+1)级[Combustion]强度",
+"base": "回合开始时，若拥有增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果。(不包括E.G.O技能，不包括待命人员)\n\n回合开始时，对全体敌方单位(或异想体的所有部位)施加6层[Combustion]并随机使全体敌方单位增加共计15级[Combustion]强度。(每个波次最多1次)\n\n使增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的加算硬币技能的最终威力+1，硬币威力+1，使目标增加的[Combustion]强度额外+1级，对目标施加的[Combustion]层数额外+1层。\n- 减算硬币技能改为基础威力+(4/硬币数)，而非硬币威力(最少+1，向下取整)\n\n增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的技能拼点胜利时，使目标敌方单位增加(剩余硬币数+1)级[Combustion]强度",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加3层[Combustion]并随机使全体敌方单位增加共计15级[Combustion]强度\n技能的最终威力+1，硬币/基础威力增加，增加的[Combustion]强度额外+1级，施加的[Combustion]层数额外+1层\n增加(剩余硬币数+1)级[Combustion]强度",
+"base": [
+{
+"abilityID": 9088,
+"simpleDesc": "施加6层[Combustion]并随机使全体敌方单位增加共计15级[Combustion]强度"
+},
+{
+"abilityID": 90881,
+"simpleDesc": "技能的最终威力+1，硬币/基础威力增加，增加的[Combustion]强度额外+1级，施加的[Combustion]层数额外+1层"
+},
+{
+"abilityID": 90882,
+"simpleDesc": "增加(剩余硬币数+1)级[Combustion]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1420,7 +2086,16 @@
 "double_plus": "使用单个技能对敌方单位造成不低于1点体力伤害时，使其增加3级[Laceration]强度。\n\n若该技能为斩击技能，则改为增加5级[Laceration]强度并施加1层[Laceration]。"
 },
 "simple_descriptions": {
-"base": "增加2级[Laceration]强度\n增加4级[Laceration]强度",
+"base": [
+{
+"abilityID": 9089,
+"simpleDesc": "增加2级[Laceration]强度"
+},
+{
+"abilityID": 9089,
+"simpleDesc": "增加4级[Laceration]强度"
+}
+],
 "plus": "增加3级[Laceration]强度\n增加5级[Laceration]强度",
 "double_plus": "增加3级[Laceration]强度\n增加5级[Laceration]强度并施加1层[Laceration]"
 },
@@ -1436,7 +2111,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加的[Laceration]强度与施加[Laceration]层数变为2倍\n技能的硬币/基础威力增加，造成的伤害+100%\n增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能的硬币/基础威力增加，造成的伤害+30%\n将阵亡敌方单位的[Laceration]强度施加给全体敌方单位",
+"base": [
+{
+"abilityID": 9090,
+"simpleDesc": "增加的[Laceration]强度与施加[Laceration]层数变为2倍"
+},
+{
+"abilityID": 90901,
+"simpleDesc": "技能的硬币/基础威力增加，造成的伤害+100%"
+},
+{
+"abilityID": 90902,
+"simpleDesc": "增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能的硬币/基础威力增加，造成的伤害+30%"
+},
+{
+"abilityID": 90903,
+"simpleDesc": "将阵亡敌方单位的[Laceration]强度施加给全体敌方单位"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1452,7 +2144,12 @@
 "double_plus": "使敌方单位[VibrationExplosion]时，本回合与下回合对其施加2层[Vulnerable](每个[VibrationExplosion]的攻击技能最多1次)"
 },
 "simple_descriptions": {
-"base": "施加1层[Vulnerable]",
+"base": [
+{
+"abilityID": 9091,
+"simpleDesc": "施加1层[Vulnerable]"
+}
+],
 "plus": "施加1层[Vulnerable]",
 "double_plus": "施加2层[Vulnerable]"
 },
@@ -1468,7 +2165,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加5级[Vibration]强度与2层[Vulnerable]\n使目标陷入混乱\n施加1层[Vulnerable]",
+"base": [
+{
+"abilityID": 9092,
+"simpleDesc": "施加5级[Vibration]强度与2层[Vulnerable]"
+},
+{
+"abilityID": 90921,
+"simpleDesc": "使目标陷入混乱"
+},
+{
+"abilityID": 90922,
+"simpleDesc": "施加1层[Vulnerable]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1484,7 +2194,12 @@
 "double_plus": "回合结束时，若有敌方单位或异想体部位带有[Burst]，则下回合随机使1名友方单位获得1层[AttackDmgUp]与1层[Agility]。触发(带有[Burst]的敌方单位或异想体部位数量+3)次。"
 },
 "simple_descriptions": {
-"base": "获得1层[AttackDmgUp]或1层[Agility]",
+"base": [
+{
+"abilityID": 9093,
+"simpleDesc": "获得1层[AttackDmgUp]或1层[Agility]"
+}
+],
 "plus": "获得1层[AttackDmgUp]或1层[Agility]",
 "double_plus": "获得1层[AttackDmgUp]与1层[Agility]"
 },
@@ -1495,12 +2210,25 @@
 "name": "恍惚镜",
 "category": "破裂",
 "descriptions": {
-"base": "回合开始时，若拥有增加[Burst]强度或施加[Burst]层数的攻击技能的人格不低于5名，则在本场战斗期间触发该效果。(不包括E.G.O技能，不包括待命人员)\n\n技能命中敌方单位时，使其增加5级[Burst]强度。\n\n战斗中敌方单位的[Burst]层数降至1层以下时，改为消耗10级[Burst]强度，而非[Burst]层数。([Burst]强度低于10级时不会触发)\n\n若目标的[Burst]层数低于3层，则对其施加的[Burst]层数额外+1层(每场战斗最多3次)。",
+"base": "回合开始时，若拥有增加[Burst]强度或施加[Burst]层数的攻击技能的人格不低于5名，则在本场战斗期间触发该效果。(不包括E.G.O技能，不包括待命人员)\n\n技能命中敌方单位时，使其增加5级[Burst]强度\n- 令增加[Burst]强度或施加[Burst]层数的攻击技能额外增加3级[Burst]强度并施加1层[Burst](每个技能最多1次)\n\n战斗中敌方单位的[Burst]层数降至1层以下时，改为消耗10级[Burst]强度，而非[Burst]层数。([Burst]强度低于10级时不会触发)\n\n若目标的[Burst]层数低于3层，则对其施加的[Burst]层数额外+1层(每场战斗最多3次)。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加5级[Burst]强度\n优先消耗10级[Burst]强度以取代[Burst]层数\n施加的[Burst]层数额外+1层",
+"base": [
+{
+"abilityID": 9094,
+"simpleDesc": "增加5级[Burst]强度"
+},
+{
+"abilityID": 90941,
+"simpleDesc": "优先消耗10级[Burst]强度以取代[Burst]层数"
+},
+{
+"abilityID": 90942,
+"simpleDesc": "施加的[Burst]层数额外+1层"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1516,7 +2244,12 @@
 "double_plus": "波次的首个回合开始时，随机对全体敌方单位(或所有异想体部位)施加共计(10+敌方单位数量×4)层[Sinking]。(若是异想体，仅其本体算作1名敌方单位)"
 },
 "simple_descriptions": {
-"base": "随机施加共计(5+敌方单位数量×3)层[Sinking]",
+"base": [
+{
+"abilityID": 9095,
+"simpleDesc": "随机施加共计(5+敌方单位数量×3)层[Sinking]"
+}
+],
 "plus": "随机施加共计(10+敌方单位数量×3)层[Sinking]",
 "double_plus": "随机施加共计(10+敌方单位数量×4)层[Sinking]"
 },
@@ -1532,7 +2265,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加5级[Sinking]强度\n施加[Sinking]层数\n造成忧郁伤害\n技能造成的伤害增加",
+"base": [
+{
+"abilityID": 9096,
+"simpleDesc": "增加5级[Sinking]强度"
+},
+{
+"abilityID": 90961,
+"simpleDesc": "施加[Sinking]层数"
+},
+{
+"abilityID": 90962,
+"simpleDesc": "造成忧郁伤害"
+},
+{
+"abilityID": 90963,
+"simpleDesc": "技能造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1548,7 +2298,16 @@
 "double_plus": "回合开始时，随机使未带有[Breath]强度的2名友方单位增加3级[Breath]强度。\n\n若全体友方单位都带有[Breath]强度，则改为使全体友方单位获得3层[Breath]。"
 },
 "simple_descriptions": {
-"base": "增加2级[Breath]强度。\n获得1层[Breath]。",
+"base": [
+{
+"abilityID": 9097,
+"simpleDesc": "增加2级[Breath]强度。"
+},
+{
+"abilityID": 90971,
+"simpleDesc": "获得1层[Breath]。"
+}
+],
 "plus": "增加3级[Breath]强度。\n获得2层[Breath]。",
 "double_plus": "增加3级[Breath]强度。\n获得3层[Breath]。"
 },
@@ -1564,7 +2323,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加7级[Breath]强度并获得7层[Breath]\n最终威力+3，硬币/最终威力增加，造成的伤害+(50/硬币数)%\n增加3级[Breath]强度。拥有忧郁攻击技能的友方单位额外获得2层[Breath]",
+"base": [
+{
+"abilityID": 9098,
+"simpleDesc": "增加7级[Breath]强度并获得7层[Breath]"
+},
+{
+"abilityID": 90981,
+"simpleDesc": "最终威力+3，硬币/最终威力增加，造成的伤害+(50/硬币数)%"
+},
+{
+"abilityID": 90982,
+"simpleDesc": "增加3级[Breath]强度。拥有忧郁攻击技能的友方单位额外获得2层[Breath]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1580,7 +2352,12 @@
 "double_plus": "波次的首个回合开始时，使全体友方单位获得7层[ChargeForceField]。"
 },
 "simple_descriptions": {
-"base": "获得3层[ChargeForceField]。",
+"base": [
+{
+"abilityID": 9099,
+"simpleDesc": "获得3层[ChargeForceField]。"
+}
+],
 "plus": "获得5层[ChargeForceField]。",
 "double_plus": "获得7层[ChargeForceField]。"
 },
@@ -1596,7 +2373,28 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得7层[ChargeForceField]\n获得3层[ChargeForceField]\n获得[AttackDmgUp]\n增加1级[Charge]强度\n施加(自身的[Charge]强度-1)层[DefenseDown]",
+"base": [
+{
+"abilityID": 9100,
+"simpleDesc": "获得7层[ChargeForceField]"
+},
+{
+"abilityID": 91001,
+"simpleDesc": "获得3层[ChargeForceField]"
+},
+{
+"abilityID": 91002,
+"simpleDesc": "获得[AttackDmgUp]"
+},
+{
+"abilityID": 91003,
+"simpleDesc": "增加1级[Charge]强度"
+},
+{
+"abilityID": 91004,
+"simpleDesc": "施加(自身的[Charge]强度-1)层[DefenseDown]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1612,7 +2410,12 @@
 "double_plus": "增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的技能拼点胜利时，使目标增加(剩余硬币数+1)级[Combustion]强度"
 },
 "simple_descriptions": {
-"base": "拼点胜利时，使目标增加(剩余硬币数/2)级[Combustion]强度",
+"base": [
+{
+"abilityID": 9101,
+"simpleDesc": "拼点胜利时，使目标增加(剩余硬币数/2)级[Combustion]强度"
+}
+],
 "plus": "拼点胜利时，使目标增加(剩余硬币数/2 +1)级[Combustion]强度",
 "double_plus": "拼点胜利时，使目标增加(剩余硬币数+1)级[Combustion]强度"
 },
@@ -1628,7 +2431,12 @@
 "double_plus": "若友方单位的理智值高于目标至少15点，则使该友方单位增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的技能造成的伤害+20%(未带有理智值的敌方单位以理智值为0点计算)"
 },
 "simple_descriptions": {
-"base": "施加[Combustion]的技能造成的伤害+7.5%",
+"base": [
+{
+"abilityID": 9102,
+"simpleDesc": "施加[Combustion]的技能造成的伤害+7.5%"
+}
+],
 "plus": "施加[Combustion]的技能造成的伤害+12.5%",
 "double_plus": "施加[Combustion]的技能造成的伤害+20%"
 },
@@ -1644,7 +2452,12 @@
 "double_plus": "通过技能效果使带有[Combustion]或特殊烧伤的敌方单位增加[Combustion]强度，对其施加[Combustion]层数或施加特殊烧伤时，下回合使自身获得1层[Agility]。(每个技能最多1次，每回合最多3次)\n\n若该友方单位带有[Agility]，则改为获得2层[Agility]，2层[AttackUp]与2层[AttackDmgUp]。"
 },
 "simple_descriptions": {
-"base": "通过技能效果增加[Combustion]，施加[Combustion]层数或施加特殊烧伤时，下回合获得1层[Agility]。",
+"base": [
+{
+"abilityID": 9103,
+"simpleDesc": "通过技能效果增加[Combustion]，施加[Combustion]层数或施加特殊烧伤时，下回合获得1层[Agility]。"
+}
+],
 "plus": "通过技能效果增加[Combustion]，施加[Combustion]层数或施加特殊烧伤时，下回合获得1层[Agility]。",
 "double_plus": "通过技能效果使带有[Combustion]或特殊烧伤的敌方单位增加[Combustion]强度，对其施加[Combustion]层数或施加特殊烧伤时，下回合获得1层[Agility]。"
 },
@@ -1660,7 +2473,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "符合条件时，使增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的技能造成的伤害+50%",
+"base": [
+{
+"abilityID": 9104,
+"simpleDesc": "符合条件时，使增加[Combustion]强度，施加[Combustion]层数或施加特殊烧伤的攻击技能造成的伤害+50%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1676,7 +2494,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "最终威力增加相当于消耗的(暴怒E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加\n攻击前，额外施加[Combustion]层数并使造成的伤害增加",
+"base": [
+{
+"abilityID": 9105,
+"simpleDesc": "最终威力增加相当于消耗的(暴怒E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加"
+},
+{
+"abilityID": 91051,
+"simpleDesc": "攻击前，额外施加[Combustion]层数并使造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1692,7 +2519,12 @@
 "double_plus": "战斗开始时，若全体敌方单位(若是异想体，则改为所有部位)均带有[Laceration]，则下回合使全体友方单位获得2层[Agility]，1层[AttackDmgUp]与2层[AttackUp]。"
 },
 "simple_descriptions": {
-"base": "若全体敌方单位均带有[Laceration]，则下回合使全体友方单位获得1层[Agility]。",
+"base": [
+{
+"abilityID": 9106,
+"simpleDesc": "若全体敌方单位均带有[Laceration]，则下回合使全体友方单位获得1层[Agility]。"
+}
+],
 "plus": "若全体敌方单位均带有[Laceration]，则下回合使全体友方单位获得1层[Agility]与1层[AttackDmgUp]。",
 "double_plus": "若全体敌方单位均带有[Laceration]，则下回合使全体友方单位获得2层[Agility]，1层[AttackDmgUp]与2层[AttackUp]。"
 },
@@ -1708,7 +2540,12 @@
 "double_plus": "速度值最高的3名友方单位增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能对敌方单位造成的伤害+20%。"
 },
 "simple_descriptions": {
-"base": "增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能对敌方单位造成的伤害+12.5%",
+"base": [
+{
+"abilityID": 9107,
+"simpleDesc": "增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能对敌方单位造成的伤害+12.5%"
+}
+],
 "plus": "增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能对敌方单位造成的伤害+15%",
 "double_plus": "增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能对敌方单位造成的伤害+20%"
 },
@@ -1724,7 +2561,12 @@
 "double_plus": "[第1、第2、第3顺位人格专属]\n\n若主要目标的[Laceration]层数不低于3层，则使增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能造成的伤害+20%"
 },
 "simple_descriptions": {
-"base": "满足条件时，若主要目标的[Laceration]层数不低于7层，则对其造成的伤害+10%",
+"base": [
+{
+"abilityID": 9108,
+"simpleDesc": "满足条件时，若主要目标的[Laceration]层数不低于7层，则对其造成的伤害+10%"
+}
+],
 "plus": "满足条件时，若主要目标的[Laceration]层数不低于5层，则对其造成的伤害+15%",
 "double_plus": "满足条件时，若主要目标的[Laceration]层数不低于3层，则对其造成的伤害+20%"
 },
@@ -1740,7 +2582,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "对目标施加(剩余硬币数/2)层[Laceration]并在下回合获得相应层数的[AttackUp]\n硬币数不高于2枚的技能改为以(剩余硬币数+3)计算",
+"base": [
+{
+"abilityID": 9109,
+"simpleDesc": "对目标施加(剩余硬币数/2)层[Laceration]并在下回合获得相应层数的[AttackUp]"
+},
+{
+"abilityID": 91091,
+"simpleDesc": "硬币数不高于2枚的技能改为以(剩余硬币数+3)计算"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1756,7 +2607,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "最终威力增加相当于消耗的(色欲E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加\n若符合条件，则额外施加[Laceration]层数并对目标造成相当于其[Laceration]强度点色欲伤害",
+"base": [
+{
+"abilityID": 9110,
+"simpleDesc": "最终威力增加相当于消耗的(色欲E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加"
+},
+{
+"abilityID": 91101,
+"simpleDesc": "若符合条件，则额外施加[Laceration]层数并对目标造成相当于其[Laceration]强度点色欲伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1772,7 +2632,12 @@
 "double_plus": "带有[Vibration]强度的敌方单位阵亡时，下回合随机对1名敌方单位(若是异想体，则改为随机部位)造成(阵亡单位的[Vibration]强度与层数之和×1.25)点怠惰伤害"
 },
 "simple_descriptions": {
-"base": "若符合条件，则随机对1名敌方单位造成怠惰伤害",
+"base": [
+{
+"abilityID": 9110,
+"simpleDesc": "若符合条件，则随机对1名敌方单位造成怠惰伤害"
+}
+],
 "plus": "若符合条件，则随机对1名敌方单位造成怠惰伤害",
 "double_plus": "若符合条件，则随机对1名敌方单位造成怠惰伤害"
 },
@@ -1788,7 +2653,12 @@
 "double_plus": "增加[Vibration]强度或施加[Vibration]层数的技能(包括对自身施加的技能)拼点胜利时，使目标增加(剩余硬币数)级[Vibration]强度并对其施加(剩余硬币数/2)层[Vibration]"
 },
 "simple_descriptions": {
-"base": "拼点胜利时：使目标增加(剩余硬币数/2)级[Vibration]强度",
+"base": [
+{
+"abilityID": 9110,
+"simpleDesc": "拼点胜利时：使目标增加(剩余硬币数/2)级[Vibration]强度"
+}
+],
 "plus": "拼点胜利时：使目标增加(剩余硬币数)级[Vibration]强度",
 "double_plus": "拼点胜利时：使目标增加(剩余硬币数)级[Vibration]强度并对其施加(剩余硬币数/2)层[Vibration]"
 },
@@ -1804,7 +2674,20 @@
 "double_plus": "[第1、第2、第3顺位人格专属]\n\n增加[Vibration]强度或施加[Vibration]层数技能(包括对自身施加的技能)的攻击等级+3\n\n若主要目标带有[Vibration]且陷入混乱，则使技能造成的伤害+(混乱阶段×12.5)%\n\n增加[Vibration]强度或施加[Vibration]层数的技能则改为造成的伤害+(混乱阶段×25)%"
 },
 "simple_descriptions": {
-"base": "增加[Vibration]强度或施加[Vibration]层数技能的攻击等级+2\n若符合条件，则使技能造成的伤害+(混乱阶段×7.5)%\n若符合条件，则使技能造成的伤害+(混乱阶段×15)%",
+"base": [
+{
+"abilityID": 9113,
+"simpleDesc": "增加[Vibration]强度或施加[Vibration]层数技能的攻击等级+2"
+},
+{
+"abilityID": 91131,
+"simpleDesc": "若符合条件，则使技能造成的伤害+(混乱阶段×7.5)%"
+},
+{
+"abilityID": 91132,
+"simpleDesc": "若符合条件，则使技能造成的伤害+(混乱阶段×15)%"
+}
+],
 "plus": "增加[Vibration]强度或施加[Vibration]层数技能的攻击等级+2\n若符合条件，则使技能造成的伤害+(混乱阶段×10)%\n若符合条件，则使技能造成的伤害+(混乱阶段×20)%",
 "double_plus": "增加[Vibration]强度或施加[Vibration]层数技能的攻击等级+3\n若符合条件，则使技能造成的伤害+(混乱阶段×12.5)%\n若符合条件，则使技能造成的伤害+(混乱阶段×25)%"
 },
@@ -1820,7 +2703,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "若符合条件，则随机使其他敌方单位增加[Vibration]强度1/3的[Vibration]强度\n若没有敌方单位可增加[Vibration]强度，则改为下回合使目标的[Vibration]强度变为1.5倍",
+"base": [
+{
+"abilityID": 9114,
+"simpleDesc": "若符合条件，则随机使其他敌方单位增加[Vibration]强度1/3的[Vibration]强度"
+},
+{
+"abilityID": 91141,
+"simpleDesc": "若没有敌方单位可增加[Vibration]强度，则改为下回合使目标的[Vibration]强度变为1.5倍"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1836,7 +2728,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加[Vibration]强度或施加[Vibration]层数的技能拼点威力+1\n若符合条件，则使造成的伤害+(目标的[Vibration]强度+5)%\n若符合条件，则使造成的伤害+(目标的[Vibration]强度与层数之和+5)%",
+"base": [
+{
+"abilityID": 9115,
+"simpleDesc": "增加[Vibration]强度或施加[Vibration]层数的技能拼点威力+1"
+},
+{
+"abilityID": 91151,
+"simpleDesc": "若符合条件，则使造成的伤害+(目标的[Vibration]强度+5)%"
+},
+{
+"abilityID": 91152,
+"simpleDesc": "若符合条件，则使造成的伤害+(目标的[Vibration]强度与层数之和+5)%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1852,7 +2757,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "最终威力增加相当于消耗的(怠惰E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加\n若符合条件，则攻击前额外对目标施加[Vibration]层数(ZAYIN施加2层，等级每提升1级，额外施加1层)并使造成的伤害+(目标的[Vibration]强度×1.5)%",
+"base": [
+{
+"abilityID": 9116,
+"simpleDesc": "最终威力增加相当于消耗的(怠惰E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加"
+},
+{
+"abilityID": 91161,
+"simpleDesc": "若符合条件，则攻击前额外对目标施加[Vibration]层数(ZAYIN施加2层，等级每提升1级，额外施加1层)并使造成的伤害+(目标的[Vibration]强度×1.5)%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1868,7 +2782,16 @@
 "double_plus": "[第1、第2、第3顺位人格专属]\n\n回合结束时，若本回合使用过增加[Burst]强度或施加[Burst]层数的攻击技能，则下回合使自身获得1~2层[Agility]。\n\n若自身的速度值不低于4，则使增加[Burst]强度或施加[Burst]层数的攻击技能造成的伤害+20%"
 },
 "simple_descriptions": {
-"base": "若符合条件，则下回合使自身获得1层[Agility]。\n若符合条件，则使造成的伤害+12.5%",
+"base": [
+{
+"abilityID": 9117,
+"simpleDesc": "若符合条件，则下回合使自身获得1层[Agility]。"
+},
+{
+"abilityID": 91171,
+"simpleDesc": "若符合条件，则使造成的伤害+12.5%"
+}
+],
 "plus": "若符合条件，则下回合使自身获得1层[Agility]。\n若符合条件，则使造成的伤害+15%",
 "double_plus": "若符合条件，则下回合使自身获得1~2层[Agility]。\n若符合条件，则使造成的伤害+20%"
 },
@@ -1884,7 +2807,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "[Burst]效果对敌方单位带有的护盾造成的伤害+100%",
+"base": [
+{
+"abilityID": 9118,
+"simpleDesc": "[Burst]效果对敌方单位带有的护盾造成的伤害+100%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1900,7 +2828,16 @@
 "double_plus": "[第1、第2、第3顺位人格专属]\n\n增加[Burst]强度或施加[Burst]层数的攻击技能拼点胜利时，使目标增加4级[Burst]强度并对其施加2层[Burst](每回合每名人格最多1次)\n\n若目标未带有[Burst]，则改为使其增加6级[Burst]强度并对其施加3层[Burst]。"
 },
 "simple_descriptions": {
-"base": "对目标施加2层[Burst]\n使目标增加3级[Burst]强度并对其施加2层[Burst]",
+"base": [
+{
+"abilityID": 9119,
+"simpleDesc": "对目标施加2层[Burst]"
+},
+{
+"abilityID": 91191,
+"simpleDesc": "使目标增加3级[Burst]强度并对其施加2层[Burst]"
+}
+],
 "plus": "使目标增加2级[Burst]强度并对其施加2层[Burst]\n使目标增加4级[Burst]强度并对其施加2层[Burst]",
 "double_plus": "使目标增加4级[Burst]强度并对其施加2层[Burst]\n使目标增加6级[Burst]强度并对其施加3层[Burst]"
 },
@@ -1916,7 +2853,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力+1，攻击等级+2，造成的伤害+15%\n拼点威力+2，攻击等级+2，造成的伤害+40%",
+"base": [
+{
+"abilityID": 9120,
+"simpleDesc": "拼点威力+1，攻击等级+2，造成的伤害+15%"
+},
+{
+"abilityID": 91201,
+"simpleDesc": "拼点威力+2，攻击等级+2，造成的伤害+40%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1932,7 +2878,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "最终威力增加相当于消耗的(暴食E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加\n根据E.G.O等级，相应额外对目标施加[Burst]层数(ZAYIN施加2层，等级每提升1级，额外施加1层)并使造成的伤害+(消耗的E.G.O资源种类数×15)%",
+"base": [
+{
+"abilityID": 9121,
+"simpleDesc": "最终威力增加相当于消耗的(暴食E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加"
+},
+{
+"abilityID": 91211,
+"simpleDesc": "根据E.G.O等级，相应额外对目标施加[Burst]层数(ZAYIN施加2层，等级每提升1级，额外施加1层)并使造成的伤害+(消耗的E.G.O资源种类数×15)%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -1948,7 +2903,16 @@
 "double_plus": "增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的攻击技能(不包括E.G.O技能)造成的伤害+10%。\n\n硬币数不高于2枚的技能改为拼点威力+1，造成的伤害+15%。"
 },
 "simple_descriptions": {
-"base": "攻击技能造成的伤害+5%\n改为拼点威力+1，造成的伤害+10%",
+"base": [
+{
+"abilityID": 9122,
+"simpleDesc": "攻击技能造成的伤害+5%"
+},
+{
+"abilityID": 91221,
+"simpleDesc": "改为拼点威力+1，造成的伤害+10%"
+}
+],
 "plus": "攻击技能造成的伤害+7.5%\n改为拼点威力+1，造成的伤害+12.5%",
 "double_plus": "攻击技能造成的伤害+10%\n改为拼点威力+1，造成的伤害+15%"
 },
@@ -1964,7 +2928,16 @@
 "double_plus": "拥有增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的攻击技能的人格拼点胜利时，使其额外恢复7点理智值(每回合最多1次)，若该单位理智值为最大值，则使其造成的伤害+12.5%。\n\n该单位使用减算硬币技能(不包括E.G.O技能)时效果改变，若该单位理智值不低于-15点，则使其理智值减少至-15点并使其造成的伤害+(理智值减少量+10)%，若该单位理智值低于-15点，则使其造成的伤害+25%。"
 },
 "simple_descriptions": {
-"base": "理智值为最大值时造成的伤害+7.5%\n若理智值不低于-15点，则使理智值减少至-15点并使造成的伤害+(理智值减少量)%，若理智值低于-15点，则使造成的伤害+15%",
+"base": [
+{
+"abilityID": 9123,
+"simpleDesc": "理智值为最大值时造成的伤害+7.5%"
+},
+{
+"abilityID": 91231,
+"simpleDesc": "若理智值不低于-15点，则使理智值减少至-15点并使造成的伤害+(理智值减少量)%，若理智值低于-15点，则使造成的伤害+15%"
+}
+],
 "plus": "理智值为最大值时造成的伤害+10%\n若理智值不低于-15点，则使理智值减少至-15点并使造成的伤害+(理智值减少量+5)%，若理智值低于-15点，则使其造成的伤害+20%",
 "double_plus": "理智值为最大值时造成的伤害+12.5%\n若理智值不低于-15点，则使理智值减少至-15点并使造成的伤害+(理智值减少量+10)%，若理智值低于-15点，则使其造成的伤害+25%"
 },
@@ -1980,7 +2953,12 @@
 "double_plus": "[第1、第2、第3顺位人格专属]\n\n若目标的[Sinking]强度与[Sinking]层数之和不低于5点，则对其使用增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的攻击技能造成伤害时，自身攻击结束后使目标增加3级[Sinking]强度并对其施加3层[Sinking](每回合每名人格最多2次)。\n若是集中遭遇战，则改为增加5级[Sinking]强度并施加3层[Sinking](每回合每名人格最多1次)。"
 },
 "simple_descriptions": {
-"base": "随机对理智值最低的1名敌方单位增加2级[Sinking]强度并对其施加2层[Sinking]",
+"base": [
+{
+"abilityID": 9124,
+"simpleDesc": "随机对理智值最低的1名敌方单位增加2级[Sinking]强度并对其施加2层[Sinking]"
+}
+],
 "plus": "随机对理智值最低的1名敌方单位额外增加3级[Sinking]强度并施加2层[Sinking]",
 "double_plus": "随机对理智值最低的1名敌方单位额外增加4级[Sinking]强度并施加3层[Sinking]"
 },
@@ -1996,7 +2974,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加沉沦 层数",
+"base": [
+{
+"abilityID": 9124,
+"simpleDesc": "施加沉沦 层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2012,7 +2995,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "最终威力增加相当于消耗的(忧郁E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加\n满足条件时，攻击前额外对目标施加[Sinking]层数(ZAYIN施加2层，等级每提升1级，额外施加1层)并使该技能造成的伤害+(使用该E.G.O技能时消耗的理智值×2.5)%",
+"base": [
+{
+"abilityID": 9126,
+"simpleDesc": "最终威力增加相当于消耗的(忧郁E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加"
+},
+{
+"abilityID": 91261,
+"simpleDesc": "满足条件时，攻击前额外对目标施加[Sinking]层数(ZAYIN施加2层，等级每提升1级，额外施加1层)并使该技能造成的伤害+(使用该E.G.O技能时消耗的理智值×2.5)%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2028,7 +3020,12 @@
 "double_plus": "回合结束时，下回合使[Breath]强度最高的1名友方单位与[Breath]层数最高的1名友方单位获得1层[Agility]，1层[AttackUp]与1层[AttackDmgUp]。(该效果可能对同一人格重复生效)\n\n若该友方单位拥有色欲攻击技能，则改为使其获得2层[Agility]2层[AttackUp]与2层[AttackDmgUp]。(不包括E.G.O技能)"
 },
 "simple_descriptions": {
-"base": "下回合获得1层[Agility]",
+"base": [
+{
+"abilityID": 9127,
+"simpleDesc": "下回合获得1层[Agility]"
+}
+],
 "plus": "下回合获得1层[Agility]与1层[AttackDmgUp]",
 "double_plus": "下回合获得2层[Agility]与1层[AttackDmgUp]"
 },
@@ -2044,7 +3041,12 @@
 "double_plus": "回合开始时，使速度值最高的1名友方单位增加4级[Breath]强度并使其获得4层[Breath]。\n\n若该友方单位拥有嫉妒攻击技能，则改为增加5级[Breath]强度并获得5层[Breath]。"
 },
 "simple_descriptions": {
-"base": "使速度值最高的1名友方单位增加3级[Breath]强度并使其获得2层[Breath]",
+"base": [
+{
+"abilityID": 9128,
+"simpleDesc": "使速度值最高的1名友方单位增加3级[Breath]强度并使其获得2层[Breath]"
+}
+],
 "plus": "使速度值最高的1名友方单位增加5级[Breath]强度并使其获得4层[Breath]",
 "double_plus": "使速度值最高的1名友方单位增加4级[Breath]强度并使其获得4层[Breath]"
 },
@@ -2060,7 +3062,12 @@
 "double_plus": "[第1、第2、第3顺位人格专属]\n\n暴击时，下回合对目标施加1层[DefenseDown](每回合每名人格最多6次)。\n[不可重复触发] 朱符 堂吉诃德 E.G.O被动触发时，该效果不会触发"
 },
 "simple_descriptions": {
-"base": "下回合对目标施加1层[DefenseDown]",
+"base": [
+{
+"abilityID": 9129,
+"simpleDesc": "下回合对目标施加1层[DefenseDown]"
+}
+],
 "plus": "下回合对目标施加1层[DefenseDown]",
 "double_plus": "下回合对目标施加1层防御等级降低 "
 },
@@ -2076,7 +3083,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "友方单位拼点威力+1并获得1层[AttackDmgUp]\n拼点威力+1并获得3层[AttackDmgUp]\n拼点威力+2并获得3层[AttackDmgUp]",
+"base": [
+{
+"abilityID": 9130,
+"simpleDesc": "友方单位拼点威力+1并获得1层[AttackDmgUp]"
+},
+{
+"abilityID": 91301,
+"simpleDesc": "拼点威力+1并获得3层[AttackDmgUp]"
+},
+{
+"abilityID": 91302,
+"simpleDesc": "拼点威力+2并获得3层[AttackDmgUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2092,7 +3112,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "最终威力增加相当于消耗的(傲慢E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加\n若是傲慢E.G.O觉醒技能，则攻击前额外获得[Breath]层数(ZAYIN获得2层，等级每提升1级，额外获得1层)并使伤害量+(消耗的E.G.O资源总和×8)%",
+"base": [
+{
+"abilityID": 9131,
+"simpleDesc": "最终威力增加相当于消耗的(傲慢E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加"
+},
+{
+"abilityID": 91311,
+"simpleDesc": "若是傲慢E.G.O觉醒技能，则攻击前额外获得[Breath]层数(ZAYIN获得2层，等级每提升1级，额外获得1层)并使伤害量+(消耗的E.G.O资源总和×8)%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2108,7 +3137,16 @@
 "double_plus": "回合结束时，若自身的[Charge]层数低于5层，则下回合开始时使自身获得4层[Charge]。(包括特殊充能)\n\n回合结束时，若自身的[Charge]层数不低于5层，则下回合开始时使自身获得2层[AttackDmgUp]。(包括特殊充能)"
 },
 "simple_descriptions": {
-"base": "下回合开始时获得3层[Charge]\n下回合开始时获得1层[AttackDmgUp]",
+"base": [
+{
+"abilityID": 9132,
+"simpleDesc": "下回合开始时获得3层[Charge]"
+},
+{
+"abilityID": 91321,
+"simpleDesc": "下回合开始时获得1层[AttackDmgUp]"
+}
+],
 "plus": "下回合开始时获得3层[Charge]\n下回合开始时获得1层[AttackDmgUp]",
 "double_plus": "下回合开始时获得4层[Charge]\n下回合开始时获得2层[AttackDmgUp]"
 },
@@ -2124,7 +3162,12 @@
 "double_plus": "回合结束时，使自身恢复(本回合攻击技能消耗的[Charge]层数与特殊充能之和+2)点体力与理智值。\n\n若现存体力不高于75%，则使恢复量变为2倍。"
 },
 "simple_descriptions": {
-"base": "恢复(消耗的[Charge]层数)点体力与理智值",
+"base": [
+{
+"abilityID": 9133,
+"simpleDesc": "恢复(消耗的[Charge]层数)点体力与理智值"
+}
+],
 "plus": "恢复(消耗的[Charge]层数+1)点体力与理智值",
 "double_plus": "恢复(消耗的[Charge]层数+2)点体力与理智值"
 },
@@ -2140,7 +3183,16 @@
 "double_plus": "[第1、第2、第3顺位人格专属]\n\n回合开始时，使适用的人格获得4层[ChargeForceField]\n\n若适用的人格拥有获得或消耗[Charge]层数或特殊充能的技能且带有[ChargeForceField]，则使其1技能的拼点威力+1，造成的伤害+25%。"
 },
 "simple_descriptions": {
-"base": "1技能的拼点威力+1，造成的伤害+10%\n下回合获得2层[ChargeForceField]",
+"base": [
+{
+"abilityID": 9134,
+"simpleDesc": "1技能的拼点威力+1，造成的伤害+10%"
+},
+{
+"abilityID": 91341,
+"simpleDesc": "下回合获得2层[ChargeForceField]"
+}
+],
 "plus": "1技能的拼点威力+1，造成的伤害+15%\n下回合获得3层[ChargeForceField]",
 "double_plus": "1技能的拼点威力+1，造成的伤害+25%\n下回合获得4层[ChargeForceField]"
 },
@@ -2156,7 +3208,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使获得或消耗[Charge]层数或特殊充能的3技能的硬币/基础威力增加\n造成的伤害+25%或硬币/基础威力额外增加",
+"base": [
+{
+"abilityID": 9135,
+"simpleDesc": "使获得或消耗[Charge]层数或特殊充能的3技能的硬币/基础威力增加"
+},
+{
+"abilityID": 91351,
+"simpleDesc": "造成的伤害+25%或硬币/基础威力额外增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2172,7 +3233,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "最终威力增加相当于消耗的(嫉妒E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加\n额外获得[Charge]层数(ZAYIN获得2层，等级每提升1级，额外获得1层)并使造成的伤害+(自身的[Charge]层数×5)%",
+"base": [
+{
+"abilityID": 9136,
+"simpleDesc": "最终威力增加相当于消耗的(嫉妒E.G.O资源+其他E.G.O资源总和/3)的数值，造成的伤害增加"
+},
+{
+"abilityID": 91361,
+"simpleDesc": "额外获得[Charge]层数(ZAYIN获得2层，等级每提升1级，额外获得1层)并使造成的伤害+(自身的[Charge]层数×5)%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2188,7 +3258,12 @@
 "double_plus": "[第4、第5顺位人格专属]\n\n回合结束时，拥有斩击攻击技能的人格下回合获得(其拥有的斩击攻击技能数+1)层[Agility](相同的技能仅计入1次，不包括E.G.O技能与反击)。"
 },
 "simple_descriptions": {
-"base": "下回合获得[Agility]",
+"base": [
+{
+"abilityID": 9137,
+"simpleDesc": "下回合获得[Agility]"
+}
+],
 "plus": "下回合获得[Agility]",
 "double_plus": "下回合获得[Agility]"
 },
@@ -2204,7 +3279,12 @@
 "double_plus": "[第5、第6顺位人格专属]\n\n若自身的速度值与目标相差至少2点，则使自身斩击技能造成的伤害+20%。"
 },
 "simple_descriptions": {
-"base": "斩击技能造成的伤害+15%",
+"base": [
+{
+"abilityID": 9138,
+"simpleDesc": "斩击技能造成的伤害+15%"
+}
+],
 "plus": "斩击技能造成的伤害+20%",
 "double_plus": "斩击技能的伤害+20%"
 },
@@ -2220,7 +3300,16 @@
 "double_plus": "[第4、第6顺位人格专属]\n\n硬币数不高于2枚的斩击技能(不包括E.G.O技能)拼点威力+1，造成的伤害+20%。\n\n单硬币技能改为拼点威力+1，造成的伤害+30%。"
 },
 "simple_descriptions": {
-"base": "斩击技能的拼点威力+1，造成的伤害+10%\n斩击技能的拼点威力+1，造成的伤害+20%",
+"base": [
+{
+"abilityID": 9139,
+"simpleDesc": "斩击技能的拼点威力+1，造成的伤害+10%"
+},
+{
+"abilityID": 91391,
+"simpleDesc": "斩击技能的拼点威力+1，造成的伤害+20%"
+}
+],
 "plus": "斩击技能的拼点威力+1，造成的伤害+15%\n斩击技能的拼点威力+1，造成的伤害+25%",
 "double_plus": "斩击技能的拼点威力+1，造成的伤害+20%\n斩击技能的拼点威力+1，造成的伤害+30%"
 },
@@ -2231,12 +3320,21 @@
 "name": "决意",
 "category": "斩击",
 "descriptions": {
-"base": "本场战斗中，拥有不低于2个斩击技能的友方单位首个回合的拼点威力+2，从第2回合起使其获得1层[Agility]并使其拼点威力+2。\n\n属于し协会的人格恢复体力最多恢复至体力上限的75%，但受到的伤害与使自身恢复的体力-50%(进入战斗时立即触发，不包括E.G.O饰品恢复的体力)。\n\n每回合开始时，使属于し协会的人格获得1层斩击威力提升 与1层斩击伤害强化",
+"base": "本场战斗中，拥有不低于2个斩击技能的友方单位首个回合的拼点威力+1，从第2回合起使其获得1层[Agility]并使其拼点威力+1。\n\n属于し协会的人格恢复体力最多恢复至体力上限的75%，但受到的伤害与使自身恢复的体力-50%(关卡开始时立即触发，不包括E.G.O饰品恢复的体力)。\n\n每回合开始时，使属于し协会的人格获得1层斩击威力提升 与1层斩击伤害强化 ",
 "plus": "本场战斗中，拥有不低于2个斩击技能的友方单位首个回合的拼点威力+2，从第2回合起使其获得2层[Agility]并使其拼点威力+2。\n\n属于し协会的人格恢复体力最多恢复至体力上限的50%，但受到的伤害与使自身恢复的体力-75%（进入战斗时立即触发，不包括E.G.O饰品恢复的体力）。\n\n每回合开始时，使属于し协会的人格获得1层斩击威力提升 与2层斩击伤害强化",
 "double_plus": "本场战斗中，拥有不低于2个斩击技能的友方单位首个回合的拼点威力+2，从第2回合起使其获得2层[Agility]并使其最终威力+1\n- 若该人格的速度值不低于7，则使其斩击技能造成的伤害+10%。\n\n属于し协会的人格恢复体力最多恢复至体力上限的49%，但受到的伤害与使自身恢复的体力-75%（进入战斗时立即触发，不包括E.G.O饰品恢复的体力）。\n\n每回合开始时，使属于し协会的人格获得1层斩击威力提升 与3层斩击伤害强化"
 },
 "simple_descriptions": {
-"base": "拥有不低于2个斩击技能的友方单位拼点威力增加\n体力最大值固定为体力上限的75%，但受到的伤害与使自身恢复的体力-50%",
+"base": [
+{
+"abilityID": 9140,
+"simpleDesc": "拥有不低于2个斩击技能的友方单位拼点威力增加"
+},
+{
+"abilityID": 91401,
+"simpleDesc": "体力最大值固定为体力上限的75%，但受到的伤害与使自身恢复的体力-50%"
+}
+],
 "plus": "拥有不低于2个斩击技能的友方单位拼点威力增加\n体力最大值固定为体力上限的50%，但受到的伤害与使自身恢复的体力-75%",
 "double_plus": "拥有不低于2个斩击技能的友方单位拼点威力增加\n体力最大值固定为体力上限的49%，但受到的伤害与使自身恢复的体力-75%"
 },
@@ -2252,7 +3350,16 @@
 "double_plus": "[第3、第4、第5、第6顺位人格专属]\n\n单方面攻击时，斩击技能造成的伤害+12.5%\n\n拼点胜利时，斩击技能造成的伤害+(50/剩余硬币数)%"
 },
 "simple_descriptions": {
-"base": "斩击技能造成的伤害+10%\n斩击技能造成的伤害+(40/剩余硬币数)%",
+"base": [
+{
+"abilityID": 9141,
+"simpleDesc": "斩击技能造成的伤害+10%"
+},
+{
+"abilityID": 91411,
+"simpleDesc": "斩击技能造成的伤害+(40/剩余硬币数)%"
+}
+],
 "plus": "斩击技能造成的伤害+10%\n斩击技能造成的伤害+(40/剩余硬币数)%",
 "double_plus": "斩击技能造成的伤害+12.5%\n斩击技能造成的伤害+(50/剩余硬币数)%"
 },
@@ -2268,7 +3375,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "斩击技能威力增加\n斩击技能造成的伤害增加，根据已失去体力相应额外使造成的伤害增加",
+"base": [
+{
+"abilityID": 9142,
+"simpleDesc": "斩击技能威力增加"
+},
+{
+"abilityID": 91421,
+"simpleDesc": "斩击技能造成的伤害增加，根据已失去体力相应额外使造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2284,7 +3400,12 @@
 "double_plus": "[第4、第5顺位人格专属]\n\n若自身拥有不低于2个突刺攻击技能，则回合开始时使自身获得2层[PenetrateDamageUp]。"
 },
 "simple_descriptions": {
-"base": "使自身获得1层[PenetrateDamageUp]",
+"base": [
+{
+"abilityID": 9143,
+"simpleDesc": "使自身获得1层[PenetrateDamageUp]"
+}
+],
 "plus": "使自身获得2层[PenetrateDamageUp]",
 "double_plus": "使自身获得2层[PenetrateDamageUp]"
 },
@@ -2300,7 +3421,12 @@
 "double_plus": "[第5、第6顺位人格专属]\n\n使用突刺技能命中敌方单位时，下回合使自身获得1层[Agility]与1层[PenetrateDamageUp](每回合每名人格最多2次)。\n\n该技能击杀敌方单位时，下回合使自身额外获得1层[Agility]与2层[PenetrateDamageUp](每回合每名人格最多1次)。"
 },
 "simple_descriptions": {
-"base": "下回合使自身获得[Agility]与[PenetrateDamageUp]",
+"base": [
+{
+"abilityID": 9144,
+"simpleDesc": "下回合使自身获得[Agility]与[PenetrateDamageUp]"
+}
+],
 "plus": "下回合使自身获得[Agility]与[PenetrateDamageUp]",
 "double_plus": "下回合使自身获得[Agility]与[PenetrateDamageUp]"
 },
@@ -2316,7 +3442,20 @@
 "double_plus": "突刺攻击技能的拼点威力+1，造成的伤害+10%\n\n消耗[Bullet]的技能造成的伤害+(60/硬币数)%\n\n若自身消耗了所有的[Bullet]，则下回合开始时使自身获得2发[Bullet](每场战斗每名人格最多1次)"
 },
 "simple_descriptions": {
-"base": "突刺攻击技能的拼点威力+1\n技能造成的伤害+(40/硬币数)%\n下回合开始时获得2发[Bullet]",
+"base": [
+{
+"abilityID": 9145,
+"simpleDesc": "突刺攻击技能的拼点威力+1"
+},
+{
+"abilityID": 91451,
+"simpleDesc": "技能造成的伤害+(40/硬币数)%"
+},
+{
+"abilityID": 91452,
+"simpleDesc": "下回合开始时获得2发[Bullet]"
+}
+],
 "plus": "突刺攻击技能的拼点威力+1，造成的伤害+5%\n技能造成的伤害+(40/硬币数)%\n下回合开始时获得2发[Bullet]",
 "double_plus": "突刺攻击技能的拼点威力+1，造成的伤害+10%\n技能造成的伤害+(40/硬币数)%\n下回合开始时获得2发[Bullet]"
 },
@@ -2332,7 +3471,16 @@
 "double_plus": "[第3、第4、第5、第6顺位人格专属]\n\n进行拼点时，使自身的拼点威力+1，突刺技能造成的伤害+25%。\n\n单方面攻击时，突刺技能造成的伤害+12.5%。"
 },
 "simple_descriptions": {
-"base": "进行拼点时拼点威力+1，突刺技能造成的伤害+20%\n单方面攻击时，突刺技能造成的伤害+10%",
+"base": [
+{
+"abilityID": 9146,
+"simpleDesc": "进行拼点时拼点威力+1，突刺技能造成的伤害+20%"
+},
+{
+"abilityID": 91461,
+"simpleDesc": "单方面攻击时，突刺技能造成的伤害+10%"
+}
+],
 "plus": "进行拼点时拼点威力+1，突刺技能造成的伤害+20%\n单方面攻击时，突刺技能造成的伤害+10%",
 "double_plus": "进行拼点时拼点威力+1，突刺技能造成的伤害+25%\n单方面攻击时，突刺技能造成的伤害+12.5%"
 },
@@ -2348,7 +3496,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "突刺技能威力增加\n突刺攻击技能造成的伤害增加，根据速度值之差相应额外使造成的伤害增加",
+"base": [
+{
+"abilityID": 9147,
+"simpleDesc": "突刺攻击技能威力增加"
+},
+{
+"abilityID": 91471,
+"simpleDesc": "突刺攻击技能造成的伤害增加，根据速度值之差相应额外使造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2364,7 +3521,16 @@
 "double_plus": "[第4、第6顺位人格专属]\n\n使用打击技能时，下回合使自身获得1层[Agility]与1层[HitDamageUp](每回合最多2次)。\n\n回合结束时，若本回合自身没有对敌方单位造成伤害，则改为下回合使自身获得3层[Agility]与2层[HitDamageUp]。"
 },
 "simple_descriptions": {
-"base": "下回合获得1层[Agility]\n下回合获得3层[Agility]",
+"base": [
+{
+"abilityID": 9148,
+"simpleDesc": "下回合获得1层[Agility]"
+},
+{
+"abilityID": 91481,
+"simpleDesc": "下回合获得3层[Agility]"
+}
+],
 "plus": "下回合获得1层[Agility]\n下回合获得3层[Agility]",
 "double_plus": "下回合获得1层[Agility]与1层[HitDamageUp]\n下回合获得3层[Agility]与2层[HitDamageUp]"
 },
@@ -2380,7 +3546,16 @@
 "double_plus": "[第5、第6顺位人格专属]\n\n打击技能命中敌方单位时，对目标额外造成3~7点打击伤害。\n\n若是忧郁攻击技能，则额外使自身恢复6点体力。"
 },
 "simple_descriptions": {
-"base": "额外造成3点打击伤害\n额外恢复3点体力",
+"base": [
+{
+"abilityID": 9149,
+"simpleDesc": "额外造成3点打击伤害"
+},
+{
+"abilityID": 91491,
+"simpleDesc": "额外恢复3点体力"
+}
+],
 "plus": "额外造成3~5点打击伤害\n额外恢复4点体力",
 "double_plus": "额外造成3~7点打击伤害\n额外恢复6点体力"
 },
@@ -2396,7 +3571,20 @@
 "double_plus": "回合开始时，使拥有打击攻击技能(不包括E.G.O技能)的友方单位获得2层[AttackUp]与1层[HitDamageUp]。\n\n若该单位拥有不低于2个打击攻击技能，则改为获得2层[AttackUp]与2层[HitDamageUp]。\n\n若该单位拥有不低于2个使用减算硬币的打击攻击技能，则改为获得3层[AttackUp]与3层[HitDamageUp]。"
 },
 "simple_descriptions": {
-"base": "获得1层[AttackUp]\n获得1层[AttackUp]与1层[HitDamageUp]\n获得2层[AttackUp]与2层[HitDamageUp]",
+"base": [
+{
+"abilityID": 9150,
+"simpleDesc": "获得1层[AttackUp]"
+},
+{
+"abilityID": 91501,
+"simpleDesc": "获得1层[AttackUp]与1层[HitDamageUp]"
+},
+{
+"abilityID": 91502,
+"simpleDesc": "获得2层[AttackUp]与2层[HitDamageUp]"
+}
+],
 "plus": "获得2层[AttackUp]\n获得2层[AttackUp]与1层[HitDamageUp]\n获得3层[AttackUp]与2层[HitDamageUp]",
 "double_plus": "获得2层[AttackUp]与1层[HitDamageUp]\n获得2层[AttackUp]与2层[HitDamageUp]\n获得3层[AttackUp]与3层[HitDamageUp]"
 },
@@ -2412,7 +3600,12 @@
 "double_plus": "[第3、第4、第5、第6顺位人格专属]\n\n打击技能拼点结束后，若剩余硬币数不低于2枚，则使其造成的伤害+12.5%，若剩余硬币数不低于3枚，则使其造成的伤害+25%，若剩余硬币数不低于4枚，则使其造成的伤害+50%。"
 },
 "simple_descriptions": {
-"base": "根据条件增加伤害",
+"base": [
+{
+"abilityID": 9151,
+"simpleDesc": "根据条件增加伤害"
+}
+],
 "plus": "根据条件增加伤害",
 "double_plus": "根据条件增加伤害"
 },
@@ -2428,7 +3621,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "打击技能威力增加\n打击技能造成的伤害增加，硬币数越少，额外使造成的伤害增加",
+"base": [
+{
+"abilityID": 9152,
+"simpleDesc": "打击技能威力增加"
+},
+{
+"abilityID": 91521,
+"simpleDesc": "打击技能造成的伤害增加，硬币数越少，额外使造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2444,7 +3646,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "转换1个随机的E.G.O资源",
+"base": [
+{
+"abilityID": 9153,
+"simpleDesc": "转换1个随机的E.G.O资源"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2460,7 +3667,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "消耗剩余体力的5%并获得2层[Enhancement]",
+"base": [
+{
+"abilityID": 9154,
+"simpleDesc": "消耗剩余体力的5%并获得2层[Enhancement]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2476,7 +3688,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力+1",
+"base": [
+{
+"abilityID": 9155,
+"simpleDesc": "拼点威力+1"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2492,7 +3709,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9156,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2508,7 +3730,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "技能的最终威力+1\n增加(剩余硬币数/2 +1)级[Combustion]强度",
+"base": [
+{
+"abilityID": 9157,
+"simpleDesc": "技能的最终威力+1"
+},
+{
+"abilityID": 91571,
+"simpleDesc": "增加(剩余硬币数/2 +1)级[Combustion]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2524,7 +3755,28 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "触发1次[Combustion]\n额外触发1次[Combustion]\n施加阵亡单位的[Combustion]强度\n施加4层[AttackDown]\n获得2层[AttackDmgUp]",
+"base": [
+{
+"abilityID": 9158,
+"simpleDesc": "触发1次[Combustion]"
+},
+{
+"abilityID": 91581,
+"simpleDesc": "额外触发1次[Combustion]"
+},
+{
+"abilityID": 91582,
+"simpleDesc": "施加阵亡单位的[Combustion]强度"
+},
+{
+"abilityID": 91583,
+"simpleDesc": "施加4层[AttackDown]"
+},
+{
+"abilityID": 91583,
+"simpleDesc": "获得2层[AttackDmgUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2540,7 +3792,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力+1",
+"base": [
+{
+"abilityID": 9159,
+"simpleDesc": "拼点威力+1"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2556,7 +3813,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "触发1次流血 (减少1层流血 )",
+"base": [
+{
+"abilityID": 9160,
+"simpleDesc": "触发1次流血 (流血 层数减少1层)"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2572,7 +3834,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "硬币/基础威力增加，造成的伤害+50%\n增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能的最终威力+1",
+"base": [
+{
+"abilityID": 9161,
+"simpleDesc": "硬币/基础威力增加，造成的伤害+50%"
+},
+{
+"abilityID": 91611,
+"simpleDesc": "增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能的最终威力+1"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2588,7 +3859,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点胜利时，触发敌方单位的流血 1次（减少1层流血 ）\n拼点后，触发敌方单位的流血 (其剩余硬币数)次（减少(触发次数)层流血 ）\n施加(触发的流血 次数×2)层防御等级降低 (最多20层)\n增加3级流血 强度并施加1层流血 ",
+"base": [
+{
+"abilityID": 9162,
+"simpleDesc": "拼点胜利时，触发敌方单位的流血 1次（流血 层数减少1层）"
+},
+{
+"abilityID": 91621,
+"simpleDesc": "拼点后，触发敌方单位的流血 (其剩余硬币数)次(减少(触发次数)层流血 )"
+},
+{
+"abilityID": 91622,
+"simpleDesc": "施加(触发的流血 次数×2)层防御等级降低 (最多20层)"
+},
+{
+"abilityID": 91623,
+"simpleDesc": "增加3级流血 强度并施加1层流血 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2599,12 +3887,21 @@
 "name": "宝石振子",
 "category": "震颤",
 "descriptions": {
-"base": "消耗[Vibration]层数的技能拼点胜利时，若目标未带有[Vibration]，则对其施加2层[Vibration]\n\n若包括该技能在内怠惰共鸣数不低于3，则改为施加3层[Vibration]",
+"base": "消耗[Vibration]层数的技能拼点胜利时，若目标未带有[Vibration]，则对其施加2层[Vibration]\n\n若包括该攻击技能在内怠惰共鸣数不低于3，则改为施加3层[Vibration]",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "消耗[Vibration]层数的技能拼点胜利时，对目标施加2层[Vibration]\n消耗[Vibration]层数的技能拼点胜利且包括该技能在内怠惰共鸣数不低于3时，对目标施加3层[Vibration]",
+"base": [
+{
+"abilityID": 9163,
+"simpleDesc": "消耗[Vibration]层数的技能拼点胜利时，对目标施加2层[Vibration]"
+},
+{
+"abilityID": 91631,
+"simpleDesc": "消耗[Vibration]层数的技能拼点胜利且包括该技能在内怠惰共鸣数不低于3时，对目标施加3层[Vibration]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2620,7 +3917,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "若自身的震颤 层数不低于8层，则使自身的拼点威力+1\n若消耗震颤 层数的技能击杀目标或使目标陷入混乱，则对自身施加震颤 层数",
+"base": [
+{
+"abilityID": 9164,
+"simpleDesc": "若自身的震颤 层数不低于8层，则使自身的拼点威力+1"
+},
+{
+"abilityID": 91641,
+"simpleDesc": "若消耗震颤 层数的技能击杀目标或使目标陷入混乱，则对自身施加震颤 层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2636,7 +3942,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "生成混乱阈值\n施加1层[Vulnerable]",
+"base": [
+{
+"abilityID": 9165,
+"simpleDesc": "生成混乱阈值"
+},
+{
+"abilityID": 91651,
+"simpleDesc": "施加1层[Vulnerable]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2652,7 +3967,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "消耗自身的[Vibration]层数的技能拼点胜利时，若目标未带有[Vibration]，则对其施加3层[Vibration]\n回合开始时，使自身的拼点威力+(自身的[Vibration]层数/5)\n若消耗震颤 层数的技能击杀目标或使目标陷入混乱，则对自身施加震颤 层数",
+"base": [
+{
+"abilityID": 9166,
+"simpleDesc": "消耗自身的[Vibration]层数的技能拼点胜利时，若目标未带有[Vibration]，则对其施加3层[Vibration]"
+},
+{
+"abilityID": 91661,
+"simpleDesc": "回合开始时，使自身的拼点威力+(自身的[Vibration]层数/5)"
+},
+{
+"abilityID": 91662,
+"simpleDesc": "若消耗震颤 层数的技能击杀目标或使目标陷入混乱，则对自身施加震颤 层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2668,7 +3996,28 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点胜利时，使目标增加(剩余硬币数)级[Vibration]强度，若目标未带有[Vibration]，则对其施加[Vibration]层数\n回合开始时，根据自身的震颤 层数相应使自身获得拼点威力提升 \n若消耗震颤 层数的技能击杀目标或使目标陷入混乱，则对自身施加震颤 层数\n消耗震颤 层数的技能造成的伤害增加\n回合结束时，使目标的震颤-叠加延长至下回合",
+"base": [
+{
+"abilityID": 9167,
+"simpleDesc": "拼点胜利时，使目标增加(剩余硬币数)级[Vibration]强度，若目标未带有[Vibration]，则对其施加[Vibration]层数"
+},
+{
+"abilityID": 91671,
+"simpleDesc": "回合开始时，根据自身的震颤 层数相应使自身获得拼点威力提升 "
+},
+{
+"abilityID": 91672,
+"simpleDesc": "若消耗震颤 层数的技能击杀目标或使目标陷入混乱，则对自身施加震颤 层数"
+},
+{
+"abilityID": 91673,
+"simpleDesc": "消耗震颤 层数的技能造成的伤害增加"
+},
+{
+"abilityID": 91674,
+"simpleDesc": "回合结束时，使目标的震颤-叠加延长至下回合"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2684,7 +4033,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加[Burst]强度时，额外增加1级[Burst]强度",
+"base": [
+{
+"abilityID": 9168,
+"simpleDesc": "增加[Burst]强度时，额外增加1级[Burst]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2700,7 +4054,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "优先消耗破裂 强度以取代破裂 层数\n施加的破裂 层数额外+1层",
+"base": [
+{
+"abilityID": 9169,
+"simpleDesc": "优先消耗破裂 强度以取代破裂 层数"
+},
+{
+"abilityID": 91691,
+"simpleDesc": "施加的破裂 层数额外+1层"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2716,7 +4079,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "破裂 效果对护盾造成的伤害+100%\n增加[Burst]强度时，额外增加2级[Burst]强度\n若技能因其效果不会施加[Burst]，则使该技能的硬币威力/基础威力增加",
+"base": [
+{
+"abilityID": 9170,
+"simpleDesc": "破裂 效果对护盾造成的伤害+100%"
+},
+{
+"abilityID": 91701,
+"simpleDesc": "增加[Burst]强度时，额外增加2级[Burst]强度"
+},
+{
+"abilityID": 91702,
+"simpleDesc": "若技能因其效果不会施加[Burst]，则使该技能的硬币威力/基础威力增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2732,7 +4108,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "[Burst]效果对护盾造成的伤害+150%\n带有[Burst]的敌方单位减少攻击等级与防御等级\n通过技能效果增加[Burst]强度时，使目标增加2级[Burst]强度并对其施加1层[Burst]\n硬币威力增加",
+"base": [
+{
+"abilityID": 9171,
+"simpleDesc": "[Burst]效果对护盾造成的伤害+150%"
+},
+{
+"abilityID": 91711,
+"simpleDesc": "带有[Burst]的敌方单位减少攻击等级与防御等级"
+},
+{
+"abilityID": 91712,
+"simpleDesc": "通过技能效果增加[Burst]强度时，使目标增加2级[Burst]强度并对其施加1层[Burst]"
+},
+{
+"abilityID": 91713,
+"simpleDesc": "硬币威力增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2748,7 +4141,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "根据目标的沉沦 强度相应使自身恢复理智值",
+"base": [
+{
+"abilityID": 9172,
+"simpleDesc": "根据目标的沉沦 强度相应使自身恢复理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2764,7 +4162,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使全体友方单位获得2层[AttackUp]",
+"base": [
+{
+"abilityID": 9173,
+"simpleDesc": "使全体友方单位获得2层[AttackUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2780,7 +4183,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[Sinking]层数\n造成忧郁伤害",
+"base": [
+{
+"abilityID": 9174,
+"simpleDesc": "施加[Sinking]层数"
+},
+{
+"abilityID": 91741,
+"simpleDesc": "造成忧郁伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2796,7 +4208,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "根据目标的沉沦 强度相应使自身恢复理智值\n每有1名敌方单位理智值为-45点，下回合使全体友方单位获得1层[AttackUp]",
+"base": [
+{
+"abilityID": 9175,
+"simpleDesc": "根据目标的沉沦 强度相应使自身恢复理智值"
+},
+{
+"abilityID": 91751,
+"simpleDesc": "每有1名敌方单位理智值为-45点，下回合使全体友方单位获得1层[AttackUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2807,12 +4228,49 @@
 "name": "袭来的浪潮",
 "category": "沉沦",
 "descriptions": {
-"base": "回合开始时，若拥有增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的攻击技能的人格不低于5名，则在本场战斗期间触发该效果。(不包括E.G.O技能，不包括待命人员)\n\n回合开始时，随机对1名敌方单位施加1层[WaveSinking]\n\n击杀带有[WaveSinking]的敌方单位时，在下回合开始时将其[WaveSinking]层数施加给[WaveSinking]层数最高但未达到最大值的1名敌方单位\n\n增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的技能命中敌方单位并对其造成体力伤害时，在回合结束时使其增加4级[Sinking]强度并对其施加3层[Sinking](每回合每名敌方单位最多1次)\n若激活忧郁或色欲完全共鸣，则在战斗开始时，使全体敌方单位(若是异想体，则随机对一个部位)增加3级[Sinking]强度并对其施加3层[Sinking]\n\n基础攻击技能攻击后，若目标的[Sinking]强度不低于10级，则使自身恢复(目标的[Sinking]强度/10)点理智值(最多5点)并对目标施加相应层数的[DefenseDown](最多5层，每回合每名敌方单位最多1次)\n\n回合结束时，每有1名敌方单位理智值为-45点或未带有理智值，下回合使全体友方单位获得1层[AttackUp](最多6层)\n\n增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的加算硬币技能的硬币威力+1\n增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的减算硬币技能的基础威力+(4/硬币数)(最少+1，向下取整)\n\n使用增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦(包括使自身增加或对自身施加)的基础攻击技能命中敌方单位时，每触发1次目标的[Sinking]效果(包括特殊沉沦)，在回合结束时，使自身恢复5点理智值(每回合每名人格最多2次)\n若该友方单位在回合开始时理智值为45点，则改为使用基础攻击技能命中敌方单位并触发目标的[Sinking]效果(包括特殊沉沦)时，对目标施加3层[Sinking](每回合每名人格最多2次)",
+"base": "回合开始时，若拥有增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的攻击技能的人格不低于5名，则在本场战斗期间触发该效果。(不包括E.G.O技能，不包括待命人员)\n\n回合开始时，随机对1名敌方单位施加1层[WaveSinking]\n\n击杀带有[WaveSinking]的敌方单位时，在下回合开始时将其[WaveSinking]层数施加给[WaveSinking]层数最高但未达到最大值的1名敌方单位\n\n增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的技能命中敌方单位并对其造成体力伤害时，在回合结束时使其增加4级[Sinking]强度并对其施加3层[Sinking](每回合每名敌方单位最多1次)\n若激活忧郁或色欲完全共鸣，则在战斗开始时，使全体敌方单位(若是异想体，则随机对一个部位)增加3级[Sinking]强度并对其施加3层[Sinking]\n\n基础攻击技能攻击后，若目标的[Sinking]强度不低于10级，则使自身恢复(目标的[Sinking]强度/10)点理智值(最多5点)并对目标施加相应层数的[DefenseDown](最多5层，每回合每名敌方单位最多1次)\n\n回合结束时，每有1名敌方单位理智值为-45点或未带有理智值，下回合使全体友方单位获得1层[AttackUp](最多6层)\n\n增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的加算硬币技能的硬币威力+1\n增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的减算硬币技能的基础威力+(4/硬币数)(最少+1，向下取整)\n\n使用增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦(包括使自身增加或对自身施加)的基础攻击技能命中敌方单位时，每触发1次目标的[Sinking](包括特殊沉沦)，在回合结束时，使自身恢复5点理智值(每回合每名人格最多2次)\n若该友方单位在回合开始时理智值为45点，则改为使用基础攻击技能命中敌方单位并触发目标的[Sinking](包括特殊沉沦)时，对目标施加3层[Sinking](每回合每名人格最多2次)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加沉沦 \n施加防御等级降低 \n获得攻击等级提升 \n恢复理智值\n施加沉沦 \n硬币威力增加\n基础威力提升\n施加逆流 \n施加逆流 ",
+"base": [
+{
+"abilityID": 9176,
+"simpleDesc": "施加沉沦 "
+},
+{
+"abilityID": 91761,
+"simpleDesc": "施加防御等级降低 "
+},
+{
+"abilityID": 91762,
+"simpleDesc": "获得攻击等级提升 "
+},
+{
+"abilityID": 91763,
+"simpleDesc": "恢复理智值"
+},
+{
+"abilityID": 91764,
+"simpleDesc": "施加沉沦 "
+},
+{
+"abilityID": 91765,
+"simpleDesc": "硬币威力增加"
+},
+{
+"abilityID": 91766,
+"simpleDesc": "基础威力提升"
+},
+{
+"abilityID": 91767,
+"simpleDesc": "施加逆流 "
+},
+{
+"abilityID": 91768,
+"simpleDesc": "施加逆流 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2828,7 +4286,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "最终威力+2",
+"base": [
+{
+"abilityID": 9177,
+"simpleDesc": "最终威力+2"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2844,7 +4307,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "消耗1级呼吸法 强度并获得1层呼吸法 ",
+"base": [
+{
+"abilityID": 9178,
+"simpleDesc": "消耗1级呼吸法 强度并获得1层呼吸法 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2860,7 +4328,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "硬币/基础威力增加\n增加3级[Breath]强度。拥有忧郁攻击技能的友方单位额外获得2层[Breath]",
+"base": [
+{
+"abilityID": 9179,
+"simpleDesc": "硬币/基础威力增加"
+},
+{
+"abilityID": 91791,
+"simpleDesc": "增加3级[Breath]强度。拥有忧郁攻击技能的友方单位额外获得2层[Breath]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2871,12 +4348,29 @@
 "name": "桶装烈酒",
 "category": "呼吸法",
 "descriptions": {
-"base": "回合开始时，若拥有使单位增加[Breath]强度或获得[Breath]层数的攻击技能的人格不低于5名，则在本场战斗期间触发该效果。(不包括E.G.O技能，不包括待命人员)\n\n回合结束时，[Breath]强度高于20级的友方单位消耗1级[Breath]强度并获得1层[Breath]\n\n回合结束时，使[Breath]强度最高的1名友方单位与[Breath]层数最高的1名友方单位获得2层[Agility]、1层[AttackUp]与1层[AttackDmgUp](该效果可能对同一人格重复生效)\n\n通过技能效果增加[Breath]强度时，额外增加2级[Breath]强度并获得2层[Breath]。若自身的[Breath]强度与层数之和低于20点，则改为增加3级[Breath]强度并获得3层[Breath]。\n\n战斗结束时，若自身的[Breath]强度不低于40级，则消耗15级[Breath]强度并[Discard]自身所有行动槽中级别最低的1个技能(每回合每名单位最多1次)",
+"base": "回合开始时，若拥有增加[Breath]强度或获得[Breath]层数的攻击技能的人格不低于5名，则在本场战斗期间触发该效果。(不包括E.G.O技能，不包括待命人员)\n\n回合结束时，[Breath]强度高于20级的友方单位消耗1级[Breath]强度并获得1层[Breath]\n\n回合结束时，使[Breath]强度最高的1名友方单位与[Breath]层数最高的1名友方单位获得2层[Agility]与1层[AttackUp](可能重复使1名人格获得)\n\n通过技能效果增加[Breath]强度时，额外增加2级[Breath]强度并获得2层[Breath]。若自身的[Breath]强度与层数之和低于20点，则改为增加3级[Breath]强度并获得3层[Breath]。\n\n战斗结束时，若自身的[Breath]强度不低于40级，则消耗15级[Breath]强度并[Discard]自身所有行动槽中级别最低的1个技能(每回合每名单位最多1次)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得呼吸法 层数\n获得2层迅捷 与1层攻击等级提升 \n通过技能效果增加呼吸法 强度时额外增加呼吸法 强度并获得呼吸法 层数\n丢弃 自身所有行动槽中级别最低的1个技能",
+"base": [
+{
+"abilityID": 9180,
+"simpleDesc": "获得呼吸法 层数"
+},
+{
+"abilityID": 91801,
+"simpleDesc": "获得2层迅捷 与1层攻击等级提升 "
+},
+{
+"abilityID": 91802,
+"simpleDesc": "通过技能效果增加呼吸法 强度时额外增加呼吸法 强度并获得呼吸法 层数"
+},
+{
+"abilityID": 91803,
+"simpleDesc": "丢弃 自身所有行动槽中级别最低的1个技能"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2892,7 +4386,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "根据消耗的[Charge]层数相应获得[Charge]层数",
+"base": [
+{
+"abilityID": 9181,
+"simpleDesc": "根据消耗的[Charge]层数相应获得[Charge]层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2908,7 +4407,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得([Charge]层数/10)层[AttackDmgUp]\n获得1层[ChargeForceField]\n增加1级[Charge]强度",
+"base": [
+{
+"abilityID": 9182,
+"simpleDesc": "获得([Charge]层数/10)层[AttackDmgUp]"
+},
+{
+"abilityID": 91821,
+"simpleDesc": "获得1层[ChargeForceField]"
+},
+{
+"abilityID": 91822,
+"simpleDesc": "增加1级[Charge]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2924,7 +4436,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "根据消耗的[Charge]层数相应获得[Charge]层数\n根据[Charge]层数相应获得1层[AttackDmgUp]或[Charge]层数",
+"base": [
+{
+"abilityID": 9183,
+"simpleDesc": "根据消耗的[Charge]层数相应获得[Charge]层数"
+},
+{
+"abilityID": 91831,
+"simpleDesc": "根据[Charge]层数相应获得1层[AttackDmgUp]或[Charge]层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2940,7 +4461,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "根据[Charge]层数相应获得1层[AttackDmgUp]或[Charge]层数\n根据消耗的[Charge]层数相应获得[Charge]层数。下回合获得[PlusCoinValueUp]\n消耗[Charge]层数的3技能攻击后，添加一个3技能到技能组中",
+"base": [
+{
+"abilityID": 9184,
+"simpleDesc": "根据[Charge]层数相应获得1层[AttackDmgUp]或[Charge]层数"
+},
+{
+"abilityID": 91841,
+"simpleDesc": "根据消耗的[Charge]层数相应获得[Charge]层数。下回合获得[PlusCoinValueUp]"
+},
+{
+"abilityID": 91842,
+"simpleDesc": "消耗[Charge]层数的3技能攻击后，添加一个3技能到技能组中"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2956,7 +4490,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9185,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2972,7 +4511,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9186,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -2988,7 +4532,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9187,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3004,7 +4553,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 19188,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3020,7 +4574,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 19189,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3036,7 +4595,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 29190,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3052,7 +4616,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 29191,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3063,12 +4632,17 @@
 "name": "重叠的创可贴",
 "category": "流血",
 "descriptions": {
-"base": "回合结束时，使带有[Laceration]且现存体力最低的1名人格恢复其体力上限5%的体力。",
+"base": "回合结束时，使带有流血 且现存体力最低的1名人格恢复其体力上限5%的体力。",
 "plus": "回合结束时，使带有[Laceration]且现存体力最低的2名人格恢复其体力上限5%的体力。",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使带有流血 的1名友方单位恢复体力",
+"base": [
+{
+"abilityID": 9192,
+"simpleDesc": "使带有流血 的1名友方单位恢复体力"
+}
+],
 "plus": "使带有流血 的2名友方单位恢复体力",
 "double_plus": ""
 },
@@ -3084,7 +4658,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "斩击技能攻击等级提升\n造成的斩击伤害增加",
+"base": [
+{
+"abilityID": 9193,
+"simpleDesc": "斩击技能攻击等级提升"
+},
+{
+"abilityID": 91931,
+"simpleDesc": "造成的斩击伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3100,7 +4683,16 @@
 "double_plus": "斩击基础攻击技能拼点胜利时，下回合对目标施加2层防御等级降低 。(每回合每名人格最多1次，不会对同一名敌方单位叠加)\n- 对于属于Seven协会的人格，该效果同样适用于突刺与打击基础攻击技能，并额外施加弱点分析 与1层拼点威力降低 \n\n回合开始时，使属于Seven协会的人格获得(除自身外属于Seven协会的人格数/2)层拼点威力提升 (向下取整，最多2层)。拼点胜利时，使该技能造成的伤害+20%。"
 },
 "simple_descriptions": {
-"base": "施加防御等级降低 。属于Seven协会的人格获得拼点威力提升 \n获得拼点威力提升 ",
+"base": [
+{
+"abilityID": 9193,
+"simpleDesc": "施加防御等级降低 。属于Seven协会的人格获得拼点威力提升 "
+},
+{
+"abilityID": 91931,
+"simpleDesc": "获得拼点威力提升 "
+}
+],
 "plus": "施加防御等级降低 。属于Seven协会的人格获得拼点威力提升 并施加弱点分析 \n获得拼点威力提升 ",
 "double_plus": "施加防御等级降低 。属于Seven协会的人格获得拼点威力提升 并施加弱点分析 \n获得拼点威力提升 ，造成的伤害+20%"
 },
@@ -3116,7 +4708,16 @@
 "double_plus": "斩击1技能的拼点威力+1，命中时对目标施加2层攻击等级降低 。\n- 对于属于黑云会的人格，该效果同样适用于所有基础攻击技能\n\n回合开始时，使属于黑云会的人格获得1层威力提升 ，基础攻击技能命中并增加流血 强度或施加流血 层数时，使自身增加1~2级呼吸法 强度(每回合每名人格最多8次)。"
 },
 "simple_descriptions": {
-"base": "拼点威力+1，命中时施加攻击等级降低 \n获得1层威力提升 ，施加流血 时增加呼吸法 强度",
+"base": [
+{
+"abilityID": 9195,
+"simpleDesc": "拼点威力+1，命中时施加攻击等级降低 "
+},
+{
+"abilityID": 91951,
+"simpleDesc": "获得1层威力提升 ，施加流血 时增加呼吸法 强度"
+}
+],
 "plus": "拼点威力+1，命中时施加攻击等级降低 \n获得1层威力提升 ，施加流血 时增加呼吸法 强度",
 "double_plus": "拼点威力+1，命中时施加攻击等级降低 \n获得1层威力提升 ，施加流血 时增加呼吸法 强度"
 },
@@ -3132,7 +4733,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得攻击等级提升 \n获得防御等级提升 \n获得强壮 与防御等级提升 ",
+"base": [
+{
+"abilityID": 9196,
+"simpleDesc": "获得攻击等级提升 "
+},
+{
+"abilityID": 91961,
+"simpleDesc": "获得防御等级提升 "
+},
+{
+"abilityID": 91962,
+"simpleDesc": "获得强壮 与防御等级提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3148,7 +4762,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "突刺技能的攻击等级+(该友方单位拥有的突刺基础攻击技能数)(同技能不重复计数，最多+3)。\n带有的迅捷 层数不低于3层时，攻击敌方单位时造成的突刺伤害+(10+自身的迅捷 层数×3)%(最多25%)。",
+"base": [
+{
+"abilityID": 9197,
+"simpleDesc": "突刺技能的攻击等级+(该友方单位拥有的突刺基础攻击技能数)(同技能不重复计数，最多+3)。"
+},
+{
+"abilityID": 91971,
+"simpleDesc": "带有的迅捷 层数不低于3层时，攻击敌方单位时造成的突刺伤害+(10+自身的迅捷 层数×3)%(最多25%)。"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3164,7 +4787,16 @@
 "double_plus": "突刺基础攻击技能拼点胜利后命中时，下回合对目标施加1层束缚 。(每回合每名人格最多1次，每名敌方单位最多2次)\n- 对于属于Cinq协会的人格，下回合额外使自身获得1层迅捷 (每回合每名人格最多2次)\n\n属于Cinq协会的人格使用基础攻击技能与带有该单位施加的决斗宣告，点穴或集中攻击的敌方单位(若是异想体，则改为以部位判定)拼点胜利后命中时，使该人格增加4级呼吸法 强度(每回合每名人格最多2次)。"
 },
 "simple_descriptions": {
-"base": "施加束缚 ，属于Cinq协会的人格额外获得迅捷 \n增加呼吸法 强度",
+"base": [
+{
+"abilityID": 9198,
+"simpleDesc": "施加束缚 ，属于Cinq协会的人格额外获得迅捷 "
+},
+{
+"abilityID": 91981,
+"simpleDesc": "增加呼吸法 强度"
+}
+],
 "plus": "施加束缚 ，属于Cinq协会的人格额外获得迅捷 \n增加呼吸法 强度",
 "double_plus": "施加束缚 ，属于Cinq协会的人格额外获得迅捷 \n增加呼吸法 强度"
 },
@@ -3180,7 +4812,16 @@
 "double_plus": "突刺2技能的攻击等级+2；硬币数不高于2枚的技能改为攻击等级+2，拼点威力+(2/硬币数)。\n- 对于属于技术解放联盟的人格，该效果同样适用于所有基础攻击技能\n\n回合开始时，使属于技术解放联盟的人格获得1层拼点威力提升与(其带有的负面状态的最高点数+1)层[AttackUp](最多5层)。"
 },
 "simple_descriptions": {
-"base": "攻击等级增加，硬币数不高于2枚的技能拼点威力增加\n获得攻击等级提升 ",
+"base": [
+{
+"abilityID": 9199,
+"simpleDesc": "攻击等级增加，硬币数不高于2枚的技能拼点威力增加"
+},
+{
+"abilityID": 91991,
+"simpleDesc": "获得攻击等级提升 "
+}
+],
 "plus": "攻击等级增加，硬币数不高于2枚的技能拼点威力增加\n获得攻击等级提升 ",
 "double_plus": "攻击等级增加，硬币数不高于2枚的技能拼点威力增加\n获得拼点威力提升 与攻击等级提升  "
 },
@@ -3196,7 +4837,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力增加\n突刺伤害强化\n闪避技能威力增加。每闪避成功3次，获得突刺伤害强化 \n获得突刺威力提升 ，造成的突刺伤害增加",
+"base": [
+{
+"abilityID": 9200,
+"simpleDesc": "拼点威力增加"
+},
+{
+"abilityID": 92001,
+"simpleDesc": "突刺伤害强化"
+},
+{
+"abilityID": 92002,
+"simpleDesc": "闪避技能威力增加。每闪避成功3次，获得突刺伤害强化 "
+},
+{
+"abilityID": 92003,
+"simpleDesc": "获得突刺威力提升 ，造成的突刺伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3212,7 +4870,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "打击技能的攻击等级增加\n造成的打击伤害增加",
+"base": [
+{
+"abilityID": 9201,
+"simpleDesc": "打击技能的攻击等级增加"
+},
+{
+"abilityID": 92011,
+"simpleDesc": "造成的打击伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3228,7 +4895,16 @@
 "double_plus": "打击基础攻击技能拼点胜利时，下回合对目标施加2层防御等级降低 。(每回合每名人格最多1次，不会对同一名敌方单位叠加)\n- 对于属于Dieci协会的人格，该效果同样适用于斩击与突刺基础攻击技能，并额外施加1层防御等级降低 \n\n若属于Dieci协会的人格通过丢弃 技能丢弃 了自身的技能，则下回合开始时使其获得(被丢弃技能的级别+2)层攻击等级提升 。(以最高级别计算，最多5层)"
 },
 "simple_descriptions": {
-"base": "下回合施加防御等级降低 \n下回合获得(被丢弃技能的级别)层攻击等级提升 ",
+"base": [
+{
+"abilityID": 9202,
+"simpleDesc": "下回合施加防御等级降低 "
+},
+{
+"abilityID": 92021,
+"simpleDesc": "下回合获得(被丢弃技能的级别)层攻击等级提升 "
+}
+],
 "plus": "下回合施加防御等级降低 \n下回合获得(被丢弃技能的级别)层攻击等级提升 ",
 "double_plus": "下回合施加防御等级降低 \n下回合获得(被丢弃技能的级别)层攻击等级提升 "
 },
@@ -3244,7 +4920,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "攻击等级增加\n获得伤害强化 与攻击等级提升 。若丢弃 了打击技能，则额外获得打击伤害强化 ",
+"base": [
+{
+"abilityID": 9203,
+"simpleDesc": "攻击等级增加"
+},
+{
+"abilityID": 92031,
+"simpleDesc": "获得伤害强化 与攻击等级提升 。若丢弃 了打击技能，则额外获得打击伤害强化 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3260,7 +4945,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力与攻击等级增加\n打击伤害强化\n使用反击技能时不会因伤害而陷入混乱\n获得打击威力提升 与忍耐，反击造成的伤害增加",
+"base": [
+{
+"abilityID": 9204,
+"simpleDesc": "拼点威力与攻击等级增加"
+},
+{
+"abilityID": 92041,
+"simpleDesc": "打击伤害强化"
+},
+{
+"abilityID": 92042,
+"simpleDesc": "使用反击技能时不会因伤害而陷入混乱"
+},
+{
+"abilityID": 92042,
+"simpleDesc": "获得打击威力提升 与忍耐，反击造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3276,7 +4978,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得血宴 \n获得强壮 ",
+"base": [
+{
+"abilityID": 9205,
+"simpleDesc": "获得血宴 "
+},
+{
+"abilityID": 92051,
+"simpleDesc": "获得强壮 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3292,7 +5003,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复体力\n拼点威力与造成的伤害增加",
+"base": [
+{
+"abilityID": 9206,
+"simpleDesc": "恢复体力"
+},
+{
+"abilityID": 92061,
+"simpleDesc": "拼点威力与造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3308,7 +5028,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "E.G.O技能造成的伤害增加或减少",
+"base": [
+{
+"abilityID": 9207,
+"simpleDesc": "E.G.O技能造成的伤害增加或减少"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3324,7 +5049,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "最终威力增加",
+"base": [
+{
+"abilityID": 9208,
+"simpleDesc": "最终威力增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3340,7 +5070,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复体力",
+"base": [
+{
+"abilityID": 9209,
+"simpleDesc": "恢复体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3356,7 +5091,12 @@
 "double_plus": "[第4、第5顺位人格专属]\n\n若自身拥有不低于2个打击攻击技能，则回合开始时使自身获得2层[ParryingResultUp]"
 },
 "simple_descriptions": {
-"base": "获得[ParryingResultUp]",
+"base": [
+{
+"abilityID": 9210,
+"simpleDesc": "获得[ParryingResultUp]"
+}
+],
 "plus": "获得[ParryingResultUp]",
 "double_plus": "获得[ParryingResultUp]"
 },
@@ -3372,7 +5112,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "沉沦 技能的最终威力增加\n沉沦 技能造成的伤害增加\n沉沦 技能的硬币/基础威力增加",
+"base": [
+{
+"abilityID": 9211,
+"simpleDesc": "沉沦 技能的最终威力增加"
+},
+{
+"abilityID": 92111,
+"simpleDesc": "沉沦 技能造成的伤害增加"
+},
+{
+"abilityID": 92112,
+"simpleDesc": "沉沦 技能的硬币/基础威力增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3388,7 +5141,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得呼吸法 \n暴击命中时，有概率在下回合获得[PenetrateResultUp]。符合条件时下回合获得[PlusCoinValueUp]且施加的负面状态增加\n获得[PenetrateResultUp]、[Protection]与[CriticalDamageUp]\n恢复理智值",
+"base": [
+{
+"abilityID": 9212,
+"simpleDesc": "获得呼吸法 "
+},
+{
+"abilityID": 92121,
+"simpleDesc": "暴击命中时，有概率在下回合获得[PenetrateResultUp]。符合条件时下回合获得[PlusCoinValueUp]且施加的负面状态增加"
+},
+{
+"abilityID": 92122,
+"simpleDesc": "获得[PenetrateResultUp]、[Protection]与[CriticalDamageUp]"
+},
+{
+"abilityID": 92123,
+"simpleDesc": "恢复理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3404,7 +5174,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "基础技能的硬币威力增加\n恢复体力，获得[SwirlingBloodPersonality]\n获得强壮 \n增加流血 强度并施加流血 层数",
+"base": [
+{
+"abilityID": 9213,
+"simpleDesc": "基础技能的硬币威力增加"
+},
+{
+"abilityID": 92131,
+"simpleDesc": "恢复体力，获得[SwirlingBloodPersonality]"
+},
+{
+"abilityID": 92132,
+"simpleDesc": "获得强壮 "
+},
+{
+"abilityID": 92133,
+"simpleDesc": "增加流血 强度并施加流血 层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3420,7 +5207,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加烧伤 \n震颤引爆 伤害增加",
+"base": [
+{
+"abilityID": 9214,
+"simpleDesc": "施加烧伤 "
+},
+{
+"abilityID": 92141,
+"simpleDesc": "震颤引爆 伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3436,7 +5232,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力与造成的伤害增加",
+"base": [
+{
+"abilityID": 9215,
+"simpleDesc": "拼点威力与造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3452,7 +5253,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "技能威力与造成的伤害增加",
+"base": [
+{
+"abilityID": 9216,
+"simpleDesc": "技能威力与造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3463,12 +5269,21 @@
 "name": "某人的终端",
 "category": "沉沦",
 "descriptions": {
-"base": "攻击结束时，若[IndexPrescriptTargetToEnemy]阵亡，则使击杀[IndexPrescriptTargetToEnemy]的友方单位在下回合获得1层[AzureResultUp]；随机对1名存活的敌方单位施加3层[Sinking](每回合最多1次)\n- 若击杀[IndexPrescriptTargetToEnemy]的人格属于食指，则改为下回合获得1层[Enhancement]，而非[AzureResultUp](每回合最多1次)\n\n回合结束时，对属于食指的友方单位造成其体力上限(其[KarmaOfIndexAlly]层数)%的伤害\n(不会因该效果而陷入混乱，且不会使友方单位的体力降至体力上限的20%以下)\n下回合使受到以上伤害的人格获得(其[KarmaOfIndexAlly]层数/5)层[ResultEnhancement](最多2层)",
+"base": "攻击后，若[IndexPrescriptTargetToEnemy]阵亡，则使击杀[IndexPrescriptTargetToEnemy]的友方单位在下回合获得1层[AzureResultUp]；随机对1名存活的敌方单位施加3层[Sinking](每回合最多1次)\n- 若击杀[IndexPrescriptTargetToEnemy]的人格属于食指，则改为下回合获得1层[Enhancement]，而非[AzureResultUp](每回合最多1次)\n\n回合结束时，对属于食指的友方单位造成其体力上限(其[KarmaOfIndexAlly]层数)%的伤害\n(不会因该效果而陷入混乱，且不会使友方单位的体力降至体力上限的20%以下)\n下回合使受到以上伤害的人格获得(其[KarmaOfIndexAlly]层数/5)层[ResultEnhancement](最多2层)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得忧郁威力提升 。属于食指的友方单位改为获得强壮 \n属于食指的友方单位受到伤害并在下回合获得威力提升 ",
+"base": [
+{
+"abilityID": 9217,
+"simpleDesc": "获得忧郁威力提升 。属于食指的友方单位改为获得强壮 "
+},
+{
+"abilityID": 92171,
+"simpleDesc": "属于食指的友方单位受到伤害并在下回合获得威力提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3484,7 +5299,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加呼吸法 强度并获得呼吸法 层数\n暴击时造成的伤害增加",
+"base": [
+{
+"abilityID": 9218,
+"simpleDesc": "增加呼吸法 强度并获得呼吸法 层数"
+},
+{
+"abilityID": 92181,
+"simpleDesc": "暴击时造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3500,7 +5324,12 @@
 "double_plus": "相同攻击类型的技能命中敌方单位6次敌方单位时，使其对应类型的物理抗性+0.1(若是异想体，则改为所有部位，每场战斗每个敌方单位最多3次，该效果不会使敌方单位的抗性高于2.0)"
 },
 "simple_descriptions": {
-"base": "物理抗性弱化",
+"base": [
+{
+"abilityID": 9219,
+"simpleDesc": "物理抗性弱化"
+}
+],
 "plus": "物理抗性弱化",
 "double_plus": "物理抗性弱化"
 },
@@ -3516,7 +5345,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9220,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3532,7 +5366,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加流血 层数与烧伤 层数\n烧伤 层数减少",
+"base": [
+{
+"abilityID": 9221,
+"simpleDesc": "施加流血 层数与烧伤 层数"
+},
+{
+"abilityID": 92211,
+"simpleDesc": "烧伤 层数减少"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3548,7 +5391,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复理智值",
+"base": [
+{
+"abilityID": 9222,
+"simpleDesc": "恢复理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3564,7 +5412,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[ObjectOfExploration]\n获得[PlusCoinValueUp]",
+"base": [
+{
+"abilityID": 9223,
+"simpleDesc": "施加[ObjectOfExploration]"
+},
+{
+"abilityID": 92231,
+"simpleDesc": "获得[PlusCoinValueUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3580,7 +5437,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得[Inspire]\n施加[ObjectOfExploration]\n获得[GreatAesthetics]",
+"base": [
+{
+"abilityID": 9224,
+"simpleDesc": "获得[Inspire]"
+},
+{
+"abilityID": 92241,
+"simpleDesc": "施加[ObjectOfExploration]"
+},
+{
+"abilityID": 92242,
+"simpleDesc": "获得[GreatAesthetics]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3596,7 +5466,12 @@
 "double_plus": "使用守备技能时，下回合使自身3技能造成的伤害+20%(每回合最多1次)"
 },
 "simple_descriptions": {
-"base": "3技能造成的伤害增加",
+"base": [
+{
+"abilityID": 9225,
+"simpleDesc": "3技能造成的伤害增加"
+}
+],
 "plus": "3技能造成的伤害增加",
 "double_plus": "3技能造成的伤害增加"
 },
@@ -3607,12 +5482,21 @@
 "name": "某人的青刀",
 "category": "呼吸法",
 "descriptions": {
-"base": "战斗开始时，使带有护盾的友方单位获得1层[CriticalDamageUp]\n友方单位的技能暴击命中时，下回合使其获得(其[Breath]强度/5)点护盾(最多15点)\n\n[蜘蛛巢 小指 子辈 辛克莱专属]\n战斗结束时，若自身的[Breath]层数不低于30层，则消耗10层[Breath]并丢弃自身所有行动槽中级别最低的1个技能(每回合最多1次)\nE.G.O饰品“桶装烈酒”的“战斗结束时，若自身的[Breath]强度不低于40级，则消耗15级[Breath]强度并丢弃自身所有行动槽中级别最低的1个技能”效果不会对自身生效",
+"base": "战斗开始时，使带有护盾的友方单位获得1层[CriticalDamageUp]\n友方单位的技能暴击命中时，下回合使该友方单位获得(自身的[Breath]强度/5)点护盾(最多15点)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得[CriticalDamageUp]\n获得护盾",
+"base": [
+{
+"abilityID": 9226,
+"simpleDesc": "获得[CriticalDamageUp]"
+},
+{
+"abilityID": 92261,
+"simpleDesc": "获得护盾"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3628,7 +5512,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "受到的伤害增加，拼点威力减少",
+"base": [
+{
+"abilityID": 9227,
+"simpleDesc": "受到的伤害增加，拼点威力减少"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3644,7 +5533,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害增加",
+"base": [
+{
+"abilityID": 9228,
+"simpleDesc": "造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3660,7 +5554,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "速度值减少",
+"base": [
+{
+"abilityID": 9229,
+"simpleDesc": "速度值减少"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3676,7 +5575,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "速度值与最终威力增加",
+"base": [
+{
+"abilityID": 9230,
+"simpleDesc": "速度值与最终威力增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3692,7 +5596,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "陷入混乱",
+"base": [
+{
+"abilityID": 9231,
+"simpleDesc": "陷入混乱"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3708,7 +5617,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "解除混乱，解除负面状态",
+"base": [
+{
+"abilityID": 9232,
+"simpleDesc": "解除混乱，解除负面状态"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3724,7 +5638,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合获得[Agility]与[AttackUp]\n造成的伤害增加",
+"base": [
+{
+"abilityID": 9233,
+"simpleDesc": "下回合获得[Agility]与[AttackUp]"
+},
+{
+"abilityID": 92331,
+"simpleDesc": "造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3740,7 +5663,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合获得[Agility]与[Enhancement]\n造成的伤害增加",
+"base": [
+{
+"abilityID": 9234,
+"simpleDesc": "下回合获得[Agility]与[Enhancement]"
+},
+{
+"abilityID": 92341,
+"simpleDesc": "造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3756,7 +5688,32 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合获得[Agility]与[AttackUp]\n拼点威力与造成的伤害增加\n造成的伤害增加\n获得[Bullet]\n获得[DesperadoBuff]，满足条件时额外获得[DesperadoBuff]\n随机对1名敌方单位造成突刺伤害",
+"base": [
+{
+"abilityID": 9235,
+"simpleDesc": "下回合获得[Agility]与[AttackUp]"
+},
+{
+"abilityID": 92351,
+"simpleDesc": "拼点威力与造成的伤害增加"
+},
+{
+"abilityID": 92352,
+"simpleDesc": "造成的伤害增加"
+},
+{
+"abilityID": 92353,
+"simpleDesc": "获得[Bullet]"
+},
+{
+"abilityID": 92354,
+"simpleDesc": "获得[DesperadoBuff]，满足条件时额外获得[DesperadoBuff]"
+},
+{
+"abilityID": 92355,
+"simpleDesc": "随机对1名敌方单位造成突刺伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3772,7 +5729,16 @@
 "double_plus": "本回合友方单位或敌方单位阵亡时，下回合对全体单位施加1层[Vulnerable](每个波次最多3次)\n- 触发该效果的下回合友方单位拼点胜利时，使全体友方单位的[Vulnerable]层数减少1层，并使全体敌方单位增加4级[Laceration]强度并对全体敌方单位施加2层[Laceration](每回合最多3次)"
 },
 "simple_descriptions": {
-"base": "下回合施加[Vulnerable]\n全体友方单位的[Vulnerable]层数减少，使全体敌方单位增加[Laceration]强度并对全体敌方单位施加[Laceration]层数",
+"base": [
+{
+"abilityID": 9236,
+"simpleDesc": "下回合施加[Vulnerable]"
+},
+{
+"abilityID": 92361,
+"simpleDesc": "全体友方单位的[Vulnerable]层数减少，使全体敌方单位增加[Laceration]强度并对全体敌方单位施加[Laceration]层数"
+}
+],
 "plus": "下回合施加[Vulnerable]\n全体友方单位的[Vulnerable]层数减少，使全体敌方单位增加[Laceration]强度并对全体敌方单位施加[Laceration]层数",
 "double_plus": "下回合施加[Vulnerable]\n全体友方单位的[Vulnerable]层数减少，使全体敌方单位增加[Laceration]强度并对全体敌方单位施加[Laceration]层数"
 },
@@ -3788,7 +5754,16 @@
 "double_plus": "[第3、第4顺位人格专属]\n\n回合开始时，使自身获得1层[TensionUp]\n\n攻击命中时，以25%的概率使自身与随机2名友方单位获得1层[TensionUp]\n- 若该技能为增加[Laceration]或[Combustion]强度，或施加[Laceration]或[Combustion]层数的技能(包括特殊关键词)，则改为以100%的概率获得"
 },
 "simple_descriptions": {
-"base": "获得[TensionUp]\n使自身与随机1名友方单位获得[TensionUp]",
+"base": [
+{
+"abilityID": 9237,
+"simpleDesc": "获得[TensionUp]"
+},
+{
+"abilityID": 92371,
+"simpleDesc": "使自身与随机1名友方单位获得[TensionUp]"
+}
+],
 "plus": "获得[TensionUp]\n使自身与随机1名友方单位获得[TensionUp]",
 "double_plus": "获得[TensionUp]\n使自身与随机2名友方单位获得[TensionUp]"
 },
@@ -3804,7 +5779,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[PinkPetals]",
+"base": [
+{
+"abilityID": 9238,
+"simpleDesc": "施加[PinkPetals]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3820,7 +5800,28 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合获得[Agility]与[PenetrateDamageUp]\n下回合获得1层[Agility]与2层[PenetrateDamageUp]\n施加[PinkPetals]，满足条件时增加[Vibration]强度\n下回合施加[Binding]与[DefenseDown]，满足条件时施加[Binding]、[Paralysis]与[DefenseDown]\n下回合全体友方单位获得[Enhancement]",
+"base": [
+{
+"abilityID": 9239,
+"simpleDesc": "下回合获得[Agility]与[PenetrateDamageUp]"
+},
+{
+"abilityID": 92391,
+"simpleDesc": "下回合获得1层[Agility]与2层[PenetrateDamageUp]"
+},
+{
+"abilityID": 92392,
+"simpleDesc": "施加[PinkPetals]，满足条件时增加[Vibration]强度"
+},
+{
+"abilityID": 92393,
+"simpleDesc": "下回合施加[Binding]与[DefenseDown]，满足条件时施加[Binding]、[Paralysis]与[DefenseDown]"
+},
+{
+"abilityID": 92394,
+"simpleDesc": "下回合全体友方单位获得[Enhancement]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3836,7 +5837,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得[QueenBeepheromone]\n施加[QueenBeeMark]",
+"base": [
+{
+"abilityID": 9240,
+"simpleDesc": "获得[QueenBeepheromone]"
+},
+{
+"abilityID": 92401,
+"simpleDesc": "施加[QueenBeeMark]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3852,7 +5862,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复理智值，满足条件的下回合获得[PlusCoinValueUp]",
+"base": [
+{
+"abilityID": 9241,
+"simpleDesc": "恢复理智值，满足条件的下回合获得[PlusCoinValueUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3868,7 +5883,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害增加\n获得[Enhancement]",
+"base": [
+{
+"abilityID": 9242,
+"simpleDesc": "造成的伤害增加"
+},
+{
+"abilityID": 92421,
+"simpleDesc": "获得[Enhancement]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3884,7 +5908,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "符合条件时攻击技能造成的伤害与拼点威力增加",
+"base": [
+{
+"abilityID": 9243,
+"simpleDesc": "符合条件时攻击技能造成的伤害与拼点威力增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3901,7 +5930,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "符合条件时攻击技能造成的伤害与拼点威力增加",
+"base": [
+{
+"abilityID": 9244,
+"simpleDesc": "符合条件时攻击技能造成的伤害与拼点威力增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3918,7 +5952,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "基于溢出的[Charge]层数使自身获得[AttackUp]，符合条件时使自身增加[Charge]强度",
+"base": [
+{
+"abilityID": 9245,
+"simpleDesc": "基于溢出的[Charge]层数使自身获得[AttackUp]，符合条件时使自身增加[Charge]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3935,7 +5974,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "基于参战且属于边狱公司的人格数使自身获得[ParryingResultUp]\n根据参战且身着E.G.O装备的人格数使自身造成的伤害增加\n与自身属于同一阵营的友方单位阵亡时，获得E.G.O资源；本场战斗中，从下回合起，回合开始时使自身获得[PlusCoinValueUp]并对自身施加[MinusCoinValueUp]",
+"base": [
+{
+"abilityID": 9246,
+"simpleDesc": "基于参战且属于边狱公司的人格数使自身获得[ParryingResultUp]"
+},
+{
+"abilityID": 92461,
+"simpleDesc": "根据参战且身着E.G.O装备的人格数使自身造成的伤害增加"
+},
+{
+"abilityID": 92462,
+"simpleDesc": "与自身属于同一阵营的友方单位阵亡时，获得E.G.O资源；本场战斗中，从下回合起，回合开始时使自身获得[PlusCoinValueUp]并对自身施加[MinusCoinValueUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3952,7 +6004,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点胜利时，对目标施加[Burst]\n与速度值低于自身的敌方单位拼点时，使自身最终威力与造成的伤害增加\n符合条件时使自身获得[AttackUp]，对敌方单位施加[AttackDown]\n符合条件时，回合开始时获得[Agility]与[SkillPowerUp]",
+"base": [
+{
+"abilityID": 9248,
+"simpleDesc": "拼点胜利时，对目标施加[Burst]"
+},
+{
+"abilityID": 92481,
+"simpleDesc": "与速度值低于自身的敌方单位拼点时，使自身最终威力与造成的伤害增加"
+},
+{
+"abilityID": 92482,
+"simpleDesc": "符合条件时使自身获得[AttackUp]，对敌方单位施加[AttackDown]"
+},
+{
+"abilityID": 92483,
+"simpleDesc": "符合条件时，回合开始时获得[Agility]与[SkillPowerUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3968,7 +6037,28 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "基于技能造成的体力伤害量恢复体力\n拼点胜利时获得[AttackUp]与[TakeHpHealIncrease]\n使用技能时获得[AttackUp]与[TakeHpHealIncrease]\n打击技能造成的伤害增加\n拼点胜利的技能造成的伤害增加",
+"base": [
+{
+"abilityID": 9249,
+"simpleDesc": "基于技能造成的体力伤害量恢复体力"
+},
+{
+"abilityID": 92491,
+"simpleDesc": "拼点胜利时获得[AttackUp]与[TakeHpHealIncrease]"
+},
+{
+"abilityID": 92492,
+"simpleDesc": "使用技能时获得[AttackUp]与[TakeHpHealIncrease]"
+},
+{
+"abilityID": 92493,
+"simpleDesc": "打击技能造成的伤害增加"
+},
+{
+"abilityID": 92494,
+"simpleDesc": "拼点胜利的技能造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -3984,7 +6074,9 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4001,7 +6093,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "友方单位的硬币威力或最终威力大幅增加\n根据目标的沉沦 强度与自身的呼吸法 强度之和相应增加拼点威力\n不可摧毁的硬币 造成的伤害+25%\n- 使自身对指令对象 造成的伤害+50%",
+"base": [
+{
+"abilityID": 98270,
+"simpleDesc": "友方单位的硬币威力或最终威力大幅增加"
+},
+{
+"abilityID": 9257,
+"simpleDesc": "根据目标的沉沦 强度与自身的呼吸法 强度之和相应增加拼点威力"
+},
+{
+"abilityID": 92571,
+"simpleDesc": "不可摧毁的硬币 造成的伤害+25%"
+},
+{
+"abilityID": 92572,
+"simpleDesc": "- 使自身对指令对象 造成的伤害+50%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4013,12 +6122,14 @@
 "name": "复仇账簿：附录",
 "category": "打击",
 "descriptions": {
-"base": "全体友方单位的加算硬币技能的硬币威力+(8/硬币数)，减算硬币技能的最终威力+(8/硬币数)(最少+1，包括E.G.O技能，向下取整)\n\n关卡开始时，每有1名属于中指的友方单位，使全体友方单位获得50点护盾(不包括待命人员，通过该效果获得的护盾不会在回合结束时解除)\n\n属于中指的友方单位的嫉妒或打击基础技能攻击结束时，使其恢复造成体力伤害量10%的体力\n- 若该技能为反击技能，则改为恢复造成体力伤害量20%的体力\n- 超过体力上限的溢出恢复量改为获得相应的护盾(通过该效果获得的护盾不会在回合结束时解除)\n\n战斗开始时，根据装备的守备技能数，使属于中指的友方单位增加相应的攻击等级(最多增加12级)\n- 若装备的守备技能数不低于6，则使嫉妒基础技能造成的伤害+30%，每额外装备1个守备技能，使其造成的伤害额外+10%(最多额外+60%)",
+"base": "全体友方单位的加算硬币技能的硬币威力+(8/硬币数)，减算硬币技能的最终威力+(8/硬币数)(最少+1，包括E.G.O技能，向下取整)\n\n关卡开始时，每有1名属于中指的友方单位，使全体友方单位获得50点护盾(不包括待命人员，通过该效果获得的护盾不会在回合结束时解除)\n\n属于中指的友方单位的嫉妒或打击基础技能攻击后，使其恢复造成体力伤害量10%的体力\n- 若该技能为反击技能，则改为恢复造成体力伤害量20%的体力\n- 超过体力上限的溢出恢复量改为获得相应的护盾(通过该效果获得的护盾不会在回合结束时解除)\n\n战斗开始时，根据装备的守备技能数，使属于中指的友方单位增加相应的攻击等级(最多增加12级)\n- 若装备的守备技能数不低于6，则使嫉妒基础技能造成的伤害+30%，每额外装备1个守备技能，使其造成的伤害额外+10%(最多额外+60%)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4035,7 +6146,9 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4052,7 +6165,9 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4068,7 +6183,9 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4084,7 +6201,9 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4132,7 +6251,9 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4148,7 +6269,9 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4180,7 +6303,9 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4457,12 +6582,17 @@
 "name": "黑檀胸针",
 "category": "破裂",
 "descriptions": {
-"base": "关卡的首个回合开始时，使全体敌方单位增加2级[Burst]强度并对其施加2层[Burst]\n\n3回合内，回合结束时对全体敌方单位施加2层[Binding]",
+"base": "在战斗的前3回合对全体敌方单位施加2层束缚 。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使全体敌方单位增加2级[Burst]强度并对其施加2层[Burst]\n对全体敌方单位施加2层[Binding]",
+"base": [
+{
+"abilityID": 1005,
+"simpleDesc": "施加2层束缚 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4478,7 +6608,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "对目标施加2层[Muckworm]\n对目标施加3层[Muckworm]",
+"base": [
+{
+"abilityID": 9404,
+"simpleDesc": "对目标施加2层[Muckworm]"
+},
+{
+"abilityID": 94041,
+"simpleDesc": "对目标施加3层[Muckworm]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4494,7 +6633,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "对自身施加3层[Vibration]\n使自身获得1层[Protection]，1层[AttackDmgUp]与1层[ResultEnhancement]",
+"base": [
+{
+"abilityID": 9407,
+"simpleDesc": "对自身施加3层[Vibration]"
+},
+{
+"abilityID": 94071,
+"simpleDesc": "使自身获得1层[Protection]，1层[AttackDmgUp]与1层[ResultEnhancement]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4510,7 +6658,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "对自身施加3层[Sinking]\n使自身获得1层[Protection]，1层[AttackDmgUp]与1层[ResultEnhancement]",
+"base": [
+{
+"abilityID": 9408,
+"simpleDesc": "对自身施加3层[Sinking]"
+},
+{
+"abilityID": 94081,
+"simpleDesc": "使自身获得1层[Protection]，1层[AttackDmgUp]与1层[ResultEnhancement]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4526,7 +6683,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使目标增加3级[Sinking]强度",
+"base": [
+{
+"abilityID": 9409,
+"simpleDesc": "使目标增加3级[Sinking]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4542,7 +6704,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使全体敌方单位增加4级[Sinking]强度并对其施加8层[Sinking]\n带有[Sinking]的敌方单位拼点威力-2",
+"base": [
+{
+"abilityID": 9410,
+"simpleDesc": "使全体敌方单位增加4级[Sinking]强度并对其施加8层[Sinking]"
+},
+{
+"abilityID": 94101,
+"simpleDesc": "带有[Sinking]的敌方单位拼点威力-2"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4553,12 +6724,21 @@
 "name": "钉与锤之书",
 "category": "流血",
 "descriptions": {
-"base": "友方单位增加[Laceration]强度，施加[Laceration]层数或施加特殊流血的技能拼点胜利时，对目标施加1~2层[NailPersonality]\n\n若该友方单位属于N公司狂信徒，则回合开始时使其获得1层狂信 ",
+"base": "使用傲慢技能时，失去5点理智值，并使该技能造成的伤害+5%",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "对目标施加1~2层[NailPersonality]\n若该友方单位属于N公司狂信徒，则回合开始时使其获得1层狂信 ",
+"base": [
+{
+"abilityID": 1051,
+"simpleDesc": "满足条件则失去5点理智值"
+},
+{
+"abilityID": 10511,
+"simpleDesc": "傲慢技能造成的伤害+5%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4569,12 +6749,21 @@
 "name": "血红鬃毛",
 "category": "泛用",
 "descriptions": {
-"base": "适用于全体拥有暴怒或色欲攻击技能的人格\n\n回合结束时，若本回合自身未受到敌方攻击技能的伤害，则下回合使自身获得2层[Agility]与2层[Endurance]\n\n回合结束时，若本回合自身受到过敌方攻击技能的伤害，则下回合对自身施加2层[Binding]并使自身的拼点威力+2",
+"base": "拥有色欲技能的罪人获得以下效果：\n若本回合未受到攻击，则下回合获得2层迅捷 和2层忍耐 。\n若本回合受到了攻击，则下回合获得2层束缚 和2层强壮 。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合使自身获得2层[Agility]与2层[Endurance]\n下回合对自身施加2层[Binding]并使自身的拼点威力+2",
+"base": [
+{
+"abilityID": 1034,
+"simpleDesc": "获得2层迅捷 和2层忍耐 "
+},
+{
+"abilityID": 10341,
+"simpleDesc": "获得2层束缚 和2层强壮 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4590,7 +6779,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害+15%\n造成的伤害+25%",
+"base": [
+{
+"abilityID": 9415,
+"simpleDesc": "造成的伤害+15%"
+},
+{
+"abilityID": 94151,
+"simpleDesc": "造成的伤害+25%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4606,7 +6804,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点胜利时，对目标施加2~3层[NailPersonality]\n造成的伤害+25%并在回合开始时获得1层狂信 。满足条件时获得3层[AttackDmgUp]\n最终威力+2，加算硬币威力+1，减算硬币威力-1，攻击技能施加的[NailPersonality]层数额外+1层。\n基础技能造成的伤害+50%",
+"base": [
+{
+"abilityID": 9416,
+"simpleDesc": "拼点胜利时，对目标施加2~3层[NailPersonality]"
+},
+{
+"abilityID": 94161,
+"simpleDesc": "造成的伤害+25%并在回合开始时获得1层狂信 。满足条件时获得3层[AttackDmgUp]"
+},
+{
+"abilityID": 94162,
+"simpleDesc": "最终威力+2，加算硬币威力+1，减算硬币威力-1，攻击技能施加的[NailPersonality]层数额外+1层。"
+},
+{
+"abilityID": 94163,
+"simpleDesc": "基础技能造成的伤害+50%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4622,7 +6837,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "回合开始时，获得1层[Agility]与1层基础威力提升 ",
+"base": [
+{
+"abilityID": 9419,
+"simpleDesc": "回合开始时，获得1层[Agility]与1层基础威力提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4638,7 +6858,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使自身获得[AttackUp]\n拼点威力+1",
+"base": [
+{
+"abilityID": 9420,
+"simpleDesc": "使自身获得[AttackUp]"
+},
+{
+"abilityID": 94201,
+"simpleDesc": "拼点威力+1"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4654,7 +6883,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力+1\n下回合获得2层[AttackUp]",
+"base": [
+{
+"abilityID": 9423,
+"simpleDesc": "拼点威力+1"
+},
+{
+"abilityID": 94231,
+"simpleDesc": "下回合获得2层[AttackUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4670,7 +6908,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点胜利时，使目标增加5级[Burst]强度并对其施加3层[Burst]\n最终威力+1，造成的伤害+25%\n对拼点失败的敌方单位施加3层[AttackDown]",
+"base": [
+{
+"abilityID": 9424,
+"simpleDesc": "拼点胜利时，使目标增加5级[Burst]强度并对其施加3层[Burst]"
+},
+{
+"abilityID": 94241,
+"simpleDesc": "最终威力+1，造成的伤害+25%"
+},
+{
+"abilityID": 94242,
+"simpleDesc": "对拼点失败的敌方单位施加3层[AttackDown]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4686,7 +6937,12 @@
 "double_plus": "[第6顺位人格专属]\n回合结束时，若现存体力低于体力上限的50%，则下回合使自身获得1层[Enhancement]\n\n回合结束时，若有友方单位陷入混乱，则下回合使自身的[Aggro]+6，并使自身获得4层[DefenseUp]"
 },
 "simple_descriptions": {
-"base": "下回合使自身获得1层强壮 ",
+"base": [
+{
+"abilityID": 9427,
+"simpleDesc": "下回合使自身获得1层强壮 "
+}
+],
 "plus": "下回合使自身获得1层强壮 \n下回合挑衅值 +6，获得4层防御等级提升 ",
 "double_plus": "下回合使自身获得1层强壮 \n下回合挑衅值 +6，获得4层防御等级提升 "
 },
@@ -4702,7 +6958,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加1级呼吸法 强度\n有概率在下回合获得[PenetrateResultUp]\n施加的负面状态额外+1",
+"base": [
+{
+"abilityID": 9428,
+"simpleDesc": "增加1级呼吸法 强度"
+},
+{
+"abilityID": 94281,
+"simpleDesc": "有概率在下回合获得[PenetrateResultUp]"
+},
+{
+"abilityID": 94282,
+"simpleDesc": "施加的负面状态额外+1"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4718,7 +6987,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合获得2层[Agility]，2层[AttackUp]与2层[AttackDmgUp]\n属于裴廓德号的人格最大速度值+1",
+"base": [
+{
+"abilityID": 9429,
+"simpleDesc": "下回合获得2层[Agility]，2层[AttackUp]与2层[AttackDmgUp]"
+},
+{
+"abilityID": 94291,
+"simpleDesc": "属于裴廓德号的人格最大速度值+1"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4734,7 +7012,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使全体友方单位增加5级[Breath]强度并获得5层[Breath]\n下回合获得2层[Agility]，3层[AttackUp]与3层[AttackDmgUp]。\n技能威力+2，最大速度值+2",
+"base": [
+{
+"abilityID": 9430,
+"simpleDesc": "使全体友方单位增加5级[Breath]强度并获得5层[Breath]"
+},
+{
+"abilityID": 94301,
+"simpleDesc": "下回合获得2层[Agility]，3层[AttackUp]与3层[AttackDmgUp]。"
+},
+{
+"abilityID": 94302,
+"simpleDesc": "技能威力+2，最大速度值+2"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4750,7 +7041,16 @@
 "double_plus": "[第5、第6顺位人格专属]\n\n若现存体力不高于65%，则拼点胜利时使自身获得1层[AttackUp]与1层[TakeHpHealIncrease](每回合每名单位最多2次)\n\n若现存体力不高于40%，则改为使用技能时使自身获得1层[AttackUp]与1层[TakeHpHealIncrease](每回合每名单位最多2次)\n\n拼点胜利且拼点次数不低于5次时，使拼点胜利的技能造成的伤害+(拼点次数×3)%(最多+30%)"
 },
 "simple_descriptions": {
-"base": "获得1层攻击等级提升 与1层体力恢复提升 \n获得1层攻击等级提升 与1层体力恢复提升 ",
+"base": [
+{
+"abilityID": 9431,
+"simpleDesc": "获得1层攻击等级提升 与1层体力恢复提升 "
+},
+{
+"abilityID": 94311,
+"simpleDesc": "获得1层攻击等级提升 与1层体力恢复提升 "
+}
+],
 "plus": "获得1层攻击等级提升 与1层体力恢复提升 \n获得1层攻击等级提升 与1层体力恢复提升 \n根据拼点次数增加造成的伤害",
 "double_plus": "获得1层攻击等级提升 与1层体力恢复提升 \n获得1层攻击等级提升 与1层体力恢复提升 \n根据拼点次数增加造成的伤害"
 },
@@ -4761,12 +7061,21 @@
 "name": "宅邸模型八音盒",
 "category": "沉沦",
 "descriptions": {
-"base": "回合结束时，若自身陷入混乱，则解除自身的混乱，下回合开始时使全体敌方单位增加4级[Sinking]强度并对其施加4层[Sinking](每场战斗最多1次；不包括强制混乱；若是集中遭遇战，则改为所有部位)\n- 每编入2名属于呼啸山庄或埃德加家族的人格，该效果每场战斗可额外触发1次(每场战斗最多触发4次，包括待命人员)\n\n击杀敌方单位时，对[Sinking]层数最低的1名敌方单位施加2层[Sinking](每回合最多3次；若是集中遭遇战，则改为1个部位)",
+"base": "回合结束时，若自身陷入混乱，则解除自身的混乱，下回合开始时使全体敌方单位增加4级[Sinking]强度并对其施加4层[Sinking](每场战斗最多1次；不包括强制混乱；若是集中遭遇战，则改为所有部位)\n\n击杀敌方单位时，对[Sinking]层数最低的1名敌方单位施加2层[Sinking](每回合最多3次；若是集中遭遇战，则改为1个部位)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合使全体敌方单位增加4级沉沦 强度并施加4层沉沦 \n对带有的沉沦 层数最低的1名敌方单位施加2层沉沦 ",
+"base": [
+{
+"abilityID": 9432,
+"simpleDesc": "下回合使全体敌方单位增加4级沉沦 强度并施加4层沉沦 "
+},
+{
+"abilityID": 94321,
+"simpleDesc": "对带有的沉沦 层数最低的1名敌方单位施加2层沉沦 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4782,7 +7091,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "从下回合起的5回合内施加5层[Binding]\n使自身恢复相当于速度值之差的理智值",
+"base": [
+{
+"abilityID": 9433,
+"simpleDesc": "从下回合起的5回合内施加5层[Binding]"
+},
+{
+"abilityID": 94331,
+"simpleDesc": "使自身恢复相当于速度值之差的理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4798,7 +7116,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "回合开始时，对目标施加5层束缚 与3层防御等级降低 \n在现存体力66%处生成1条混乱阈值\n使陷入混乱的目标的震颤 强度变为2倍",
+"base": [
+{
+"abilityID": 9433,
+"simpleDesc": "回合开始时，对目标施加5层束缚 与3层防御等级降低 "
+},
+{
+"abilityID": 94331,
+"simpleDesc": "在现存体力66%处生成1条混乱阈值"
+},
+{
+"abilityID": 94332,
+"simpleDesc": "使陷入混乱的目标的震颤 强度变为2倍"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4814,7 +7145,16 @@
 "double_plus": "回合开始时，对上回合解除混乱的敌方单位施加3层[Binding]\n\n现存体力比例最高的友方单位攻击命中时，若目标陷入混乱，则每层混乱阶段使造成的伤害+12.5%"
 },
 "simple_descriptions": {
-"base": "对解除混乱的敌方单位施加1层束缚 \n根据目标的混乱阶段增加造成的伤害",
+"base": [
+{
+"abilityID": 9435,
+"simpleDesc": "对解除混乱的敌方单位施加1层束缚 "
+},
+{
+"abilityID": 94351,
+"simpleDesc": "根据目标的混乱阶段增加造成的伤害"
+}
+],
 "plus": "对解除混乱的敌方单位施加2层束缚 \n根据目标的混乱阶段增加造成的伤害",
 "double_plus": "对解除混乱的敌方单位施加3层束缚 \n根据目标的混乱阶段增加造成的伤害"
 },
@@ -4825,12 +7165,21 @@
 "name": "折射玻璃管",
 "category": "沉沦",
 "descriptions": {
-"base": "命中带有理智值的敌方单位时，若目标的理智值为-45点，则对其造成相当于其[Sinking]强度的忧郁伤害\n\n集中遭遇战中，命中[Sinking]强度与[Sinking]层数之和不低于10点的敌方单位时，\n对目标造成(其[Sinking]强度/2)点忧郁伤害(每个技能最多1次)\n\n若命中敌方单位的技能为施加[Sinking](包括施加[Sinking]层数与特殊沉沦)的技能，则改为其造成(其[Sinking]强度)点忧郁伤害，而非([Sinking]强度/2)点\n(适用于每回合首个攻击命中的施加[Sinking]的技能)",
+"base": "常规遭遇战中，命中[Sinking]强度与[Sinking]层数之和不低于10点的敌方单位时，若目标的理智值为-45点，\n则对其造成(其[Sinking]强度/2)点忧郁伤害(每个技能最多1次)\n\n集中遭遇战中，命中[Sinking]强度与[Sinking]层数之和不低于10点的敌方单位时，\n对目标造成(其[Sinking]强度/2)点忧郁伤害(每个技能最多1次)\n\n若命中敌方单位的技能为施加[Sinking](包括施加[Sinking]层数与特殊<noparse>沉沦</noparse>)的技能，则改为其造成(其[Sinking]强度)点忧郁伤害，而非([Sinking]强度/2)点\n(适用于每回合首个攻击命中的施加[Sinking]的技能)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "根据目标带有的沉沦 强度造成忧郁伤害\n根据目标带有的沉沦 强度造成忧郁伤害",
+"base": [
+{
+"abilityID": 9436,
+"simpleDesc": "根据目标带有的沉沦 强度造成忧郁伤害"
+},
+{
+"abilityID": 94361,
+"simpleDesc": "根据目标带有的沉沦 强度造成忧郁伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4841,12 +7190,17 @@
 "name": "拉·曼却领自由通行券",
 "category": "流血",
 "descriptions": {
-"base": "攻击命中[Laceration]强度、特殊流血与[Burst]强度之和不低于10点的敌方单位时，使自身增加1级[Breath]强度并使自身获得1层[Breath](每个技能最多2次)",
+"base": "攻击命中[Laceration]强度、特殊流血与[Burst]强度之和不低于10点的敌方单位时，使自身增加1级[Breath]强度并使自身获得1层[Breath](每个技能最多3次)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加1级呼吸法 强度并获得1层呼吸法 ",
+"base": [
+{
+"abilityID": 2048,
+"simpleDesc": "攻击命中[Laceration]强度、特殊流血与[Burst]强度之和不低于10点的敌方单位时，使自身增加1级[Breath]强度并使自身获得1层[Breath]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4857,12 +7211,21 @@
 "name": "胜利之证",
 "category": "流血",
 "descriptions": {
-"base": "击杀敌方单位时，使理智值最低的1名友方单位恢复3点理智值。\n\n攻击结束后，若有[Laceration]强度、特殊流血与[Burst]强度之和不低于10点的敌方单位阵亡，则下回合使1名友方单位获得2层[AttackUp](优先指定击杀该敌方单位的友方单位)。",
+"base": "通过技能伤害击杀敌方单位时，使理智值最低的1名友方单位恢复8点理智值。\n攻击结束后，若有[Laceration]强度、特殊流血与[Burst]强度之和不低于10点的敌方单位阵亡，则下回合使击杀该敌方单位的单位获得2层[AttackUp](每回合最多3次)。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复3点理智值\n下回合随机使1名友方单位获得2层攻击等级提升 ",
+"base": [
+{
+"abilityID": 2050,
+"simpleDesc": "通过技能伤害击杀敌方单位时，使理智值最低的1名友方单位恢复8点理智值。"
+},
+{
+"abilityID": 205001,
+"simpleDesc": "攻击结束后，若有[Laceration]强度、特殊流血与[Burst]强度之和不低于10点的敌方单位阵亡，则下回合使击杀该敌方单位的单位获得2层[AttackUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4873,12 +7236,21 @@
 "name": "吞噬一切的魔方",
 "category": "泛用",
 "descriptions": {
-"base": "友方单位阵亡时，获得其1、2技能对应的E.G.O资源各1个。\n\n攻击结束后，若敌方单位阵亡，则随机获得1个E.G.O资源(每个技能最多1次)",
+"base": "友方单位阵亡时，获得其1、2、3技能对应的E.G.O资源各1个与1个随机的E.G.O资源\n攻击结束后，若敌方单位阵亡，则随机获得1个E.G.O资源(每个技能最多1次)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "随机获得1个E.G.O资源",
+"base": [
+{
+"abilityID": 2053,
+"simpleDesc": "友方单位阵亡时，获得其1、2、3技能对应的E.G.O资源各1个与1个随机的E.G.O资源"
+},
+{
+"abilityID": 205301,
+"simpleDesc": "攻击结束后，若敌方单位阵亡，则随机获得1个E.G.O资源"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4889,12 +7261,17 @@
 "name": "游行的面具",
 "category": "流血",
 "descriptions": {
-"base": "遭遇战中新的敌方单位增援时，战斗开始时使其增加3级[Laceration]强度并对其施加2层[Laceration]。\n\n若友方单位中存在<血魔>，则新的敌方单位增援时触发全体敌方单位的[Laceration]1次，并使全体敌方单位的[Laceration]层数减少1层",
+"base": "连续遭遇战中有新的敌方单位登场时，战斗开始时使其增加5级[Laceration]强度并对其施加3层[Laceration]。",
 "plus": "遭遇战中新的敌方单位增援时，战斗开始时使其增加5级[Laceration]强度并对其施加3层[Laceration]。\n\n若友方单位中存在<血魔>，则新的敌方单位增援时触发全体敌方单位的[Laceration]1次，并使全体敌方单位的[Laceration]层数减少1层",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使增援的敌方单位增加3级流血 强度并施加2层流血 \n触发全体敌方单位的流血 1次(流血 层数减少1层)",
+"base": [
+{
+"abilityID": 2052,
+"simpleDesc": "连续遭遇战中有新的敌方单位登场时，战斗开始时使其增加5级[Laceration]强度并对其施加3层[Laceration]。"
+}
+],
 "plus": "使增援的敌方单位增加5级流血 强度并施加3层流血 \n触发全体敌方单位的流血 1次(流血 层数减少1层)",
 "double_plus": ""
 },
@@ -4905,12 +7282,17 @@
 "name": "火热多汁琵琶腿",
 "category": "烧伤",
 "descriptions": {
-"base": "通过技能效果对敌方单位施加[Combustion]时，额外施加3层[Combustion](每回合最多3次)",
+"base": "通过技能效果对敌方单位施加[Combustion]时，额外施加5层[Combustion]。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "通过技能效果施加[Combustion]时，额外施加3层[Combustion]",
+"base": [
+{
+"abilityID": 1052,
+"simpleDesc": "通过技能效果施加烧伤 时，额外施加5层烧伤 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4921,12 +7303,17 @@
 "name": "干巴柴涩鸡胸肉",
 "category": "破裂",
 "descriptions": {
-"base": "通过技能效果对敌方单位施加[Burst]时，额外施加3层[Burst](每回合最多3次)",
+"base": "通过技能效果对敌方单位施加[Burst]时，额外施加5层[Burst]。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "通过技能效果施加[Burst]时，额外施加3层[Burst]",
+"base": [
+{
+"abilityID": 1053,
+"simpleDesc": "通过技能效果施加破裂 时，额外施加5层破裂 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4937,12 +7324,17 @@
 "name": "探戈鸡酱料",
 "category": "泛用",
 "descriptions": {
-"base": "若自身的速度值高于目标，则使拼点威力+(速度值/3) (最多+3)",
+"base": "若自身的速度值高于目标，则使拼点威力+(速度值/2) (最多+3)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力+(速度值/3)",
+"base": [
+{
+"abilityID": 1054,
+"simpleDesc": "拼点威力+(速度值/2)"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4958,7 +7350,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使目标增加(伤害量/3)级[Laceration]强度",
+"base": [
+{
+"abilityID": 1055,
+"simpleDesc": "使目标增加(伤害量/3)级流血 强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4974,7 +7371,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "额外造成(伤害量/2)的固定伤害",
+"base": [
+{
+"abilityID": 1056,
+"simpleDesc": "额外造成(伤害量/2)的固定伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -4990,7 +7392,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "打击技能造成的伤害+10%\n使目标增加2级[Vibration]强度。",
+"base": [
+{
+"abilityID": 9706,
+"simpleDesc": "打击技能造成的伤害+10%"
+},
+{
+"abilityID": 97061,
+"simpleDesc": "使目标增加2级[Vibration]强度。"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5006,7 +7417,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "反弹3点固定伤害",
+"base": [
+{
+"abilityID": 9707,
+"simpleDesc": "反弹3点固定伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5022,7 +7438,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害+(目标的[Burst]层数×1.25)%(最多+50%)\n恢复其体力上限20%的体力",
+"base": [
+{
+"abilityID": 9708,
+"simpleDesc": "造成的伤害+(目标的[Burst]层数×1.25)%(最多+50%)"
+},
+{
+"abilityID": 97081,
+"simpleDesc": "恢复其体力上限20%的体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5038,7 +7463,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加1级[Breath]强度\n增加3级[Breath]强度",
+"base": [
+{
+"abilityID": 9709,
+"simpleDesc": "增加1级[Breath]强度"
+},
+{
+"abilityID": 97091,
+"simpleDesc": "增加3级[Breath]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5054,7 +7488,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加2级[Breath]强度并获得2层[Breath]与2层[Protection]",
+"base": [
+{
+"abilityID": 9710,
+"simpleDesc": "增加2级[Breath]强度并获得2层[Breath]与2层[Protection]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5070,7 +7509,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害+(该单位理智值的绝对值/1.5)%(最低0%)\n解除混乱时，恢复全部理智值\n回合开始时，施加3层[Paralysis]",
+"base": [
+{
+"abilityID": 9711,
+"simpleDesc": "造成的伤害+(该单位理智值的绝对值/1.5)%(最低0%)"
+},
+{
+"abilityID": 97111,
+"simpleDesc": "解除混乱时，恢复全部理智值"
+},
+{
+"abilityID": 97112,
+"simpleDesc": "回合开始时，施加3层[Paralysis]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5086,7 +7538,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "随机获得E.G.O资源\n获得持有量最少的E.G.O资源",
+"base": [
+{
+"abilityID": 2027,
+"simpleDesc": "随机获得E.G.O资源"
+},
+{
+"abilityID": 20271,
+"simpleDesc": "获得持有量最少的E.G.O资源"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5102,7 +7563,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得1层斩击威力提升 \n获得2层斩击威力提升 ",
+"base": [
+{
+"abilityID": 2028,
+"simpleDesc": "获得1层斩击威力提升 "
+},
+{
+"abilityID": 20281,
+"simpleDesc": "获得2层斩击威力提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5118,7 +7588,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "额外施加2层[Laceration]\n额外增加4级[Laceration]强度并施加4层[Laceration]",
+"base": [
+{
+"abilityID": 2029,
+"simpleDesc": "额外施加2层[Laceration]"
+},
+{
+"abilityID": 20291,
+"simpleDesc": "额外增加4级[Laceration]强度并施加4层[Laceration]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5129,12 +7608,21 @@
 "name": "损坏的刀刃",
 "category": "呼吸法",
 "descriptions": {
-"base": "友方单位对敌方单位造成暴击时，对目标额外造成(自身的[Breath]强度/3)点傲慢伤害。\n\n若该友方单位属于剑契组，则改为暴击时对目标额外造成(自身的[Breath]强度/2)点傲慢伤害。",
+"base": "友方单位对敌方单位造成暴击时，对目标额外造成（自身的[Breath]强度/3）点傲慢伤害。\n\n若该友方单位属于剑契组，则改为暴击时对目标额外造成（自身的[Breath]强度/2）点傲慢伤害。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "额外造成(自身的[Breath]强度/3)点傲慢伤害\n额外造成(自身的[Breath]强度/2)点傲慢伤害",
+"base": [
+{
+"abilityID": 2030,
+"simpleDesc": "额外造成（自身的[Breath]强度/3）点傲慢伤害"
+},
+{
+"abilityID": 20301,
+"simpleDesc": "额外造成（自身的[Breath]强度/2）点傲慢伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5150,7 +7638,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "斩击抗性+0.3",
+"base": [
+{
+"abilityID": 2031,
+"simpleDesc": "斩击抗性+0.3"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5166,7 +7659,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得2层斩击威力提升 ，造成的斩击伤害+35%\n额外增加4级[Laceration]强度并施加4层[Laceration]",
+"base": [
+{
+"abilityID": 2032,
+"simpleDesc": "获得2层斩击威力提升 ，造成的斩击伤害+35%"
+},
+{
+"abilityID": 20321,
+"simpleDesc": "额外增加4级流血 强度并施加4层流血 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5177,12 +7679,21 @@
 "name": "不动",
 "category": "斩击",
 "descriptions": {
-"base": "回合开始时，若属于剑契组成员的人格不低于3名，则触发该效果。(以参战人员为基准)\n\n回合开始时，使全体友方单位获得2层斩击威力提升 并使其造成的斩击伤害+35%。\n\n属于剑契组成员的人格造成暴击时，对目标额外造成(自身的[Breath]强度)点傲慢伤害。",
+"base": "回合开始时，若属于剑契组的人格不低于3名，则触发该效果。(以参战人员为基准)\n\n回合开始时，使全体友方单位获得2层斩击威力提升 并使其造成的斩击伤害+35%。\n\n属于剑契组的人格造成暴击时，对目标额外造成(自身的[Breath]强度)点傲慢伤害。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得2层斩击威力提升 ，造成的斩击伤害+35%\n额外造成(自身的[Breath]强度)点傲慢伤害",
+"base": [
+{
+"abilityID": 2033,
+"simpleDesc": "获得2层斩击威力提升 ，造成的斩击伤害+35%"
+},
+{
+"abilityID": 20331,
+"simpleDesc": "额外造成(自身的呼吸法 强度)点傲慢伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5193,12 +7704,25 @@
 "name": "破损的斗笠",
 "category": "呼吸法",
 "descriptions": {
-"base": "回合开始时，若属于剑契组成员的人格不低于3名，则触发该效果。(以参战人员为基准)\n\n全体友方单位造成的斩击伤害+50%。\n\n属于剑契组成员，且带有[Breath]的友方单位暴击率固定为100%。\n\n属于剑契组成员的友方单位暴击倍率增加至1.5倍",
+"base": "回合开始时，若属于剑契组的人格不低于3名，则触发该效果。(以参战人员为基准)\n\n全体友方单位造成的斩击伤害+50%。\n\n属于剑契组，且带有[Breath]的友方单位暴击率固定为100%。\n\n属于剑契组的友方单位暴击倍率增加至1.5倍",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的斩击伤害+50%\n暴击率固定为100%\n暴击倍率增加至1.5倍",
+"base": [
+{
+"abilityID": 2034,
+"simpleDesc": "造成的斩击伤害+50%"
+},
+{
+"abilityID": 20341,
+"simpleDesc": "暴击率固定为100%"
+},
+{
+"abilityID": 20342,
+"simpleDesc": "暴击倍率增加至1.5倍"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5209,12 +7733,25 @@
 "name": "陈旧的长袍",
 "category": "斩击",
 "descriptions": {
-"base": "回合开始时，若属于剑契组成员的人格不低于3名，则触发该效果。(以参战人员为基准)\n\n全体友方单位造成的斩击伤害+50%。\n\n属于剑契组成员的友方单位1技能的硬币威力+1，若该技能为单硬币技能，则改为硬币威力+3。\n\n[剑契组 头领 默尔索专属] 装备了“肉斩”的回合内，自身不会陷入混乱 技能“肉斩”的拼点最终威力-36，技能“骨断”造成的伤害+50%。",
+"base": "回合开始时，若属于剑契组的人格不低于3名，则触发该效果。(以参战人员为基准)\n\n全体友方单位造成的斩击伤害+50%。\n\n属于剑契组的友方单位1技能的硬币威力+1，若该技能为单硬币技能，则改为硬币威力+3。\n\n[剑契组 头领 默尔索专属] 技能“肉斩”的拼点最终威力-12，技能“骨断”造成的伤害+50%。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的斩击伤害+50%\n1技能的硬币威力增加\n技能“舍吾皮肉”的拼点最终威力-24，技能“断汝筋骨”造成的伤害+50%",
+"base": [
+{
+"abilityID": 2035,
+"simpleDesc": "造成的斩击伤害+50%"
+},
+{
+"abilityID": 20351,
+"simpleDesc": "1技能的硬币威力增加"
+},
+{
+"abilityID": 20352,
+"simpleDesc": "技能“肉斩”的拼点最终威力-12，技能“骨断”造成的伤害+50%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5230,7 +7767,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害+10%\n下回合施加2层[Vibration]",
+"base": [
+{
+"abilityID": 2036,
+"simpleDesc": "造成的伤害+10%"
+},
+{
+"abilityID": 20361,
+"simpleDesc": "下回合施加2层[Vibration]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5246,7 +7792,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力+1\n下回合增加3级[Vibration]强度并施加2层[Vibration]",
+"base": [
+{
+"abilityID": 2037,
+"simpleDesc": "拼点威力+1"
+},
+{
+"abilityID": 20371,
+"simpleDesc": "下回合增加3级[Vibration]强度并施加2层[Vibration]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5262,7 +7817,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合施加1层[Binding]\n造成的伤害+(5+(目标的[Binding]层数×2.5))%",
+"base": [
+{
+"abilityID": 2038,
+"simpleDesc": "下回合施加1层[Binding]"
+},
+{
+"abilityID": 20381,
+"simpleDesc": "造成的伤害+(5+(目标的[Binding]层数×2.5))%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5278,7 +7842,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加(9-当前速度值)级[Vibration]强度\n造成的伤害+10%",
+"base": [
+{
+"abilityID": 2039,
+"simpleDesc": "增加(9-当前速度值)级[Vibration]强度"
+},
+{
+"abilityID": 20391,
+"simpleDesc": "造成的伤害+10%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5294,7 +7867,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加(9-当前速度值)级[Vibration]强度并施加层数相当于该数值一半的[Vibration]\n受到的伤害-10%",
+"base": [
+{
+"abilityID": 2040,
+"simpleDesc": "增加(9-当前速度值)级[Vibration]强度并施加层数相当于该数值一半的[Vibration]"
+},
+{
+"abilityID": 20401,
+"simpleDesc": "受到的伤害-10%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5310,7 +7892,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加2级[Vibration]强度并施加2层[Vibration]\n增加3级[Vibration]强度并施加3层[Vibration]\n拼点威力+2，造成的伤害+20%",
+"base": [
+{
+"abilityID": 2041,
+"simpleDesc": "增加2级[Vibration]强度并施加2层[Vibration]"
+},
+{
+"abilityID": 20411,
+"simpleDesc": "增加3级[Vibration]强度并施加3层[Vibration]"
+},
+{
+"abilityID": 20412,
+"simpleDesc": "拼点威力+2，造成的伤害+20%"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5326,7 +7921,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害+(5+速度值之差×2.5)%\n下回合施加2层[Binding]与1层[ResultReduction]",
+"base": [
+{
+"abilityID": 2042,
+"simpleDesc": "造成的伤害+(5+速度值之差×2.5)%"
+},
+{
+"abilityID": 20421,
+"simpleDesc": "下回合施加2层[Binding]与1层[ResultReduction]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5337,12 +7941,25 @@
 "name": "怀表：Type L",
 "category": "震颤",
 "descriptions": {
-"base": "回合开始时，若拥有增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果(不包括E.G.O技能，不包括待命人员)。\n\n友方单位增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的3技能加算硬币威力+2，造成的伤害+25%。\n- 减算硬币技能改为基础威力+(8/硬币数)，而非加算硬币威力(最少+1，向下取整)\n\n增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的友方单位通过攻击技能(包括E.G.O技能)使敌方单位[Switch_Vibration]或[FusionVibration]时，使该敌方单位转换后的[Vibration]强度与层数变为1.5倍(仅在转换为其他类型的[Vibration]时生效)并在下回合对该敌方单位施加5层[DefenseDown](每回合最多1次)。\n\n回合开始时，使速度值最少的3名敌方单位增加(12-当前速度值)级[Vibration]强度(最少6级，每个波次最多1次)。",
+"base": "回合开始时，若拥有增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果(不包括E.G.O技能，不包括待命人员)。\n\n友方单位增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的3技能硬币威力+2，造成的伤害+25%。\n\n增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的友方单位通过攻击技能(包括E.G.O技能)使敌方单位[Switch_Vibration]时，使该敌方单位转换后的[Vibration]强度与层数变为1.5倍(仅在转换为其他类型的[Vibration]时生效)并在下回合对该敌方单位施加5层[DefenseDown](每回合最多1次)。\n\n回合开始时，使速度值最低的3名敌方单位增加(12-当前速度值)级[Vibration]强度(最少6级，每个波次最多1次)。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "3技能的硬币威力/基础威力增加，造成的伤害+25%\n转换后的[Vibration]强度与层数变为1.5倍\n增加(12-当前速度值)级[Vibration]强度",
+"base": [
+{
+"abilityID": 2043,
+"simpleDesc": "3技能的硬币威力+2，造成的伤害+25%"
+},
+{
+"abilityID": 20431,
+"simpleDesc": "转换后的[Vibration]强度与层数变为1.5倍"
+},
+{
+"abilityID": 20432,
+"simpleDesc": "增加(12-当前速度值)级[Vibration]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5353,12 +7970,25 @@
 "name": "怀表：Type E",
 "category": "震颤",
 "descriptions": {
-"base": "回合开始时，若拥有增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果(不包括E.G.O技能，不包括待命人员)。\n\n友方单位增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的3技能加算硬币威力+2，造成的伤害+25%。\n- 减算硬币技能改为基础威力+(8/硬币数)，而非加算硬币威力(最少+1，向下取整)\n\n增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的友方单位与速度值低于自身至少2点的敌方单位拼点时，使该友方单位造成的伤害+(目标的[Vibration]强度)%(最多+25%)，造成伤害时对目标施加2层[DefenseDown](最多6层)。\n\n回合开始时，使速度值最高的1名敌方单位增加(12-当前速度值)级[Vibration]强度(最少6级)并对其施加层数相当于该数值一半的[Vibration](向上取整，若是异想体，则改为1个部位，每个波次最多1次)。",
+"base": "回合开始时，若拥有增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果(不包括E.G.O技能，不包括待命人员)。\n\n友方单位增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的3技能硬币威力+2，造成的伤害+25%。\n\n增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的友方单位与速度值低于自身至少2点的敌方单位拼点时，使该友方单位造成的伤害+(目标的[Vibration]强度)%(最多+25%)，造成伤害时对目标施加2层[DefenseDown](最多6层)。\n\n回合开始时，使速度值最高的1名敌方单位增加(12-当前速度值)级[Vibration]强度(最少6级)并对其施加层数相当于该数值一半的[Vibration](向上取整，若是异想体，则改为1个部位，每个波次最多1次)。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "3技能的硬币威力/基础威力增加，造成的伤害+25%\n造成的伤害+(目标的[Vibration]强度)%，造成伤害时施加2层[DefenseDown]\n增加(12-当前速度值)级[Vibration]强度并施加层数相当于该数值一半的[Vibration]",
+"base": [
+{
+"abilityID": 2044,
+"simpleDesc": "3技能的硬币威力+2，造成的伤害+25%"
+},
+{
+"abilityID": 20441,
+"simpleDesc": "造成的伤害+(目标的[Vibration]强度)%，造成伤害时施加2层[DefenseDown]"
+},
+{
+"abilityID": 20442,
+"simpleDesc": "增加(12-当前速度值)级[Vibration]强度并施加层数相当于该数值一半的[Vibration]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5369,12 +7999,25 @@
 "name": "怀表：Type Y",
 "category": "震颤",
 "descriptions": {
-"base": "回合开始时，若拥有增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果(不包括E.G.O技能，不包括待命人员)。\n\n友方单位增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的3技能加算硬币威力+2，造成的伤害+25%。\n- 减算硬币技能改为基础威力+(8/硬币数)，而非加算硬币威力(最少+1，向下取整)\n\n属于圣愚的人格改为3技能的硬币威力+2，造成的伤害+(25+(目标的[Vibration]强度与[Vibration]层数之和))%(最多+100%)。\n\n回合开始时，对属于圣愚的人格施加3层[Vibration]。",
+"base": "回合开始时，若拥有增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果(不包括E.G.O技能，不包括待命人员)。\n\n友方单位增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的3技能硬币威力+2，造成的伤害+25%。\n\n属于圣愚的人格改为3技能的硬币威力+2，造成的伤害+(25+(目标的[Vibration]强度与[Vibration]层数之和))%(最多+100%)。\n\n回合开始时，对属于圣愚的人格施加3层[Vibration]。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "3技能的硬币威力/基础威力增加，造成的伤害+25%\n3技能的硬币威力+2，造成的伤害+(25+目标的[Vibration]强度与层数之和)%\n施加3层[Vibration]",
+"base": [
+{
+"abilityID": 2045,
+"simpleDesc": "3技能的硬币威力+2，造成的伤害+25%"
+},
+{
+"abilityID": 20451,
+"simpleDesc": "3技能的硬币威力+2，造成的伤害+(25+目标的[Vibration]强度与层数之和)%"
+},
+{
+"abilityID": 20452,
+"simpleDesc": "施加3层[Vibration]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5385,12 +8028,25 @@
 "name": "怀表：Type P",
 "category": "震颤",
 "descriptions": {
-"base": "回合开始时，若拥有增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果(不包括E.G.O技能，不包括待命人员)。\n\n友方单位增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的3技能加算硬币威力+2，造成的伤害+25%。\n- 减算硬币技能改为基础威力+(8/硬币数)，而非加算硬币威力(最少+1，向下取整)\n\n增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的友方单位与速度值高于自身至少2点的敌方单位拼点时，使该友方单位的拼点威力+2，造成的伤害+(目标的[Vibration]强度)%(最多+50%)。\n\n回合开始时，使速度值最少的3名友方单位按速度值由低到高分别获得5层[AttackUp]，3层[AttackUp]与2层[AttackUp]。",
+"base": "回合开始时，若拥有增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的攻击技能的人格不低于5名，则在本场战斗期间触发该效果(不包括E.G.O技能，不包括待命人员)。\n\n友方单位增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的3技能硬币威力+2，造成的伤害+25%。\n\n增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的友方单位与速度值高于自身至少2点的敌方单位拼点时，使该友方单位的拼点威力+2，造成的伤害+(目标的[Vibration]强度)%(最多+50%)。\n\n回合开始时，使速度值最低的3名友方单位按速度值由低到高分别获得5层[AttackUp]，3层[AttackUp]与2层[AttackUp]。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "3技能的硬币威力/基础威力增加，造成的伤害+25%\n拼点威力+2，造成的伤害+(目标的[Vibration]强度)%\n获得[AttackUp]",
+"base": [
+{
+"abilityID": 2046,
+"simpleDesc": "3技能的硬币威力+2，造成的伤害+25%"
+},
+{
+"abilityID": 20461,
+"simpleDesc": "拼点威力+2，造成的伤害+(目标的[Vibration]强度)%"
+},
+{
+"abilityID": 20462,
+"simpleDesc": "获得[AttackUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5406,7 +8062,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合获得1层迅捷 ",
+"base": [
+{
+"abilityID": 9732,
+"simpleDesc": "下回合获得1层迅捷 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5422,7 +8083,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合开始时，恢复体力\nE.G.O 技能恢复的体力增加",
+"base": [
+{
+"abilityID": 9733,
+"simpleDesc": "下回合开始时，恢复体力"
+},
+{
+"abilityID": 97331,
+"simpleDesc": "E.G.O 技能恢复的体力增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5438,7 +8108,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "1技能拼点威力与造成的伤害增加\n1技能拼点威力与造成的伤害增加\n对目标施加2层体力恢复降低 ",
+"base": [
+{
+"abilityID": 9734,
+"simpleDesc": "1技能拼点威力与造成的伤害增加"
+},
+{
+"abilityID": 97341,
+"simpleDesc": "1技能拼点威力与造成的伤害增加"
+},
+{
+"abilityID": 97342,
+"simpleDesc": "对目标施加2层体力恢复降低 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5454,7 +8137,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "1技能的拼点威力增加，获得充能 层数与充能力场 \n获得充能力场 ",
+"base": [
+{
+"abilityID": 9735,
+"simpleDesc": "1技能的拼点威力增加，获得充能 层数与充能力场 "
+},
+{
+"abilityID": 97351,
+"simpleDesc": "获得充能力场 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5470,7 +8162,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加攻击等级\n获得迅捷 \n获得攻击等级提升 ",
+"base": [
+{
+"abilityID": 9736,
+"simpleDesc": "增加攻击等级"
+},
+{
+"abilityID": 97361,
+"simpleDesc": "获得迅捷 "
+},
+{
+"abilityID": 97362,
+"simpleDesc": "获得攻击等级提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5486,7 +8191,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得护盾\n根据上回合失去的体力，相应恢复体力",
+"base": [
+{
+"abilityID": 9737,
+"simpleDesc": "获得护盾"
+},
+{
+"abilityID": 97371,
+"simpleDesc": "根据上回合失去的体力，相应恢复体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5502,7 +8216,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得迅捷 与充能 层数\n额外获得充能 层数",
+"base": [
+{
+"abilityID": 9738,
+"simpleDesc": "获得迅捷 与充能 层数"
+},
+{
+"abilityID": 97381,
+"simpleDesc": "额外获得充能 层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5518,7 +8241,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "自身的流血 强度减半，恢复体力",
+"base": [
+{
+"abilityID": 9739,
+"simpleDesc": "自身的流血 强度减半，恢复体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5534,7 +8262,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "硬币威力/基础威力与造成的伤害增加\n下回合获得迅捷 与伤害强化 \n硬币威力增加",
+"base": [
+{
+"abilityID": 9740,
+"simpleDesc": "硬币威力/基础威力与造成的伤害增加"
+},
+{
+"abilityID": 97401,
+"simpleDesc": "下回合获得迅捷 与伤害强化 "
+},
+{
+"abilityID": 97402,
+"simpleDesc": "硬币威力增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5550,7 +8291,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "硬币威力/基础威力与造成的伤害增加\n拼点威力增加，拼点胜利时获得充能 层数，拼点失败时失去充能 层数\n施加嫉妒易损 ",
+"base": [
+{
+"abilityID": 9741,
+"simpleDesc": "硬币威力/基础威力与造成的伤害增加"
+},
+{
+"abilityID": 97411,
+"simpleDesc": "拼点威力增加，拼点胜利时获得充能 层数，拼点失败时失去充能 层数"
+},
+{
+"abilityID": 97412,
+"simpleDesc": "施加嫉妒易损 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5566,7 +8320,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "硬币威力/基础威力与造成的伤害增加\n拼点威力增加，获得攻击等级提升 \n阵亡前消耗充能 层数并立即恢复体力，获得守护 ",
+"base": [
+{
+"abilityID": 9742,
+"simpleDesc": "硬币威力/基础威力与造成的伤害增加"
+},
+{
+"abilityID": 97421,
+"simpleDesc": "拼点威力增加，获得攻击等级提升 "
+},
+{
+"abilityID": 97422,
+"simpleDesc": "阵亡前消耗充能 层数并立即恢复体力，获得守护 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5582,7 +8349,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "硬币威力/基础威力与造成的伤害增加\n额外消耗充能 层数并额外造成伤害\n最大充能 层数+5",
+"base": [
+{
+"abilityID": 9743,
+"simpleDesc": "硬币威力/基础威力与造成的伤害增加"
+},
+{
+"abilityID": 97431,
+"simpleDesc": "额外消耗充能 层数并额外造成伤害"
+},
+{
+"abilityID": 97432,
+"simpleDesc": "最大充能 层数+5"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5598,7 +8378,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[Laceration]层数，使自身造成的伤害增加",
+"base": [
+{
+"abilityID": 9744,
+"simpleDesc": "施加[Laceration]层数，使自身造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5614,7 +8399,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "额外消耗[Charge]层数或特殊充能并使造成的伤害增加",
+"base": [
+{
+"abilityID": 9745,
+"simpleDesc": "额外消耗[Charge]层数或特殊充能并使造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5630,7 +8420,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使目标增加相当于拼点次数的[Sinking]强度",
+"base": [
+{
+"abilityID": 9746,
+"simpleDesc": "使目标增加相当于拼点次数的[Sinking]强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5646,7 +8441,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "以([Sinking]强度)%的概率在减少或消耗[Sinking]层数之前立即施加[Sinking]层数",
+"base": [
+{
+"abilityID": 9747,
+"simpleDesc": "以([Sinking]强度)%的概率在减少或消耗[Sinking]层数之前立即施加[Sinking]层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5662,7 +8462,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点胜利时，恢复相当于拼点次数的理智值",
+"base": [
+{
+"abilityID": 9748,
+"simpleDesc": "拼点胜利时，恢复相当于拼点次数的理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5678,7 +8483,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "回合开始时，使理智值最低的1名友方单位恢复8点理智值",
+"base": [
+{
+"abilityID": 9749,
+"simpleDesc": "回合开始时，使理智值最低的1名友方单位恢复8点理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5694,7 +8504,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "基础攻击技能使自身失去理智值时，使失去量减少1点\n若目标带有沉沦 ，则使造成的伤害增加",
+"base": [
+{
+"abilityID": 9750,
+"simpleDesc": "基础攻击技能使自身失去理智值时，使失去量减少1点"
+},
+{
+"abilityID": 97501,
+"simpleDesc": "若目标带有沉沦 ，则使造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5710,7 +8529,12 @@
 "double_plus": "回合开始时，使全体友方单位获得4层[DefenseUp]。\n友方单位的攻击等级+(自身的[DefenseUp]层数/2) 。(最多+10)"
 },
 "simple_descriptions": {
-"base": "全体友方单位获得[DefenseUp]并增加攻击等级",
+"base": [
+{
+"abilityID": 9751,
+"simpleDesc": "全体友方单位获得[DefenseUp]并增加攻击等级"
+}
+],
 "plus": "全体友方单位获得[DefenseUp]并增加攻击等级",
 "double_plus": "全体友方单位获得[DefenseUp]并增加攻击等级"
 },
@@ -5726,7 +8550,12 @@
 "double_plus": "攻击命中时，使自身获得2层[Zazen]。(每个技能最多3次)\n若本回合自身受到敌方单位的技能攻击，则令获得的[Zazen]额外+1层。"
 },
 "simple_descriptions": {
-"base": "攻击命中时，使自身获得1层[Zazen]",
+"base": [
+{
+"abilityID": 9752,
+"simpleDesc": "攻击命中时，使自身获得1层[Zazen]"
+}
+],
 "plus": "攻击命中时，使自身获得1层[Zazen]",
 "double_plus": "攻击命中时，使自身获得2层[Zazen]"
 },
@@ -5742,7 +8571,12 @@
 "double_plus": "回合数为奇数时，使全体友方单位获得1层[AttackDmgUp]与1层[AttackUp]。回合数为偶数时，使全体友方单位获得1层[Protection]与1层[DefenseUp]。"
 },
 "simple_descriptions": {
-"base": "全体友方单位的攻击或防御随回合数获得强化",
+"base": [
+{
+"abilityID": 9753,
+"simpleDesc": "全体友方单位的攻击或防御随回合数获得强化"
+}
+],
 "plus": "全体友方单位的攻击或防御随回合数获得强化",
 "double_plus": "全体友方单位的攻击或防御随回合数获得强化"
 },
@@ -5758,7 +8592,12 @@
 "double_plus": "关卡开始时，使全体友方单位的体力上限增加(当前阶层×5)%(最多50%)"
 },
 "simple_descriptions": {
-"base": "全体友方单位的体力上限随当前阶层提升",
+"base": [
+{
+"abilityID": 9754,
+"simpleDesc": "全体友方单位的体力上限随当前阶层提升"
+}
+],
 "plus": "全体友方单位的体力上限随当前阶层提升",
 "double_plus": "全体友方单位的体力上限随当前阶层提升"
 },
@@ -5774,7 +8613,12 @@
 "double_plus": "[第1、第6顺位人格专属]\n\n战斗开始时，每有1个指定自身为目标的敌方单位的攻击技能，使自身造成的伤害+10%(最多+30%)\n\n战斗开始时，若自身被不低于2个技能指定为目标，则对指定自身的全体敌方单位造成(2×指定自身的技能数)点固定体力与理智伤害。(最多10点，不会对友方单位造成伤害)"
 },
 "simple_descriptions": {
-"base": "根据指定自身的敌方单位的技能数相应使造成的伤害增加，造成固定伤害",
+"base": [
+{
+"abilityID": 9755,
+"simpleDesc": "根据指定自身的敌方单位的攻击技能数相应使造成的伤害增加，造成固定伤害"
+}
+],
 "plus": "根据指定自身的敌方单位的技能数相应使造成的伤害增加，造成固定伤害",
 "double_plus": "根据指定自身的敌方单位的技能数相应使造成的伤害增加，造成固定伤害"
 },
@@ -5790,7 +8634,12 @@
 "double_plus": "受到致死伤害时，攻击期间内体力固定为1点。该攻击结束后使自身恢复体力上限20%的体力(每场战斗最多1次)。\n\n若自身带有[Combustion]，则改为攻击期间内体力固定为1点。该攻击结束后使自身恢复体力上限40%的体力(以上效果合计每场战斗最多1次)。"
 },
 "simple_descriptions": {
-"base": "受到致死伤害时不会阵亡，并恢复体力",
+"base": [
+{
+"abilityID": 9756,
+"simpleDesc": "受到致死伤害时不会阵亡，并恢复体力"
+}
+],
 "plus": "受到致死伤害时不会阵亡，并恢复体力",
 "double_plus": "受到致死伤害时不会阵亡，并恢复体力"
 },
@@ -5806,7 +8655,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "受到攻击时，下回合施加1层[Paralysis]",
+"base": [
+{
+"abilityID": 9757,
+"simpleDesc": "受到攻击时，下回合施加1层[Paralysis]"
+}
+],
 "plus": "战斗开始时与受到伤害时，下回合施加1层[Paralysis]",
 "double_plus": ""
 },
@@ -5817,12 +8671,17 @@
 "name": "王的残渣",
 "category": "泛用",
 "descriptions": {
-"base": "连续遭遇战中，从第7顺位友方单位起，解除待命的回合开始时，使其恢复10点理智值，获得2层[ParryingResultUp]，并获得1、2、3技能对应的E.G.O资源各1个。",
+"base": "回合开始时若有解除待命的人格，则使其恢复10点理智值，获得2层[Enhancement]与2层[ParryingResultUp]，并获得其1、2、3技能对应的E.G.O资源各1个。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "解除待命时恢复理智值，获得拼点威力提升 与E.G.O资源",
+"base": [
+{
+"abilityID": 9758,
+"simpleDesc": "解除待命时恢复理智值，获得拼点威力提升 与E.G.O资源"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5838,7 +8697,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "技能或硬币效果对自身施加的[Vibration]层数增加",
+"base": [
+{
+"abilityID": 9759,
+"simpleDesc": "技能或硬币效果对自身施加的[Vibration]层数增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5855,7 +8719,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加1层[AttackDown]与1层[DefenseDown]\n施加1层[AttackDown]与1层[DefenseDown]",
+"base": [
+{
+"abilityID": 9760,
+"simpleDesc": "施加1层[AttackDown]与1层[DefenseDown]"
+},
+{
+"abilityID": 97601,
+"simpleDesc": "施加1层[AttackDown]与1层[DefenseDown]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5872,7 +8745,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "技能或硬币效果对自身施加的[Vibration]层数增加\n施加1层[AttackDown]与1层[DefenseDown]\n施加1层[AttackDown]与1层[DefenseDown]",
+"base": [
+{
+"abilityID": 9761,
+"simpleDesc": "技能或硬币效果对自身施加的[Vibration]层数增加"
+},
+{
+"abilityID": 97611,
+"simpleDesc": "施加1层[AttackDown]与1层[DefenseDown]"
+},
+{
+"abilityID": 97612,
+"simpleDesc": "施加1层[AttackDown]与1层[DefenseDown]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5889,7 +8775,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加随机减益效果\n获得随机增益效果",
+"base": [
+{
+"abilityID": 9762,
+"simpleDesc": "施加随机减益效果"
+},
+{
+"abilityID": 97621,
+"simpleDesc": "获得随机增益效果"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5905,7 +8800,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得随机属性的伤害强化\n施加随机属性的易损",
+"base": [
+{
+"abilityID": 9763,
+"simpleDesc": "获得随机属性的伤害强化"
+},
+{
+"abilityID": 97631,
+"simpleDesc": "施加随机属性的易损"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5921,7 +8825,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加随机减益效果\n获得随机增益效果\n获得随机属性的伤害强化",
+"base": [
+{
+"abilityID": 9764,
+"simpleDesc": "施加随机减益效果"
+},
+{
+"abilityID": 97641,
+"simpleDesc": "获得随机增益效果"
+},
+{
+"abilityID": 97642,
+"simpleDesc": "获得随机属性的伤害强化"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5937,7 +8854,32 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加呼吸法 强度\n施加随机增益效果\n获得[Breath]与[Protection]\n造成的伤害增加\n恢复全部理智值\n施加[Paralysis]",
+"base": [
+{
+"abilityID": 9765,
+"simpleDesc": "增加呼吸法 强度"
+},
+{
+"abilityID": 97651,
+"simpleDesc": "施加随机增益效果"
+},
+{
+"abilityID": 97652,
+"simpleDesc": "获得[Breath]与[Protection]"
+},
+{
+"abilityID": 97653,
+"simpleDesc": "造成的伤害增加"
+},
+{
+"abilityID": 97654,
+"simpleDesc": "恢复全部理智值"
+},
+{
+"abilityID": 97655,
+"simpleDesc": "施加[Paralysis]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5953,7 +8895,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[RequestedTarget]",
+"base": [
+{
+"abilityID": 9766,
+"simpleDesc": "施加[RequestedTarget]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5969,7 +8916,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使自身获得[Enhancement]并对自身施加[Vulnerable]\n增加[Breath]强度\n突刺技能造成的伤害增加",
+"base": [
+{
+"abilityID": 9767,
+"simpleDesc": "使自身获得[Enhancement]并对自身施加[Vulnerable]"
+},
+{
+"abilityID": 97671,
+"simpleDesc": "增加[Breath]强度"
+},
+{
+"abilityID": 97672,
+"simpleDesc": "突刺技能造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -5985,7 +8945,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9768,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6001,7 +8966,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得[Enhancement]与[AttackDmgUp]\n获得[Enhancement]与[Endurance]",
+"base": [
+{
+"abilityID": 9769,
+"simpleDesc": "获得[Enhancement]与[AttackDmgUp]"
+},
+{
+"abilityID": 97691,
+"simpleDesc": "获得[Enhancement]与[Endurance]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6017,7 +8991,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得[DefenseUp]与[Endurance]\n首个命中的硬币造成的伤害增加",
+"base": [
+{
+"abilityID": 9770,
+"simpleDesc": "获得[DefenseUp]与[Endurance]"
+},
+{
+"abilityID": 97701,
+"simpleDesc": "首个命中的硬币造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6033,7 +9016,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得[Enhancement]\n3技能造成的伤害增加\n增加[Breath]强度并获得[Breath]层数",
+"base": [
+{
+"abilityID": 9771,
+"simpleDesc": "获得[Enhancement]"
+},
+{
+"abilityID": 97711,
+"simpleDesc": "3技能造成的伤害增加"
+},
+{
+"abilityID": 97712,
+"simpleDesc": "增加[Breath]强度并获得[Breath]层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6049,7 +9045,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加[Conbustion]强度\n施加[Conbustion]层数\n增加攻击等级",
+"base": [
+{
+"abilityID": 9772,
+"simpleDesc": "增加[Conbustion]强度"
+},
+{
+"abilityID": 97721,
+"simpleDesc": "施加[Conbustion]层数"
+},
+{
+"abilityID": 97722,
+"simpleDesc": "增加攻击等级"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6065,7 +9074,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[Burst]层数\n施加[Burst]层数\n增加攻击等级",
+"base": [
+{
+"abilityID": 9773,
+"simpleDesc": "施加[Burst]层数"
+},
+{
+"abilityID": 97731,
+"simpleDesc": "施加[Burst]层数"
+},
+{
+"abilityID": 97732,
+"simpleDesc": "增加攻击等级"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6081,7 +9103,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[DefenseDown]\n获得[AttackUp]\n",
+"base": [
+{
+"abilityID": 9774,
+"simpleDesc": "施加[DefenseDown]"
+},
+{
+"abilityID": 97741,
+"simpleDesc": "获得[AttackUp]"
+},
+{
+"abilityID": 97742,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6097,7 +9132,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[Burst]层数\n拼点威力增加，造成的伤害增加\n",
+"base": [
+{
+"abilityID": 9775,
+"simpleDesc": "施加[Burst]层数"
+},
+{
+"abilityID": 97751,
+"simpleDesc": "拼点威力增加，造成的伤害增加"
+},
+{
+"abilityID": 97752,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6113,7 +9161,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[Combustion]层数\n触发[Combustion]",
+"base": [
+{
+"abilityID": 9776,
+"simpleDesc": "施加[Combustion]层数"
+},
+{
+"abilityID": 97761,
+"simpleDesc": "触发[Combustion]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6129,7 +9186,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加[AttackDown]\n施加[Burst]层数\n",
+"base": [
+{
+"abilityID": 9777,
+"simpleDesc": "施加[AttackDown]"
+},
+{
+"abilityID": 97771,
+"simpleDesc": "施加[Burst]层数"
+},
+{
+"abilityID": 97772,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6145,7 +9215,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "攻击等级增加，造成的伤害增加\n获得攻击等级提升 ",
+"base": [
+{
+"abilityID": 9778,
+"simpleDesc": "攻击等级增加，造成的伤害增加"
+},
+{
+"abilityID": 97781,
+"simpleDesc": "获得攻击等级提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6161,7 +9240,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得攻击等级提升 \n恢复理智值",
+"base": [
+{
+"abilityID": 9779,
+"simpleDesc": "获得攻击等级提升 "
+},
+{
+"abilityID": 97791,
+"simpleDesc": "恢复理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6177,7 +9265,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "攻击等级增加，造成的伤害增加\n随机使友方单位获得攻击等级提升 \n随机使友方单位获得攻击等级提升 ",
+"base": [
+{
+"abilityID": 9780,
+"simpleDesc": "攻击等级增加，造成的伤害增加"
+},
+{
+"abilityID": 97801,
+"simpleDesc": "随机使友方单位获得攻击等级提升 "
+},
+{
+"abilityID": 97802,
+"simpleDesc": "随机使友方单位获得攻击等级提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6193,7 +9294,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得守护 并恢复理智值\n硬币威力与造成的伤害增加",
+"base": [
+{
+"abilityID": 9781,
+"simpleDesc": "获得守护 并恢复理智值"
+},
+{
+"abilityID": 97811,
+"simpleDesc": "硬币威力与造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6210,7 +9320,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得色欲威力提升 \n获得色欲威力提升 与斩击威力提升 ",
+"base": [
+{
+"abilityID": 2080,
+"simpleDesc": "获得色欲威力提升 "
+},
+{
+"abilityID": 20801,
+"simpleDesc": "获得色欲威力提升 与斩击威力提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6222,12 +9341,25 @@
 "name": "绝景",
 "category": "流血",
 "descriptions": {
-"base": "回合开始时，若属于黑云会的人格不低于3名，则触发该效果(以参战人员为基准)。\n\n回合开始时，使全体友方单位获得2层[ScarletResultUp]与1层[SlashResultUp]。\n\n属于黑云会的人格的基础攻击技能硬币威力+(4/硬币数)(最少+1)，增加的[Laceration]强度额外+1级，施加的[Laceration]层数额外+1层，造成的伤害+(80/硬币数)%。\n\n属于黑云会的人格第一混乱阈值无效，回合开始时若现存体力低于50%，则使自身获得2层[Protection]。本回合受到敌方单位伤害且属于黑云会的人格在下回合获得2层[Agility]。",
+"base": "回合开始时，若属于黑云会的人格不低于3名，则触发该效果(以参战人员为基准)。\n\n回合开始时，使全体友方单位获得2层[ScarletResultUp]与1层[SlashResultUp]。\n\n属于黑云会的人格的基础攻击技能硬币威力+(4/硬币数)(最少+1)，增加的[Laceration]强度额外+1级，施加的[Laceration]层数额外+1层，造成的伤害+(80/硬币数)%。\n\n属于黑云会的人格第一混乱阈值无效，回合开始时若现存体力低于50%，则使自身获得2层[Protection]。本回合受到敌方单位伤害的属于黑云会的人格在下回合获得2层[Agility]。",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得色欲威力提升 与斩击威力提升 \n硬币威力，增加的流血强度，施加的流血层数，造成的伤害增加\n第一混乱阈值无效，体力不高于一定值时获得守护 ，受到伤害时获得迅捷 ",
+"base": [
+{
+"abilityID": 2081,
+"simpleDesc": "获得色欲威力提升 与斩击威力提升 "
+},
+{
+"abilityID": 20811,
+"simpleDesc": "硬币威力，增加的流血强度，施加的流血层数，造成的伤害增加"
+},
+{
+"abilityID": 20812,
+"simpleDesc": "第一混乱阈值无效，体力不高于一定值时获得守护 ，受到伤害时获得迅捷 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6244,7 +9376,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得斩击威力提升 并使造成的伤害增加\n额外造成(自身的[Breath]强度/2)点傲慢伤害\n获得斩击伤害强化",
+"base": [
+{
+"abilityID": 2082,
+"simpleDesc": "获得斩击威力提升 并使造成的伤害增加"
+},
+{
+"abilityID": 20821,
+"simpleDesc": "额外造成(自身的[Breath]强度/2)点傲慢伤害"
+},
+{
+"abilityID": 20822,
+"simpleDesc": "获得斩击伤害强化"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6261,7 +9406,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害增加\n获得斩击伤害强化 ，攻击等级提升 与防御等级提升 \n获得伤害强化 ",
+"base": [
+{
+"abilityID": 9785,
+"simpleDesc": "造成的伤害增加"
+},
+{
+"abilityID": 97851,
+"simpleDesc": "获得斩击伤害强化 ，攻击等级提升 与防御等级提升 "
+},
+{
+"abilityID": 97852,
+"simpleDesc": "获得伤害强化 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6278,7 +9436,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力增加。属于中指的友方单位硬币威力与造成的伤害增加",
+"base": [
+{
+"abilityID": 9786,
+"simpleDesc": "拼点威力增加。属于中指的友方单位硬币威力与造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6294,7 +9457,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加破裂 强度\n增加破裂 强度，施加破裂 层数",
+"base": [
+{
+"abilityID": 9787,
+"simpleDesc": "增加破裂 强度"
+},
+{
+"abilityID": 97871,
+"simpleDesc": "增加破裂 强度，施加破裂 层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6305,12 +9477,17 @@
 "name": "卯足",
 "category": "破裂",
 "descriptions": {
-"base": "若自身的速度值高于目标，则令自身通过技能增加破裂 强度或施加破裂 层数时额外增加(速度值之差/3)级破裂 强度或额外施加(速度值之差/3)层破裂 ",
+"base": "若自身的速度值高于目标，则令自身通过技能增加破裂 强度或施加破裂 层数时额外增加(速度值之差/3)级破裂 强度或额外施加(速度值之差/3)层破裂 (最多3点)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加破裂 强度或施加破裂 层数",
+"base": [
+{
+"abilityID": 9788,
+"simpleDesc": "增加破裂 强度或施加破裂 层数"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6326,7 +9503,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的打击伤害增加。属于中指的友方单位获得攻击等级提升 ",
+"base": [
+{
+"abilityID": 9789,
+"simpleDesc": "造成的打击伤害增加。属于中指的友方单位获得攻击等级提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6342,7 +9524,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "拼点威力增加\n通过黑兽 - 卯符咒造成伤害时，额外造成伤害",
+"base": [
+{
+"abilityID": 9790,
+"simpleDesc": "拼点威力增加"
+},
+{
+"abilityID": 97901,
+"simpleDesc": "通过黑兽 - 卯符咒造成伤害时，额外造成伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6358,7 +9549,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得迅捷 \n造成的斩击伤害增加\n受到的伤害减少",
+"base": [
+{
+"abilityID": 9791,
+"simpleDesc": "获得迅捷 "
+},
+{
+"abilityID": 97911,
+"simpleDesc": "造成的斩击伤害增加"
+},
+{
+"abilityID": 97912,
+"simpleDesc": "受到的伤害减少"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6374,7 +9578,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的打击伤害增加。属于中指的友方单位获得攻击等级提升 \n打击技能威力增加\n最小与最大速度值增加",
+"base": [
+{
+"abilityID": 9792,
+"simpleDesc": "造成的打击伤害增加。属于中指的友方单位获得攻击等级提升 "
+},
+{
+"abilityID": 97921,
+"simpleDesc": "打击技能威力增加"
+},
+{
+"abilityID": 97922,
+"simpleDesc": "最小与最大速度值增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6390,7 +9607,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加破裂 强度\n增加破裂 强度\n拼点威力增加\n通过黑兽 - 卯符咒造成伤害时，额外造成伤害",
+"base": [
+{
+"abilityID": 9793,
+"simpleDesc": "增加破裂 强度"
+},
+{
+"abilityID": 97931,
+"simpleDesc": "增加破裂 强度"
+},
+{
+"abilityID": 97932,
+"simpleDesc": "拼点威力增加"
+},
+{
+"abilityID": 97933,
+"simpleDesc": "通过黑兽 - 卯符咒造成伤害时，额外造成伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6401,12 +9635,17 @@
 "name": "满满当当的燃料罐",
 "category": "泛用",
 "descriptions": {
-"base": "[第2、第4顺位人格专属]\n\n受到使体力降至0点的伤害时，以60%的概率不会受到伤害并使自身恢复30点体力(每场战斗最多1次)\n以下情况不会触发避免阵亡与体力恢复效果\n- 受到攻击时技能造成的伤害高于自身体力上限\n- 自身带有体力恢复降低 效果",
+"base": "[第2、第4顺位人格专属]\n\n受到使体力降至0点的伤害时，以60%的概率不会受到伤害并使自身恢复30点体力(每场战斗每个人格最多1次)\n以下情况不会触发避免阵亡与体力恢复效果\n- 受到攻击时技能造成的伤害高于自身体力上限\n- 自身带有体力恢复降低 效果",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复体力",
+"base": [
+{
+"abilityID": 9794,
+"simpleDesc": "恢复体力"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6422,7 +9661,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "流血 强度减少，获得血宴 \n获得威力提升 与伤害强化 ",
+"base": [
+{
+"abilityID": 9795,
+"simpleDesc": "流血 强度减少，获得血宴 "
+},
+{
+"abilityID": 979501,
+"simpleDesc": "获得威力提升 与伤害强化 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6438,7 +9686,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "暴击时造成的伤害增加\n暴击时造成的伤害增加",
+"base": [
+{
+"abilityID": 9796,
+"simpleDesc": "暴击时造成的伤害增加"
+},
+{
+"abilityID": 979601,
+"simpleDesc": "暴击时造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6454,7 +9711,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得火力 并施加易碎 \n",
+"base": [
+{
+"abilityID": 9797,
+"simpleDesc": "获得火力 并施加易碎 "
+},
+{
+"abilityID": 979701,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6470,7 +9736,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加贪食棘\n施加贪食棘",
+"base": [
+{
+"abilityID": 9798,
+"simpleDesc": "施加贪食棘"
+},
+{
+"abilityID": 979801,
+"simpleDesc": "施加贪食棘"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6486,7 +9761,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9799,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6502,7 +9782,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "\n获得攻击等级提升 ",
+"base": [
+{
+"abilityID": 9800,
+"simpleDesc": ""
+},
+{
+"abilityID": 980001,
+"simpleDesc": "获得攻击等级提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6518,7 +9807,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得防御等级提升 ",
+"base": [
+{
+"abilityID": 9801,
+"simpleDesc": "获得防御等级提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6534,7 +9828,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加1级破裂 强度\n\n获得1层充能 \n施加1层破裂",
+"base": [
+{
+"abilityID": 9802,
+"simpleDesc": "增加1级破裂 强度"
+},
+{
+"abilityID": 980201,
+"simpleDesc": ""
+},
+{
+"abilityID": 980202,
+"simpleDesc": "获得1层充能 "
+},
+{
+"abilityID": 980203,
+"simpleDesc": "施加1层破裂"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6550,7 +9861,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加3级破裂 强度并施加1层破裂 \n\n获得1层呼吸法 \n施加1层破裂",
+"base": [
+{
+"abilityID": 9803,
+"simpleDesc": "增加3级破裂 强度并施加1层破裂 "
+},
+{
+"abilityID": 980301,
+"simpleDesc": ""
+},
+{
+"abilityID": 980302,
+"simpleDesc": "获得1层呼吸法 "
+},
+{
+"abilityID": 980303,
+"simpleDesc": "施加1层破裂"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6566,7 +9894,24 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加呼吸法 强度并获得呼吸法 层数\n\n暴击时造成的伤害增加\n随机解除1种负面状态",
+"base": [
+{
+"abilityID": 9804,
+"simpleDesc": "增加呼吸法 强度并获得呼吸法 层数"
+},
+{
+"abilityID": 980401,
+"simpleDesc": ""
+},
+{
+"abilityID": 980402,
+"simpleDesc": "暴击时造成的伤害增加"
+},
+{
+"abilityID": 980403,
+"simpleDesc": "随机解除1种负面状态"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6582,7 +9927,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得[KnightBless]",
+"base": [
+{
+"abilityID": 9744,
+"simpleDesc": "获得[KnightBless]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6598,7 +9948,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加[Sinking]强度\n获得[Enhancement]",
+"base": [
+{
+"abilityID": 9806,
+"simpleDesc": "增加[Sinking]强度"
+},
+{
+"abilityID": 98061,
+"simpleDesc": "获得[Enhancement]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6614,7 +9973,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "额外造成忧郁伤害\n额外造成固定伤害",
+"base": [
+{
+"abilityID": 9807,
+"simpleDesc": "额外造成忧郁伤害"
+},
+{
+"abilityID": 98071,
+"simpleDesc": "额外造成固定伤害"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6630,7 +9998,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "随机恢复体力或理智值\n恢复理智值",
+"base": [
+{
+"abilityID": 9808,
+"simpleDesc": "随机恢复体力或理智值"
+},
+{
+"abilityID": 98081,
+"simpleDesc": "恢复理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6646,7 +10023,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得[AttackUp]\n获得[AttackUp]并施加[DefenseDown]",
+"base": [
+{
+"abilityID": 9809,
+"simpleDesc": "获得[AttackUp]"
+},
+{
+"abilityID": 98091,
+"simpleDesc": "获得[AttackUp]并施加[DefenseDown]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6662,7 +10048,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得[TraumaShield]",
+"base": [
+{
+"abilityID": 9810,
+"simpleDesc": "获得[TraumaShield]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6678,7 +10069,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得E.G.O资源\n恢复理智值",
+"base": [
+{
+"abilityID": 9811,
+"simpleDesc": "获得E.G.O资源"
+},
+{
+"abilityID": 98111,
+"simpleDesc": "恢复理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6694,7 +10094,12 @@
 "double_plus": "使敌方单位[Switch_Vibration]或[FusionVibration]时，使其[VibrationExplosion](每回合每名人格最多3次)"
 },
 "simple_descriptions": {
-"base": "使目标震颤引爆 ",
+"base": [
+{
+"abilityID": 9812,
+"simpleDesc": "使目标震颤引爆 "
+}
+],
 "plus": "使目标震颤引爆 ",
 "double_plus": "使目标震颤引爆 "
 },
@@ -6711,7 +10116,20 @@
 "double_plus": "[第1、第2、第3顺位人格专属]\n\n受到体力减少至0点的伤害时，体力不会低于1点，立即恢复体力上限80%的体力并解除自身的混乱(每场战斗每名人格最多1次，向上取整)\n本E.G.O饰品触发时，下回合起，本场战斗期间每回合开始时使自身获得2层[Enhancement]\n若自身属于T公司员工，则自身获得[TimeRentalTwoPersonality]时，使自身额外获得2层\n若自身属于T公司员工，则目标带有[TimeSuspend]时，使自身攻击技能造成的伤害+15%"
 },
 "simple_descriptions": {
-"base": "体力不会低于1点，立即恢复体力上限80%的体力\n获得时间租赁 时，额外获得\n若带有时间延付 ，则使自身造成的伤害增加",
+"base": [
+{
+"abilityID": 9813,
+"simpleDesc": "体力不会低于1点，立即恢复体力上限80%的体力"
+},
+{
+"abilityID": 98131,
+"simpleDesc": "获得时间租赁 时，额外获得"
+},
+{
+"abilityID": 98132,
+"simpleDesc": "若带有时间延付 ，则使自身造成的伤害增加"
+}
+],
 "plus": "体力不会低于1点，立即恢复体力上限80%的体力\n获得时间租赁 时，额外获得\n若带有时间延付 ，则使自身造成的伤害增加",
 "double_plus": "体力不会低于1点，立即恢复体力上限80%的体力\n获得时间租赁 时，额外获得\n若带有时间延付 ，则使自身造成的伤害增加"
 },
@@ -6728,7 +10146,12 @@
 "double_plus": "回合开始时，使[Vibration]层数最高的3名人格的[Vibration]以[VibrationDistribution][FusionVibration]"
 },
 "simple_descriptions": {
-"base": "以震颤-分配 振幅纠缠 ",
+"base": [
+{
+"abilityID": 9814,
+"simpleDesc": "以震颤-分配 振幅纠缠 "
+}
+],
 "plus": "以震颤-分配 振幅纠缠 ",
 "double_plus": "以震颤-分配 振幅纠缠 "
 },
@@ -6740,12 +10163,41 @@
 "name": "暗中行动",
 "category": "破裂",
 "descriptions": {
-"base": "属于黑兽 - 卯的人格首次登场时，3回合内使其最小速度值固定为10(若最小速度值不低于10，则不会触发该效果)\n\n自身每带有1层[FootworkMao]，使自身基础技能的拼点威力+1，造成的伤害+10%\n\n施加[CursekillSwift]时，额外对未带有[CursekillSwift]的2名敌方单位施加(每回合最多1次，若是集中遭遇战，则改为以部位判定)\n\n若自身的速度值高于目标，则令自身通过技能增加[Burst]强度或施加[Burst]层数时额外增加(速度值之差/3)级[Burst]强度或额外施加(速度值之差/3)层[Burst](最多3点)\n\n回合结束时，使属于黑兽 - 卯的友方单位在下回合获得2层[Agility]\n\n若自身的速度值高于目标或进行单方面攻击，则(速度值之差/3)每有1点，使自身造成的斩击伤害+10%(最多+30%)\n\n若自身的速度值高于目标，则(速度值之差/3)每有1点，使自身受到的伤害-10%(最多-30%)",
+"base": "属于黑兽 - 卯的人格首次登场时，3回合内使其最小速度值固定为10(若最小速度值不低于10，则不会触发该效果)\n\n自身每带有1层[LegStrength]，使自身基础技能的拼点威力+1，造成的伤害+10%\n\n施加[BurstAgility]时，额外对未带有[BurstAgility]的2名敌方单位施加(每回合最多1次，若是集中遭遇战，则改为以部位判定)\n\n若自身的速度值高于目标，则令自身通过技能增加[Burst]强度或施加[Burst]层数时额外增加(速度值之差/3)级[Burst]强度或额外施加(速度值之差/3)层[Burst](最多3点)\n\n回合结束时，使属于黑兽 - 卯的友方单位在下回合获得2层[Agility]\n若自身的速度值高于目标或进行单方面攻击，则(速度值之差/3)每有1点，使自身造成的斩击伤害+10%(最多+30%)\n若自身的速度值高于目标，则(速度值之差/3)每有1点，使自身受到的伤害-10%(最多-30%)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "黑兽-卯专属 破裂增强 速度加成",
+"base": [
+{
+"abilityID": 9272,
+"simpleDesc": "最小速度值固定"
+},
+{
+"abilityID": 92721,
+"simpleDesc": "拼点威力增加，造成的伤害增加"
+},
+{
+"abilityID": 92722,
+"simpleDesc": "额外施加[BurstAgility]"
+},
+{
+"abilityID": 92723,
+"simpleDesc": "技能增加[Burst]强度或施加[Burst]层数时，额外增加[Burst]强度或施加[Burst]层数"
+},
+{
+"abilityID": 92724,
+"simpleDesc": "回合结束时，下回合获得[Agility]"
+},
+{
+"abilityID": 92725,
+"simpleDesc": "造成的斩击伤害增加"
+},
+{
+"abilityID": 92726,
+"simpleDesc": "受到的伤害减少"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6762,7 +10214,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使自身获得5层超精密时间加速 ",
+"base": [
+{
+"abilityID": 9816,
+"simpleDesc": "使自身获得5层超精密时间加速 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6779,7 +10236,12 @@
 "double_plus": "士气低落或陷入恐慌的敌方单位技能的最终威力-3(未带有理智值的敌方单位改为带有的[Sinking]强度不低于10级时触发)\n- 增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的技能对该敌方单位造成伤害时，对其施加3层[DefenseDown](每回合最多3次)"
 },
 "simple_descriptions": {
-"base": "技能的最终威力减少，命中时施加防御等级降低 ",
+"base": [
+{
+"abilityID": 9817,
+"simpleDesc": "技能的最终威力减少，命中时施加防御等级降低 "
+}
+],
 "plus": "技能的最终威力减少，命中时施加防御等级降低 ",
 "double_plus": "技能的最终威力减少，命中时施加防御等级降低 "
 },
@@ -6795,7 +10257,12 @@
 "double_plus": "消耗[Charge]层数或特殊充能的技能对敌方单位造成伤害时，本回合使其物理抗性中最低的抗性+0.1(每回合最多2次)\n- 并对其施加1层[VioletResistDown]与1层[AzureResistDown]"
 },
 "simple_descriptions": {
-"base": "物理抗性中最低的抗性增加",
+"base": [
+{
+"abilityID": 9818,
+"simpleDesc": "物理抗性中最低的抗性增加"
+}
+],
 "plus": "物理抗性中最低的抗性增加",
 "double_plus": "物理抗性中最低的抗性增加"
 },
@@ -6807,12 +10274,21 @@
 "name": "血炎刀",
 "category": "烧伤",
 "descriptions": {
-"base": "战斗的首个回合开始时，使拥有使自身增加[Combustion]强度的基础攻击技能的人格增加5级[Combustion]强度并使其恢复8点理智值\n\n属于黑兽 - 酉的人格恢复体力至多恢复至体力上限的49%，但受到的伤害与使自身恢复的体力-50%(不包括E.G.O饰品恢复的体力)",
+"base": "战斗的首个回合开始时，使拥有使自身增加[Combustion]强度的基础攻击技能的人格增加5级[Combustion]强度并使其恢复8点理智值\n\n属于黑兽 - 酉的人格恢复体力最多恢复至体力上限的49%，但受到的伤害与使自身恢复的体力-50%(不包括E.G.O饰品恢复的体力)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "增加[Combustion]强度与攻击等级，并恢复理智值\n体力最大值固定，但受到的伤害与使自身恢复的体力减少",
+"base": [
+{
+"abilityID": 9819,
+"simpleDesc": "增加[Combustion]强度与攻击等级，并恢复理智值"
+},
+{
+"abilityID": 98191,
+"simpleDesc": "体力最大值固定，但受到的伤害与使自身恢复的体力减少"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6828,7 +10304,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使1名友方单位获得护盾与[Agility]\n根据速度值，相应增加震颤 强度，下回合增加防御等级",
+"base": [
+{
+"abilityID": 9820,
+"simpleDesc": "使1名友方单位获得护盾与[Agility]"
+},
+{
+"abilityID": 98201,
+"simpleDesc": "根据速度值，相应增加震颤 强度，下回合增加防御等级"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6844,7 +10329,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "下回合增加攻击等级\n下回合获得斩击威力提升 与斩击伤害强化 \n下回合获得威力提升 ",
+"base": [
+{
+"abilityID": 9821,
+"simpleDesc": "下回合增加攻击等级"
+},
+{
+"abilityID": 98211,
+"simpleDesc": "下回合获得斩击威力提升 与斩击伤害强化 "
+},
+{
+"abilityID": 98212,
+"simpleDesc": "下回合获得威力提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6860,7 +10358,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得防御等级提升，属于家主候选人的单位下回合额外获得[Agility]",
+"base": [
+{
+"abilityID": 9822,
+"simpleDesc": "获得防御等级提升，属于家主候选人的单位下回合额外获得[Agility]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6876,7 +10379,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得攻击等级提升，属于家主候选人的单位下回合额外获得[AttackUp]",
+"base": [
+{
+"abilityID": 9823,
+"simpleDesc": "获得攻击等级提升，属于家主候选人的单位下回合额外获得[AttackUp]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6892,7 +10400,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复体力，属于家主候选人的单位下回合额外获得[Protection]",
+"base": [
+{
+"abilityID": 9824,
+"simpleDesc": "恢复体力，属于家主候选人的单位下回合额外获得[Protection]"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6908,7 +10421,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得攻击等级提升与防御等级提升并恢复体力，若自身属于家主候选人，则下回合额外使包括自身在内的全体友方单位获得迅捷 ，守护 与攻击等级提升 ",
+"base": [
+{
+"abilityID": 9825,
+"simpleDesc": "获得攻击等级提升与防御等级提升并恢复体力，若自身属于家主候选人，则下回合额外使包括自身在内的全体友方单位获得迅捷 ，守护 与攻击等级提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6924,7 +10442,12 @@
 "double_plus": "[第2、第4、第6顺位人格专属]\n\n自身每失去1%的体力，使自身基础技能造成的伤害+1%(最多+10%)"
 },
 "simple_descriptions": {
-"base": "根据已失去体力使自身造成的伤害增加",
+"base": [
+{
+"abilityID": 9826,
+"simpleDesc": "根据已失去体力使自身造成的伤害增加"
+}
+],
 "plus": "根据已失去体力使自身造成的伤害增加",
 "double_plus": "根据已失去体力使自身造成的伤害增加"
 },
@@ -6935,12 +10458,29 @@
 "name": "家人的怨恨",
 "category": "流血",
 "descriptions": {
-"base": "关卡内生成的[BloodDinner]变为2倍\n增加[Laceration]强度，施加[Laceration]层数与施加特殊流血的技能攻击后，使自身恢复造成伤害量30%的体力(最多20点)\n- 通过以上效果恢复体力时，下回合使自身获得1层[Enhancement](最多2层)\n\n[BloodDinner_Common_Accumulation]层数每有50层，下回合开始时使全体友方单位获得1层[AttackUp](最多5层)\n属于拉·曼却领的友方单位每带有30层[BloodDinner_Accumulation]，下回合开始时使其获得1层[AttackUp](最多3层)",
+"base": "关卡内生成的血宴 变为2倍\n增加[Laceration]强度，施加[Laceration]层数与施加特殊流血的技能攻击后，使自身恢复造成伤害量30%的体力(最多20点)\n- 通过以上效果恢复体力时，下回合使自身获得1层[Enhancement](最多2层)\n\n[BloodDinner_Common_Accumulation]层数每有50层，下回合开始时使全体友方单位获得1层[AttackUp](最多5层)\n属于拉·曼却领的友方单位每带有30层[BloodDinner_Accumulation]，下回合开始时使其获得1层[AttackUp](最多3层)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "加算硬币技能的硬币威力增加，减算硬币技能的最终威力增加\n生成的血宴 增加\n恢复体力\n获得攻击等级提升 \n获得攻击等级提升 ",
+"base": [
+{
+"abilityID": 9827,
+"simpleDesc": "生成的血宴 增加"
+},
+{
+"abilityID": 98271,
+"simpleDesc": "恢复体力"
+},
+{
+"abilityID": 98272,
+"simpleDesc": "获得攻击等级提升 "
+},
+{
+"abilityID": 98272,
+"simpleDesc": "获得攻击等级提升 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6956,7 +10496,28 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "加算硬币技能的硬币威力增加，减算硬币技能的最终威力增加\n获得迅捷 \n造成震颤引爆 \n造成暴怒伤害\n硬币威力增加\n造成的伤害增加",
+"base": [
+{
+"abilityID": 9828,
+"simpleDesc": "获得迅捷 "
+},
+{
+"abilityID": 98281,
+"simpleDesc": "造成震颤引爆 "
+},
+{
+"abilityID": 98282,
+"simpleDesc": "造成暴怒伤害"
+},
+{
+"abilityID": 98283,
+"simpleDesc": "硬币威力增加"
+},
+{
+"abilityID": 98284,
+"simpleDesc": "造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6967,12 +10528,33 @@
 "name": "中指规矩",
 "category": "打击",
 "descriptions": {
-"base": "打击基础技能的硬币威力+1，属于中指的人格改为硬币威力+2\n友方单位受到攻击时，下回合使全体友方单位获得2层[AttackUp](每回合最多3次)\n\n战斗中属于中指的人格不低于3名时，触发以下效果\n战斗开始时，每有3点嫉妒共鸣数，获得1层[Enhancement]与1层[Protection](最多3层)\n属于中指的人格使用嫉妒基础技能时，使该技能的所有硬币转化为[SuperCoin]，该人格受到的伤害-50%，并在本回合与下回合获得2层[HitDamageUp]",
+"base": "打击基础技能的硬币威力+1，属于中指的人格改为硬币威力+2\n友方单位受到攻击时，下回合使全体友方单位获得2层[AttackUp](每回合最多3次)\n\n战斗中属于中指的人格不低于3名时，触发以下效果\n战斗开始时，每有1点嫉妒共鸣数，获得1层[Enhancement]与1层[Protection](最多3层)\n属于中指的人格使用嫉妒基础技能时，使该技能的所有硬币转化为[SuperCoin]，该人格受到的伤害-50%，\n并在本回合与下回合获得2层[HitDamageUp]",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "加算硬币技能的硬币威力增加，减算硬币技能的最终威力增加\n硬币威力增加\n硬币威力增加\n增加攻击等级\n获得强壮 与守护 \n转化为不可摧毁的硬币，受到的伤害减少，获得打击伤害强化",
+"base": [
+{
+"abilityID": 9829,
+"simpleDesc": "硬币威力增加"
+},
+{
+"abilityID": 98291,
+"simpleDesc": "硬币威力增加"
+},
+{
+"abilityID": 98292,
+"simpleDesc": "增加攻击等级"
+},
+{
+"abilityID": 98293,
+"simpleDesc": "获得强壮 与守护 "
+},
+{
+"abilityID": 98294,
+"simpleDesc": "转化为不可摧毁的硬币，受到的伤害减少，造成的打击伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -6988,7 +10570,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "加算硬币技能的硬币威力增加，减算硬币技能的最终威力增加\n获得备用糖果 \n获得饥饿",
+"base": [
+{
+"abilityID": 9830,
+"simpleDesc": "获得备用糖果 "
+},
+{
+"abilityID": 98301,
+"simpleDesc": "获得饥饿 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7004,7 +10595,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "造成的伤害增加",
+"base": [
+{
+"abilityID": 9831,
+"simpleDesc": "造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7020,7 +10616,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使用技能时，根据硬币类型决定恢复或失去理智值\n理智值为最大值或不高于-30点时，获得威力提升与守护",
+"base": [
+{
+"abilityID": 9832,
+"simpleDesc": "使用技能时，根据硬币类型决定恢复或失去理智值"
+},
+{
+"abilityID": 98321,
+"simpleDesc": "理智值为最大值或不高于-30点时，获得威力提升与守护"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7036,7 +10641,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得持有量最少的3种E.G.O资源各1个\n获得3个持有量最少的E.G.O资源",
+"base": [
+{
+"abilityID": 9833,
+"simpleDesc": "获得持有量最少的3种E.G.O资源各1个"
+},
+{
+"abilityID": 98331,
+"simpleDesc": "获得3个持有量最少的E.G.O资源"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7052,7 +10666,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "施加防御等级降低",
+"base": [
+{
+"abilityID": 9834,
+"simpleDesc": "施加防御等级降低"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7063,12 +10682,25 @@
 "name": "闪耀的提灯",
 "category": "泛用",
 "descriptions": {
-"base": "[最先编入的人格专属]\n\n每回合首个使用的攻击技能的最终威力+3\n若该攻击技能为E.G.O技能，则改为最终威力+4，造成的伤害+25%\n\n战斗开始时，若自身带有[NervousImpairment]，则消耗至多4层[NervousImpairment]并使自身增加(消耗的[NervousImpairment]层数×2)级[Combustion]强度",
+"base": "[最先编入的人格专属]\n\n每回合首个使用的攻击技能的最终威力+3\n若该攻击技能为E.G.O技能，则改为最终威力+4，造成的伤害+25%\n\n战斗开始时，若自身带有[NervousImpairment]，则消耗最多4层[NervousImpairment]并使自身增加(消耗的[NervousImpairment]层数×2)级[Combustion]强度",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "每回合首个使用的攻击技能的最终威力增加\n每回合首个使用的攻击技能最终威力与造成的伤害增加\n若自身带有神经损伤 ，则消耗神经损伤 层数并相应增加烧伤 强度",
+"base": [
+{
+"abilityID": 9835,
+"simpleDesc": "每回合首个使用的攻击技能的最终威力增加"
+},
+{
+"abilityID": 98351,
+"simpleDesc": "每回合首个使用的攻击技能最终威力与造成的伤害增加"
+},
+{
+"abilityID": 98352,
+"simpleDesc": "若自身带有神经损伤 ，则消耗神经损伤 层数并相应增加烧伤 强度"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7079,12 +10711,25 @@
 "name": "古旧乐谱残章",
 "category": "沉沦",
 "descriptions": {
-"base": "包括E.G.O技能在内的攻击技能仅攻击命中1个敌方单位时(若是异想体，则改为以部位判定)，使该技能造成的伤害+10%\n若该技能为增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的技能，则改为造成的伤害+25%\n\n[涌潮悲歌 以实玛利 E.G.O专属效果]\n若该E.G.O技能仅命中1个敌方单位，则使该技能最后一枚硬币的威力+4，造成的伤害+20%",
+"base": "包括E.G.O技能在内的攻击技能仅攻击命中1个敌方单位时(若是异想体，则改为以部位判定)，使该技能造成的伤害+10%\n若该技能为增加[Sinking]强度，施加[Sinking]层数或施加特殊沉沦的技能，则改为造成的伤害+25%\n\n[涌潮悲歌 以实玛利 E.G.O专属]\n若该E.G.O技能仅命中1个敌方单位，则使该技能最后一枚硬币的威力+4，造成的伤害+20%",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "攻击容量为1的技能攻击命中时造成的伤害增加\n攻击容量为1且施加沉沦的技能攻击命中时造成的伤害增加\n涌潮悲歌 以实玛利 E.G.O获得强化",
+"base": [
+{
+"abilityID": 9836,
+"simpleDesc": "攻击容量为1的技能攻击命中时造成的伤害增加"
+},
+{
+"abilityID": 98361,
+"simpleDesc": "攻击容量为1且施加沉沦的技能攻击命中时造成的伤害增加"
+},
+{
+"abilityID": 98362,
+"simpleDesc": "涌潮悲歌 以实玛利 E.G.O获得强化"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7095,12 +10740,25 @@
 "name": "金属构造体",
 "category": "破裂",
 "descriptions": {
-"base": "回合开始时，使全体友方单位获得2层[TakeHpHealIncrease]\n拥有增加[Burst]强度或施加[Burst]层数的攻击技能的人格改为获得4层[TakeHpHealIncrease]\n\n[指令：熔毁 浮士德 E.G.O专属效果]\n该E.G.O技能效果与被动恢复的溢出体力会转化为护盾",
+"base": "回合开始时，使全体友方单位获得2层[TakeHpHealIncrease]\n拥有增加[Burst]强度或施加[Burst]层数的攻击技能的人格改为获得4层[TakeHpHealIncrease]\n\n[指令：熔毁 浮士德 E.G.O专属]\n该E.G.O技能效果与被动恢复的溢出体力会转化为护盾",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得体力恢复提升\n获得体力恢复提升\n指令：熔毁 浮士德 E.G.O获得强化",
+"base": [
+{
+"abilityID": 9837,
+"simpleDesc": "获得体力恢复提升"
+},
+{
+"abilityID": 98371,
+"simpleDesc": "获得体力恢复提升"
+},
+{
+"abilityID": 98372,
+"simpleDesc": "指令：熔毁 浮士德 E.G.O获得强化"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7111,12 +10769,25 @@
 "name": "宿月酒盏",
 "category": "呼吸法",
 "descriptions": {
-"base": "回合开始时，使全体友方单位恢复5点理智值。若理智值为最大值，则改为增加相当于溢出恢复量的[Breath]强度(最多5级)\n使用使自身或其他单位增加[Breath]强度或获得[Breath]层数的攻击技能时，使自身获得2层[Breath](每回合每名人格最多1次)\n\n[宁作吾 鸿璐 E.G.O专属效果]\n- 觉醒：使用该E.G.O技能时改为恢复理智值，而非消耗理智值\n- 侵蚀：使用该E.G.O技能时消耗的理智值-50%",
+"base": "回合开始时，使全体友方单位恢复5点理智值。若理智值为最大值，则改为增加相当于溢出恢复量的[Breath]强度(最多5级)\n使用使自身或其他单位增加[Breath]强度或获得[Breath]层数的攻击技能时，使自身获得2层[Breath](每回合每名人格最多1次)\n\n[宁作吾 鸿璐 E.G.O专属]\n- 觉醒：使用该E.G.O技能时改为恢复理智值，而非消耗理智值\n- 侵蚀：使用该E.G.O技能时消耗的理智值-50%",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "恢复理智值。若理智值为最大值，则改为增加呼吸法 强度\n使用使自身或其他单位增加呼吸法 强度或获得呼吸法 层数的攻击技能时获得呼吸法 层数\n宁作吾 鸿璐 E.G.O获得强化",
+"base": [
+{
+"abilityID": 9838,
+"simpleDesc": "恢复理智值。若理智值为最大值，则改为增加呼吸法 强度"
+},
+{
+"abilityID": 98381,
+"simpleDesc": "使用使自身或其他单位增加呼吸法 强度或获得呼吸法 层数的攻击技能时获得呼吸法 层数"
+},
+{
+"abilityID": 98382,
+"simpleDesc": "宁作吾 鸿璐 E.G.O获得强化"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7127,12 +10798,25 @@
 "name": "造型古典的拆信刀",
 "category": "震颤",
 "descriptions": {
-"base": "攻击容量不低于2的技能造成的伤害+15%\n增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的技能改为造成的伤害+(15+攻击容量×5)%(最多+50%)\n\n[未照耀的荣光 格里高尔 E.G.O专属效果]\n- 觉醒：每重复使用1次该E.G.O技能的硬币，使其造成的伤害+20%(最多+60%)\n- 侵蚀：攻击前每消耗10层[MlynarWaiting]，使自身获得1层[AttackDmgUp](最多4层)",
+"base": "攻击容量不低于2的技能造成的伤害+15%\n增加[Vibration]强度，施加[Vibration]层数或施加特殊震颤的技能改为造成的伤害+(15+攻击容量×5)%(最多+50%)\n\n[未照耀的荣光 格里高尔 E.G.O专属]\n- 觉醒：每重复使用1次该E.G.O技能的硬币，使其造成的伤害+20%(最多+60%)\n- 侵蚀：攻击前每消耗10层[MlynarWaiting]，使自身获得1层[AttackDmgUp](最多4层)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "使用攻击容量不低于2的技能时造成的伤害增加\n使用攻击容量不低于2且施加震颤的技能时造成的伤害增加\n未照耀的荣光 格里高尔 E.G.O获得强化",
+"base": [
+{
+"abilityID": 9839,
+"simpleDesc": "使用攻击容量不低于2的技能时造成的伤害增加"
+},
+{
+"abilityID": 98391,
+"simpleDesc": "使用攻击容量不低于2且施加震颤的技能时造成的伤害增加"
+},
+{
+"abilityID": 98392,
+"simpleDesc": "未照耀的荣光 格里高尔 E.G.O获得强化"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7148,7 +10832,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得应急力场电池 ",
+"base": [
+{
+"abilityID": 9840,
+"simpleDesc": "获得应急力场电池 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7160,12 +10849,49 @@
 "name": "C型清扫人员装备套组",
 "category": "充能",
 "descriptions": {
-"base": "使用获得[Charge]层数或特殊充能的技能后，使自身获得相应层数的[EmergencyChargeForceField](每名人格最多7层)\n\n消耗[Charge]层数或特殊充能的技能造成的伤害+(编队中拥有获得或消耗[Charge]层数或特殊充能的人格数)%(包括编队中全体单位)\n\n消耗[Charge]层数或特殊充能的1技能的拼点威力+3，造成的伤害+15% \n- 使用该技能时，使自身获得4层[Charge]与1层[ChargeForceField](每回合每名人格最多1次)\n\n属于W公司的人格获得以下效果\n- 通过技能(包括E.G.O技能)对敌方单位造成伤害时，对其施加2层[TakeHpHealReduce](不可叠加)\n- 战斗中，自身受到除技能直接伤害以外的体力伤害时，使自身获得5层[ChargeForceField](每回合每名人格最多1次)\n- 2技能的拼点威力+3，造成的伤害+15%\n- 回合开始时，本回合使自身3技能造成的伤害+(属于W公司的人格数×6.25)%\n- 回合开始时，使属于W公司 2级 员工的单位获得1层[PlusCoinValueUp]\n- 回合开始时，使自身获得(参战且属于W公司的人格数/3)层[ChargeLoad](最多2层，向下取整)\n-使最先编入且拥有施加[DimensionRift]的基础技能的人格中不属于W公司的1名人格视作属于W公司的人格",
+"base": "使用获得[Charge]层数或特殊充能的技能后，使自身获得相应层数的[EmergencyChargeForceField](每名人格最多7层)\n\n消耗[Charge]层数或特殊充能的技能造成的伤害+(编队中拥有获得或消耗[Charge]层数或特殊充能的人格数)%(包括编队中全体单位)\n\n消耗[Charge]层数或特殊充能的1技能的拼点威力+3，造成的伤害+15% \n- 使用该技能时，使自身获得4层[Charge]与1层[ChargeForceField](每回合每名人格最多1次)\n\n属于W公司的人格获得以下效果\n- 通过技能(包括E.G.O技能)对敌方单位造成伤害时，对其施加2层[TakeHpHealReduce](不可叠加)\n- 战斗中，自身受到除技能直接伤害以外的体力伤害时，使自身获得5层[ChargeForceField](每回合每名人格最多1次)\n- 2技能的拼点威力+3，造成的伤害+15%\n- 回合开始时，本回合使自身3技能造成的伤害+(属于W公司的人格数×6.25)%\n- 回合开始时，使属于W公司 2级 员工的单位获得1层[PlusCoinValueUp]\n- 回合开始时，使自身获得(参战且属于W公司的人格数/3)层[ChargeLoad](最多2层，向下取整)\n使最先编入且拥有施加[DimensionRift]的基础技能的人格中不属于W公司的1名人格视作属于W公司的人格",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得应急力场电池 \n消耗充能 层数的技能造成的伤害增加\n1技能的拼点威力与造成的伤害增加，获得充能 层数与充能力场 \n施加体力恢复降低 \n获得充能力场 \n2技能的拼点威力与造成的伤害增加\n3技能造成的伤害增加\n获得加算硬币强化 \n获得载荷 ",
+"base": [
+{
+"abilityID": 9841,
+"simpleDesc": "获得应急力场电池 "
+},
+{
+"abilityID": 98411,
+"simpleDesc": "消耗充能 层数的技能造成的伤害增加"
+},
+{
+"abilityID": 98412,
+"simpleDesc": "1技能的拼点威力与造成的伤害增加，获得充能 层数与充能力场 "
+},
+{
+"abilityID": 98413,
+"simpleDesc": "施加体力恢复降低 "
+},
+{
+"abilityID": 98414,
+"simpleDesc": "获得充能力场 "
+},
+{
+"abilityID": 98415,
+"simpleDesc": "2技能的拼点威力与造成的伤害增加"
+},
+{
+"abilityID": 98416,
+"simpleDesc": "3技能造成的伤害增加"
+},
+{
+"abilityID": 98417,
+"simpleDesc": "获得加算硬币强化 "
+},
+{
+"abilityID": 98418,
+"simpleDesc": "获得载荷 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7182,7 +10908,20 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得血宴 ，增加流血 强度并施加流血 层数\n受到的流血 伤害减少\n造成的流血 伤害增加",
+"base": [
+{
+"abilityID": 9842,
+"simpleDesc": "获得血宴 ，增加流血 强度并施加流血 层数"
+},
+{
+"abilityID": 98421,
+"simpleDesc": "受到的流血 伤害减少"
+},
+{
+"abilityID": 98422,
+"simpleDesc": "造成的流血 伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7199,7 +10938,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "获得硬血铸造 ",
+"base": [
+{
+"abilityID": 9843,
+"simpleDesc": "获得硬血铸造 "
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7233,7 +10977,16 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "打击技能命中恢复体力 反击恢复理智",
+"base": [
+{
+"abilityID": 9269,
+"simpleDesc": "根据伤害量，相应恢复体力"
+},
+{
+"abilityID": 92691,
+"simpleDesc": "恢复理智值"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7262,12 +11015,14 @@
 "name": "钉与锤",
 "category": "流血",
 "descriptions": {
-"base": "属于N公司狂信徒的友方单位基础威力+3\n\n属于N公司狂信徒的人格获得狂信时，使全体属于N公司狂信徒的人格获得相应层数的狂信(每回合最多1次；包括自身)\n- 激活色欲完全共鸣时，令获得的狂信层数变为3倍\n\n关卡开始时，对全体敌方单位施加2层尖钉\n\n属于N公司狂信徒的人格的基础技能与带有尖钉的目标进行拼点时，使该目标增加3级流血强度(每个技能最多1次)\n\n属于N公司狂信徒的人格的基础技能对带有尖钉的目标造成的伤害+100%",
+"base": "属于N公司狂信徒的友方单位基础威力+3\n\n属于N公司狂信徒的人格获得[AssemblePersonality]时，使全体属于N公司狂信徒的人格获得相应层数的[AssemblePersonality](每回合最多1次；包括自身)\n- 激活色欲完全共鸣时，令获得的[AssemblePersonality]层数变为3倍\n\n关卡开始时，对全体敌方单位施加2层[NailPersonality]\n\n属于N公司狂信徒的人格的基础技能与带有[NailPersonality]的目标进行拼点时，使该目标增加3级[Laceration]强度(每个技能最多1次)\n\n属于N公司狂信徒的人格的基础技能对带有[NailPersonality]的目标造成的伤害+100%",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "N公司狂信徒专属 基础威力增加 狂信共享 尖钉增伤",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7283,7 +11038,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9991,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7299,7 +11059,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9992,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7315,7 +11080,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9993,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7331,7 +11101,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9994,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7347,7 +11122,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9995,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7363,7 +11143,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9279,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7374,12 +11159,29 @@
 "name": "赤红纠缠的蜘蛛巢",
 "category": "泛用",
 "descriptions": {
-"base": "每有 1 名友方人格阵亡，使全体友方单位增加 1 级攻击等级与 1 级防御等级 (最多 10 级)\n编入蜘蛛巢之刃 良秀时，除蜘蛛巢之刃 良秀以外的人格阵亡时不会在通过关卡后复活 (头目与隐藏节点)\n\n[第 1 顺位人格专属]\n回合开始时，若除自身以外的全体友方单位均阵亡，则使自身获得 [Tornbutterfly]\n[蜘蛛巢之刃 良秀专属]\n自身在战斗中首次登场时，每有 1 名属于蜘蛛巢的友方人格阵亡，使自身获得 5 层 地彗星刀\n每有 2 名属于蜘蛛巢的友方人格阵亡，使自身的最终威力 + 1，硬币威力 + 1，造成的伤害 + 10%(分别最多 + 3 与 + 30%)\n除蜘蛛巢之刃 良秀以外的全体友方单位均阵亡时，所有选项变动值 + 12\n",
+"base": "每有1名友方人格阵亡，使全体友方单位增加1级攻击等级与1级防御等级(最多10级)\n\n编入蜘蛛巢之刃 良秀时，除蜘蛛巢之刃 良秀以外的人格阵亡时不会在通过关卡后复活(头目与隐藏节点)\n\n[第1顺位人格专属]\n\n回合开始时，若除自身以外的全体友方单位均阵亡，则使自身获得[RedButterfly]\n\n[蜘蛛巢之刃 良秀专属]\n\n自身在战斗中首次登场时，每有1名属于蜘蛛巢的友方人格阵亡，使自身获得5层[PhantomIncisionTotalID]\n每有2名属于蜘蛛巢的友方人格阵亡，使自身的最终威力+1，硬币威力+1，造成的伤害+10%(分别最多+3与+30%)\n除蜘蛛巢之刃 良秀以外的全体友方单位均阵亡时，所有选项变动值+12",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9273,
+"simpleDesc": "增加攻击等级与防御等级"
+},
+{
+"abilityID": 92731,
+"simpleDesc": "获得[RedButterfly]"
+},
+{
+"abilityID": 92732,
+"simpleDesc": "获得[PhantomIncisionTotalID]"
+},
+{
+"abilityID": 92733,
+"simpleDesc": "最终威力，硬币威力与造成的伤害增加"
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7390,12 +11192,14 @@
 "name": "燃烧的命运",
 "category": "烧伤",
 "descriptions": {
-"base": "与带有[Combustion]的目标拼点胜利时，以(20+(暴怒共鸣数×10))%的概率触发目标的[Combustion]1次，并使目标的[Combustion]层数减少1层(每回合最多4次)\n- 若目标的[Combustion]强度不低于90级，则100%概率触发以上效果(若是集中遭遇战，则改为以部位判定)",
+"base": "最大[Combustion]强度+30\n\n与带有[Combustion]的目标拼点胜利时，触发其[Combustion]1次，并使其[Combustion]层数减少1层(每名人格最多1次)\n\n对带有[Combustion]的敌方单位使用技能时，使该技能增加(主要目标的[Combustion]强度/10)级攻击等级(最多8级)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7406,12 +11210,17 @@
 "name": "白瓷砚滴",
 "category": "泛用",
 "descriptions": {
-"base": "友方人格获得[AidDefense]时，使其获得2层[AttackDmgUp]与2层[Protection]\n[第1顺位友方单位专属]\n回合结束时，下回合使自身获得2层[Agility]\n若人格的速度值高于敌方单位，则速度值每相差1点，使该人格造成的伤害+3%(最多+30%)",
+"base": "友方人格获得[SupportProtect]时，使其获得2层[AttackDmgUp]与2层[Protection]\n\n[第1顺位友方单位专属]\n回合结束时，下回合使自身获得2层[Agility]\n若人格的速度值高于敌方单位，则速度值每相差1点，使该人格造成的伤害+3%(最多+30%)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9276,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7427,7 +11236,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9275,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7438,12 +11252,14 @@
 "name": "再来一杯！",
 "category": "泛用",
 "descriptions": {
-"base": "消耗[Vibration]层数或[Charge]层数的基础技能造成的伤害+20%(包括特殊充能，不包括固定强度的特殊充能)\n通过基础技能消耗[Vibration]层数或[Charge]层数时，该技能结束时对自身重新施加相当于消耗层数一半的[Vibration]层数或[Charge]层数(最少1层，向下取整；包括特殊充能，不包括固定强度的特殊充能)",
+"base": "消耗[Vibration]层数或[Charge]层数的基础技能造成的伤害+20%(包括特殊<noparse>充能</noparse>，不包括固定强度的特殊<noparse>充能</noparse>)\n\n通过基础技能消耗[Vibration]层数或[Charge]层数时，该技能结束时对自身重新施加相当于消耗层数一半的[Vibration]层数或[Charge]层数(最少1层，向下取整；包括特殊<noparse>充能</noparse>，不包括固定强度的特殊<noparse>充能</noparse>)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7454,12 +11270,14 @@
 "name": "拍手啪啪！",
 "category": "震颤",
 "descriptions": {
-"base": "使敌方单位增加[Vibration]强度，对敌方单位施加[Vibration]层数或对敌方单位施加特殊震颤的基础技能拼点胜利时，随机使目标以以下的特殊震颤[FusionVibration]\n(每回合最多1次)\n- [VibrationIgnition]\n- [VibrationBleeding]\n- [VibrationEcho]\n- [VibrationCollapse]\n- [VibrationChain]",
+"base": "使敌方单位增加[Vibration]强度，对敌方单位施加[Vibration]层数或对敌方单位施加特殊<noparse>震颤</noparse>的基础技能拼点胜利时，随机使目标以以下的特殊<noparse>震颤</noparse>[FusionVibration](每回合最多1次)\n- [VibrationIgnition]\n- [VibrationBleeding]\n- [VibrationEcho]\n- [VibrationCollapse]\n- [VibrationChainPersonality]",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7470,12 +11288,17 @@
 "name": "菖蒲剑",
 "category": "斩击",
 "descriptions": {
-"base": "若友方单位在本回合未受到敌方单位攻击，则下回合使该友方单位获得1层[SlashDamageUp]\n友方单位受到敌方单位攻击时，使该友方单位增加4级[Breath]强度并在本回合与下回合中使该友方单位获得1层[CriticalDamageUp](每回合每名人格最多1次)\n- 对于属于剑契组的人格，本饰品的效果变为2倍",
+"base": "若友方单位在本回合未受到敌方单位攻击，则下回合使该友方单位获得1层[SlashDamageUp]\n友方单位受到敌方单位攻击时，使该友方单位增加4级[Breath]强度并在本回合与下回合使该友方单位获得1层[CriticalDamageUp](每回合每名人格最多1次)\n- 对于属于剑契组的人格，本饰品的效果变为2倍",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9277,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7486,12 +11309,17 @@
 "name": "捕绳",
 "category": "呼吸法",
 "descriptions": {
-"base": "暴击命中敌方单位时，下回合对其施加1层[Binding](每回合最多2次)\n技能命中带有[Binding]的敌方单位时，使自身增加1级[Breath]强度(每回合每名人格最多2次)\n回合开始时，对带有[Laceration]的全体敌方单位施加层数相当于其[Binding]层数的[AttackDown](最多5层)\n回合开始时，若全体敌方单位(若是集中遭遇战，则改为以部位判定)均带有[Binding]，则使全体友方单位增加3级[Breath]强度",
+"base": "暴击命中敌方单位时，下回合对其施加1层[Binding](每回合最多2次)\n技能命中带有[Binding]的敌方单位时，使自身增加1级[Breath]强度(每回合每名人格最多2次)\n\n回合开始时，对带有[Laceration]的全体敌方单位施加层数相当于其[Binding]层数的[AttackDown](最多5层)\n\n回合开始时，若全体敌方单位(若是集中遭遇战，则改为以部位判定)均带有[Binding]，则使全体友方单位增加3级[Breath]强度",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9274,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7502,12 +11330,14 @@
 "name": "量产型K公司安瓿",
 "category": "泛用",
 "descriptions": {
-"base": "[第1顺位人格专属]\n关卡开始时，使自身获得1层[KAmpouleA1C94TH]",
+"base": "[第1顺位人格专属]\n关卡开始时，使自身获得1层[KAmpouleMirror]",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7518,12 +11348,17 @@
 "name": "翼形蜡烛",
 "category": "烧伤",
 "descriptions": {
-"base": "回合开始时，若属于黎明事务所的人格不低于3名，则触发该效果(以编队人员为基准)\n首个回合开始时，使全体友方单位获得2层[DawnHerald]\n战斗开始时，使黎明事务所 收尾人 辛克莱恢复10点理智值，该人格通过被动“不稳定的自我外壳”进入不稳定E.G.O::蜡翼状态的理智值条件改为不低于25点\n\n[属于黎明事务所的人格专属]\n基础技能攻击命中时，使目标增加2级[Combustion]强度与2级[Vibration]强度(每个技能最多1次)\n属于黎明事务所的人格视作施加[Combustion]与[Vibration]的人格\n- 属于黎明事务所的人格的基础技能视作施加[Combustion]与[Vibration]的技能\n关卡开始时，若黎明事务所 收尾人 浮士德在场，则使其获得1层[BattleInstinct]",
+"base": "回合开始时，若属于<noparse>黎明事务所</noparse>的人格不低于3名，则触发该效果(以编队人员为基准)\n首个回合开始时，使全体友方单位获得2层[DawnLight]\n战斗开始时，使<noparse>黎明事务所</noparse> 收尾人 辛克莱恢复10点理智值，该人格通过被动“不稳定的自我外壳”进入不稳定E.G.O::蜡翼状态的理智值条件改为不低于25点\n\n[属于<noparse>黎明事务所</noparse>的人格专属]\n基础技能攻击命中时，使目标增加2级[Combustion]强度与2级[Vibration]强度(每个技能最多1次)\n属于<noparse>黎明事务所</noparse>的人格视作施加[Combustion]与[Vibration]的人格\n- 属于<noparse>黎明事务所</noparse>的人格的基础技能视作施加[Combustion]与[Vibration]的技能\n关卡开始时，若<noparse>黎明事务所</noparse> 收尾人 浮士德在场，则使其获得1层[Firstlight]",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9281,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7539,7 +11374,12 @@
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9278,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7550,12 +11390,14 @@
 "name": "旋转木马模型",
 "category": "流血",
 "descriptions": {
-"base": "首个回合开始时，获得300层[BloodDinner]\n令[Laceration]效果生成的[BloodDinner]变为2倍\n使用消耗[BloodDinner]的技能时，在该技能攻击后额外消耗相应层数的[BloodDinner]\n[属于拉·曼却领的人格专属]\n属于拉·曼却领的人格参战时，根据人格触发以下效果\n- 拉·曼却领 总督 堂吉诃德：获得15层[Hardblood]\n- 拉·曼却领 公主 罗佳：获得15层[BloomingThorns]\n- 拉·曼却领 神父 格里高尔：获得15层[BloodyHand]\n- 拉·曼却领 理发师 奥提斯：获得15层[BloodScissorScars]\n- 拉·曼却领 王子 默尔索：获得3层[BloodArmorCasting]\n\n[拉·曼却领 总督 堂吉诃德专属]\n- 除自身以外每有1名属于拉·曼却领的人格，使拉·曼却领 总督 堂吉诃德的基础技能的最终威力+1，造成的伤害+30%(最多+4；最多+120%；包括待命人员，包括阵亡的单位，不包括未编入的单位)",
+"base": "首个回合开始时，获得300层[BloodDinner]\n令[Laceration]效果生成的[BloodDinner]变为2倍\n使用消耗[BloodDinner]的技能时，在该技能攻击后额外消耗相应层数的[BloodDinner]\n\n[属于拉·曼却领的人格专属]\n属于拉·曼却领的人格参战时，根据人格触发以下效果\n- 拉·曼却领 总督 堂吉诃德：获得15层[BloodArmorPersonalityFirst]\n- 拉·曼却领 公主 罗佳：获得15层[BloomingThornsRodionFirst]\n- 拉·曼却领 神父 格里高尔：获得15层[BloodyHandGregFirst]\n- 拉·曼却领 理发师 奥提斯：获得15层[BloodScissorPersonalityFirst]\n- 拉·曼却领 王子 默尔索：获得3层[BloodArmorMeursault]\n\n[拉·曼却领 总督 堂吉诃德专属]\n- 除自身以外每有1名属于拉·曼却领的人格，使拉·曼却领 总督 堂吉诃德的基础技能的最终威力+1，造成的伤害+30%(最多+4；最多+120%；包括待命人员，包括阵亡的单位，不包括未编入的单位)",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{}
+],
 "plus": "",
 "double_plus": ""
 },
@@ -7566,12 +11408,17 @@
 "name": "本国剑谱",
 "category": "斩击",
 "descriptions": {
-"base": "若敌方单位的斩击抗性不高于1.5，则使其斩击抗性+0.3\n斩击技能的攻击等级+2\n攻击斩击抗性为脆弱(抗性超过1.0；不包括陷入混乱)的敌方单位时，使自身造成的斩击伤害+(5+目标的斩击抗性×10)%(最多+25%)\n自身每带有1级[Breath]强度，使自身斩击技能造成的伤害+1.5%(最多+30%)\n使不属于剑契组且属于S公司的人格中最先编入的1名人格视作属于剑契组的人格并使其在每回合获得[SwordStriking]\n回合开始时，若属于剑契组的人格不低于3名，则触发该效果(以参战人员为基准)\n战斗开始时使装备了暴怒或傲慢技能且属于剑契组的人格获得1层[SwordStriking]",
+"base": "若敌方单位的斩击抗性不高于1.5，则使其斩击抗性+0.3\n斩击技能的攻击等级+2\n攻击斩击抗性为脆弱(抗性超过1.0；不包括陷入混乱)的敌方单位时，使自身造成的斩击伤害+(5+目标的斩击抗性×10)%(最多+25%)\n\n自身每带有1级[Breath]强度，使自身斩击技能造成的伤害+1.5%(最多+30%)\n\n使不属于剑契组且属于S公司的人格中最先编入的1名人格视作属于剑契组的人格并使其在每回合获得[BongukGiftEnhance]\n\n回合开始时，若属于剑契组的人格不低于3名，则触发该效果(以参战人员为基准)\n- 战斗开始时使装备了暴怒或傲慢技能且属于剑契组的人格获得1层[BongukGiftEnhance]",
 "plus": "",
 "double_plus": ""
 },
 "simple_descriptions": {
-"base": "",
+"base": [
+{
+"abilityID": 9280,
+"simpleDesc": ""
+}
+],
 "plus": "",
 "double_plus": ""
 },
