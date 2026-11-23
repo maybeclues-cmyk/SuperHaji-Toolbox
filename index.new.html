@@ -165,6 +165,14 @@ async function boot(){
       if (!arr.includes(pid)) { arr.push(pid); S.user.packMap[key] = arr; }
     }
   }
+  /* 每个卡包实际挂了多少饰品（判"要不要显示"用真实数据，权威表只兜底） */
+  S.packGiftCount = {};
+  for (const g of S.gifts) {
+    const key = String(g.id);
+    const v = S.user.packMap[key];
+    const arr = Array.isArray(v) ? v.map(String) : (v ? [String(v)] : []);
+    for (const pid of arr) S.packGiftCount[pid] = (S.packGiftCount[pid] || 0) + 1;
+  }
   route();
 }
 function route(){
@@ -304,7 +312,8 @@ document.addEventListener('click', e => { if(!$('ctxMenu').contains(e.target)) $
 /* ---------- 卡包 ---------- */
 function renderPacks(){
   const q = S.q.trim().toLowerCase();
-  const hasSrc = p => { const v = S.packSrc && S.packSrc[nrmName(p.name)]; return Array.isArray(v) && v.length > 0; };
+  const hasSrc = p => (S.packGiftCount && S.packGiftCount[String(p.id)] > 0)
+    || !!(S.packSrc && (S.packSrc[nrmName(p.name)] || []).length);
   const list = S.packs.filter(hasSrc).filter(p=>!q||(p.name||'').toLowerCase().includes(q));
   const cur = S.packOpen ? S.packs.find(p=>String(p.id)===String(S.packOpen)) : null;
   $('app').innerHTML = `<div class="card-pack-page">
