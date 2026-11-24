@@ -1,0 +1,52 @@
+/* ============================================================
+   skin5.css —— 找回 BGM 按钮各自的颜色（深色底 + 彩色字 + 彩色边）
+   ============================================================ */
+
+/* 总开关：金 */
+#bgmMute{
+  color:#f0c840 !important;
+  border-color:#8a6a14 !important;
+  background:linear-gradient(180deg,#241d0a,#100c04) !important;
+}
+/* 雷：血红 */
+#bgmLei{
+  color:#e85a5a !important;
+  border-color:#7a2222 !important;
+  background:linear-gradient(180deg,#25100f,#100505) !important;
+}
+/* 马：紫 */
+#bgmMat{
+  color:#c07ae0 !important;
+  border-color:#5e2a72 !important;
+  background:linear-gradient(180deg,#1e1026,#0b0510) !important;
+}
+/* 眠：绿 */
+#bgmMao{
+  color:#8ee05e !important;
+  border-color:#3a6a22 !important;
+  background:linear-gradient(180deg,#14240c,#060d03) !important;
+}
+/* 末：橙金 */
+#bgmHa{
+  color:#f0a83a !important;
+  border-color:#7a4a10 !important;
+  background:linear-gradient(180deg,#26190a,#0e0803) !important;
+}
+/* 莲：冰蓝 */
+#bgmLian{
+  color:#7abeF0 !important;
+  border-color:#2a5a80 !important;
+  background:linear-gradient(180deg,#0c1c28,#04090e) !important;
+}
+
+/* 悬停时各自的颜色亮一层 */
+#bgmMute:hover{background:linear-gradient(180deg,#33280d,#171006) !important;box-shadow:0 0 12px rgba(240,200,64,.55) !important}
+#bgmLei:hover{background:linear-gradient(180deg,#361616,#160707) !important;box-shadow:0 0 12px rgba(232,90,90,.55) !important}
+#bgmMat:hover{background:linear-gradient(180deg,#2c1736,#100716) !important;box-shadow:0 0 12px rgba(192,122,224,.55) !important}
+#bgmMao:hover{background:linear-gradient(180deg,#1c3311,#080f04) !important;box-shadow:0 0 12px rgba(142,224,94,.55) !important}
+#bgmHa:hover{background:linear-gradient(180deg,#372413,#130b04) !important;box-shadow:0 0 12px rgba(240,168,58,.55) !important}
+#bgmLian:hover{background:linear-gradient(180deg,#13293b,#050b10) !important;box-shadow:0 0 12px rgba(122,190,240,.55) !important}
+
+/* 总开关关着的时候，后面的 BGM 按钮压暗（保留色相） */
+.nav-btn--muted{filter:brightness(.85)}
+.nav-btn--muted ~ .nav-btn{filter:brightness(.5) saturate(.55)}
