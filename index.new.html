@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="skin16.css?v=20261125a">
 <link rel="stylesheet" href="skin17.css?v=20261125a">
 <link rel="stylesheet" href="skin18.css?v=20261125a">
+<link rel="stylesheet" href="skin19.css?v=20261125a">
 <style>
 body{margin:0}
 .gift-card{cursor:pointer}
@@ -378,11 +379,24 @@ function openGift(id, grade){
       <div><div class="modal-name">${esc(g.name)}</div><div class="modal-category">${esc(cat)}${r?' · '+esc(r):''}</div></div>
       ${catImg(cat)?`<img class="modal-category-icon" src="${catImg(cat)}">`:''}
     </div>
-    ${gradeBtns.length>1?`<div class="modal-controls"><div class="pill-group">${gradeBtns.map(([k,lbl])=>`<button class="pill-btn ${k===cur?'active':''}" data-grade="${k}">${lbl}</button>`).join('')}</div></div>`:''}
+    <div class="modal-controls">
+      ${gradeBtns.length>1?`<div class="pill-group">${gradeBtns.map(([k,lbl])=>`<button class="pill-btn ${k===cur?'active':''}" data-grade="${k}">${lbl}</button>`).join('')}</div>`:''}
+      <button class="plan-toggle ${S.sel.includes(String(g.id))?'in-plan':''}" id="planToggle">${S.sel.includes(String(g.id))?'− 从楼层规划移除':'+ 加入楼层规划'}</button>
+    </div>
     ${d[cur]?`<div class="modal-description">${describe(d[cur])}</div>`:''}
     ${(()=>{ const rel=[...recs,...usedIn].filter((v,i,a)=>a.indexOf(v)===i); return rel.length?`<div class="recipe-panel__label">合成方式</div>${rel.map(rr=>`<div class="recipe-panel__list">${(rr.materialIds||[]).map(matHtml).join('<span class="recipe-panel__plus">+</span>')}<span class="recipe-panel__plus">=</span>${(()=>{const res=giftById(rr.resultId);return res?entry(res.id,res.name):`<span class="recipe-panel__gift-name">${esc(rr.resultId)}</span>`})()}</div>`).join('')}`:'' })()}`;
   $('modal').classList.add('open');
   document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>openGift(id, b.dataset.grade));
+  /* 点详情里的按钮也能加/移除，手机上没有右键 */
+  const pt = $('planToggle');
+  if(pt) pt.onclick = () => {
+    const sid = String(g.id), i = S.sel.indexOf(sid);
+    if(i>=0) S.sel.splice(i,1); else S.sel.push(sid);
+    savePlanSel();
+    const inPlan = S.sel.includes(sid);
+    pt.textContent = inPlan ? '− 从楼层规划移除' : '+ 加入楼层规划';
+    pt.classList.toggle('in-plan', inPlan);
+  };
 }
 
 /* ---------- 右键菜单 ---------- */

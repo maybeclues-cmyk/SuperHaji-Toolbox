@@ -1,0 +1,42 @@
+/* ============================================================
+   skin19.css —— 详情弹窗里的「加入/移除楼层规划」按钮
+   ============================================================ */
+
+.plan-toggle{
+  padding:6px 16px;
+  border-radius:16px;
+  font-size:13px;
+  font-family:LimbusFont,sans-serif;
+  cursor:pointer;
+  color:#9fd4ea;
+  border:1px solid #2a5a72;
+  background:linear-gradient(180deg,#0d1a24,#050a0f);
+  transition:all .15s;
+  white-space:nowrap;
+}
+.plan-toggle:hover{
+  color:#c9ecff;
+  border-color:#4a8fb0;
+  box-shadow:0 0 12px rgba(90,168,230,.5);
+}
+.plan-toggle.in-plan{
+  color:#f0d06a;
+  border-color:#8a6a14;
+  background:linear-gradient(180deg,#2a2210,#141005);
+}
+.plan-toggle.in-plan:hover{
+  color:#ffe9a0;
+  border-color:#c9a227;
+  box-shadow:0 0 12px rgba(201,162,39,.55);
+}
+
+/* 手机上按钮大一点，好点 */
+@media (max-width: 768px){
+  .plan-toggle{
+    padding:9px 18px;
+    font-size:14px;
+    width:100%;
+    margin-top:6px;
+  }
+  .modal-controls{flex-wrap:wrap}
+}
