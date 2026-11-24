@@ -463,10 +463,12 @@ function packDetailHtml(p){
   const idsOf = g => { const v=S.user.packMap[String(g.id)]; return Array.isArray(v)?v.map(String):(v?[String(v)]:[]); };
   const G = S.gifts.filter(g=>idsOf(g).includes(String(p.id)));
   const inPack = new Set(G.map(g=>String(g.id)));
-  const synth = new Set(S.recipes.filter(r=>inPack.has(String(r.resultId)) && (r.materialIds||[]).some(m=>inPack.has(String(m)))).map(r=>String(r.resultId)));
+  /* 卡包里有材料 → 它合成出来的东西显示在右边（不管结果是不是本包的） */
+  const synth = new Set(S.recipes.filter(r=>(r.materialIds||[]).some(m=>inPack.has(String(m)))).map(r=>String(r.resultId)));
   const isRep = g => (S.user.labels[g.id]||'')==='复刻';
   const V = G.filter(g=>!synth.has(String(g.id)) && !isRep(g));
-  const F = G.filter(g=>synth.has(String(g.id)) && !isRep(g));
+  const outF = S.gifts.filter(g=>synth.has(String(g.id)) && !inPack.has(String(g.id)) && !isRep(g));
+  const F = G.filter(g=>synth.has(String(g.id)) && !isRep(g)).concat(outF);
   const H = G.filter(isRep);
   const z = H.filter(g=>!synth.has(String(g.id)));
   const Y = H.filter(g=>synth.has(String(g.id)));
@@ -524,12 +526,13 @@ function groups4(packId){
   const idsOf = g => { const v=S.user.packMap[String(g.id)]; return Array.isArray(v)?v.map(String):(v?[String(v)]:[]); };
   const G = S.gifts.filter(g=>idsOf(g).includes(String(packId)));
   const inPack = new Set(G.map(g=>String(g.id)));
-  const synth = new Set(S.recipes.filter(r=>inPack.has(String(r.resultId)) && (r.materialIds||[]).some(m=>inPack.has(String(m)))).map(r=>String(r.resultId)));
+  const synth = new Set(S.recipes.filter(r=>(r.materialIds||[]).some(m=>inPack.has(String(m)))).map(r=>String(r.resultId)));
   const isRep = g => (S.user.labels[g.id]||'')==='复刻';
+  const outF = S.gifts.filter(g=>synth.has(String(g.id)) && !inPack.has(String(g.id)) && !isRep(g));
   return {
     G,
     V: G.filter(g=>!synth.has(String(g.id)) && !isRep(g)),
-    F: G.filter(g=>synth.has(String(g.id)) && !isRep(g)),
+    F: G.filter(g=>synth.has(String(g.id)) && !isRep(g)).concat(outF),
     H: G.filter(isRep),
     z: G.filter(g=>isRep(g) && !synth.has(String(g.id))),
     Y: G.filter(g=>isRep(g) && synth.has(String(g.id))),
