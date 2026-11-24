@@ -43,7 +43,7 @@
   filter:none !important;
 }
 
-.gift-card::before{opacity:1}
+.gift-card:hover::before{opacity:1}
 
 /* 姣忓眰浠ヤ笉鍚岄€熷害銆佷笉鍚屾柟鍚戜綅绉?鈥斺€?鐪嬭捣鏉ュ氨鍍忓嚑鏉＄嚎鍚勮蛋鍚勭殑 */
 @keyframes flowLayers{
@@ -76,4 +76,5 @@
   transform:translateY(-1px) !important;
   filter:none !important;
 }
+
 
