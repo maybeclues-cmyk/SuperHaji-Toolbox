@@ -1,0 +1,61 @@
+/* ============================================================
+   skin20.css —— 悬浮窗（#hoverPanel = .recipe-panel）改冷色
+   ============================================================ */
+
+.recipe-panel{
+  background:linear-gradient(180deg,rgba(17,24,36,.97),rgba(5,8,13,.99)) !important;
+  border-left:1px solid #2b3546 !important;
+  box-shadow:-6px 0 28px rgba(0,0,0,.8), inset 1px 0 0 rgba(255,255,255,.05) !important;
+  color:#c9d4e4 !important;
+  border-radius:10px 0 0 10px;
+}
+
+/* 顶部那道金边 */
+.recipe-panel::before{
+  content:"";position:absolute;left:0;right:0;top:0;height:2px;
+  background:linear-gradient(90deg,#c9a227,rgba(201,162,39,.15));
+  border-radius:10px 0 0 0;
+  pointer-events:none;
+}
+
+.recipe-panel__title{color:#f0d06a !important;text-shadow:0 0 12px rgba(201,162,39,.45)}
+.recipe-panel__label{color:#c9a227 !important}
+.recipe-panel__close{color:#8a95a8 !important}
+.recipe-panel__close:hover{color:#f0d06a !important}
+
+.recipe-panel__gift-name{color:#c9d4e4 !important}
+.recipe-panel__name{color:#c9d4e4 !important}
+.recipe-panel__plus{color:#5c6b80 !important}
+
+.recipe-panel__entry{
+  background:rgba(20,28,42,.6);
+  border-radius:6px;
+  padding:4px 6px;
+}
+
+.recipe-panel__desc{
+  background:#070b11 !important;
+  border:1px solid #2b3546 !important;
+  color:#8f9bad !important;
+}
+
+.recipe-panel__packs{
+  border-top:1px solid rgba(90,168,230,.16) !important;
+  padding-top:10px;
+  margin-top:12px;
+}
+.recipe-panel__packs-title{color:#c9a227 !important}
+
+.recipe-panel__pack-item{
+  background:rgba(255,255,255,.02);
+  border-radius:6px;
+  padding:4px;
+}
+.recipe-panel__pack-img{
+  border:none !important;
+  border-radius:4px;
+}
+.recipe-panel__pack-name{color:#9fb0c6 !important}
+
+/* 里头的卡包小图不要边框 */
+.recipe-panel .recipe-panel__pack-img{box-shadow:none !important}
