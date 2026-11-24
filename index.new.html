@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="skin14.css?v=20261125a">
 <link rel="stylesheet" href="skin15.css?v=20261125a">
 <link rel="stylesheet" href="skin16.css?v=20261125a">
+<link rel="stylesheet" href="skin17.css?v=20261125a">
 <style>
 body{margin:0}
 .gift-card{cursor:pointer}
@@ -145,7 +146,16 @@ function loadUser(){
   S.user.cats = u.giftCategoryOverrides || {};
   S.user.labels = u.giftLabels || {};
   S.user.packMap = JSON.parse(JSON.stringify(u.giftCardPackMap || {}));
-  S.sel = [];   // 楼层规划选中是临时状态，不落地
+  /* 楼层规划选中的饰品：个人偏好，单独存，跟数据文件无关 */
+  try {
+    const v = JSON.parse(localStorage.getItem('may_plan_sel') || 'null');
+    S.sel = Array.isArray(v) ? v.map(String) : [];
+  } catch(e){ S.sel = []; }
+}
+
+/* 只存"勾了哪些饰品"，不碰任何数据 */
+function savePlanSel(){
+  try { localStorage.setItem('may_plan_sel', JSON.stringify(S.sel)); } catch(e){}
 }
 function saveUser(){ /* no-op：数据只从文件来 */ }
 const giftById = id => S.gifts.find(g => String(g.id) === String(id));
@@ -386,7 +396,7 @@ function openCtx(id, x, y){
   $('ctxSel').onclick = () => {
     const s=String(g.id), i=S.sel.indexOf(s);
     if(i>=0) S.sel.splice(i,1); else S.sel.push(s);
-    saveUser(); menu.classList.remove('open'); render();
+    savePlanSel(); menu.classList.remove('open'); render();
   };
 }
 document.addEventListener('click', e => { if(!$('ctxMenu').contains(e.target)) $('ctxMenu').classList.remove('open'); });
@@ -648,6 +658,9 @@ function renderPlan(){
     <div class="planning-page__section">
       <div class="section-header">
         <h3 class="section-title">已选中饰品（${sel.length}）</h3>
+        <button class="plan-btn" id="planExport" title="把当前方案存成文件，发给别人">导出方案</button>
+        <button class="plan-btn" id="planImport" title="读入别人分享的方案文件">导入方案</button>
+        <input type="file" id="planFile" accept=".json,application/json" style="display:none">
         ${sel.length?`<button class="clear-all-btn" id="clearAll">清除全部</button>`:''}
       </div>
       ${(groups.filter(g=>g.gifts.length).map(gr=>`<div class="selected-group">${gr.gifts.map(g=>`<div class="selected-item" data-id="${g.id}">${cardHtml(g)}<button class="selected-item__remove" data-remove="${g.id}">×</button></div>`).join('')}</div>`).join('')) || '<div class="selected-list__empty">还没选饰品，去图鉴点卡片「加入规划」</div>'}
@@ -662,10 +675,46 @@ function renderPlan(){
   document.querySelectorAll('[data-remove]').forEach(b=>b.onclick=ev=>{
     ev.stopPropagation();
     S.sel = S.sel.filter(x=>x!==String(b.dataset.remove));
-    saveUser(); renderPlan();
+    savePlanSel(); renderPlan();
   });
   const ca=$('clearAll');
-  if(ca) ca.onclick=()=>{ if(confirm('确定清除所有已选中饰品？')){ S.sel=[]; saveUser(); renderPlan(); } };
+  if(ca) ca.onclick=()=>{ if(confirm('确定清除所有已选中饰品？')){ S.sel=[]; savePlanSel(); renderPlan(); } };
+
+  /* 导出方案：{ version, name, gifts:[id...] } */
+  const pe = $('planExport');
+  if(pe) pe.onclick = () => {
+    const data = { version: 1, name: 'E.G.O 楼层方案', gifts: S.sel.slice() };
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 1)], {type:'application/json'}));
+    a.download = 'egogift-plan.json';
+    document.body.appendChild(a); a.click(); a.remove();
+  };
+  /* 导入方案 */
+  const pi = $('planImport'), pf = $('planFile');
+  if(pi && pf){
+    pi.onclick = () => pf.click();
+    pf.onchange = () => {
+      const f = pf.files && pf.files[0];
+      if(!f) return;
+      const rd = new FileReader();
+      rd.onload = () => {
+        try {
+          const obj = JSON.parse(String(rd.result));
+          const arr = Array.isArray(obj) ? obj : (obj.gifts || []);
+          const ids = arr.map(x => String(typeof x === 'object' ? (x.id ?? x) : x)).filter(Boolean);
+          const valid = ids.filter(id => giftById(id));
+          if(!valid.length){ alert('这个文件里没有认识的饰品。'); return; }
+          if(valid.length < ids.length){
+            if(!confirm(`文件里 ${ids.length} 件，其中 ${ids.length - valid.length} 件在库里找不到，只导入认得的那 ${valid.length} 件？`)) return;
+          }
+          S.sel = [...new Set(valid)];
+          savePlanSel(); renderPlan();
+        } catch(e){ alert('读不懂这个文件。'); }
+      };
+      rd.readAsText(f);
+      pf.value = '';
+    };
+  }
   document.querySelectorAll('[data-pack]').forEach(el=>{
     el.onmouseenter = () => { S.planHover = el.dataset.pack; refreshFloorDetail(); };
     el.onmouseleave = () => { S.planHover = null; refreshFloorDetail(); };

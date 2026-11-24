@@ -1,0 +1,25 @@
+/* ============================================================
+   skin17.css —— 楼层规划：导出/导入按钮
+   ============================================================ */
+
+.plan-btn{
+  padding:4px 12px;
+  border-radius:14px;
+  font-size:12px;
+  font-family:LimbusFont,sans-serif;
+  cursor:pointer;
+  color:#9fd4ea;
+  border:1px solid #2a5a72;
+  background:linear-gradient(180deg,#0d1a24,#050a0f);
+  transition:all .15s;
+}
+.plan-btn:hover{
+  color:#c9ecff;
+  border-color:#4a8fb0;
+  box-shadow:0 0 10px rgba(90,168,230,.5);
+  background:linear-gradient(180deg,#122b3a,#071017);
+}
+.plan-btn:active{transform:translateY(1px)}
+
+/* 按钮排在标题右边 */
+.section-header{gap:10px !important}
