@@ -191,8 +191,31 @@ async function boot(){
       return o;
     });
   })();
-  /* 合成表以 data/recipes_preset.json 为唯一准绳；浏览器里那份旧 egogift_recipes 不再读（老数据会带出乱序和重复） */
-  S.recipes = Array.isArray(r) ? r : [];
+  /* 合成表：浏览器里的 egogift_recipes 是准绳（那里有她手改过的版本，绝不能丢）；
+     data/recipes_preset.json 只负责「补新增」和「给初始顺序」——浏览器里有的条目原样保留、原样排位。 */
+  S.recipes = (()=>{ try{
+    const v = JSON.parse(localStorage.getItem('egogift_recipes')||'null');
+    const base = Array.isArray(r)?r:[];
+    if(!Array.isArray(v) || !v.length) return base;
+    const key = x => String(x.resultId)+'|'+((x.materialIds||[]).join(','));
+    const have = new Set(v.map(key));
+    const list = v.slice();
+    /* 把 preset 里「浏览器还没有」的条目，插到它在 preset 中前一条之后（前一条不在浏览器里就继续往前找） */
+    for(const b of base){
+      const k = key(b);
+      if(have.has(k)) continue;
+      let pos = -1;
+      for(let i = base.indexOf(b)-1; i >= 0; i--){
+        const pk = key(base[i]);
+        const at = list.findIndex(x=>key(x)===pk);
+        if(at >= 0){ pos = at + 1; break; }
+      }
+      if(pos < 0) pos = list.length;
+      list.splice(pos, 0, b);
+      have.add(k);
+    }
+    return list;
+  }catch(e){ return Array.isArray(r)?r:[]; } })();
   /* 卡包饰品：数据里写死的 gifts 合并进 packMap（localStorage 优先） */
   for(const pk of S.packs){
     if(!Array.isArray(pk.gifts)) continue;
