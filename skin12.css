@@ -1,0 +1,104 @@
+/* ============================================================
+   skin12.css —— 金属边框元素（竖向金属轨 + 铆钉 + 分段高光）
+   ============================================================ */
+
+/* ---------- 通用：一条竖向金属轨（左右各用到） ---------- */
+/* 主面板左右两侧加金属条，盖在内容之上，pointer-events 关掉 */
+.compendium,.card-pack-page,.recipe-page,.planning-page{
+  position:relative;
+}
+.compendium::before,.card-pack-page::before,.recipe-page::before,.planning-page::before{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;top:0 !important;bottom:0 !important;
+  width:11px !important;
+  border-radius:8px 0 0 8px;
+  pointer-events:none;
+  z-index:4;
+  background:
+    /* 铆钉/分段高光：每 22px 一小段亮线 */
+    repeating-linear-gradient(180deg,
+      rgba(255,255,255,.55) 0 2px,
+      transparent 2px 9px,
+      rgba(160,200,240,.22) 9px 11px,
+      transparent 11px 22px),
+    /* 金属柱体：左暗 → 中间亮点 → 右暗 */
+    linear-gradient(90deg,
+      #0a0f16 0%,
+      #1b2432 22%,
+      #3a4a62 46%,
+      #55688a 52%,
+      #2a3548 62%,
+      #121924 100%);
+  box-shadow:inset 0 0 6px rgba(0,0,0,.9), 1px 0 4px rgba(0,0,0,.75);
+  opacity:.95;
+}
+.compendium::after,.card-pack-page::after,.recipe-page::after,.planning-page::after{
+  content:"" !important;
+  position:absolute !important;
+  right:0 !important;top:0 !important;bottom:0 !important;
+  width:11px !important;
+  border-radius:0 8px 8px 0;
+  pointer-events:none;
+  z-index:4;
+  background:
+    repeating-linear-gradient(180deg,
+      rgba(255,255,255,.45) 0 2px,
+      transparent 2px 11px,
+      rgba(160,200,240,.18) 11px 13px,
+      transparent 13px 26px),
+    linear-gradient(90deg,
+      #121924 0%,
+      #2a3548 30%,
+      #55688a 46%,
+      #3a4a62 54%,
+      #1b2432 78%,
+      #0a0f16 100%);
+  box-shadow:inset 0 0 6px rgba(0,0,0,.9), -1px 0 4px rgba(0,0,0,.75);
+  opacity:.95;
+}
+
+/* 面板内容往内让出金属条的位置 */
+.compendium,.card-pack-page,.recipe-page,.planning-page{
+  padding-left:14px !important;
+  padding-right:14px !important;
+}
+
+/* ---------- 导航栏：两端加金属块 ---------- */
+.nav-bar::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:14px;pointer-events:none;
+  background:
+    repeating-linear-gradient(180deg,rgba(255,255,255,.4) 0 2px,transparent 2px 10px),
+    linear-gradient(90deg,#080c12,#28313f 45%,#4a5a72 52%,#1a2230 100%);
+  box-shadow:2px 0 6px rgba(0,0,0,.6);
+}
+.nav-bar::after{
+  /* 原来的下沿锁链保留，改成从右侧起 */
+  left:14px !important;
+}
+
+/* ---------- 卡包格子：给封面加金属边 ---------- */
+.pack-item__cover{
+  position:relative;
+}
+.pack-item__cover::after{
+  content:"";position:absolute;inset:0;border-radius:4px;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.16),transparent 18%,transparent 82%,rgba(0,0,0,.35));
+  box-shadow:
+    inset 0 0 0 1px rgba(120,160,210,.35),
+    inset 0 0 8px rgba(0,0,0,.5);
+}
+
+/* ---------- 搜索框：左边一条金属 shorts ---------- */
+.search-wrapper{position:relative}
+.search-wrapper::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:6px;border-radius:4px 0 0 4px;
+  background:
+    repeating-linear-gradient(180deg,rgba(255,255,255,.5) 0 1.5px,transparent 1.5px 7px),
+    linear-gradient(90deg,#0a0f16,#2e3a4c 50%,#141b26);
+  pointer-events:none;opacity:.8;
+}
+.search-wrapper .search-input{
+  padding-left:20px !important;
+}
