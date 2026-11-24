@@ -22,8 +22,8 @@ body{margin:0}
 .ctx-item{padding:6px 12px;cursor:pointer;font-size:13px;color:#d4b896}
 .ctx-item:hover{background:#5a3a1a}
 .recipe-panel{display:none}.recipe-panel.open{display:block}
-.recipe-icon-wrapper{background:url(gift-bg.png) center/contain no-repeat;border-radius:6px;padding:3px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s}
-.recipe-icon-wrapper:hover{background:url(gift-bg-hover.png) center/contain no-repeat}
+.recipe-icon-wrapper{background:url(gift-bg.webp) center/contain no-repeat;border-radius:6px;padding:3px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s}
+.recipe-icon-wrapper:hover{background:url(gift-bg-hover.webp) center/contain no-repeat}
 .recipe-panel__title{color:#ffba00;font-size:16px;margin:0 0 10px}
 .recipe-panel__gift-icon{width:64px;height:64px;object-fit:contain;vertical-align:middle}
 .recipe-panel__gift-name{font-size:15px;color:#e8ddc9;margin-left:8px}
@@ -84,10 +84,10 @@ body{margin:0}
 <body>
 <div class="app">
   <nav class="nav-bar">
-    <a class="nav-link" href="#/gifts" data-page="gifts"><img class="nav-icon" src="nav-icon-pack.png" alt="">饰品图鉴</a>
-    <a class="nav-link" href="#/packs" data-page="packs"><img class="nav-icon" src="nav-icon-gift.png" alt="">卡包饰品</a>
-    <a class="nav-link" href="#/plan" data-page="plan"><img class="nav-icon" src="nav-icon-floor.png" alt="">楼层规划</a>
-    <a class="nav-link" href="#/recipes" data-page="recipes"><img class="nav-icon" src="nav-icon-recipe.png" alt="">合成方式</a>
+    <a class="nav-link" href="#/gifts" data-page="gifts"><img class="nav-icon" src="nav-icon-pack.webp" alt="">饰品图鉴</a>
+    <a class="nav-link" href="#/packs" data-page="packs"><img class="nav-icon" src="nav-icon-gift.webp" alt="">卡包饰品</a>
+    <a class="nav-link" href="#/plan" data-page="plan"><img class="nav-icon" src="nav-icon-floor.webp" alt="">楼层规划</a>
+    <a class="nav-link" href="#/recipes" data-page="recipes"><img class="nav-icon" src="nav-icon-recipe.webp" alt="">合成方式</a>
     <button class="nav-btn nav-btn--mute" id="bgmMute" title="总开关"><span class="mute-icon">♪</span></button>
     <button class="nav-btn nav-btn--leiheng hidden" id="bgmLei" title="BGM：雷恒">雷</button>
     <button class="nav-btn nav-btn--matthias hidden" id="bgmMat" title="BGM：马蒂亚斯">马</button>
@@ -104,8 +104,8 @@ body{margin:0}
 const CAT_ICON = {烧伤:'Combustion',流血:'Laceration',震颤:'Vibration',破裂:'Burst',沉沦:'Sinking',呼吸法:'Breath',充能:'Charge',斩击:'Slash',突刺:'Pierce',打击:'Blunt',泛用:'none'};
 const RARITIES = ['EX','V','IV','III','II','I'];
 const S = {gifts:[],packs:[],recipes:[],user:{rarities:{},cats:{},labels:{},packMap:{}},sel:[],cat:'烧伤',q:'',page:'gifts',packOpen:null};
-const icon = id => 'EgoGiftIcon/' + id + '.png';
-const catImg = c => CAT_ICON[c] ? 'Buf/' + CAT_ICON[c] + '.png' : '';
+const icon = id => 'EgoGiftIcon/' + id + '.webp';
+const catImg = c => CAT_ICON[c] ? 'Buf/' + CAT_ICON[c] + '.webp' : '';
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 /* [状态] → 图标 + 中文名 */
 function describe(text){
@@ -113,7 +113,7 @@ function describe(text){
   const clean = String(text).replace(/<\/?noparse>/g, '').replace(/<style[^>]*>/g, '').replace(/<\/style>/g, '');
   return esc(clean).replace(/\[([A-Za-z0-9_]+)\]/g, (m, key) => {
     const cn = (S.status && S.status[key]) || key;
-    return `<img class="status-icon" src="Buf/${encodeURIComponent(key)}.png" onerror="this.style.display='none'"><span class="status-name">${esc(cn)}</span>`;
+    return `<img class="status-icon" src="Buf/${encodeURIComponent(key)}.webp" onerror="this.style.display='none'"><span class="status-name">${esc(cn)}</span>`;
   });
 }
 const $ = id => document.getElementById(id);
@@ -379,8 +379,10 @@ function renderPacks(){
 }
 function coverSrc(p){
   if (!p.imageKey) return '';
-  const k = p.imageKey;
-  return 'card_pack/' + encodeURIComponent(k.toLowerCase().endsWith('.png') ? k : k + '.png');
+  let k = p.imageKey;
+  // imageKey 存的是老版本的 png 名，实际文件都换成 webp 了
+  k = k.replace(/\.(png|jpg|jpeg)$/i, '') + '.webp';
+  return 'card_pack/' + encodeURIComponent(k);
 }
 function giftChip(g){
   if (!g) return '';
