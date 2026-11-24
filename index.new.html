@@ -15,7 +15,7 @@ body{margin:0}
 .modal-overlay{display:none}.modal-overlay.open{display:flex}
 .pack-modal-overlay{display:none}.pack-modal-overlay.open{display:flex}
 .hidden{display:none!important}
-.nav-btn--leiheng{color:#e74c3c}.nav-btn--matthias{color:#9b59b6}.nav-btn--mao{color:#7ec850;border-color:#4a7a30}.nav-btn--ha{color:#e6a817;border-color:#8b6914}.nav-btn--ha:hover{background:#8b69144d}.nav-btn--mao:hover{background:#4a7a304d}.nav-btn--playing{background:#4a7a30;color:#fff;box-shadow:0 0 8px #7ec85080}
+.nav-btn--leiheng{color:#e74c3c}.nav-btn--matthias{color:#9b59b6}.nav-btn--mao{color:#7ec850;border-color:#4a7a30}.nav-btn--ha{color:#e6a817;border-color:#8b6914}.nav-btn--lian{color:#7aa7e6;border-color:#4a6a9a}.nav-btn--lian:hover{background:#4a6a9a4d}.nav-btn--ha:hover{background:#8b69144d}.nav-btn--mao:hover{background:#4a7a304d}.nav-btn--playing{background:#4a7a30;color:#fff;box-shadow:0 0 8px #7ec85080}
 .context-menu{display:none}.context-menu.open{display:block}
 .ctx-row{padding:6px 12px;display:flex;align-items:center;gap:8px;font-size:13px}
 .ctx-row select,.ctx-row input{background:#2c1d12;color:#d4b896;border:1px solid #5a3a1a;border-radius:4px;padding:2px 4px;font-size:12px}
@@ -93,6 +93,7 @@ body{margin:0}
     <button class="nav-btn nav-btn--matthias hidden" id="bgmMat" title="BGM：马蒂亚斯">马</button>
     <button class="nav-btn nav-btn--mao" id="bgmMao" title="BGM：哈基米起床">耄</button>
     <button class="nav-btn nav-btn--ha" id="bgmHa" title="BGM：最后一哈">哈</button>
+    <button class="nav-btn nav-btn--lian" id="bgmLian" title="BGM：蓝莲哈">莲</button>
   </nav>
   <main class="main-content" id="app"></main>
 </div>
@@ -680,6 +681,7 @@ function syncBgmBtns(){
   $('bgmMat').classList.toggle('hidden', !S.playedBgm.has('BGM_Matthias.ogg'));
   $('bgmMao').classList.toggle('nav-btn--playing', !!(audio && cur==='BGM_Mao.ogg' && !audio.paused));
   $('bgmHa').classList.toggle('nav-btn--playing', !!(audio && cur==='BGM_Ha.ogg' && !audio.paused));
+  $('bgmLian').classList.toggle('nav-btn--playing', !!(audio && cur==='BGM_Lian.ogg' && !audio.paused));
 }
 /* 点特定饰品才起的 BGM（原版规则：为了指挥官→QINHU→雷恒；复仇账簿：附录→YILI→马蒂亚斯） */
 function triggerGiftBgm(g){
@@ -697,6 +699,7 @@ $('bgmLei').onclick=()=>toggleBgm('BGM_LeiHeng.ogg');
 $('bgmMat').onclick=()=>toggleBgm('BGM_Matthias.ogg');
 $('bgmMao').onclick=()=>toggleBgm('BGM_Mao.ogg');
 $('bgmHa').onclick=()=>toggleBgm('BGM_Ha.ogg');
+$('bgmLian').onclick=()=>toggleBgm('BGM_Lian.ogg');
 $('bgmMute').onclick=()=>{
   muted = !muted;
   $('bgmMute').classList.toggle('nav-btn--muted', muted);
