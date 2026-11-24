@@ -491,9 +491,10 @@ function renderRecipes(){
   $('app').innerHTML = `<div class="recipe-page"><div class="recipe-list">${S.recipes.map(r=>{
     const mats=(r.materialIds||[]).map(giftById).filter(Boolean);
     const res=giftById(r.resultId); if(!res) return '';
-    const pick = r.pickAny && (r.pickAny.from||[]).length ? `<div class="recipe-material-entry recipe-pick">${r.pickAny.from.map(id=>{const g=giftById(id); return g?`<img class="recipe-pick__icon" src="${icon(g.id)}" title="${esc(g.name)}" loading="lazy">`:'';}).join('')}<span class="recipe-pick__label">任选 ${r.pickAny.count||1} 种</span></div><span class="recipe-plus">+</span>` : '';
+    const pick = r.pickAny && (r.pickAny.from||[]).length ? `<div class="recipe-material-entry recipe-pick">${r.pickAny.from.map(id=>{const g=giftById(id); return g?`<img class="recipe-pick__icon" src="${icon(g.id)}" title="${esc(g.name)}" loading="lazy">`:'';}).join('')}<span class="recipe-pick__label">任选 ${r.pickAny.count||1} 种</span></div>` : '';
+    const matHtml = mats.map(m=>`<div class="recipe-material-entry">${recipeIcon(m)}<span class="recipe-gift-name">${esc(m.name)}</span></div>`).join('<span class="recipe-plus">+</span>');
     return `<div class="recipe-item">
-      <div class="recipe-materials">${mats.map(m=>`<div class="recipe-material-entry">${recipeIcon(m)}<span class="recipe-gift-name">${esc(m.name)}</span></div><span class="recipe-plus">+</span>`).join('')}${pick}</div>
+      <div class="recipe-materials">${matHtml}${pick?`<span class="recipe-plus">+</span>${pick}`:''}</div>
       <span class="recipe-equals">=</span>
       <div class="recipe-result">${recipeIcon(res)}<span class="recipe-gift-name">${esc(res.name)}</span></div>
     </div>`;
