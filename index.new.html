@@ -403,15 +403,38 @@ function renderPacks(){
     <div class="pack-list">${list.map(packHtml).join('')}</div>
     ${cur?packDetailHtml(cur):''}
   </div>`;
-  const qi=$('q');
-  qi.oninput=e=>{S.q=e.target.value;renderPacks();const n=$('q');n.focus();};
-  document.querySelectorAll('.pack-item').forEach(el=>el.onclick=()=>{
-    const id = el.dataset.id;
-    S.packOpen = (String(S.packOpen)===String(id)) ? null : id;
-    renderPacks();
-  });
+  /* 搜索框每敲一个字，只重画下面的列表 —— 绝不重建 #q 本身，
+     否则输入法会被打断（中文打一半就断） */
+  const qi = $('q');
+  qi.oninput = e => {
+    S.q = e.target.value;
+    const listEl = document.querySelector('.pack-list');
+    if (!listEl) return;
+    listEl.innerHTML = packListHtml();
+    bindPackItems();
+    fillCovers(listEl);
+  };
+  bindPackItems();
   fillCovers($('app'));
   const det=$('packDetail'); if(det) bindCards(det);
+}
+
+/* 卡包列表的 HTML（搜索时单独重画这一块） */
+function packListHtml(){
+  const q = S.q.trim().toLowerCase();
+  const hasSrc = p => (S.packGiftCount && S.packGiftCount[String(p.id)] > 0)
+    || !!(S.packSrc && (S.packSrc[nrmName(p.name)] || []).length);
+  const list = S.packs.filter(hasSrc).filter(p=>!q||(p.name||'').toLowerCase().includes(q));
+  return list.map(packHtml).join('');
+}
+function bindPackItems(){
+  document.querySelectorAll('.pack-item').forEach(el=>{
+    el.onclick=()=>{
+      const id = el.dataset.id;
+      S.packOpen = (String(S.packOpen)===String(id)) ? null : id;
+      renderPacks();
+    };
+  });
 }
 function coverSrc(p){
   if (!p.imageKey) return '';
