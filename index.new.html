@@ -89,7 +89,6 @@ body{margin:0}
     <a class="nav-link" href="#/plan" data-page="plan"><img class="nav-icon" src="nav-icon-floor.png" alt="">楼层规划</a>
     <a class="nav-link" href="#/recipes" data-page="recipes"><img class="nav-icon" src="nav-icon-recipe.png" alt="">合成方式</a>
     <button class="nav-btn nav-btn--mute" id="bgmMute" title="总开关"><span class="mute-icon">♪</span></button>
-    <button class="nav-btn" id="exportBtn" title="导出我的数据（给 May 更新仓库用）">⤓</button>
     <button class="nav-btn nav-btn--leiheng hidden" id="bgmLei" title="BGM：雷恒">雷</button>
     <button class="nav-btn nav-btn--matthias hidden" id="bgmMat" title="BGM：马蒂亚斯">马</button>
   </nav>
@@ -119,25 +118,17 @@ function describe(text){
 }
 const $ = id => document.getElementById(id);
 
+/* 用户数据全部来自 data/user_data.json（仓库里那份）；页面不读也不写 localStorage。
+   要改数据就改文件——这是唯一入口。 */
 function loadUser(){
-  try{
-    const P = 'egogift_';
-    const get = k => JSON.parse(localStorage.getItem(P + k) || 'null');
-    S.user.rarities = get('giftRarities') || {};
-    S.user.cats = get('giftCategoryOverrides') || {};
-    S.user.labels = get('giftLabels') || {};
-    S.user.packMap = get('giftCardPackMap') || {};
-    S.sel = (get('selectedGiftIds') || []).map(String);
-  }catch(e){}
+  const u = S.userData || {};
+  S.user.rarities = u.giftRarities || {};
+  S.user.cats = u.giftCategoryOverrides || {};
+  S.user.labels = u.giftLabels || {};
+  S.user.packMap = JSON.parse(JSON.stringify(u.giftCardPackMap || {}));
+  S.sel = [];   // 楼层规划选中是临时状态，不落地
 }
-function saveUser(){
-  const P = 'egogift_';
-  localStorage.setItem(P + 'giftRarities', JSON.stringify(S.user.rarities));
-  localStorage.setItem(P + 'giftCategoryOverrides', JSON.stringify(S.user.cats));
-  localStorage.setItem(P + 'giftLabels', JSON.stringify(S.user.labels));
-  localStorage.setItem(P + 'giftCardPackMap', JSON.stringify(S.user.packMap));
-  localStorage.setItem(P + 'selectedGiftIds', JSON.stringify(S.sel));
-}
+function saveUser(){ /* no-op：数据只从文件来 */ }
 const giftById = id => S.gifts.find(g => String(g.id) === String(id));
 const catOf = g => S.user.cats[g.id] || g.category || '泛用';
 const rarOf = g => S.user.rarities[g.id] || g.rarity || '';
@@ -159,17 +150,8 @@ function giftIdsInPack(packName){
 
 const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
 
-async function ensureUserSeed(){
-  /* 浏览器里一条用户数据都没有时，用仓库里的 data/user_data.json 灌一次（之后浏览器是工作副本，靠「导出」回写） */
-  if(localStorage.getItem('egogift_giftRarities')) return;
-  try{
-    const u = await (await fetch('data/user_data.json',{cache:'no-store'})).json();
-    for(const [k,v] of Object.entries(u||{})) localStorage.setItem('egogift_'+k, JSON.stringify(v));
-  }catch(e){}
-}
-
 async function boot(){
-  await ensureUserSeed();
+  S.userData = await fetch('data/user_data.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>({}));
   loadUser();
   const [g,p,r,st,pe] = await Promise.all([
     fetch('data/egogift.json',{cache:'no-store'}).then(x=>x.json()),
@@ -182,8 +164,7 @@ async function boot(){
   S.status = st || {};
   S.gifts=g.gifts||[];
   S.packs = (()=>{
-    let user = [];
-    try{ const v=JSON.parse(localStorage.getItem('egogift_cardPacks')||'null'); user = Array.isArray(v)?v:[]; }catch(e){}
+    const user = Array.isArray(S.userData?.cardPacks) ? S.userData.cardPacks : [];
     const base = user.length ? user : (p || []);
     const have = new Set(base.map(x=>String(x.id)));
     const extra = (p || []).filter(x=>x && x.id && String(x.id).startsWith('pack_') && !have.has(String(x.id)));
@@ -708,19 +689,6 @@ function triggerGiftBgm(g){
 }
 $('bgmLei').onclick=()=>toggleBgm('BGM_LeiHeng.ogg');
 $('bgmMat').onclick=()=>toggleBgm('BGM_Matthias.ogg');
-/* 导出用户数据：把浏览器里所有 egogift_* 原样存成 json，交给 May 更新仓库里的 data/user_data.json */
-$('exportBtn').onclick=()=>{
-  const out={};
-  for(let i=0;i<localStorage.length;i++){
-    const k=localStorage.key(i);
-    if(k.indexOf('egogift_')===0) out[k]=localStorage.getItem(k);
-  }
-  const txt=JSON.stringify(out,null,1);
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(new Blob([txt],{type:'application/json'}));
-  a.download='egogift-export.json';
-  document.body.appendChild(a); a.click(); a.remove();
-};
 $('bgmMute').onclick=()=>{
   muted = !muted;
   $('bgmMute').classList.toggle('nav-btn--muted', muted);
