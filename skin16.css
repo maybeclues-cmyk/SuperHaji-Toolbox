@@ -1,0 +1,16 @@
+/* ============================================================
+   skin16.css —— 事件区的饰品图标去掉边框
+   ============================================================ */
+
+.pack-events__gift img{
+  border:none !important;
+  box-shadow:none !important;
+}
+
+/* 悬浮窗 / 合成面板里那些小图标也一起清掉多余描边 */
+.recipe-panel__gift-icon,
+.recipe-panel__pack-img,
+.gift-chip img{
+  border:none !important;
+  box-shadow:none !important;
+}
