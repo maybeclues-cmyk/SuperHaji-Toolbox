@@ -8,10 +8,10 @@
 <style>
 body{margin:0}
 .gift-card{cursor:pointer}
-.pack-item__cover{width:70px;height:90px}
-.pack-item__cover img{width:70px;height:90px;object-fit:cover;border-radius:4px}
+.pack-item__cover{width:76px;height:98px}
+.pack-item__cover img{width:76px;height:98px;object-fit:cover;border-radius:4px}
 .pack-item__cover-placeholder{font-size:10px;color:#d4b896;text-align:center;padding:2px;line-height:1.25}
-.pack-item__name{font-size:11px;color:#c9b89a;max-width:82px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pack-item__name{font-size:11px;color:#c9b89a;max-width:88px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .modal-overlay{display:none}.modal-overlay.open{display:flex}
 .pack-modal-overlay{display:none}.pack-modal-overlay.open{display:flex}
 .hidden{display:none!important}
@@ -22,7 +22,8 @@ body{margin:0}
 .ctx-item{padding:6px 12px;cursor:pointer;font-size:13px;color:#d4b896}
 .ctx-item:hover{background:#5a3a1a}
 .recipe-panel{display:none}.recipe-panel.open{display:block}
-.recipe-icon-wrapper{background:url(gift-bg.png) center/contain no-repeat;border-radius:6px;padding:3px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.recipe-icon-wrapper{background:url(gift-bg.png) center/contain no-repeat;border-radius:6px;padding:3px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s}
+.recipe-icon-wrapper:hover{background:url(gift-bg-hover.png) center/contain no-repeat}
 .recipe-panel__title{color:#ffba00;font-size:16px;margin:0 0 10px}
 .recipe-panel__gift-icon{width:64px;height:64px;object-fit:contain;vertical-align:middle}
 .recipe-panel__gift-name{font-size:15px;color:#e8ddc9;margin-left:8px}
@@ -35,9 +36,35 @@ body{margin:0}
 .nav-btn--mute:hover{background:#8b69144d}
 .mute-icon{position:relative;display:inline-block}
 .nav-btn--muted .mute-icon:after{content:"";position:absolute;left:-2px;top:-2px;width:120%;height:120%;background:linear-gradient(to top right,transparent 44%,#e6a817 44%,#e6a817 56%,transparent 56%);pointer-events:none}
-.recipe-icon{width:48px;height:48px}
-.recipe-icon-wrapper{width:48px;height:48px}
+.recipe-icon{width:56px;height:56px}
+.recipe-icon-wrapper{width:56px;height:56px}
 .recipe-gift-name{white-space:nowrap}
+.recipe-note{font-size:11px;color:#c9a96a;margin-left:8px;white-space:nowrap;opacity:.85}
+.pack-events{margin-top:16px;padding-top:12px;border-top:1px dashed #5a3a1a}
+.pack-events__label{font-size:17px;color:#e8d3a9;margin:0 0 2px;letter-spacing:.5px}
+.pack-events__src{font-size:11px;color:#8f7f6a;margin:0 0 10px}
+.pack-events__pack{margin-bottom:16px}
+.pack-events__pack-name{font-size:14px;color:#e0b96a;margin:0 0 6px;padding-left:8px;border-left:3px solid #8b6914}
+.pack-events__list{list-style:none;margin:0;padding:0}
+.pack-events__ev{padding:10px 0 2px}
+.pack-events__evname{font-size:15px;color:#e8d3a9;font-weight:600;margin-bottom:4px;padding-left:9px;border-left:3px solid #8b6914}
+.pack-events__opts{list-style:none;margin:0;padding:0 0 0 6px}
+.pack-events__opts > li{position:relative;padding:3px 0 3px 18px}
+.pack-events__opts > li::before{content:'';position:absolute;left:0;top:0;bottom:0;border-left:1px solid #4a3620}
+.pack-events__opts > li:last-child::before{bottom:auto;height:17px}
+.pack-events__opts > li::after{content:'';position:absolute;left:0;top:16px;width:13px;border-top:1px solid #4a3620}
+.pack-events__row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px;color:#c9b89a;border-radius:6px;padding:2px 6px 2px 2px}
+.pack-events__row:hover{background:#2a1e14}
+.pack-events__row > .pack-events__opts{flex-basis:100%;width:100%;margin-top:2px}
+.pack-events__event{color:#e8d3a9}
+.pack-events__opt{color:#9c8a72}
+.pack-events__arrow{color:#6f5c44}
+.pack-events__gifts{display:inline-flex;flex-wrap:wrap;gap:10px}
+.pack-events__gift{display:inline-flex;align-items:center;gap:4px}
+.pack-events__gift img{width:30px;height:30px;border-radius:4px}
+.recipe-pick{display:inline-flex;align-items:center;gap:3px;border:1px dashed #6f5c44;border-radius:8px;padding:3px 7px;margin:0 4px}
+.recipe-pick__icon{width:28px;height:28px;border-radius:4px;opacity:.95}
+.recipe-pick__label{font-size:11px;color:#d8c39c;margin-left:5px;white-space:nowrap}
 .recipe-panel{width:460px}
 .recipe-panel__list{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:4px;padding-bottom:2px}
 .recipe-panel__entry{flex-wrap:nowrap}
@@ -83,7 +110,8 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, m => ({'&':'&amp;
 /* [状态] → 图标 + 中文名 */
 function describe(text){
   if (!text) return '';
-  return esc(text).replace(/\[([A-Za-z0-9_]+)\]/g, (m, key) => {
+  const clean = String(text).replace(/<\/?noparse>/g, '').replace(/<style[^>]*>/g, '').replace(/<\/style>/g, '');
+  return esc(clean).replace(/\[([A-Za-z0-9_]+)\]/g, (m, key) => {
     const cn = (S.status && S.status[key]) || key;
     return `<img class="status-icon" src="Buf/${encodeURIComponent(key)}.png" onerror="this.style.display='none'"><span class="status-name">${esc(cn)}</span>`;
   });
@@ -132,12 +160,14 @@ const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
 
 async function boot(){
   loadUser();
-  const [g,p,r,st] = await Promise.all([
-    fetch('data/egogift.json').then(x=>x.json()),
-    fetch('data/cardpacks_preset.json').then(x=>x.json()),
-    fetch('data/recipes_preset.json').then(x=>x.json()),
-    fetch('data/status_names.json').then(x=>x.json()).catch(()=>({}))
+  const [g,p,r,st,pe] = await Promise.all([
+    fetch('data/egogift.json',{cache:'no-store'}).then(x=>x.json()),
+    fetch('data/cardpacks_preset.json',{cache:'no-store'}).then(x=>x.json()),
+    fetch('data/recipes_preset.json',{cache:'no-store'}).then(x=>x.json()),
+    fetch('data/status_names.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>({})),
+    fetch('data/pack_events.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>({}))
   ]);
+  S.packEvents = pe || {};
   S.status = st || {};
   S.gifts=g.gifts||[];
   S.packs = (()=>{
@@ -161,7 +191,7 @@ async function boot(){
       return o;
     });
   })();
-  S.recipes = (()=>{ try{ const v=JSON.parse(localStorage.getItem('egogift_recipes')||'null'); return Array.isArray(v)&&v.length?v:r||[]; }catch(e){ return r||[]; } })();
+  S.recipes = (()=>{ try{ const v=JSON.parse(localStorage.getItem('egogift_recipes')||'null'); const base=Array.isArray(r)?r:[]; if(Array.isArray(v)&&v.length){ const key=x=>String(x.resultId)+'|'+((x.materialIds||[]).join(',')); const byKey=new Map(v.map(x=>[key(x),x])); const baseKeys=new Set(base.map(key)); /* 顺序以 preset 为准；同 key 的条目保留浏览器里的改法；浏览器独有的追加到末尾 */ return base.map(x=>byKey.get(key(x))||x).concat(v.filter(x=>!baseKeys.has(key(x)))); } return base; }catch(e){ return r||[]; } })();
   /* 卡包饰品：数据里写死的 gifts 合并进 packMap（localStorage 优先） */
   for(const pk of S.packs){
     if(!Array.isArray(pk.gifts)) continue;
@@ -259,20 +289,26 @@ function cardHtml(g){
   return `<div class="gift-card gift-card--normal" data-id="${g.id}" title="${esc(g.name)}">
     ${r?`<span class="gift-card__rarity">${esc(r)}</span>`:''}
     <img class="gift-card__icon" loading="lazy" src="${icon(g.id)}" onerror="this.classList.add('hidden')">
-    ${catImg(catOf(g))?`<img class="gift-card__category" src="${catImg(catOf(g))}">`:''}
+    ${catOf(g)!=='泛用'&&catImg(catOf(g))?`<img class="gift-card__category" src="${catImg(catOf(g))}">`:''}
   </div>`;
 }
+let hoverTimer = null;
+function hideHoverSoon(){ clearTimeout(hoverTimer); hoverTimer = setTimeout(()=>{ const p=$('hoverPanel'); if(p) p.classList.remove('open'); }, 160); }
+function keepHover(){ clearTimeout(hoverTimer); }
 function bindCards(root){
   root.querySelectorAll('.gift-card[data-id]').forEach(el=>{
     const id = el.dataset.id;
     el.onclick = () => { triggerGiftBgm(giftById(id)); openGift(id); };
     el.oncontextmenu = ev => { ev.preventDefault(); openCtx(id, ev.clientX, ev.clientY); };
-    el.onmouseenter = () => { playSfx(SFX_HOVER); showHover(id); };
+    el.onmouseenter = () => { playSfx(SFX_HOVER); keepHover(); showHover(id); };
+    el.onmouseleave = () => hideHoverSoon();
   });
-  const grid = root.querySelector('.gift-grid');
-  if(grid) grid.onmouseleave = () => $('hoverPanel').classList.remove('open');
-  const cont = root.querySelector('.gift-sections');
-  if(cont) cont.onmouseleave = () => $('hoverPanel').classList.remove('open');
+  const panel = $('hoverPanel');
+  if(panel && !panel.dataset.hoverBound){
+    panel.dataset.hoverBound = '1';
+    panel.onmouseenter = keepHover;
+    panel.onmouseleave = hideHoverSoon;
+  }
 }
 
 /* ---------- 悬浮窗 ---------- */
@@ -356,7 +392,6 @@ function renderPacks(){
     const id = el.dataset.id;
     S.packOpen = (String(S.packOpen)===String(id)) ? null : id;
     renderPacks();
-    const d=$('packDetail'); if(d) setTimeout(()=>d.scrollIntoView({behavior:'smooth',block:'start'}),30);
   });
   fillCovers($('app'));
   const det=$('packDetail'); if(det) bindCards(det);
@@ -365,6 +400,57 @@ function coverSrc(p){
   if (!p.imageKey) return '';
   const k = p.imageKey;
   return 'card_pack/' + encodeURIComponent(k.toLowerCase().endsWith('.png') ? k : k + '.png');
+}
+function giftChip(g){
+  if (!g) return '';
+  return `<span class="pack-events__gift"><img src="${icon(g.id)}" loading="lazy" onerror="this.style.display='none'"><span>${esc(g.name)}</span></span>`;
+}
+function eventVisible(n){
+  const kids = n.children || [];
+  if (!kids.length) return (n.gifts || []).length > 0;
+  return kids.some(eventVisible);
+}
+function eventTree(nodes, depth){
+  const vis = (nodes || []).filter(eventVisible);
+  if (!vis.length) return '';
+  return `<ul class="pack-events__opts${depth?' pack-events__opts--sub':''}">${vis.map(n=>{
+    const isLeaf = !(n.children && n.children.length);
+    const gifts = isLeaf ? (n.gifts||[]).map(id=>giftChip(giftById(id))).join('') : '';
+    return `<li class="pack-events__row">
+      <span class="pack-events__opt">${esc(n.tab||'')}${n.title?' · '+esc(n.title):''}</span>
+      ${gifts?`<span class="pack-events__arrow">→</span><span class="pack-events__gifts">${gifts}</span>`:''}
+      ${(n.children&&n.children.length)?eventTree(n.children, depth+1):''}
+    </li>`;
+  }).join('')}</ul>`;
+}
+function packEventsFor(packName){
+  const rows = (S.packEvents || {})[packName];
+  if (!Array.isArray(rows) || !rows.length) return '';
+  const byEv = new Map();
+  for (const r of rows) {
+    if (r.tree) { byEv.set(r.event, { tree: r.tree }); continue; }
+    if (!byEv.has(r.event)) byEv.set(r.event, { opts: new Map() });
+    const m = byEv.get(r.event).opts;
+    const k = (r.tab || '') + '|' + (r.title || '');
+    if (!m.has(k)) m.set(k, { tab: r.tab || '', title: r.title || '', gifts: [] });
+    if (r.gift) m.get(k).gifts.push(r.gift);
+  }
+  return `<div class="pack-events">
+    <div class="pack-events__label">事件</div>
+    <div class="pack-events__src">数据来自灰机wiki</div>
+    <ul class="pack-events__list">${[...byEv.entries()].map(([ev, v])=>{
+      const body = v.tree ? eventTree(v.tree, 0) : `<ul class="pack-events__opts">${[...v.opts.values()].map(o=>`<li class="pack-events__row">
+        <span class="pack-events__opt">${esc(o.tab)}${o.title?' · '+esc(o.title):''}</span>
+        <span class="pack-events__arrow">→</span>
+        <span class="pack-events__gifts">${o.gifts.map(giftChip).join('')}</span>
+      </li>`).join('')}</ul>`;
+      if (!body) return '';
+      return `<li class="pack-events__ev">
+      <div class="pack-events__evname">${esc(ev)}</div>
+      ${body}
+    </li>`;
+    }).join('')}</ul>
+  </div>`;
 }
 function packHtml(p){
   const cover = p.imageKey
@@ -390,6 +476,7 @@ function packDetailHtml(p){
     <div class="pack-detail__header"><h3 class="pack-detail__title">${esc(p.name)}</h3></div>
     <div class="pack-detail__gifts">${G.length===0?'<span class="pack-detail__empty">暂无饰品</span>':row(V)+(F.length?sep+row(F):'')}</div>
     ${H.length?`<div class="pack-detail__reprint"><span class="pack-detail__reprint-label">复刻</span><div class="pack-detail__gifts">${row(z)}${Y.length?sep+row(Y):''}</div></div>`:''}
+    ${packEventsFor(p.name)}
   </div>`;
 }
 
@@ -402,8 +489,9 @@ function renderRecipes(){
   $('app').innerHTML = `<div class="recipe-page"><div class="recipe-list">${S.recipes.map(r=>{
     const mats=(r.materialIds||[]).map(giftById).filter(Boolean);
     const res=giftById(r.resultId); if(!res) return '';
+    const pick = r.pickAny && (r.pickAny.from||[]).length ? `<div class="recipe-material-entry recipe-pick">${r.pickAny.from.map(id=>{const g=giftById(id); return g?`<img class="recipe-pick__icon" src="${icon(g.id)}" title="${esc(g.name)}" loading="lazy">`:'';}).join('')}<span class="recipe-pick__label">任选 ${r.pickAny.count||1} 种</span></div><span class="recipe-plus">+</span>` : '';
     return `<div class="recipe-item">
-      <div class="recipe-materials">${mats.map(m=>`<div class="recipe-material-entry">${recipeIcon(m)}<span class="recipe-gift-name">${esc(m.name)}</span></div><span class="recipe-plus">+</span>`).join('')}</div>
+      <div class="recipe-materials">${mats.map(m=>`<div class="recipe-material-entry">${recipeIcon(m)}<span class="recipe-gift-name">${esc(m.name)}</span></div><span class="recipe-plus">+</span>`).join('')}${pick}</div>
       <span class="recipe-equals">=</span>
       <div class="recipe-result">${recipeIcon(res)}<span class="recipe-gift-name">${esc(res.name)}</span></div>
     </div>`;

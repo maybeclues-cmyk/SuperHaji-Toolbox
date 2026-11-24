@@ -172,6 +172,15 @@
     "resultId": 9096
   },
   {
+    "id": "windy-hill",
+    "materialIds": [
+      9432,
+      9436
+    ],
+    "resultId": 9301,
+    "note": ""
+  },
+  {
     "id": "f254b48c-677a-48ce-a8d7-f22b19973584",
     "materialIds": [
       9063,
@@ -455,5 +464,26 @@
       9265
     ],
     "resultId": 9268
+  },
+  {
+    "id": "lunar-memory-special",
+    "materialIds": [
+      9142,
+      9147,
+      9152
+    ],
+    "resultId": 9083,
+    "pickAny": {
+      "from": [
+        9105,
+        9110,
+        9116,
+        9121,
+        9126,
+        9131,
+        9136
+      ],
+      "count": 2
+    }
   }
 ]
