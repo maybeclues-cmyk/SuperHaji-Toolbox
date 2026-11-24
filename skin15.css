@@ -1,0 +1,49 @@
+/* ============================================================
+   skin15.css —— 金属边换成真 border（伪元素那套被面板压掉了）
+   ============================================================ */
+
+/* 关掉之前所有伪元素版本的金属边 */
+.compendium::before,.card-pack-page::before,.recipe-page::before,.planning-page::before,
+.compendium::after,.card-pack-page::after,.recipe-page::after,.planning-page::after{
+  display:none !important;
+  content:none !important;
+}
+
+/* 用真实左右边框 + 渐变做金属条 */
+.compendium,.card-pack-page,.recipe-page,.planning-page{
+  border-left:7px solid transparent !important;
+  border-right:7px solid transparent !important;
+  border-top:1px solid #2b3546 !important;
+  border-bottom:1px solid #2b3546 !important;
+  border-image:linear-gradient(180deg,
+      #0a0c10 0%,
+      #232830 8%,
+      #5c6470 13%,
+      #9aa3b0 15%,
+      #3a414b 19%,
+      #14181d 26%,
+      #0a0c10 34%,
+      #2c323a 46%,
+      #6a7280 51%,
+      #aab3c0 53%,
+      #414852 57%,
+      #16191e 64%,
+      #0a0c10 72%,
+      #232830 82%,
+      #5c6470 87%,
+      #9aa3b0 89%,
+      #3a414b 93%,
+      #14181d 97%,
+      #0a0c10 100%) 1 !important;
+  box-shadow:
+    inset 0 0 24px rgba(0,0,0,.85),
+    0 10px 40px rgba(0,0,0,.75) !important;
+  border-radius:8px;
+  padding-left:18px !important;
+  padding-right:18px !important;
+}
+
+/* 面板里再压一层很淡的暗角，让边框更"嵌进去" */
+.compendium,.card-pack-page,.recipe-page,.planning-page{
+  background-clip:padding-box !important;
+}
