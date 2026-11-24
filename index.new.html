@@ -89,6 +89,7 @@ body{margin:0}
     <a class="nav-link" href="#/plan" data-page="plan"><img class="nav-icon" src="nav-icon-floor.png" alt="">楼层规划</a>
     <a class="nav-link" href="#/recipes" data-page="recipes"><img class="nav-icon" src="nav-icon-recipe.png" alt="">合成方式</a>
     <button class="nav-btn nav-btn--mute" id="bgmMute" title="总开关"><span class="mute-icon">♪</span></button>
+    <button class="nav-btn" id="exportBtn" title="导出我的数据（给 May 更新仓库用）">⤓</button>
     <button class="nav-btn nav-btn--leiheng hidden" id="bgmLei" title="BGM：雷恒">雷</button>
     <button class="nav-btn nav-btn--matthias hidden" id="bgmMat" title="BGM：马蒂亚斯">马</button>
   </nav>
@@ -706,6 +707,19 @@ function triggerGiftBgm(g){
 }
 $('bgmLei').onclick=()=>toggleBgm('BGM_LeiHeng.ogg');
 $('bgmMat').onclick=()=>toggleBgm('BGM_Matthias.ogg');
+/* 导出用户数据：把浏览器里所有 egogift_* 原样存成 json，交给 May 更新仓库里的 data/user_data.json */
+$('exportBtn').onclick=()=>{
+  const out={};
+  for(let i=0;i<localStorage.length;i++){
+    const k=localStorage.key(i);
+    if(k.indexOf('egogift_')===0) out[k]=localStorage.getItem(k);
+  }
+  const txt=JSON.stringify(out,null,1);
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([txt],{type:'application/json'}));
+  a.download='egogift-export.json';
+  document.body.appendChild(a); a.click(); a.remove();
+};
 $('bgmMute').onclick=()=>{
   muted = !muted;
   $('bgmMute').classList.toggle('nav-btn--muted', muted);
