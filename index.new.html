@@ -544,6 +544,7 @@ function renderRecipes(){
   $('app').querySelectorAll('.recipe-icon-wrapper[data-id]').forEach(el=>{
     el.onclick = () => openGift(el.dataset.id);
     el.oncontextmenu = ev => { ev.preventDefault(); openCtx(el.dataset.id, ev.clientX, ev.clientY); };
+    el.onmouseenter = () => playSfx(SFX_HOVER);   // 合成页也要 DI 的悬停音
   });
 }
 
