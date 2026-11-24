@@ -1,0 +1,66 @@
+/* ============================================================
+   skin10.css —— 合成页：图标放大 + 同款流动特效
+   ============================================================ */
+
+/* 图标从 56 放大到 76 */
+.recipe-icon{width:76px !important;height:76px !important}
+.recipe-icon-wrapper{
+  width:76px !important;height:76px !important;
+  position:relative;
+  border-radius:10px;
+}
+
+/* 同款三层流线（与饰品卡一致） */
+.recipe-icon-wrapper::before{
+  content:"";
+  position:absolute;
+  inset:-4px;
+  padding:2.5px;
+  border-radius:12px;
+  background:
+    repeating-linear-gradient(122deg,
+      transparent 0px,
+      rgba(255,255,255,.62) 0px 3px,
+      transparent 3px 68px),
+    repeating-linear-gradient(58deg,
+      transparent 0px,
+      rgba(255,255,255,.38) 0px 2px,
+      transparent 2px 104px),
+    repeating-linear-gradient(96deg,
+      transparent 0px,
+      rgba(220,240,255,.24) 0px 1.5px,
+      transparent 1.5px 156px),
+    linear-gradient(120deg,
+      rgba(160,215,255,.07),
+      rgba(255,255,255,.03) 50%,
+      rgba(160,215,255,.06));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  opacity:0;
+  transition:opacity .22s ease;
+  pointer-events:none;
+  animation:flowLayers10 5.5s linear infinite;
+}
+
+.recipe-icon-wrapper:hover::before{opacity:1}
+
+@keyframes flowLayers10{
+  0%{background-position:0 0,0 0,0 0,0 0}
+  100%{background-position:136px -80px,-208px 128px,312px 0,0 0}
+}
+
+/* 悬停时图标本身也柔亮一点 */
+.recipe-icon-wrapper:hover{
+  box-shadow:0 0 12px rgba(200,225,255,.3) !important;
+}
+
+/* 合成页的配方行也要跟着放大一点间距，别挤 */
+.recipe-item{padding:14px 16px !important;gap:14px !important}
+.recipe-materials{gap:8px !important}
+.recipe-gift-name{font-size:15px !important}
+
+/* 悬浮面板里的图标也同步放大 */
+#hoverPanel .recipe-panel__gift-icon{width:64px !important;height:64px !important}
