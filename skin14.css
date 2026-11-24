@@ -1,0 +1,75 @@
+/* ============================================================
+   skin14.css —— 删掉导航锁链；金属边取中：不粗不细
+   ============================================================ */
+
+/* ---------- 1. 导航栏下沿那串锁链：删 ---------- */
+.nav-bar::after{
+  content:none !important;
+  display:none !important;
+}
+
+/* ---------- 2. 金属边：6px 宽的灰钢条，稀疏分段 ---------- */
+.compendium::before,.card-pack-page::before,.recipe-page::before,.planning-page::before,
+.compendium::after,.card-pack-page::after,.recipe-page::after,.planning-page::after{
+  width:6px !important;
+  left:2px !important;right:auto;
+  top:4px !important;bottom:4px !important;
+  display:block !important;
+  opacity:.9;
+}
+.compendium::after,.card-pack-page::after,.recipe-page::after,.planning-page::after{
+  left:auto !important;right:2px !important;
+}
+
+/* 左边：暗底 + 中缝亮 + 稀疏高光 */
+.compendium::before,.card-pack-page::before,.recipe-page::before,.planning-page::before{
+  background:
+    /* 稀疏分段：每 52px 两段亮线 */
+    repeating-linear-gradient(180deg,
+      rgba(232,238,245,.72) 0 3px,
+      transparent 3px 26px,
+      rgba(160,170,182,.35) 26px 28px,
+      transparent 28px 52px),
+    /* 钢条本体 */
+    linear-gradient(90deg,
+      #0a0c10 0%,
+      #20242b 30%,
+      #4e5560 48%,
+      #767e8a 53%,
+      #363c46 66%,
+      #12161b 100%);
+  box-shadow:
+    inset 0 0 4px rgba(0,0,0,.9),
+    1px 0 5px rgba(0,0,0,.65);
+  border-radius:3px;
+}
+
+/* 右边：镜像，分段周期不同（错开） */
+.compendium::after,.card-pack-page::after,.recipe-page::after,.planning-page::after{
+  background:
+    repeating-linear-gradient(180deg,
+      rgba(210,218,228,.62) 0 2px,
+      transparent 2px 34px,
+      rgba(140,150,162,.3) 34px 36px,
+      transparent 36px 68px),
+    linear-gradient(90deg,
+      #12161b 0%,
+      #363c46 34%,
+      #767e8a 47%,
+      #4e5560 52%,
+      #20242b 70%,
+      #0a0c10 100%);
+  box-shadow:
+    inset 0 0 4px rgba(0,0,0,.9),
+    -1px 0 5px rgba(0,0,0,.65);
+  border-radius:3px;
+}
+
+/* 导航左端那块不用了（锁链删掉后这里干净点） */
+.nav-bar::before{
+  display:none !important;
+}
+
+/* 搜索框左边细线也收掉 */
+.search-wrapper::before{display:none !important}
+.search-wrapper .search-input{padding-left:14px !important}
