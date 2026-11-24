@@ -671,8 +671,9 @@ function bgmEl(f){
   audio.volume = BGM_VOL;
   return audio;
 }
-function playBgm(f){ S.playedBgm.add(f); syncBgmBtns(); bgmEl(f).play().catch(()=>{}); }
+function playBgm(f){ if(muted) return; S.playedBgm.add(f); syncBgmBtns(); bgmEl(f).play().catch(()=>{}); }
 function toggleBgm(f){
+  if(muted) return;                 // 总开关关着：点了也不响
   const a = bgmEl(f);
   if(cur === f && !a.paused) a.pause(); else a.play().catch(()=>{});
 }
@@ -703,8 +704,16 @@ $('bgmLian').onclick=()=>toggleBgm('BGM_Lian.ogg');
 $('bgmMute').onclick=()=>{
   muted = !muted;
   $('bgmMute').classList.toggle('nav-btn--muted', muted);
-  if(!audio) return;
-  if(muted) audio.pause(); else audio.play().catch(()=>{});
+  if(muted){
+    // 关：停掉所有在响的东西，之后任何人再点播放都不出声
+    if(audio) audio.pause();
+    for(const k in SFX){ try{ SFX[k].pause(); SFX[k].currentTime=0; }catch(e){} }
+    [SFX_HOVER, SFX_CLICK].forEach(a => { try{ a.pause(); a.currentTime=0; }catch(e){} });
+    syncBgmBtns();
+  } else {
+    // 开：只解除限制，不替她自动续播
+    syncBgmBtns();
+  }
 };
 /* 点空白处关掉详情 */
 document.addEventListener('click', e => {
