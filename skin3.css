@@ -25,18 +25,8 @@
 .recipe-item:last-child{border-bottom:1px solid rgba(58,74,96,.55) !important}
 
 /* ---------- 合成图标：加金属环 ---------- */
-.recipe-icon-wrapper{
-  box-shadow:
-    0 0 0 1px rgba(90,168,230,.35),
-    0 0 10px rgba(90,168,230,.15),
-    0 2px 6px rgba(0,0,0,.7) !important;
-}
-.recipe-icon-wrapper:hover{
-  box-shadow:
-    0 0 0 1px var(--gold),
-    0 0 16px rgba(201,162,39,.6),
-    0 2px 8px rgba(0,0,0,.8) !important;
-}
+.recipe-icon-wrapper{box-shadow:none !important}
+.recipe-icon-wrapper:hover{box-shadow:0 0 12px rgba(201,162,39,.45) !important}
 
 /* ---------- 页面级：左右两侧刻度尺 ---------- */
 .compendium::before,.card-pack-page::before,.recipe-page::before,.planning-page::before{
