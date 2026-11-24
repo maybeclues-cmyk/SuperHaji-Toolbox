@@ -206,6 +206,14 @@
   "resultId": 9096
  },
  {
+  "id": "cnt-9301-windy",
+  "materialIds": [
+   9432,
+   9436
+  ],
+  "resultId": 9301
+ },
+ {
   "id": "f254b48c-677a-48ce-a8d7-f22b19973584",
   "materialIds": [
    9063,
@@ -496,5 +504,14 @@
    80001
   ],
   "resultId": 89877
+ },
+ {
+  "id": "cnt-9083-moon",
+  "materialIds": [
+   9142,
+   9147,
+   9152
+  ],
+  "resultId": 9083
  }
 ]

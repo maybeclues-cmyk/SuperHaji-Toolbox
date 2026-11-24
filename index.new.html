@@ -191,8 +191,8 @@ async function boot(){
       return o;
     });
   })();
-  /* 合成表：原样回到早先的逻辑——浏览器里存了 egogift_recipes 就整份用它（那是她手改过的版本） */
-  S.recipes = (()=>{ try{ const v=JSON.parse(localStorage.getItem('egogift_recipes')||'null'); return Array.isArray(v)&&v.length?v:r||[]; }catch(e){ return r||[]; } })();
+  /* 合成表：data/recipes_preset.json 是唯一来源（2026-11-25 已把浏览器里那份手改版整份收编进来） */
+  S.recipes = Array.isArray(r) ? r : [];
   /* 卡包饰品：数据里写死的 gifts 合并进 packMap（localStorage 优先） */
   for(const pk of S.packs){
     if(!Array.isArray(pk.gifts)) continue;
