@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="skin18.css?v=20261125a">
 <link rel="stylesheet" href="skin19.css?v=20261125a">
 <link rel="stylesheet" href="skin20.css?v=20261125a">
+<link rel="stylesheet" href="skin21.css?v=20261125a">
 <style>
 body{margin:0}
 .gift-card{cursor:pointer}
@@ -622,6 +623,9 @@ function selectedPacks(){
 function floorGridHtml(packs){
   const withF = packs.filter(p=>packFloors(p).length>0).slice().sort((a,b)=>packAvgFloor(a)-packAvgFloor(b));
   if(!withF.length) return '<div class="floor-detail__empty">还没有选中带楼层的卡包</div>';
+
+  /* 手机：横向表格滑不动（会被当成返回手势），改成竖排卡片 */
+  if (window.innerWidth <= 768) return floorCardsHtml(withF);
   const col = i => PACK_COLORS[i % PACK_COLORS.length];
   const overview = `<div class="pack-overview">${withF.map((p,i)=>`<div class="pack-overview__item" data-pack="${esc(p.id)}" style="border-color:${col(i)}">${p.imageKey?`<img class="pack-overview__img" src="${coverSrc(p)}" onerror="this.style.display='none'">`:''}<span>${esc(p.name)}</span></div>`).join('')}</div>`;
   let body = '';
@@ -639,6 +643,27 @@ function floorGridHtml(packs){
   const head = `<tr><th class="floor-table__corner floor-table__sticky">层</th>${withF.map((_,ci)=>`<th class="floor-table__col-header"><span style="color:${col(ci)}">${ci+1}</span></th>`).join('')}</tr>`;
   return `${overview}<div class="floor-table-wrapper"><table class="floor-table"><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
 }
+/* 手机用的竖排楼层卡：一个包一块，下面写它在哪些层 */
+function floorCardsHtml(packs){
+  const col = i => PACK_COLORS[i % PACK_COLORS.length];
+  const floorLabel = f => {
+    const row = FLOOR_ROWS.find(r => r.floors.includes(f));
+    return row ? row.label : ('第 ' + f + ' 层');
+  };
+  const cards = packs.map((p, i) => {
+    const fl = packFloors(p).slice().sort((a,b)=>a-b);
+    const labels = [...new Set(fl.map(floorLabel))];
+    return `<div class="floor-card" data-pack="${esc(p.id)}" style="border-left-color:${col(i)}">
+      ${p.imageKey?`<img class="floor-card__cover" src="${coverSrc(p)}" onerror="this.style.display='none'">`:''}
+      <div class="floor-card__body">
+        <div class="floor-card__name">${esc(p.name)}</div>
+        <div class="floor-card__floors">${labels.map(l=>`<span class="floor-chip">${esc(l)}</span>`).join('')}</div>
+      </div>
+    </div>`;
+  }).join('');
+  return `<div class="floor-cards">${cards}</div>`;
+}
+
 function floorDetailHtml(){
   const id = S.planPick || S.planHover;
   const p = id ? packById(id) : null;
