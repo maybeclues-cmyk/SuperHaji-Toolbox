@@ -147,9 +147,26 @@ const giftById = id => S.gifts.find(g => String(g.id) === String(id));
 const catOf = g => S.user.cats[g.id] || g.category || '泛用';
 const rarOf = g => S.user.rarities[g.id] || g.rarity || '';
 const packsOf = id => {
-  const v = S.user.packMap[String(id)];
-  const arr = Array.isArray(v) ? v.map(String) : (v ? [String(v)] : []);
-  return arr.map(x => { const p = S.packs.find(pp => String(pp.id) === x || pp.name === x); return p ? p.name : x; });
+  /* 这个饰品「自己能拿到」的包 + 「用包里的材料合成出来」的包 */
+  const out = [];
+  const pushPid = pid => { const k = String(pid); if (!out.includes(k)) out.push(k); };
+
+  const own = S.user.packMap[String(id)];
+  (Array.isArray(own) ? own : (own ? [own] : [])).forEach(pushPid);
+
+  /* 补：哪几个包里的饰品，能合成这个（含 pickAny） */
+  for (const r of (S.recipes || [])) {
+    if (String(r.resultId) !== String(id)) continue;
+    const mats = (r.materialIds || []).map(String);
+    const pool = (r.pickAny && (r.pickAny.from || []).length) ? r.pickAny.from.map(String) : [];
+    const allMats = mats.concat(pool);
+    for (const m of allMats) {
+      const mv = S.user.packMap[m];
+      (Array.isArray(mv) ? mv : (mv ? [mv] : [])).forEach(pushPid);
+    }
+  }
+
+  return out.map(x => { const p = S.packs.find(pp => String(pp.id) === x || pp.name === x); return p ? p.name : x; });
 };
 function giftIdsInPack(packName){
   const p = S.packs.find(x => x.name === packName);
@@ -539,9 +556,11 @@ function groups4(packId){
 function selectedPacks(){
   const set = new Set();
   for(const gid of S.sel){
-    const v = S.user.packMap[String(gid)];
-    const arr = Array.isArray(v)?v:(v?[v]:[]);
-    for(const x of arr) if(x) set.add(String(x));
+    /* 用 packsOf：既算「包里直接有它」，也算「包里的材料能合成它」 */
+    for(const name of packsOf(gid)){
+      const pk = S.packs.find(x => x.name === name);
+      if(pk) set.add(String(pk.id));
+    }
   }
   return S.packs.filter(p=>set.has(String(p.id)));
 }
