@@ -1,0 +1,70 @@
+﻿/* ============================================================
+   skin9.css 鈥斺€?鎮仠娴佺嚎锛氱█鐤忕殑闀挎銆佸垎灞傘€佷笉瑙勫垯銆佹贰鐧?   ============================================================ */
+
+.gift-card::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:-4px !important;
+  padding:3px !important;
+  border-radius:11px !important;
+  background:
+    /* 绗?1 灞傦細闀挎銆佷寒锛屽懆鏈熷ぇ -> 鍍忓嚑閬撳厜鍦ㄨ窇 */
+    repeating-linear-gradient(122deg,
+      transparent 0 0px,
+      rgba(255,255,255,.62) 0px 3px,
+      transparent 3px 68px),
+    /* 绗?2 灞傦細鍙嶅悜锛岀◢鏆楋紝鍛ㄦ湡涓嶅悓 -> 涓嶅悓杞ㄩ亾 */
+    repeating-linear-gradient(58deg,
+      transparent 0px,
+      rgba(255,255,255,.38) 0px 2px,
+      transparent 2px 104px),
+    /* 绗?3 灞傦細杩戞按骞筹紝鏈€娣℃渶闀?*/
+    repeating-linear-gradient(96deg,
+      transparent 0px,
+      rgba(220,240,255,.24) 0px 1.5px,
+      transparent 1.5px 156px),
+    /* 绗?4 灞傦細鏋佹贰钃濆簳 */
+    linear-gradient(120deg,
+      rgba(160,215,255,.07),
+      rgba(255,255,255,.03) 50%,
+      rgba(160,215,255,.06));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  opacity:0;
+  transition:opacity .22s ease;
+  pointer-events:none;
+  animation:flowLayers9 5.5s linear infinite;
+  filter:none !important;
+}
+
+.gift-card:hover::before{opacity:1}
+
+/* 涓夊眰鍚勮嚜鐨勪綅绉婚€熷害涓嶅悓 鈥斺€?瑙嗚涓婂氨鏄嚑鏉＄嚎鍦ㄤ笉鍚岃建閬撲笂鍚勮蛋鍚勭殑 */
+@keyframes flowLayers9{
+  0%{
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  100%{
+    background-position:
+      136px -80px,
+      -208px 128px,
+      312px 0,
+      0 0;
+  }
+}
+
+/* 鍗＄墖鏈綋鐨勬偓鍋滃厜涔熷帇娣?*/
+.gift-card:hover{
+  box-shadow:0 0 12px rgba(200,225,255,.28), 0 3px 10px rgba(0,0,0,.8) !important;
+  transform:translateY(-1px) !important;
+  filter:none !important;
+}
+
+

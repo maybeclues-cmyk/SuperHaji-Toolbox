@@ -1,0 +1,79 @@
+﻿/* ============================================================
+   skin8.css 鈥斺€?鎮仠娴佺嚎锛氭贰鐧姐€佸灞傘€佷笉瑙勫垯
+   ============================================================ */
+
+/* 瑕嗙洊涓婁竴鐗堢殑鑺卞摠閲戣摑 */
+.gift-card::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:-2px !important;
+  padding:2px !important;
+  border-radius:9px !important;
+  background:
+    /* 绗?1 灞傦細鏂滀笂鏂圭粏绾匡紝鏈€浜?*/
+    repeating-linear-gradient(118deg,
+      transparent 0 7px,
+      rgba(255,255,255,.55) 7px 8px,
+      transparent 8px 21px),
+    /* 绗?2 灞傦細鍙嶆枩锛屼腑绛?*/
+    repeating-linear-gradient(62deg,
+      transparent 0 11px,
+      rgba(255,255,255,.34) 11px 12px,
+      transparent 12px 29px),
+    /* 绗?3 灞傦細鍑犱箮姘村钩锛屾渶娣?*/
+    repeating-linear-gradient(94deg,
+      transparent 0 15px,
+      rgba(255,255,255,.18) 15px 16px,
+      transparent 16px 37px),
+    /* 绗?4 灞傦細涓€鏉″緢娣＄殑钃濆簳鍏?*/
+    linear-gradient(120deg,
+      rgba(143,208,255,.10),
+      rgba(255,255,255,.04) 40%,
+      rgba(143,208,255,.08));
+  background-size:auto, auto, auto, 100% 100%;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  opacity:0;
+  transition:opacity .2s ease;
+  pointer-events:none;
+  animation:flowLayers 7s linear infinite;
+  filter:none !important;
+}
+
+.gift-card::before{opacity:1}
+
+/* 姣忓眰浠ヤ笉鍚岄€熷害銆佷笉鍚屾柟鍚戜綅绉?鈥斺€?鐪嬭捣鏉ュ氨鍍忓嚑鏉＄嚎鍚勮蛋鍚勭殑 */
+@keyframes flowLayers{
+  0%{
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  50%{
+    background-position:
+      26px -14px,
+      -18px 12px,
+      10px 0,
+      0 0;
+  }
+  100%{
+    background-position:
+      52px -28px,
+      -36px 24px,
+      20px 0,
+      0 0;
+  }
+}
+
+/* 鎮仠鏃跺崱鐗囨湰韬啀鏌斾竴鐐癸紝鍒姠 */
+.gift-card:hover{
+  box-shadow:0 0 14px rgba(190,220,255,.35), 0 3px 10px rgba(0,0,0,.8) !important;
+  transform:translateY(-1px) !important;
+  filter:none !important;
+}
+
