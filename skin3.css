@@ -1,0 +1,95 @@
+/* ============================================================
+   skin3.css —— 合成行卡片化 + 更多游戏 HUD 装饰
+   ============================================================ */
+
+/* ---------- 合成页：每条配方做成一块金属板 ---------- */
+.recipe-item{
+  background:linear-gradient(160deg,rgba(20,28,42,.55),rgba(6,9,15,.8)) !important;
+  border:1px solid rgba(58,74,96,.55) !important;
+  border-radius:6px;
+  margin:6px 0 !important;
+  padding:10px 14px !important;
+  position:relative;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04), 0 2px 8px rgba(0,0,0,.5);
+}
+.recipe-item::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,var(--gold),transparent 75%);
+  opacity:.65;border-radius:6px 0 0 6px;
+}
+.recipe-item:hover{
+  border-color:rgba(90,168,230,.75) !important;
+  background:linear-gradient(160deg,rgba(28,42,64,.7),rgba(8,12,20,.85)) !important;
+  box-shadow:0 0 16px rgba(90,168,230,.35), inset 0 1px 0 rgba(255,255,255,.07);
+}
+.recipe-item:last-child{border-bottom:1px solid rgba(58,74,96,.55) !important}
+
+/* ---------- 合成图标：加金属环 ---------- */
+.recipe-icon-wrapper{
+  box-shadow:
+    0 0 0 1px rgba(90,168,230,.35),
+    0 0 10px rgba(90,168,230,.15),
+    0 2px 6px rgba(0,0,0,.7) !important;
+}
+.recipe-icon-wrapper:hover{
+  box-shadow:
+    0 0 0 1px var(--gold),
+    0 0 16px rgba(201,162,39,.6),
+    0 2px 8px rgba(0,0,0,.8) !important;
+}
+
+/* ---------- 页面级：左右两侧刻度尺 ---------- */
+.compendium::before,.card-pack-page::before,.recipe-page::before,.planning-page::before{
+  content:"";position:absolute;left:-14px;top:20px;bottom:20px;width:8px;
+  background-image:linear-gradient(180deg,
+    rgba(201,162,39,.75) 0 2px, transparent 2px 10px);
+  background-size:100% 10px;
+  opacity:.5;
+}
+.compendium::after,.card-pack-page::after,.recipe-page::after,.planning-page::after{
+  content:"";position:absolute;right:-14px;top:20px;bottom:20px;width:8px;
+  background-image:linear-gradient(180deg,
+    rgba(90,168,230,.6) 0 2px, transparent 2px 10px);
+  background-size:100% 10px;
+  opacity:.45;
+}
+
+/* ---------- 卡包页标题条 ---------- */
+.card-pack-page__header::after,.search-wrapper::after{
+  content:"";display:block;height:1px;margin-top:10px;
+  background:linear-gradient(90deg,var(--gold) 0%,rgba(90,168,230,.5) 35%,transparent 80%);
+  opacity:.55;
+}
+
+/* ---------- 面板四角小三角（HUD 切角） ---------- */
+.compendium,.card-pack-page,.recipe-page,.planning-page,.pack-detail{
+  border-radius:10px;
+  position:relative;
+}
+.pack-detail > .pack-detail__header::before{
+  content:"◤";position:absolute;left:6px;top:2px;
+  color:var(--gold);opacity:.5;font-size:12px;
+}
+
+/* ---------- 鼠标悬停卡片时，右上角冒一个小眼 ---------- */
+.gift-card{overflow:visible}
+.gift-card::after{
+  content:"";position:absolute;right:2px;top:2px;width:14px;height:10px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'><g fill='none' stroke='%235aa8e6' stroke-width='14'><path d='M10 60 Q100 4 190 60 Q100 116 10 60 Z'/><circle cx='100' cy='60' r='20' fill='%235aa8e6' stroke='none'/></g></svg>");
+  background-repeat:no-repeat;background-size:contain;
+  opacity:0;transition:opacity .15s;pointer-events:none;z-index:3;
+}
+.gift-card:hover::after{opacity:.85}
+
+/* ---------- 加载/刷新时的一道光 ---------- */
+@keyframes scanDown{
+  0%{transform:translateY(-100vh);opacity:0}
+  8%{opacity:.55}
+  100%{transform:translateY(100vh);opacity:0}
+}
+.main-content::after{
+  content:"";position:fixed;left:0;right:0;top:0;height:140px;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,transparent,rgba(90,168,230,.10) 45%,rgba(143,208,255,.18) 50%,rgba(90,168,230,.10) 55%,transparent);
+  animation:scanDown 9s linear infinite;
+  opacity:0;
+}

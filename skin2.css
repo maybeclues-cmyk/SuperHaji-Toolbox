@@ -1,0 +1,134 @@
+/* ============================================================
+   skin.css v4 —— 补：合成页 / 方格线 / 黑块 / 特效
+   ============================================================ */
+
+/* ---------- 全页方格线（游戏 HUD 那种刻度网格） ---------- */
+.main-content{position:relative}
+.main-content::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(90,168,230,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90,168,230,.055) 1px, transparent 1px),
+    linear-gradient(rgba(90,168,230,.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90,168,230,.022) 1px, transparent 1px);
+  background-size:48px 48px, 48px 48px, 12px 12px, 12px 12px;
+  background-position:0 0, 0 0, 0 0, 0 0;
+}
+.main-content > *{position:relative;z-index:1}
+
+/* ---------- 扫描线（很淡，缓慢下移） ---------- */
+body .app::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1000;
+  background:repeating-linear-gradient(0deg,
+    rgba(0,0,0,.16) 0px, rgba(0,0,0,.16) 1px,
+    transparent 1px, transparent 3px);
+  opacity:.35;mix-blend-mode:multiply;
+}
+
+/* ---------- 合成页：全部改冷色 ---------- */
+.recipe-page{
+  background:linear-gradient(180deg,rgba(16,22,34,.95),rgba(6,9,14,.98)) !important;
+  border:1px solid var(--line) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05), 0 10px 40px rgba(0,0,0,.8) !important;
+  position:relative;
+}
+.recipe-page::before{
+  content:"";position:absolute;left:0;top:0;width:40px;height:40px;
+  border-left:2px solid var(--gold);border-top:2px solid var(--gold);opacity:.85;
+}
+.recipe-page::after{
+  content:"";position:absolute;right:0;bottom:0;width:40px;height:40px;
+  border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);opacity:.85;
+}
+.recipe-list{
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+.recipe-item{
+  border-bottom:1px solid rgba(90,168,230,.14) !important;
+  padding:12px 8px !important;
+  border-radius:6px;
+  transition:background .15s, box-shadow .15s;
+}
+.recipe-item:hover{
+  background:rgba(90,168,230,.07) !important;
+  box-shadow:inset 0 0 0 1px rgba(90,168,230,.35);
+}
+.recipe-item:last-child{border-bottom:none !important}
+.recipe-equals{color:var(--gold) !important;text-shadow:0 0 8px rgba(201,162,39,.6)}
+.recipe-plus{color:#5c6b80 !important}
+.recipe-gift-name{color:var(--text) !important}
+.recipe-icon{border-radius:4px}
+.recipe-icon-wrapper{
+  box-shadow:0 0 0 1px rgba(90,168,230,.2), 0 2px 6px rgba(0,0,0,.6);
+  border-radius:6px;
+}
+.recipe-list-title,.list-title,.page-title{
+  color:var(--gold-hi) !important;
+  text-shadow:0 0 14px rgba(201,162,39,.5);
+  letter-spacing:1px;
+}
+
+/* ---------- 更黑的块：面板底压到近黑 ---------- */
+.compendium,.card-pack-page,.pack-detail{
+  background:linear-gradient(180deg,rgba(11,15,23,.96),rgba(3,5,8,.99)) !important;
+}
+.pack-modal,.modal{
+  background:linear-gradient(180deg,#0d131d,#020305) !important;
+}
+.floor-table__cell--active{
+  background:linear-gradient(160deg,#0f1725,#04070b) !important;
+}
+
+/* ---------- 特效：按钮扫光 ---------- */
+.nav-link{position:relative;overflow:hidden}
+.nav-link::after{
+  content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(143,208,255,.28),transparent);
+  transform:skewX(-18deg);transition:none;pointer-events:none;
+}
+.nav-link:hover::after{
+  animation:sweep .7s ease-out;
+}
+@keyframes sweep{
+  from{left:-120%}
+  to{left:130%}
+}
+
+/* ---------- 特效：标题呼吸 ---------- */
+@keyframes glowPulse{
+  0%,100%{text-shadow:0 0 10px rgba(201,162,39,.4)}
+  50%{text-shadow:0 0 20px rgba(240,208,106,.85)}
+}
+.rarity-section__title{animation:glowPulse 4.5s ease-in-out infinite}
+.pack-detail__title,.page-title{animation:glowPulse 5.5s ease-in-out infinite}
+
+/* ---------- 特效：眼睛偶尔眨一下 ---------- */
+@keyframes blink{
+  0%,92%,100%{opacity:.10}
+  95%{opacity:.02}
+}
+body::after{animation:blink 7s ease-in-out infinite}
+
+/* ---------- 特效：选中导航的外发光呼吸 ---------- */
+@keyframes activeGlow{
+  0%,100%{box-shadow:inset 0 1px 0 rgba(255,225,150,.22), 0 0 14px 1px rgba(201,162,39,.45) !important}
+  50%{box-shadow:inset 0 1px 0 rgba(255,225,150,.3), 0 0 24px 3px rgba(240,208,106,.7) !important}
+}
+.nav-link.router-link-active{animation:activeGlow 3.2s ease-in-out infinite}
+
+/* ---------- 特效：卡片选中一圈金 ---------- */
+.gift-card--selected{
+  box-shadow:0 0 0 2px var(--gold), 0 0 16px rgba(201,162,39,.6) !important;
+}
+
+/* ---------- 滚动条：金色细线 ---------- */
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#3a4a62,#1b2432) !important;
+  border:1px solid rgba(201,162,39,.35) !important;
+}
+::-webkit-scrollbar-thumb:hover{
+  background:linear-gradient(180deg,#54688a,#26313f) !important;
+  border-color:var(--gold) !important;
+}
