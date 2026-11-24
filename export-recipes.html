@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>导出合成表</title>
+<style>
+  body{font-family:system-ui,sans-serif;background:#1a1410;color:#e8dcc8;padding:40px;margin:0}
+  h1{font-size:20px;margin:0 0 8px}
+  p{color:#a9967e;font-size:14px;line-height:1.7}
+  button{background:#c9a227;color:#1a1410;border:0;padding:12px 22px;border-radius:8px;font-size:15px;cursor:pointer;font-weight:600}
+  button:hover{background:#dbb63a}
+  pre{margin-top:20px;background:#241c16;padding:14px;border-radius:8px;font-size:12px;line-height:1.6;max-height:50vh;overflow:auto;white-space:pre-wrap;word-break:break-all}
+  .stat{color:#7fbf7f}
+</style>
+</head>
+<body>
+<h1>导出合成表（egogift_recipes）</h1>
+<p>点下面的按钮，会把浏览器里存的合成表原样下载成一个 <code>egogift_recipes.json</code>。<br>
+下载完告诉我，我读它来更新代码里的预设表。</p>
+<button onclick="go()">⤓ 下载 egogift_recipes.json</button>
+<div id="stat" class="stat"></div>
+<pre id="out">（点按钮后这里显示前 2000 字）</pre>
+<script>
+function go(){
+  const raw = localStorage.getItem('egogift_recipes');
+  const out = document.getElementById('out');
+  const stat = document.getElementById('stat');
+  if(!raw){ out.textContent = '（浏览器里没有 egogift_recipes）'; stat.textContent=''; return; }
+  let n = -1;
+  try { n = JSON.parse(raw).length; } catch(e){}
+  stat.textContent = '找到 ' + (n >= 0 ? n + ' 条' : '一段数据') + '，开始下载…';
+  out.textContent = raw.slice(0, 2000) + (raw.length > 2000 ? '\n…（共 ' + raw.length + ' 字）' : '');
+  const blob = new Blob([raw], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'egogift_recipes.json';
+  document.body.appendChild(a); a.click(); a.remove();
+}
+</script>
+</body>
+</html>
