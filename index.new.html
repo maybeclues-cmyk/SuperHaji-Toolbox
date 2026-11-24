@@ -158,7 +158,17 @@ function giftIdsInPack(packName){
 
 const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
 
+async function ensureUserSeed(){
+  /* 浏览器里一条用户数据都没有时，用仓库里的 data/user_data.json 灌一次（之后浏览器是工作副本，靠「导出」回写） */
+  if(localStorage.getItem('egogift_giftRarities')) return;
+  try{
+    const u = await (await fetch('data/user_data.json',{cache:'no-store'})).json();
+    for(const [k,v] of Object.entries(u||{})) localStorage.setItem('egogift_'+k, JSON.stringify(v));
+  }catch(e){}
+}
+
 async function boot(){
+  await ensureUserSeed();
   loadUser();
   const [g,p,r,st,pe] = await Promise.all([
     fetch('data/egogift.json',{cache:'no-store'}).then(x=>x.json()),
