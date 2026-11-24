@@ -1,0 +1,271 @@
+/* ============================================================
+   skin.css v2 —— 西西弗之镜风格
+   深蓝黑底 / 冷金属边 / 铜金指路 / 锁链 + 眼睛
+   ============================================================ */
+
+:root{
+  --bg-0:#05070b;
+  --bg-1:#0a0e15;
+  --bg-2:#111722;
+  --bg-3:#18202e;
+  --line:#2b3546;
+  --line-hi:#4a5a72;
+  --steel:#8a95a8;
+  --text:#c9d4e4;
+  --text-dim:#7d8a9e;
+  --gold:#c9a227;
+  --gold-hi:#f0d06a;
+  --ice:#5aa8e6;
+  --ice-hi:#8fd0ff;
+}
+
+/* ---------- 底色 ---------- */
+html,body{
+  background:
+    radial-gradient(1400px 700px at 50% -15%, #17243a 0%, transparent 62%),
+    radial-gradient(900px 500px at 110% 110%, #0e1724 0%, transparent 55%),
+    radial-gradient(700px 400px at -10% 90%, #1a1420 0%, transparent 60%),
+    var(--bg-0) !important;
+  color:var(--text) !important;
+  background-attachment:fixed !important;
+}
+.app{background:transparent !important;min-height:100vh}
+.main-content{
+  background:
+    repeating-linear-gradient(90deg, transparent 0 79px, rgba(90,168,230,.03) 79px 80px),
+    repeating-linear-gradient(0deg, transparent 0 79px, rgba(90,168,230,.03) 79px 80px);
+}
+
+/* ---------- 顶部金线 + 眼睛水印（固定在四角，很淡） ---------- */
+body::before{
+  content:"";position:fixed;left:0;right:0;top:0;height:2px;z-index:1200;
+  background:linear-gradient(90deg,transparent,var(--gold) 18%,var(--gold-hi) 50%,var(--gold) 82%,transparent);
+  opacity:.7;pointer-events:none;
+}
+body::after{
+  content:"";position:fixed;right:12px;bottom:10px;width:200px;height:120px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'><g fill='none' stroke='%235aa8e6' stroke-width='1.2'><path d='M10 60 Q100 4 190 60 Q100 116 10 60 Z'/><circle cx='100' cy='60' r='22'/><circle cx='100' cy='60' r='8' fill='%235aa8e6'/></g></svg>");
+  background-repeat:no-repeat;background-size:contain;
+  opacity:.10;pointer-events:none;z-index:2;
+}
+
+/* ---------- 导航栏 ---------- */
+.nav-bar{
+  background:linear-gradient(180deg,#1c2637 0%,#0d131d 55%,#070b11 100%) !important;
+  border-bottom:1px solid var(--line-hi) !important;
+  box-shadow:0 1px 0 rgba(255,255,255,.06), 0 6px 24px rgba(0,0,0,.75), inset 0 -1px 0 rgba(90,168,230,.3) !important;
+}
+/* 下沿锁链 */
+.nav-bar::after{
+  content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='10' viewBox='0 0 30 10'><g fill='none' stroke='%235a7ba0' stroke-width='1.5'><ellipse cx='7.5' cy='5' rx='6.2' ry='3.4'/><ellipse cx='22.5' cy='5' rx='3.4' ry='6.2'/></g></svg>");
+  background-repeat:repeat-x;opacity:.5;pointer-events:none;
+}
+
+/* ---------- 导航按钮 ---------- */
+.nav-link{
+  background:linear-gradient(180deg,#1a232f 0%,#0b1017 100%) !important;
+  color:var(--steel) !important;
+  border:1px solid var(--line-hi) !important;
+  outline:1px solid #000 !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 2px 6px rgba(0,0,0,.6) !important;
+  clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+  transition:all .18s ease;
+}
+.nav-link:hover{
+  background:linear-gradient(180deg,#243044 0%,#121a26 100%) !important;
+  border-color:var(--ice) !important;color:var(--ice-hi) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 0 14px 1px rgba(90,168,230,.45) !important;
+}
+.nav-link.router-link-active{
+  background:linear-gradient(180deg,#2f2713 0%,#171208 100%) !important;
+  border-color:var(--gold) !important;color:var(--gold-hi) !important;
+  box-shadow:inset 0 1px 0 rgba(255,225,150,.22), 0 0 18px 2px rgba(201,162,39,.55) !important;
+}
+.nav-btn{
+  background:linear-gradient(180deg,#161e2a,#0a0f16) !important;
+  border:1px solid var(--line) !important;color:var(--steel) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
+.nav-btn:hover{background:linear-gradient(180deg,#202b3b,#111823) !important;border-color:var(--ice) !important}
+
+/* ---------- 搜索框 ---------- */
+.search-input{
+  background:linear-gradient(180deg,#080d13,#0d141d) !important;
+  border:1px solid var(--line) !important;color:var(--text) !important;
+  box-shadow:inset 0 2px 8px rgba(0,0,0,.8) !important;
+}
+.search-input:focus{
+  border-color:var(--ice) !important;
+  box-shadow:inset 0 2px 8px rgba(0,0,0,.8), 0 0 14px rgba(90,168,230,.45) !important;
+  outline:none;
+}
+.search-input::placeholder{color:#546075 !important}
+
+/* ---------- 分类按钮 ---------- */
+.filter-btn{
+  background:linear-gradient(180deg,#161d29,#0b1118) !important;
+  border:1px solid var(--line) !important;color:var(--text-dim) !important;
+  clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px);
+  transition:all .15s;
+}
+.filter-btn:hover{border-color:var(--line-hi) !important;color:var(--text) !important}
+.filter-btn.active{
+  background:linear-gradient(180deg,#2e2712,#171105) !important;
+  border-color:var(--gold) !important;color:var(--gold-hi) !important;
+  box-shadow:0 0 12px rgba(201,162,39,.5) !important;
+}
+
+/* ---------- 等级分组：金条 + 眼睛 ---------- */
+.rarity-section__title{
+  color:var(--gold-hi) !important;
+  text-shadow:0 0 14px rgba(201,162,39,.55);
+  border-bottom:1px solid var(--line) !important;
+  padding:0 0 6px 44px !important;
+  position:relative;
+  background:linear-gradient(90deg,rgba(90,168,230,.10),transparent 42%);
+  letter-spacing:2px;
+}
+.rarity-section__title::before{
+  content:"";position:absolute;left:8px;top:50%;transform:translateY(-60%);
+  width:28px;height:18px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120'><g fill='none' stroke='%23f0d06a' stroke-width='10'><path d='M10 60 Q100 4 190 60 Q100 116 10 60 Z'/><circle cx='100' cy='60' r='22' fill='%23f0d06a' stroke='none'/></g></svg>");
+  background-repeat:no-repeat;background-size:contain;opacity:.85;
+}
+.rarity-section__title::after{
+  content:"";position:absolute;left:0;bottom:-6px;width:100%;height:6px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='6' viewBox='0 0 24 6'><g fill='none' stroke='%23c9a227' stroke-width='1' opacity='.45'><ellipse cx='6' cy='3' rx='5' ry='2.4'/><ellipse cx='18' cy='3' rx='2.4' ry='5'/></g></svg>");
+  background-repeat:repeat-x;opacity:.6;
+}
+
+/* ---------- 饰品卡：金属框 ---------- */
+.gift-card{
+  background:
+    radial-gradient(circle at 32% 26%, rgba(90,168,230,.08), transparent 60%),
+    linear-gradient(160deg,#161e2b 0%,#0a0e15 100%) !important;
+  border:1px solid #38455c !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,.85),
+    inset 0 1px 0 rgba(255,255,255,.10),
+    inset 0 -2px 6px rgba(0,0,0,.7),
+    0 2px 8px rgba(0,0,0,.65) !important;
+  position:relative;
+  border-radius:6px;
+  transition:transform .16s, box-shadow .16s, border-color .16s;
+}
+.gift-card::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(160deg,rgba(255,255,255,.06),transparent 38%);
+}
+.gift-card:hover{
+  border-color:var(--ice) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.12),
+    0 0 18px rgba(90,168,230,.55),
+    0 4px 14px rgba(0,0,0,.7) !important;
+  transform:translateY(-2px);
+}
+.gift-card__rarity{
+  color:var(--gold-hi) !important;
+  text-shadow:0 1px 3px #000, 0 0 8px rgba(201,162,39,.5);
+}
+.gift-card__icon{filter:drop-shadow(0 2px 4px rgba(0,0,0,.7))}
+
+/* ---------- 卡包格子 ---------- */
+.pack-item{
+  background:linear-gradient(160deg,#151d29,#090d13) !important;
+  border:1px solid #222b3a !important;
+  transition:all .15s;
+}
+.pack-item:hover{border-color:var(--ice) !important;box-shadow:0 0 16px rgba(90,168,230,.45) !important}
+.pack-item--active,.pack-item.active{
+  border-color:var(--gold) !important;
+  box-shadow:0 0 18px rgba(201,162,39,.6) !important;
+}
+.pack-item__cover img{
+  border:1px solid #2c3648;
+  box-shadow:0 2px 10px rgba(0,0,0,.7), inset 0 0 12px rgba(0,0,0,.5);
+}
+.pack-item__name{color:var(--text-dim) !important}
+
+/* ---------- 面板 ---------- */
+.pack-detail,.compendium,.card-pack-page,.recipe-page,.planning-page{
+  background:linear-gradient(180deg,rgba(17,23,35,.93),rgba(7,10,16,.97)) !important;
+  border:1px solid var(--line) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    0 10px 40px rgba(0,0,0,.75) !important;
+  border-radius:8px;
+}
+.pack-detail{position:relative;overflow:hidden}
+.pack-detail::before{
+  content:"";position:absolute;left:0;top:0;width:38px;height:38px;
+  border-left:2px solid var(--gold);border-top:2px solid var(--gold);
+  pointer-events:none;opacity:.85;
+}
+.pack-detail::after{
+  content:"";position:absolute;right:0;bottom:0;width:38px;height:38px;
+  border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);
+  pointer-events:none;opacity:.85;
+}
+.pack-detail__title{color:var(--gold-hi) !important;text-shadow:0 0 16px rgba(201,162,39,.5)}
+
+/* ---------- 弹窗 ---------- */
+.modal-overlay,.pack-modal-overlay{background:rgba(2,4,8,.88) !important;backdrop-filter:blur(4px)}
+.pack-modal,.modal{
+  background:linear-gradient(180deg,#131a26,#080d14) !important;
+  border:1px solid var(--line-hi) !important;
+  box-shadow:0 0 0 1px #000, 0 24px 70px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.07) !important;
+  color:var(--text) !important;
+}
+
+/* ---------- 右键菜单 ---------- */
+.context-menu,.ctx-menu{
+  background:linear-gradient(180deg,#151d2a,#0a0f16) !important;
+  border:1px solid var(--line-hi) !important;
+  box-shadow:0 10px 32px rgba(0,0,0,.85) !important;color:var(--text) !important;
+}
+.ctx-item:hover{background:#22304a !important;color:var(--ice-hi) !important}
+
+/* ---------- 事件区 ---------- */
+.pack-events{border-top:1px dashed var(--line) !important}
+.pack-events__label{color:var(--gold-hi) !important;text-shadow:0 0 12px rgba(201,162,39,.45)}
+.pack-events__evname{border-left:2px solid var(--gold) !important;color:var(--text) !important}
+.pack-events__opt{color:var(--text-dim) !important}
+.pack-events__arrow{color:#4d5c72 !important}
+.pack-events__row:hover{background:rgba(90,168,230,.09) !important}
+.pack-events__opts > li::before{border-left-color:#2a3444 !important}
+.pack-events__opts > li::after{border-top-color:#2a3444 !important}
+.pack-events__gift img{border:1px solid #2a3444;box-shadow:0 1px 4px rgba(0,0,0,.6)}
+
+/* ---------- 合成页 ---------- */
+.recipe-gift-name{color:var(--text) !important}
+.recipe-panel__title{color:var(--gold-hi) !important}
+.recipe-panel__label{color:var(--gold) !important}
+.recipe-panel__desc{
+  background:#080d14 !important;border:1px solid var(--line) !important;
+  color:var(--text-dim) !important;
+}
+.recipe-pick{border-color:var(--line-hi) !important}
+.recipe-pick__label{color:var(--gold) !important}
+
+/* ---------- 楼层表 ---------- */
+.floor-table__cell{background:#0c121a !important;border:1px solid #1b2432}
+.floor-table__cell--active{
+  background:linear-gradient(160deg,#1b2536,#0f1620) !important;
+  border-color:var(--line-hi) !important;
+}
+.floor-table__row-label{color:var(--steel) !important}
+.floor-table__corner{color:#5b6879 !important}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#070b11}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#2b3546,#1a2130);
+  border:1px solid #3a475c;border-radius:5px;
+}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#3d4a60,#232c3d)}
+
+/* ---------- 选区 ---------- */
+::selection{background:rgba(201,162,39,.35);color:#fff}
