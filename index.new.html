@@ -213,20 +213,8 @@ async function boot(){
       if(!arr.includes(String(pk.id))){ arr.push(String(pk.id)); S.user.packMap[key] = arr; }
     }
   }
-  /* 权威映射：dcorps 的卡包→饰品（按名字归一化匹配），补齐缺的归属，并作为"这个卡包有没有饰品"的判据 */
+  /* 权威映射：只当"这个卡包有没有饰品"的判据，不再往 packMap 里塞（旧版会写脏用户数据） */
   S.packSrc = await fetch('data/pack_sources.json').then(x=>x.json()).catch(()=>({}));
-  const byName = {};
-  for (const pk of S.packs) byName[nrmName(pk.name)] = String(pk.id);
-  for (const [name, ids] of Object.entries(S.packSrc || {})) {
-    const pid = byName[nrmName(name)];
-    if (!pid) continue;
-    for (const gid of ids) {
-      const key = String(gid);
-      const cur = S.user.packMap[key];
-      const arr = Array.isArray(cur) ? cur.map(String) : (cur ? [String(cur)] : []);
-      if (!arr.includes(pid)) { arr.push(pid); S.user.packMap[key] = arr; }
-    }
-  }
   /* 每个卡包实际挂了多少饰品（判"要不要显示"用真实数据，权威表只兜底） */
   S.packGiftCount = {};
   for (const g of S.gifts) {
