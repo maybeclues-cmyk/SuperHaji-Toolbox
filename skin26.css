@@ -1,17 +1,44 @@
-/* skin26 —— 合成页的等级标跟图标一起缩放
-   原来 .recipe-rarity 写死 font-size:14px，图标在桌面被放大到 76px 后它还是 14px，
-   比例就塌了（手机上 icon 是 58px，14px 看着正好，所以只有电脑上偏小）。
-   用容器查询单位：字号 = 图标宽度的 26%。手机 58×0.26≈15px，桌面 76×0.26≈20px。 */
+/* skin26 —— 所有页面的饰品等级标，统一成图鉴页那一档
+   原来的问题有三层：
+   ① 合成页 .recipe-rarity 写死 14px（图鉴是 18px），偏小；
+   ② 合成页的等级标没穿皮肤 —— 没有金色光晕，暗一档，看着更小；
+   ③ 位置也不一样：图鉴贴左上角 2px，合成页缩进去 4%。
+   容器查询单位在 inline-flex 上不稳（cqw 可能回退成旧字号），所以这里直接给绝对值，
+   三档断点跟图鉴同步。 */
 
-.recipe-icon-wrapper{
-  container-type: inline-size;
-}
+/* —— 合成页 —— */
 .recipe-rarity{
-  font-size: 26cqw !important;
-  line-height: 1;
-  left: 4% !important;
-  top: 3% !important;
+  color: #f0d06a !important;
+  text-shadow: 0 1px 3px #000, 0 0 9px rgba(201,162,39,.65) !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  left: 2px !important;
+  top: 2px !important;
+  font-weight: 700 !important;
 }
 
-/* 楼层规划里的格子只有 44px 左右，26% 是 11px，再垫一点点下限保证能看 */
-.floor-table .recipe-icon-wrapper .recipe-rarity{ font-size: max(11px, 26cqw) !important; }
+/* —— 图鉴页：跟合成页同值（原本就是 18px，锁住别再被别的层改掉） —— */
+.gift-card__rarity{
+  font-size: 18px !important;
+  line-height: 1 !important;
+  left: 2px !important;
+  top: 2px !important;
+}
+
+/* —— 楼层规划格子小，单独给一档，但仍然是"看得清"的最小值 —— */
+.floor-table .recipe-rarity,
+.floor-card .recipe-rarity{
+  font-size: 13px !important;
+  left: 1px !important;
+  top: 1px !important;
+}
+
+/* —— 手机：整体缩一档，比例不变 —— */
+@media (max-width: 768px){
+  .recipe-rarity{ font-size: 17px !important; }
+  .gift-card__rarity{ font-size: 17px !important; }
+}
+@media (max-width: 480px){
+  .recipe-rarity{ font-size: 16px !important; }
+  .gift-card__rarity{ font-size: 16px !important; }
+}
