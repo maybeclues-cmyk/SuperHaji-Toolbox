@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="skin21.css?v=20261125a">
 <link rel="stylesheet" href="skin22.css?v=20261125a">
 <link rel="stylesheet" href="skin23.css?v=20261125a">
+<link rel="stylesheet" href="skin24.css?v=20261125a">
 <style>
 body{margin:0}
 .gift-card{cursor:pointer}
@@ -314,7 +315,13 @@ function route(){
   S.page = page;
   document.querySelectorAll('.nav-link').forEach(a => {
     a.classList.toggle('router-link-active', a.dataset.page === S.page);
-    a.onclick = () => playSfx('DUANG');
+    a.onclick = ev => {
+      ev.preventDefault();
+      playSfx('DUANG');
+      const target = '#/' + a.dataset.page;
+      if(location.hash !== target) location.hash = target;
+      else route();           // 已经在那一页就手动重画一下
+    };
   });
   closeAll(); render();
 }

@@ -1,0 +1,40 @@
+/* ============================================================
+   skin24.css —— 手机点击手感的保险
+   ============================================================ */
+
+/* 1. 去掉 300ms 点击延迟；同时禁掉双击缩放 */
+.nav-link,.nav-btn,.filter-btn,.gift-card,.pack-item,.recipe-icon-wrapper,.plan-toggle,.floor-card{
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 2. 导航那个扫光伪元素在手机上直接不要（有的浏览器会拿它当命中层） */
+@media (max-width: 768px){
+  .nav-link::after,
+  .nav-btn::after{
+    display:none !important;
+  }
+  /* clip-path 在某些安卓上会让点击区变歪，手机上改成普通圆角 */
+  .nav-link{
+    clip-path:none !important;
+    border-radius:6px !important;
+  }
+  .filter-btn,
+  .nav-btn{
+    clip-path:none !important;
+    border-radius:10px !important;
+  }
+}
+
+/* 3. 卡片上的流动伪元素绝不能吃点击 */
+.gift-card::before,
+.recipe-icon-wrapper::before{
+  pointer-events:none !important;
+}
+
+/* 4. 图标本身也别拦截 */
+.gift-card__icon,
+.nav-icon,
+.pack-item__cover img{
+  pointer-events:none;
+}
