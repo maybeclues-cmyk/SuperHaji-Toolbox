@@ -1,10 +1,21 @@
-/* skin27 —— 手机上的两处毛病
-   ① 合成页比别的页多一圈空白：.recipe-page 的 padding 已经跟别人一样了（skin18），
-      但里面 .recipe-list 还留着 orig 的 padding:20px，别的页没有这一层 → 内容被多缩进 20px。
-   ② 那个页面点开的饰品详情显示不全：.modal-content 用 max-height:88vh，
-      手机地址栏伸缩时 vh 是按"最大视口"算的，实际可见区比它矮，底部就被切掉。
-      换成 dvh（动态视口）并留一点余量。 */
+/* skin27 —— 手机上的合成页：那圈多出来的空白
+   别的页（图鉴/卡包/楼层）都是满宽的，只有合成页右边空出一截：
+   外层的 .recipe-page 在这套皮肤好几层里被设过 border-image / padding / position，
+   宽度被内容撑住了（不是 block 满宽）。这里直接钉死满宽，不给它自己算。 */
 
+.recipe-page,
+.recipe-list{
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.recipe-item{
+  box-sizing: border-box !important;
+}
+
+/* 手机上合成页比别的页多一圈空白：.recipe-list 还留着 orig 的 padding:20px，
+   别的页没有这一层 → 内容被多缩进 */
 @media (max-width: 768px){
   .recipe-list{
     padding: 10px !important;
@@ -25,14 +36,10 @@
 /* 详情弹窗：dvh 跟地址栏一起变，不会算到看不见的地方去 */
 .modal-content{
   max-height: 82dvh !important;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 /* 老浏览器不认 dvh 的话，vh 兜底 */
 @supports not (max-height: 1dvh){
   .modal-content{ max-height: 82vh !important; }
-}
-
-/* 弹窗里长内容滚到底时别被圆角和边框切到 */
-.modal-content{
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
 }

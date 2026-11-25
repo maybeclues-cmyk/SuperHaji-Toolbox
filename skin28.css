@@ -1,0 +1,45 @@
+/* skin28 —— 满宽止血：手机上合成页右边空出一大块
+   现象：导航和别的页都是满屏，只有合成页的内容区窄了一截。
+   排查到 recipe 那一支在好几层皮肤里被单独设过 padding / border-image / 伪元素，
+   宽度不一定按 block 满宽算。这里不跟它讲道理了：
+   html/body 钉满、所有页面容器钉满、超出的东西直接裁掉（会有横向溢出的伪元素）。 */
+
+html, body{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.app,
+.main-content,
+.recipe-page,
+.recipe-list,
+.compendium,
+.card-pack-page,
+.planning-page,
+.pack-detail{
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 合成页内层再别自己加缩进（图鉴页那层是 0，这里也归 0） */
+.recipe-list{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.recipe-item{
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 手机上：合成页跟别的页对齐，别多一圈 */
+@media (max-width: 768px){
+  .recipe-list{
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+  .recipe-item{
+    padding: 8px 8px !important;
+  }
+}
