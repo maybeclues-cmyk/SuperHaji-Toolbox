@@ -209,7 +209,7 @@ const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
 
 /* 数据版本：改了 data/*.json 就把这个 +1 —— 浏览器才会去拉新的；没改就一直吃缓存。
    （这是手机上"每次打开都卡一会儿、第一下点不动"的根因：原来每个数据都 no-store，每次都重下） */
-const DATA_VER = 'v42';
+const DATA_VER = 'v43';
 const J = p => fetch(p + '?v=' + DATA_VER).then(x => x.json());
 
 async function boot(){
@@ -881,16 +881,9 @@ function getCover(name){
     }catch(e){ res(null); }
   });
 }
-async function fillCovers(root){
-  const items = [...root.querySelectorAll('.pack-item')];
-  for (const el of items){
-    const name = el.dataset.name;
-    const img = el.querySelector('img[data-cover]');
-    if (!img) continue;
-    const data = await getCover(name);
-    if (data){ img.src = data; img.style.display = 'block'; img.nextElementSibling && (img.nextElementSibling.style.display = 'none'); }
-  }
-}
+/* 封面已经随仓库发（card_pack/*.webp），src 在 packHtml 里就写好了。
+   旧版这里要逐个去 IndexedDB 捞（77 次开关库、还是串行 await），手机上会卡成幻灯片 —— 现在是空操作。 */
+async function fillCovers(root){ return; }
 
 /* ---------- BGM ---------- */
 let audio=null, cur='', muted=false;
@@ -962,7 +955,7 @@ document.addEventListener('click', e => {
 (function(){
   const b = document.createElement('div');
   b.id = 'verBadge';
-  b.textContent = 'v42';
+  b.textContent = 'v43';
   b.style.cssText = 'position:fixed;right:6px;bottom:4px;z-index:99999;font:10px/1 ui-monospace,Menlo,monospace;'
     + 'color:#4a5468;background:#0a0d13cc;border:1px solid #1c2433;border-radius:3px;padding:3px 5px;'
     + 'user-select:none;-webkit-user-select:none;cursor:pointer;letter-spacing:.5px;-webkit-tap-highlight-color:transparent';
