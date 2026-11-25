@@ -262,6 +262,7 @@ async function boot(){
   /* 预加载音效：解码一次，之后点一下就响，不用等下载 */
   ['DI','DUANG','JIUZHE','QINHU','YEHEI','YILI'].forEach(loadSfx);
 
+  S.ready = true;
   route();
 }
 /* ---------- 界面音效（DI=悬停，DUANG=点导航按钮） ---------- */
@@ -329,6 +330,18 @@ function route(){
   S.page = page;
   document.querySelectorAll('.nav-link').forEach(a => {
     a.classList.toggle('router-link-active', a.dataset.page === S.page);
+  });
+  if(!S.ready){            // 数据还没到：先给提示，别给一页空白（那就是"要点两下"的真相）
+    const app = $('app');
+    if(app) app.innerHTML = '<div style="padding:64px 20px;text-align:center;color:#4f5a6e;font-size:13px;letter-spacing:.1em">正在读数据…</div>';
+    return;
+  }
+  closeAll(); render();
+}
+window.addEventListener('hashchange', route);
+/* 导航的点按立刻绑好——不等数据加载（否则第一次点只是一页空白，看着就像"要点两下"） */
+function bindNav(){
+  document.querySelectorAll('.nav-link').forEach(a => {
     a.onclick = ev => {
       ev.preventDefault();
       const target = '#/' + a.dataset.page;
@@ -337,9 +350,8 @@ function route(){
       try { playSfx('DUANG'); } catch(e) {}   // 音效不许挡住跳转
     };
   });
-  closeAll(); render();
 }
-window.addEventListener('hashchange', route);
+bindNav();
 function closeAll(){ $('modal').classList.remove('open'); $('packModal').classList.remove('open'); $('hoverPanel').classList.remove('open'); $('ctxMenu').classList.remove('open'); }
 
 function render(){
@@ -928,6 +940,18 @@ document.addEventListener('click', e => {
   const m = $('modal');
   if(m && m.classList.contains('open') && e.target === m) m.classList.remove('open');
 });
+
+/* 版本徽章：点一下强制刷新（手机不好手动刷，也用它确认拿到的是新版本） */
+(function(){
+  const b = document.createElement('div');
+  b.id = 'verBadge';
+  b.textContent = 'v34';
+  b.style.cssText = 'position:fixed;right:6px;bottom:4px;z-index:99999;font:10px/1 ui-monospace,Menlo,monospace;'
+    + 'color:#4a5468;background:#0a0d13cc;border:1px solid #1c2433;border-radius:3px;padding:3px 5px;'
+    + 'user-select:none;-webkit-user-select:none;cursor:pointer;letter-spacing:.5px;-webkit-tap-highlight-color:transparent';
+  b.onclick = () => { location.replace(location.pathname + '?t=' + Date.now() + location.hash); };
+  document.body.appendChild(b);
+})();
 
 boot();
 </script>
