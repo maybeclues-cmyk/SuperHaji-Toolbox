@@ -1,44 +1,43 @@
-/* skin26 —— 所有页面的饰品等级标，统一成图鉴页那一档
-   原来的问题有三层：
-   ① 合成页 .recipe-rarity 写死 14px（图鉴是 18px），偏小；
-   ② 合成页的等级标没穿皮肤 —— 没有金色光晕，暗一档，看着更小；
-   ③ 位置也不一样：图鉴贴左上角 2px，合成页缩进去 4%。
-   容器查询单位在 inline-flex 上不稳（cqw 可能回退成旧字号），所以这里直接给绝对值，
-   三档断点跟图鉴同步。 */
+/* skin26 —— 所有页面的饰品等级标统一成图鉴页那一档，并且贴回游戏里那道斜边
+   ① 字号：图鉴页 18px，合成页原来写死 14px（且没穿皮肤、没有金色光晕）——统一并放大 30%；
+   ② 位置：饰品底图 gift-bg 是八边形，左上角那道是斜边，等级标要吃在斜边内侧、往右下让一点，
+      原来贴直角（left:2px top:2px）会被斜边"啃"掉一半。
+   ③ 容器查询单位（cqw）在 inline-flex 上不稳，会回退成旧字号，所以这里全用绝对值 + 断点。 */
 
 /* —— 合成页 —— */
 .recipe-rarity{
   color: #f0d06a !important;
   text-shadow: 0 1px 3px #000, 0 0 9px rgba(201,162,39,.65) !important;
-  font-size: 18px !important;
+  font-size: 23px !important;
   line-height: 1 !important;
-  left: 2px !important;
-  top: 2px !important;
   font-weight: 700 !important;
+  left: 9% !important;
+  top: 5% !important;
 }
 
-/* —— 图鉴页：跟合成页同值（原本就是 18px，锁住别再被别的层改掉） —— */
+/* —— 图鉴页：同字号、同位置 —— */
 .gift-card__rarity{
-  font-size: 18px !important;
+  font-size: 23px !important;
   line-height: 1 !important;
-  left: 2px !important;
-  top: 2px !important;
+  font-weight: 700 !important;
+  left: 9% !important;
+  top: 5% !important;
 }
 
-/* —— 楼层规划格子小，单独给一档，但仍然是"看得清"的最小值 —— */
+/* —— 楼层规划格子小，单独一档，但位置同样让开斜边 —— */
 .floor-table .recipe-rarity,
 .floor-card .recipe-rarity{
-  font-size: 13px !important;
-  left: 1px !important;
-  top: 1px !important;
+  font-size: 16px !important;
+  left: 8% !important;
+  top: 4% !important;
 }
 
 /* —— 手机：整体缩一档，比例不变 —— */
 @media (max-width: 768px){
-  .recipe-rarity{ font-size: 17px !important; }
-  .gift-card__rarity{ font-size: 17px !important; }
+  .recipe-rarity{ font-size: 22px !important; }
+  .gift-card__rarity{ font-size: 22px !important; }
 }
 @media (max-width: 480px){
-  .recipe-rarity{ font-size: 16px !important; }
-  .gift-card__rarity{ font-size: 16px !important; }
+  .recipe-rarity{ font-size: 21px !important; }
+  .gift-card__rarity{ font-size: 21px !important; }
 }
