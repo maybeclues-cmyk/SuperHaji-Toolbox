@@ -32,12 +32,15 @@
   top: 4% !important;
 }
 
-/* —— 手机：整体缩一档，比例不变 —— */
+/* —— 手机：卡片本身缩小了一半，字号要按比例跟着降（原来是 22/21，在 76px 的卡上占比 29%，
+   桌面 23px 在 100px 卡上才是 23%。手机按同一比例算下来约 17px / 15px。——  */
 @media (max-width: 768px){
-  .recipe-rarity{ font-size: 22px !important; }
-  .gift-card__rarity{ font-size: 22px !important; }
+  .recipe-rarity{ font-size: 17px !important; }
+  .gift-card__rarity{ font-size: 17px !important; }
+  .floor-table .recipe-rarity,
+  .floor-card .recipe-rarity{ font-size: 13px !important; }
 }
 @media (max-width: 480px){
-  .recipe-rarity{ font-size: 21px !important; }
-  .gift-card__rarity{ font-size: 21px !important; }
+  .recipe-rarity{ font-size: 15px !important; }
+  .gift-card__rarity{ font-size: 15px !important; }
 }
