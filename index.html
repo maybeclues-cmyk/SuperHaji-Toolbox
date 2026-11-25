@@ -209,7 +209,7 @@ const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
 
 /* 数据版本：改了 data/*.json 就把这个 +1 —— 浏览器才会去拉新的；没改就一直吃缓存。
    （这是手机上"每次打开都卡一会儿、第一下点不动"的根因：原来每个数据都 no-store，每次都重下） */
-const DATA_VER = 'v40';
+const DATA_VER = 'v41';
 const J = p => fetch(p + '?v=' + DATA_VER).then(x => x.json());
 
 async function boot(){
@@ -354,9 +354,16 @@ function bindNav(){
   document.querySelectorAll('.nav-link').forEach(a => {
     a.onclick = ev => {
       ev.preventDefault();
-      const target = '#/' + a.dataset.page;
+      const page = a.dataset.page;
+      const target = '#/' + page;
+      /* 连点太快时，浏览器会把几次 hashchange 合并 / 延迟，route() 读到的还是旧的 hash。
+         所以这里不依赖 hash：点击当场就把目标页渲染出来。 */
       if(location.hash !== target) location.hash = target;
-      else route();           // 已经在那一页就手动重画一下
+      if(S.page !== page){ S.q = ''; S.page = page; }
+      document.querySelectorAll('.nav-link').forEach(x => {
+        x.classList.toggle('router-link-active', x.dataset.page === page);
+      });
+      if(S.ready){ closeAll(); render(); }
       try { playSfx('DUANG'); } catch(e) {}   // 音效不许挡住跳转
     };
   });
@@ -955,7 +962,7 @@ document.addEventListener('click', e => {
 (function(){
   const b = document.createElement('div');
   b.id = 'verBadge';
-  b.textContent = 'v40';
+  b.textContent = 'v41';
   b.style.cssText = 'position:fixed;right:6px;bottom:4px;z-index:99999;font:10px/1 ui-monospace,Menlo,monospace;'
     + 'color:#4a5468;background:#0a0d13cc;border:1px solid #1c2433;border-radius:3px;padding:3px 5px;'
     + 'user-select:none;-webkit-user-select:none;cursor:pointer;letter-spacing:.5px;-webkit-tap-highlight-color:transparent';
