@@ -204,15 +204,20 @@ function giftIdsInPack(packName){
 
 const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
 
+/* 数据版本：改了 data/*.json 就把这个 +1 —— 浏览器才会去拉新的；没改就一直吃缓存。
+   （这是手机上"每次打开都卡一会儿、第一下点不动"的根因：原来每个数据都 no-store，每次都重下） */
+const DATA_VER = 'v34';
+const J = p => fetch(p + '?v=' + DATA_VER).then(x => x.json());
+
 async function boot(){
-  S.userData = await fetch('data/user_data.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>({}));
+  S.userData = await J('data/user_data.json').catch(()=>({}));
   loadUser();
   const [g,p,r,st,pe] = await Promise.all([
-    fetch('data/egogift.json',{cache:'no-store'}).then(x=>x.json()),
-    fetch('data/cardpacks_preset.json',{cache:'no-store'}).then(x=>x.json()),
-    fetch('data/recipes_preset.json',{cache:'no-store'}).then(x=>x.json()),
-    fetch('data/status_names.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>({})),
-    fetch('data/pack_events.json',{cache:'no-store'}).then(x=>x.json()).catch(()=>({}))
+    J('data/egogift.json'),
+    J('data/cardpacks_preset.json'),
+    J('data/recipes_preset.json'),
+    J('data/status_names.json').catch(()=>({})),
+    J('data/pack_events.json').catch(()=>({}))
   ]);
   S.packEvents = pe || {};
   S.status = st || {};
@@ -250,7 +255,7 @@ async function boot(){
     }
   }
   /* 权威映射：只当"这个卡包有没有饰品"的判据，不再往 packMap 里塞（旧版会写脏用户数据） */
-  S.packSrc = await fetch('data/pack_sources.json').then(x=>x.json()).catch(()=>({}));
+  S.packSrc = await J('data/pack_sources.json').catch(()=>({}));
   /* 每个卡包实际挂了多少饰品（判"要不要显示"用真实数据，权威表只兜底） */
   S.packGiftCount = {};
   for (const g of S.gifts) {
@@ -333,7 +338,9 @@ function route(){
   });
   if(!S.ready){            // 数据还没到：先给提示，别给一页空白（那就是"要点两下"的真相）
     const app = $('app');
-    if(app) app.innerHTML = '<div style="padding:64px 20px;text-align:center;color:#4f5a6e;font-size:13px;letter-spacing:.1em">正在读数据…</div>';
+    if(app) app.innerHTML = '<div style="padding:72px 20px;text-align:center;color:#7d8a9e;font-size:13px;letter-spacing:.12em">'
+      + '<div style="width:26px;height:26px;margin:0 auto 16px;border:2px solid #1c2433;border-top-color:#c9a227;border-radius:50%;animation:ldspin .85s linear infinite"></div>'
+      + '正在读取数据…</div><style>@keyframes ldspin{to{transform:rotate(360deg)}}</style>';
     return;
   }
   closeAll(); render();
@@ -945,7 +952,7 @@ document.addEventListener('click', e => {
 (function(){
   const b = document.createElement('div');
   b.id = 'verBadge';
-  b.textContent = 'v34';
+  b.textContent = 'v35';
   b.style.cssText = 'position:fixed;right:6px;bottom:4px;z-index:99999;font:10px/1 ui-monospace,Menlo,monospace;'
     + 'color:#4a5468;background:#0a0d13cc;border:1px solid #1c2433;border-radius:3px;padding:3px 5px;'
     + 'user-select:none;-webkit-user-select:none;cursor:pointer;letter-spacing:.5px;-webkit-tap-highlight-color:transparent';
