@@ -346,7 +346,10 @@
   "id": "pack_canto_x",
   "name": "开店抢购",
   "imageKey": "Canto_X",
-  "floors": [],
+  "floors": [
+   3,
+   4
+  ],
   "gifts": [
    9290,
    9291
@@ -356,7 +359,15 @@
   "id": "pack_canto_x_mid",
   "name": "纷繁的色彩",
   "imageKey": "Canto_X_mid",
-  "floors": [],
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
   "gifts": [
    9288,
    9289
@@ -366,7 +377,15 @@
   "id": "pack_canto_x_mid2",
   "name": "保存的信念",
   "imageKey": "Canto_X_mid2",
-  "floors": [],
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
   "gifts": [
    9286,
    9287
@@ -376,7 +395,15 @@
   "id": "pack_canto_x_hard",
   "name": "暴食重临",
   "imageKey": "Canto_X_hard",
-  "floors": [],
+  "floors": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
   "gifts": [
    9284,
    9285
@@ -742,11 +769,12 @@
   "name": "黎明后贯穿而来之楔",
   "imageKey": "Walpu10_Dawn",
   "floors": [
-   11,
-   12,
-   13,
-   14,
-   15
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
   ],
   "gifts": [
    9292,
