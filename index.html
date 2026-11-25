@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="skin22.css?v=20261125a">
 <link rel="stylesheet" href="skin23.css?v=20261125a">
 <link rel="stylesheet" href="skin24.css?v=20261125a">
+<link rel="stylesheet" href="skin25.css?v=20261125a">
 <style>
 body{margin:0}
 .gift-card{cursor:pointer}
@@ -317,10 +318,10 @@ function route(){
     a.classList.toggle('router-link-active', a.dataset.page === S.page);
     a.onclick = ev => {
       ev.preventDefault();
-      playSfx('DUANG');
       const target = '#/' + a.dataset.page;
       if(location.hash !== target) location.hash = target;
       else route();           // 已经在那一页就手动重画一下
+      try { playSfx('DUANG'); } catch(e) {}   // 音效不许挡住跳转
     };
   });
   closeAll(); render();
@@ -380,9 +381,12 @@ function keepHover(){ clearTimeout(hoverTimer); }
 function bindCards(root){
   root.querySelectorAll('.gift-card[data-id]').forEach(el=>{
     const id = el.dataset.id;
-    el.onclick = () => { triggerGiftBgm(giftById(id)); openGift(id); };
+    el.onclick = () => {
+      try { triggerGiftBgm(giftById(id)); } catch(e) {}
+      openGift(id);
+    };
     el.oncontextmenu = ev => { ev.preventDefault(); openCtx(id, ev.clientX, ev.clientY); };
-    el.onmouseenter = () => { playSfx('DI'); keepHover(); showHover(id); };
+    el.onmouseenter = () => { try { playSfx('DI'); } catch(e) {} keepHover(); showHover(id); };
     el.onmouseleave = () => hideHoverSoon();
   });
   const panel = $('hoverPanel');
@@ -622,7 +626,7 @@ function renderRecipes(){
   $('app').querySelectorAll('.recipe-icon-wrapper[data-id]').forEach(el=>{
     el.onclick = () => openGift(el.dataset.id);
     el.oncontextmenu = ev => { ev.preventDefault(); openCtx(el.dataset.id, ev.clientX, ev.clientY); };
-    el.onmouseenter = () => playSfx('DI');   // 合成页也要 DI 的悬停音
+    el.onmouseenter = () => { try { playSfx('DI'); } catch(e) {} };   // 合成页也要 DI 的悬停音
   });
 }
 

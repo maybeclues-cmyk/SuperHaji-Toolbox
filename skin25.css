@@ -1,0 +1,53 @@
+/* ============================================================
+   skin25.css —— 触屏上别让 :hover 抢走第一次点击
+   ============================================================ */
+
+/* 手机/平板：把这些元素的 hover 视觉反馈全部中和，
+   让浏览器不再因为「先 hover 后 click」而吃掉第一下 */
+@media (hover: none) and (pointer: coarse){
+
+  /* 导航 */
+  .nav-link:hover{
+    background:linear-gradient(180deg,#1a232f 0%,#0b1017 100%) !important;
+    border-color:#4a5a72 !important;
+    color:#8a95a8 !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 2px 6px rgba(0,0,0,.6) !important;
+  }
+  .nav-link.router-link-active:hover{
+    background:linear-gradient(180deg,#2f2713 0%,#171208 100%) !important;
+    border-color:#c9a227 !important;
+    color:#f0d06a !important;
+    box-shadow:inset 0 1px 0 rgba(255,225,150,.22), 0 0 18px 2px rgba(201,162,39,.55) !important;
+  }
+
+  /* 小按钮 */
+  .nav-btn:hover,
+  .filter-btn:hover,
+  .plan-toggle:hover,
+  .clear-all-btn:hover,
+  .plan-btn:hover{
+    filter:none !important;
+  }
+
+  /* 卡片：hover 不位移、不发光 */
+  .gift-card:hover{
+    border:none !important;
+    box-shadow:0 2px 8px rgba(0,0,0,.7) !important;
+    transform:none !important;
+    filter:none !important;
+  }
+  .pack-item:hover{
+    border-color:#222b3a !important;
+    box-shadow:none !important;
+  }
+  .floor-card:hover{filter:none !important}
+  .recipe-icon-wrapper:hover{box-shadow:none !important}
+  .selected-item:hover .selected-item__remove{opacity:1}
+
+  /* 流动光带彻底不参与 */
+  .gift-card::before,
+  .recipe-icon-wrapper::before{
+    animation:none !important;
+    opacity:0 !important;
+  }
+}
