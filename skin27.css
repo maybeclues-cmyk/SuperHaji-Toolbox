@@ -1,0 +1,38 @@
+/* skin27 —— 手机上的两处毛病
+   ① 合成页比别的页多一圈空白：.recipe-page 的 padding 已经跟别人一样了（skin18），
+      但里面 .recipe-list 还留着 orig 的 padding:20px，别的页没有这一层 → 内容被多缩进 20px。
+   ② 那个页面点开的饰品详情显示不全：.modal-content 用 max-height:88vh，
+      手机地址栏伸缩时 vh 是按"最大视口"算的，实际可见区比它矮，底部就被切掉。
+      换成 dvh（动态视口）并留一点余量。 */
+
+@media (max-width: 768px){
+  .recipe-list{
+    padding: 10px !important;
+    border-radius: 8px !important;
+  }
+  .recipe-item{
+    padding: 8px 0 !important;
+  }
+}
+
+@media (max-width: 480px){
+  .recipe-list{
+    padding: 8px !important;
+  }
+  .recipe-materials{ gap: 4px !important; }
+}
+
+/* 详情弹窗：dvh 跟地址栏一起变，不会算到看不见的地方去 */
+.modal-content{
+  max-height: 82dvh !important;
+}
+/* 老浏览器不认 dvh 的话，vh 兜底 */
+@supports not (max-height: 1dvh){
+  .modal-content{ max-height: 82vh !important; }
+}
+
+/* 弹窗里长内容滚到底时别被圆角和边框切到 */
+.modal-content{
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
