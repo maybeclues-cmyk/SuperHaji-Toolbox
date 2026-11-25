@@ -653,7 +653,6 @@ function floorCardsHtml(packs){
     const fl = packFloors(p).slice().sort((a,b)=>a-b);
     const labels = [...new Set(fl.map(floorLabel))];
     return `<div class="floor-card" data-pack="${esc(p.id)}" style="border-left-color:${col(i)}">
-      <span class="floor-card__idx">${i + 1}</span>
       ${p.imageKey?`<img class="floor-card__cover" src="${coverSrc(p)}" onerror="this.style.display='none'">`:''}
       <div class="floor-card__body">
         <div class="floor-card__name">${esc(p.name)}</div>
