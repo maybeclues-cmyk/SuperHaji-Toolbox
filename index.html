@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>E.G.O 饰品图鉴</title>
-<link rel="stylesheet" href="orig.flat.css?v=20261125">
+<link rel="stylesheet" href="orig.flat.css?v=20261125b">
 <link rel="stylesheet" href="skin.css?v=20261125a">
 <link rel="stylesheet" href="skin2.css?v=20261125a">
 <link rel="stylesheet" href="skin3.css?v=20261125a">
@@ -256,14 +256,56 @@ async function boot(){
     const arr = Array.isArray(v) ? v.map(String) : (v ? [String(v)] : []);
     for (const pid of arr) S.packGiftCount[pid] = (S.packGiftCount[pid] || 0) + 1;
   }
+  /* 预加载音效：解码一次，之后点一下就响，不用等下载 */
+  ['DI','DUANG','JIUZHE','QINHU','YEHEI','YILI'].forEach(loadSfx);
+
   route();
 }
 /* ---------- 界面音效（DI=悬停，DUANG=点导航按钮） ---------- */
-const SFX_HOVER = new Audio('DI.mp3');
-const SFX_CLICK = new Audio('DUANG.mp3');
-SFX_HOVER.volume = 0.45;
-SFX_CLICK.volume = 0.55;
-function playSfx(a){ try{ a.currentTime = 0; a.play().catch(()=>{}); }catch(e){} }
+/* 音效走 Web Audio —— 和 <audio> 的 BGM 是两个通道，手机上能边放歌边出音效 */
+let actx = null;
+const SFXBUF = {};
+function sfxCtx(){
+  if(!actx){
+    try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e){ return null; }
+  }
+  if(actx.state === 'suspended') actx.resume().catch(()=>{});
+  return actx;
+}
+const SFXAB = {};   // 先只把文件拉下来，decode 等第一次交互（不然 AudioContext 会被拦）
+function loadSfx(name){
+  if(SFXAB[name] !== undefined) return;
+  SFXAB[name] = 'loading';
+  fetch(name + '.mp3')
+    .then(r => r.arrayBuffer())
+    .then(ab => { SFXAB[name] = ab; })
+    .catch(() => {});
+}
+/* 第一次点屏幕：把已下载的全解码，之后点一下就响 */
+document.addEventListener('pointerdown', function initAudio(){
+  const c = sfxCtx(); if(!c) return;
+  for(const k in SFXAB){
+    const ab = SFXAB[k];
+    if(ab && ab !== 'loading' && SFXBUF[k] === undefined){
+      c.decodeAudioData(ab.slice(0)).then(b => { SFXBUF[k] = b; }).catch(() => {});
+    }
+  }
+}, { once: true, passive: true });
+function playSfx(name){
+  if(muted) return;
+  const c = sfxCtx(); if(!c) return;
+  const b = SFXBUF[name];
+  if(b){
+    const src = c.createBufferSource();
+    src.buffer = b;
+    const gain = c.createGain();
+    gain.gain.value = (name === 'DUANG') ? 0.55 : 0.45;
+    src.connect(gain); gain.connect(c.destination);
+    src.start();
+  } else {
+    loadSfx(name);
+  }
+}
 function route(){
   const h = (location.hash.replace(/^#\/?/, '') || 'gifts');
   const page = ['gifts','packs','plan','recipes'].includes(h) ? h : 'gifts';
@@ -271,7 +313,7 @@ function route(){
   S.page = page;
   document.querySelectorAll('.nav-link').forEach(a => {
     a.classList.toggle('router-link-active', a.dataset.page === S.page);
-    a.onclick = () => playSfx(SFX_CLICK);
+    a.onclick = () => playSfx('DUANG');
   });
   closeAll(); render();
 }
@@ -332,7 +374,7 @@ function bindCards(root){
     const id = el.dataset.id;
     el.onclick = () => { triggerGiftBgm(giftById(id)); openGift(id); };
     el.oncontextmenu = ev => { ev.preventDefault(); openCtx(id, ev.clientX, ev.clientY); };
-    el.onmouseenter = () => { playSfx(SFX_HOVER); keepHover(); showHover(id); };
+    el.onmouseenter = () => { playSfx('DI'); keepHover(); showHover(id); };
     el.onmouseleave = () => hideHoverSoon();
   });
   const panel = $('hoverPanel');
@@ -572,7 +614,7 @@ function renderRecipes(){
   $('app').querySelectorAll('.recipe-icon-wrapper[data-id]').forEach(el=>{
     el.onclick = () => openGift(el.dataset.id);
     el.oncontextmenu = ev => { ev.preventDefault(); openCtx(el.dataset.id, ev.clientX, ev.clientY); };
-    el.onmouseenter = () => playSfx(SFX_HOVER);   // 合成页也要 DI 的悬停音
+    el.onmouseenter = () => playSfx('DI');   // 合成页也要 DI 的悬停音
   });
 }
 
@@ -799,14 +841,8 @@ async function fillCovers(root){
 /* ---------- BGM ---------- */
 let audio=null, cur='', muted=false;
 const BGM_VOL = 0.18;
-const SFX = {};
 S.playedBgm = new Set();
-function sfx(name){
-  if(muted) return;
-  if(!SFX[name]){ SFX[name]=new Audio(name+'.mp3'); SFX[name].volume=1; }
-  SFX[name].currentTime=0;
-  SFX[name].play().catch(()=>{});
-}
+function sfx(name){ playSfx(name); }   // 统一走 Web Audio
 function bgmEl(f){
   if(!audio){
     audio = new Audio();
@@ -855,8 +891,7 @@ $('bgmMute').onclick=()=>{
   if(muted){
     // 关：停掉所有在响的东西，之后任何人再点播放都不出声
     if(audio) audio.pause();
-    for(const k in SFX){ try{ SFX[k].pause(); SFX[k].currentTime=0; }catch(e){} }
-    [SFX_HOVER, SFX_CLICK].forEach(a => { try{ a.pause(); a.currentTime=0; }catch(e){} });
+    /* Web Audio 的短音效播完就没了，不用手动停 */
     syncBgmBtns();
   } else {
     // 开：只解除限制，不替她自动续播
