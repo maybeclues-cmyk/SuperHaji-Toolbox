@@ -1,0 +1,64 @@
+/* ============================================================
+   skin23.css —— 手机性能减负
+   手机 GPU 扛不住的东西全关掉：模糊、常驻动画、多层网格
+   ============================================================ */
+
+@media (max-width: 768px){
+
+  /* 1. 毛玻璃最吃性能，关掉 */
+  .modal-overlay,.pack-modal-overlay{
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+
+  /* 2. 常驻动画全停 —— 这些每秒都在重绘 */
+  body::after{animation:none !important;opacity:.05 !important}      /* 眼睛眨 */
+  .rarity-section__title{animation:none !important;text-shadow:0 0 8px rgba(201,162,39,.5) !important}
+  .pack-detail__title,.page-title{animation:none !important}
+  .nav-link.router-link-active{animation:none !important}
+  .nav-btn--playing{animation:none !important}
+  .nav-btn::before{animation:none !important;opacity:.7;box-shadow:0 0 4px currentColor}
+
+  /* 3. 扫描线 / 扫光 关掉 */
+  body .app::after{display:none !important}
+  .main-content::after{display:none !important}
+
+  /* 4. 网格只留一层，淡一点 */
+  .app::before{
+    background-image:
+      linear-gradient(rgba(120,170,220,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(120,170,220,.035) 1px, transparent 1px) !important;
+    background-size:32px 32px !important;
+    opacity:.6 !important;
+  }
+
+  /* 5. 噪点层也去掉（SVG 滤镜在手机上很贵） */
+  .app::after{
+    background-image:none !important;
+    display:none !important;
+  }
+
+  /* 6. 卡片/按钮的发光浅一点，少点合成层 */
+  .gift-card{box-shadow:0 2px 6px rgba(0,0,0,.6) !important}
+  .gift-card:hover{transform:none !important}
+  .nav-link,.filter-btn,.nav-btn{text-shadow:none !important}
+
+  /* 7. 图片渲染：让它按设备像素比缩，别用高分辨率硬撑 */
+  .gift-card__icon,.pack-item__cover img,.recipe-icon,.pack-empty img{
+    image-rendering:auto;
+  }
+
+  /* 8. 楼层卡片也别发光 */
+  .floor-card{box-shadow:0 1px 4px rgba(0,0,0,.5) !important}
+}
+
+/* 低端机：再加一层保险（内存/核心数不够就不加载重特效） */
+@media (max-width: 480px){
+  .app::before{
+    background-image:
+      linear-gradient(rgba(120,170,220,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(120,170,220,.03) 1px, transparent 1px) !important;
+    background-size:40px 40px !important;
+  }
+  #hoverPanel{display:none !important}
+}
