@@ -297,17 +297,30 @@ document.addEventListener('pointerdown', function initAudio(){
 function playSfx(name){
   if(muted) return;
   const c = sfxCtx(); if(!c) return;
-  const b = SFXBUF[name];
-  if(b){
+
+  const play = buf => {
     const src = c.createBufferSource();
-    src.buffer = b;
+    src.buffer = buf;
     const gain = c.createGain();
     gain.gain.value = (name === 'DUANG') ? 0.55 : 0.45;
     src.connect(gain); gain.connect(c.destination);
-    src.start();
-  } else {
-    loadSfx(name);
+    try { src.start(); } catch(e) {}
+  };
+
+  const b = SFXBUF[name];
+  if(b){ play(b); return; }
+
+  const ab = SFXAB[name];
+  if(ab && ab !== 'loading'){
+    /* 文件已经有了，只是还没解码 —— 现在就解，解完立刻补播这一下 */
+    SFXBUF[name] = null;              // 占位，别重复解码
+    c.decodeAudioData(ab.slice(0)).then(buf => {
+      SFXBUF[name] = buf;
+      play(buf);                      // 这一下也补上
+    }).catch(() => { SFXBUF[name] = undefined; });
+    return;
   }
+  if(ab === undefined) loadSfx(name); // 连文件都还没开始拉
 }
 function route(){
   const h = (location.hash.replace(/^#\/?/, '') || 'gifts');
