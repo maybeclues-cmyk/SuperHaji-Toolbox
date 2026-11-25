@@ -1,0 +1,59 @@
+/* ============================================================
+   skin22.css —— 楼层规划：饰品横排、楼层卡片竖排 + 表格
+   ============================================================ */
+
+/* ---------- 已选中饰品：横着排（一行多个），不是竖着排 ---------- */
+.selected-group{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:flex-start;
+  gap:10px !important;
+  padding-bottom:12px;
+  border-bottom:1px solid rgba(90,168,230,.16) !important;
+}
+.selected-group:last-child{
+  border-bottom:none !important;
+  padding-bottom:0;
+}
+
+/* 每个卡片保持原尺寸，别被 flex 拉长 */
+.selected-item{
+  flex:0 0 auto;
+  display:block;
+}
+
+/* 移除按钮：悬停时出现在右上角（横排后位置不变） */
+.selected-item__remove{
+  position:absolute !important;
+  top:-6px !important;
+  right:-6px !important;
+  width:18px !important;
+  height:18px !important;
+  font-size:12px !important;
+  line-height:1 !important;
+  border-radius:50%;
+  background:#4a2a2a;
+  border:1px solid #733;
+  color:#e74c3c;
+}
+
+/* ---------- 楼层分布：卡片在上、表格在下 ---------- */
+.floor-cards{
+  margin:6px 0 14px;
+}
+
+/* 桌面上卡片可以两列，别一根竖到底 */
+@media (min-width: 900px){
+  .floor-cards{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:8px !important;
+  }
+}
+
+/* 表格保留，加个分隔 */
+.floor-table-wrapper{
+  margin-top:10px;
+  padding-top:12px;
+  border-top:1px dashed rgba(90,168,230,.18);
+}

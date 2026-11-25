@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="skin19.css?v=20261125a">
 <link rel="stylesheet" href="skin20.css?v=20261125a">
 <link rel="stylesheet" href="skin21.css?v=20261125a">
+<link rel="stylesheet" href="skin22.css?v=20261125a">
 <style>
 body{margin:0}
 .gift-card{cursor:pointer}
@@ -624,10 +625,8 @@ function floorGridHtml(packs){
   const withF = packs.filter(p=>packFloors(p).length>0).slice().sort((a,b)=>packAvgFloor(a)-packAvgFloor(b));
   if(!withF.length) return '<div class="floor-detail__empty">还没有选中带楼层的卡包</div>';
 
-  /* 手机：横向表格滑不动（会被当成返回手势），改成竖排卡片 */
-  if (window.innerWidth <= 768) return floorCardsHtml(withF);
   const col = i => PACK_COLORS[i % PACK_COLORS.length];
-  const overview = `<div class="pack-overview">${withF.map((p,i)=>`<div class="pack-overview__item" data-pack="${esc(p.id)}" style="border-color:${col(i)}">${p.imageKey?`<img class="pack-overview__img" src="${coverSrc(p)}" onerror="this.style.display='none'">`:''}<span>${esc(p.name)}</span></div>`).join('')}</div>`;
+  const overview = floorCardsHtml(withF);
   let body = '';
   FLOOR_ROWS.forEach((row,i)=>{
     body += `<tr><td class="floor-table__row-label floor-table__sticky">${row.label}</td>`;
