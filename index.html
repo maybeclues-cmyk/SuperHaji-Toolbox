@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="skin23.css?v=20261125a">
 <link rel="stylesheet" href="skin24.css?v=20261125a">
 <link rel="stylesheet" href="skin25.css?v=20261125a">
+<link rel="stylesheet" href="skin26.css?v=20261125b">
 <style>
 body{margin:0}
 .gift-card{cursor:pointer}
@@ -206,7 +207,7 @@ const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
 
 /* 数据版本：改了 data/*.json 就把这个 +1 —— 浏览器才会去拉新的；没改就一直吃缓存。
    （这是手机上"每次打开都卡一会儿、第一下点不动"的根因：原来每个数据都 no-store，每次都重下） */
-const DATA_VER = 'v35';
+const DATA_VER = 'v36';
 const J = p => fetch(p + '?v=' + DATA_VER).then(x => x.json());
 
 async function boot(){
@@ -952,7 +953,7 @@ document.addEventListener('click', e => {
 (function(){
   const b = document.createElement('div');
   b.id = 'verBadge';
-  b.textContent = 'v35';
+  b.textContent = 'v36';
   b.style.cssText = 'position:fixed;right:6px;bottom:4px;z-index:99999;font:10px/1 ui-monospace,Menlo,monospace;'
     + 'color:#4a5468;background:#0a0d13cc;border:1px solid #1c2433;border-radius:3px;padding:3px 5px;'
     + 'user-select:none;-webkit-user-select:none;cursor:pointer;letter-spacing:.5px;-webkit-tap-highlight-color:transparent';
