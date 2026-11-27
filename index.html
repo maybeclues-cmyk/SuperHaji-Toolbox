@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="skin20.css?v=20261125a">
 <link rel="stylesheet" href="skin21.css?v=20261125a">
 <link rel="stylesheet" href="skin22.css?v=20261125a">
-<link rel="stylesheet" href="skin23.css?v=20261125a">
+<link rel="stylesheet" href="skin23.css?v=20261127a">
 <link rel="stylesheet" href="skin24.css?v=20261125a">
 <link rel="stylesheet" href="skin25.css?v=20261125a">
 <link rel="stylesheet" href="skin26.css?v=20261125e">
@@ -93,6 +93,7 @@ body{margin:0}
 .recipe-pick{display:inline-flex;align-items:center;gap:3px;border:1px dashed #6f5c44;border-radius:8px;padding:3px 7px;margin:0 4px}
 .recipe-pick__icon{width:28px;height:28px;border-radius:4px;opacity:.95}
 .recipe-pick__label{font-size:11px;color:#d8c39c;margin-left:5px;white-space:nowrap}
+.recipe-panel__pick{font-size:12px;color:#d8c39c;border:1px dashed #6f5c44;border-radius:6px;padding:2px 6px;white-space:normal}
 .recipe-panel{width:460px}
 .recipe-panel__list{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:4px;padding-bottom:2px}
 .recipe-panel__entry{flex-wrap:nowrap}
@@ -447,13 +448,19 @@ function showHover(id){
   const pk = packsOf(g.id);
   const entry = (gid,name) => `<span class="recipe-panel__entry"><img class="recipe-panel__gift-icon" src="${icon(gid)}" onerror="this.style.display='none'"><span class="recipe-panel__gift-name">${esc(name)}</span></span>`;
   const matHtml = mid => { const m=giftById(mid); return m ? entry(m.id,m.name) : `<span class="recipe-panel__gift-name">${esc(mid)}</span>`; };
+  const pickHtml = rr => {
+    const p = rr && rr.pickAny;
+    if(!p || !Array.isArray(p.from) || !p.from.length) return '';
+    const names = p.from.map(id=>{ const g=giftById(id); return g?esc(g.name):String(id); }).join(' / ');
+    return `<span class="recipe-panel__pick">任选 ${p.count||1}：${names}</span>`;
+  };
   const isRep = (S.user.labels[g.id]||'')==='复刻';
   const panel = $('hoverPanel');
   if(!recs.length && !usedIn.length && !pk.length){ panel.classList.remove('open'); return; }
   panel.innerHTML = `
     <button class="recipe-panel__close" onclick="document.getElementById('hoverPanel').classList.remove('open')">×</button>
     ${(recs.length||usedIn.length)?`<div class="recipe-panel__label">合成方式</div>
-    ${recs.map(rr=>`<div class="recipe-panel__list">${(rr.materialIds||[]).map(matHtml).join('<span class="recipe-panel__plus">+</span>')}</div>`).join('')}
+    ${recs.map(rr=>{ const pick=pickHtml(rr); return `<div class="recipe-panel__list">${(rr.materialIds||[]).map(matHtml).join('<span class="recipe-panel__plus">+</span>')}${pick?`<span class="recipe-panel__plus">+</span>${pick}`:''}</div>`; }).join('')}
     ${usedIn.map(rr=>{const res=giftById(rr.resultId);return `<div class="recipe-panel__list"><span class="recipe-panel__gift-name">可合成 </span>${res?entry(res.id,res.name):esc(rr.resultId)}</div>`}).join('')}`:''}
     ${pk.length?`<div class="recipe-panel__label">所属卡包</div><div class="recipe-panel__packs">${pk.map(n=>{const p=S.packs.find(x=>x.name===n);return `<div class="recipe-panel__pack-item">${p&&p.imageKey?`<img class="recipe-panel__pack-img" src="${coverSrc(p)}" onerror="this.style.display='none'">`:''}<span class="recipe-panel__pack-name">${esc(n)}${isRep?' 复刻':''}</span></div>`}).join('')}</div>`:''}`;
   panel.classList.add('open');
@@ -469,6 +476,12 @@ function openGift(id, grade){
   const usedIn = S.recipes.filter(x=>(x.materialIds||[]).some(m=>String(m)===String(g.id)));
   const entry = (gid,name) => `<span class="recipe-panel__entry"><img class="recipe-panel__gift-icon" src="${icon(gid)}" onerror="this.style.display='none'"><span class="recipe-panel__gift-name">${esc(name)}</span></span>`;
   const matHtml = mid => { const m=giftById(mid); return m ? entry(m.id,m.name) : `<span class="recipe-panel__gift-name">${esc(mid)}</span>`; };
+  const pickHtml = rr => {
+    const p = rr && rr.pickAny;
+    if(!p || !Array.isArray(p.from) || !p.from.length) return '';
+    const names = p.from.map(id=>{ const g=giftById(id); return g?esc(g.name):String(id); }).join(' / ');
+    return `<span class="recipe-panel__pick">任选 ${p.count||1}：${names}</span>`;
+  };
   const isRep = (S.user.labels[g.id]||'')==='复刻';
   const gradeBtns = [['base','-'],['plus','+'],['double_plus','++']].filter(([k])=>d[k]);
   $('modalBody').innerHTML = `
@@ -483,7 +496,7 @@ function openGift(id, grade){
       <button class="plan-toggle ${S.sel.includes(String(g.id))?'in-plan':''}" id="planToggle">${S.sel.includes(String(g.id))?'− 从楼层规划移除':'+ 加入楼层规划'}</button>
     </div>
     ${d[cur]?`<div class="modal-description">${describe(d[cur])}</div>`:''}
-    ${(()=>{ const rel=[...recs,...usedIn].filter((v,i,a)=>a.indexOf(v)===i); return rel.length?`<div class="recipe-panel__label">合成方式</div>${rel.map(rr=>`<div class="recipe-panel__list">${(rr.materialIds||[]).map(matHtml).join('<span class="recipe-panel__plus">+</span>')}<span class="recipe-panel__plus">=</span>${(()=>{const res=giftById(rr.resultId);return res?entry(res.id,res.name):`<span class="recipe-panel__gift-name">${esc(rr.resultId)}</span>`})()}</div>`).join('')}`:'' })()}`;
+    ${(()=>{ const rel=[...recs,...usedIn].filter((v,i,a)=>a.indexOf(v)===i); return rel.length?`<div class="recipe-panel__label">合成方式</div>${rel.map(rr=>{ const pick=pickHtml(rr); return `<div class="recipe-panel__list">${(rr.materialIds||[]).map(matHtml).join('<span class="recipe-panel__plus">+</span>')}${pick?`<span class="recipe-panel__plus">+</span>${pick}`:''}<span class="recipe-panel__plus">=</span>${(()=>{const res=giftById(rr.resultId);return res?entry(res.id,res.name):`<span class="recipe-panel__gift-name">${esc(rr.resultId)}</span>`})()}</div>`; }).join('')}`:'' })()}`;
   $('modal').classList.add('open');
   document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>openGift(id, b.dataset.grade));
   /* 点详情里的按钮也能加/移除，手机上没有右键 */
@@ -495,6 +508,13 @@ function openGift(id, grade){
     const inPlan = S.sel.includes(sid);
     pt.textContent = inPlan ? '− 从楼层规划移除' : '+ 加入楼层规划';
     pt.classList.toggle('in-plan', inPlan);
+    /* ★ 在楼层规划页里加/减，要立刻重画（以前得切到别的页才看得到）；
+       重画后把滚动位置还回去，别让人弹回顶部 */
+    if(S.page === 'plan'){
+      const y = window.scrollY;
+      renderPlan();
+      window.scrollTo(0, y);
+    }
   };
 }
 

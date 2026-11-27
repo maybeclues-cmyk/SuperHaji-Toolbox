@@ -50,6 +50,16 @@
 
   /* 8. 楼层卡片也别发光 */
   .floor-card{box-shadow:0 1px 4px rgba(0,0,0,.5) !important}
+
+  /* 9. ★ 每张饰品卡图标的 drop-shadow：滚动时每帧重算阴影，是最贵的一项。
+        卡包详情一展开就是几十张卡，全带这个 —— 手机直接去掉。 */
+  .gift-card__icon{filter:none !important}
+
+  /* 10. 屏幕外的区块不参与布局和绘制（卡包页一展开就很长） */
+  .pack-list>.pack-item{content-visibility:auto;contain-intrinsic-size:auto 96px}
+  .pack-detail__gifts{content-visibility:auto;contain-intrinsic-size:auto 400px}
+  .pack-events{content-visibility:auto;contain-intrinsic-size:auto 300px}
+  .gift-grid{content-visibility:auto;contain-intrinsic-size:auto 120px}
 }
 
 /* 低端机：再加一层保险（内存/核心数不够就不加载重特效） */
