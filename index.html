@@ -210,8 +210,8 @@ const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
 
 /* 数据版本：改了 data/*.json 就把这个 +1 —— 浏览器才会去拉新的；没改就一直吃缓存。
    （这是手机上"每次打开都卡一会儿、第一下点不动"的根因：原来每个数据都 no-store，每次都重下） */
-const DATA_VER = 'v48';
-const PAGE_VER = '27c';   /* 改 index.html 或皮肤时手动 bump，徽章上看得见 */
+const DATA_VER = 'v49';
+const PAGE_VER = '27d';   /* 改 index.html 或皮肤时手动 bump，徽章上看得见 */
 const J = p => fetch(p + '?v=' + DATA_VER).then(x => x.json());
 
 async function boot(){
@@ -618,7 +618,8 @@ function packEventsFor(packName){
     if (!byEv.has(r.event)) byEv.set(r.event, { opts: new Map() });
     const m = byEv.get(r.event).opts;
     const k = (r.tab || '') + '|' + (r.title || '');
-    if (!m.has(k)) m.set(k, { tab: r.tab || '', title: r.title || '', gifts: [] });
+    if (!m.has(k)) m.set(k, { tab: r.tab || '', title: r.title || '', gifts: [], pickOne: false });
+    if (r.pickOne) m.get(k).pickOne = true;
     if (r.gift) m.get(k).gifts.push(r.gift);
   }
   return `<div class="pack-events">
@@ -628,7 +629,7 @@ function packEventsFor(packName){
       const body = v.tree ? eventTree(v.tree, 0) : `<ul class="pack-events__opts">${[...v.opts.values()].map(o=>`<li class="pack-events__row">
         <span class="pack-events__opt">${esc(o.tab)}${o.title?' · '+esc(o.title):''}</span>
         <span class="pack-events__arrow">→</span>
-        <span class="pack-events__gifts">${o.gifts.map(giftChip).join('<span class="pack-events__slash">/</span>')}</span>
+        <span class="pack-events__gifts">${o.gifts.map(giftChip).join(o.pickOne ? '<span class="pack-events__slash">/</span>' : '')}</span>
       </li>`).join('')}</ul>`;
       if (!body) return '';
       return `<li class="pack-events__ev">
