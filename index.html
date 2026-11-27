@@ -210,8 +210,8 @@ const nrmName = s => String(s||'').replace(/\s+/g,'').replace(/・/g,'·');
 
 /* 数据版本：改了 data/*.json 就把这个 +1 —— 浏览器才会去拉新的；没改就一直吃缓存。
    （这是手机上"每次打开都卡一会儿、第一下点不动"的根因：原来每个数据都 no-store，每次都重下） */
-const DATA_VER = 'v46';
-const PAGE_VER = '27a';   /* 改 index.html 或皮肤时手动 bump，徽章上看得见 */
+const DATA_VER = 'v47';
+const PAGE_VER = '27b';   /* 改 index.html 或皮肤时手动 bump，徽章上看得见 */
 const J = p => fetch(p + '?v=' + DATA_VER).then(x => x.json());
 
 async function boot(){
@@ -601,8 +601,7 @@ function eventTree(nodes, depth){
   const vis = (nodes || []).filter(eventVisible);
   if (!vis.length) return '';
   return `<ul class="pack-events__opts${depth?' pack-events__opts--sub':''}">${vis.map(n=>{
-    const isLeaf = !(n.children && n.children.length);
-    const gifts = isLeaf ? (n.gifts||[]).map(id=>giftChip(giftById(id))).join('') : '';
+    const gifts = (n.gifts||[]).map(id=>giftChip(giftById(id))).join('');
     return `<li class="pack-events__row">
       <span class="pack-events__opt">${esc(n.tab||'')}${n.title?' · '+esc(n.title):''}</span>
       ${gifts?`<span class="pack-events__arrow">→</span><span class="pack-events__gifts">${gifts}</span>`:''}
