@@ -60,6 +60,15 @@
   .pack-detail__gifts{content-visibility:auto;contain-intrinsic-size:auto 400px}
   .pack-events{content-visibility:auto;contain-intrinsic-size:auto 300px}
   .gift-grid{content-visibility:auto;contain-intrinsic-size:auto 120px}
+
+  /* 11. ★★ 每张卡上都挂着一个「无限旋转的伪元素」＋双层 drop-shadow
+         （skin7.css 的 .gift-card::before＋spinBorder），平时 opacity:0。
+         手机上根本没有 hover，它一次都没被看见过，却一直在跑合成和滤镜。
+         卡包详情一展开就是几十张卡 —— 这一条是卡包页卡的头号原因。 */
+  .gift-card::before{display:none !important}
+
+  /* 12. ★ 背景 fixed：滚动时每帧重绘整个径向渐变背景堆（skin.css / skin11.css）。 */
+  html,body{background-attachment:scroll !important}
 }
 
 /* 低端机：再加一层保险（内存/核心数不够就不加载重特效） */
